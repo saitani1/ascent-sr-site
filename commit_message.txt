@@ -1,1 +1,1 @@
-サイトのコンテンツとレイアウトを更新
+feat: Add CNAME for custom domain
