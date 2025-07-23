@@ -456,6 +456,7 @@ section {
     object-fit: cover;
     border: 5px solid var(--accent-color);
     aspect-ratio: 1 / 1;
+    object-position: 50% 30%;
 }
 
 /* Contact Form Section */
