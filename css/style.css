@@ -466,6 +466,13 @@ section {
     box-shadow: var(--box-shadow);
 }
 
+.transportation {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
 .representative-photo {
     width: 250px;
     height: 250px;
