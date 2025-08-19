@@ -446,7 +446,7 @@ section {
 .greeting-content {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .access-map {
@@ -474,13 +474,8 @@ section {
 }
 
 .representative-photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--accent-color);
-    aspect-ratio: 1 / 1;
-    object-position: 50% 30%;
+    max-width: 450px;
+    max-height: 450px;
 }
 
 /* Contact Form Section */
