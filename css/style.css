@@ -408,6 +408,19 @@ section {
 }
 
 /* News */
+.news-excerpt-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.news-excerpt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+}
+
 .news-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -458,8 +471,7 @@ section {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 700;
-    margin-top: 15px;
-    display: inline-block;
+    white-space: nowrap;
 }
 
 /* About Section */
