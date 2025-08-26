@@ -696,3 +696,10 @@ section {
     left: 0; /* Position the checkmark */
     font-weight: bold;
 }
+
+.mission-statement-title {
+    font-size: 2rem; /* Adjust size as needed */
+    color: var(--accent-color); /* Orange color */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below */
+}
