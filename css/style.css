@@ -700,6 +700,6 @@ section {
 .mission-statement-title {
     font-size: 2rem; /* Adjust size as needed */
     color: var(--accent-color); /* Orange color */
-    text-align: center; /* Center the text */
+    text-align: left; /* Left align the text */
     margin-bottom: 20px; /* Add some space below */
 }
