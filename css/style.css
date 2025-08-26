@@ -676,3 +676,23 @@ section {
 .service-item--photo {
     background-color: #fff0f5;
 }
+
+/* Office Overview List Styling */
+.greeting-text ul {
+    list-style: none; /* Remove default bullet points */
+    margin: 15px 0; /* Adjust as needed */
+}
+
+.greeting-text ul li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* Indent for the checkmark */
+    position: relative;
+}
+
+.greeting-text ul li::before {
+    content: '\2713'; /* Checkmark character */
+    color: var(--accent-color); /* Use accent color for checkmark */
+    position: absolute;
+    left: 0; /* Position the checkmark */
+    font-weight: bold;
+}
