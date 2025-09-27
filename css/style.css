@@ -703,3 +703,36 @@ section {
     text-align: left; /* Left align the text */
     margin-bottom: 20px; /* Add some space below */
 }
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.service-table th,
+.service-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.service-table td:first-child {
+    width: 500px; /* Adjust as needed */
+}
+
+.service-table td:nth-child(2) {
+    width: 200px; /* Adjust as needed */
+}
+
+.service-table th {
+    background-color: var(--light-bg-color);
+    font-weight: 700;
+}
+
+/* News Scroll Wrapper */
+.news-items-wrapper {
+    max-height: 450px; /* Approximately 3 items */
+    overflow-y: auto;
+    padding-right: 15px; /* For scrollbar */
+}
