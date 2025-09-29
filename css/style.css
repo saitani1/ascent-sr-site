@@ -200,12 +200,11 @@ section {
 
 /* Hero Section */
 .hero {
-    background: url('../images/Multicolor Bright Summer Photo Collage.png') no-repeat center center;
-    background-size: cover;
     color: #fff;
     padding: 100px 0;
     text-align: center;
     position: relative; /* For overlay */
+    overflow: hidden; /* For animation */
 }
 
 .hero::before {
@@ -213,10 +212,22 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+    width: 200%; /* Loop: Set width to 200% for two images */
+    height: 100%;
+    background-image: url('../images/Multicolor Bright Summer Photo Collage.png');
+    background-repeat: repeat-x; /* Loop: Repeat the image horizontally */
+    background-size: 50% 100%; /* Loop: Each image takes up half the width */
+    animation: slide-right-background 40s linear infinite; /* Apply the new animation */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7); /* 半透明のオーバーレイ */
-    z-index: 1;
 }
 
 .hero .container {
@@ -845,5 +856,15 @@ section {
     .read-more {
         display: block;
         text-align: right;
+    }
+}
+
+/* Animation for Hero Background */
+@keyframes slide-right-background {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
