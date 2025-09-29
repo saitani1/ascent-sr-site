@@ -629,50 +629,6 @@ section {
     transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 767px) {
-    .header-nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 20px 0;
-    }
-
-    .header-nav ul.active {
-        display: flex;
-    }
-
-    .header-nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--primary-color);
-        margin-bottom: 5px;
-        transition: all 0.3s ease;
-    }
-
-    .greeting-content {
-        flex-direction: column;
-    }
-}
-
 .service-item--photo {
     background-color: #fff0f5;
 }
@@ -735,4 +691,82 @@ section {
     max-height: 450px; /* Approximately 3 items */
     overflow-y: auto;
     padding-right: 15px; /* For scrollbar */
+}
+
+
+
+/* Responsive */
+@media (max-width: 767px) {
+    /* Header */
+    .header-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .header-nav ul.active {
+        display: flex;
+    }
+    .header-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Typography */
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Layout */
+    .greeting-content {
+        flex-direction: column;
+    }
+
+    /* News Section */
+    .news-items-wrapper.news-list {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+        display: block; /* gridを解除 */
+    }
+    .news-item {
+        margin-bottom: 30px; /* gapの代わり */
+    }
+    .news-excerpt-wrapper {
+        display: block;
+    }
+    .news-excerpt {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .read-more {
+        display: block;
+        text-align: right;
+    }
 }
