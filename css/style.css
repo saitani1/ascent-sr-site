@@ -747,23 +747,31 @@ section {
 
     /* News Section */
     .news-items-wrapper.news-list {
-        max-height: none;
-        overflow-y: visible;
-        padding-right: 0;
-        display: block; /* gridを解除 */
+        max-height: 480px;
+        overflow-y: auto;
+        padding-right: 15px;
+        display: block;
     }
     .news-item {
-        margin-bottom: 30px; /* gapの代わり */
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .news-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
     }
     .news-excerpt-wrapper {
         display: block;
     }
     .news-excerpt {
         white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-right: 0;
         margin-bottom: 10px;
+        line-height: 1.6;
+        max-height: 3.2em;
     }
     .read-more {
         display: block;
