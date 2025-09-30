@@ -201,7 +201,7 @@ section {
 /* Hero Section */
 .hero {
     color: #fff;
-    padding: 100px 0;
+    padding: 90px 0;
     text-align: center;
     position: relative; /* For overlay */
     overflow: hidden; /* For animation */
