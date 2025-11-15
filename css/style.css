@@ -899,15 +899,15 @@ section {
 }
 
 .button-highlight {
-    background-color: #ff6b6b; /* 目立つ赤系の色 */
+    background-color: var(--accent-color); /* 寒色系のティール */
     color: #fff;
     animation: pulse 2s infinite; /* pulseアニメーションを適用 */
 }
 
 .button-highlight:hover {
-    background-color: #ee5253; /* ホバー時の色 */
+    background-color: #16a085; /* ホバー時の色 */
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.3); /* accent-colorに合わせたシャドウ */
 }
 
 @keyframes pulse {
