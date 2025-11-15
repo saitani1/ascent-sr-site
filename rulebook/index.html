@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>就業規則の見直し・作成サポート｜アセント社労士事務所</title>
+    <style>
+        /* --- Reset & Basic Settings --- */
+        :root {
+            --base-color: #166534; /* 落ち着いた緑 */
+            --accent-color: #ff8c42; /* オレンジ */
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: var(--base-color);
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--base-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        /* --- Header --- */
+        .site-header {
+            background-color: var(--white);
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--base-color);
+        }
+        
+        .header-contact {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .header-contact span {
+            font-size: 0.8rem;
+            display: block;
+            text-align: right;
+        }
+
+        .gnav ul {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .gnav a {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- Main Visual (FV) --- */
+        .fv {
+            background-color: var(--base-color);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .fv-catch {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .fv-subcopy {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Problems Section --- */
+        .problem-list li {
+            background: var(--white);
+            padding: 20px;
+            border-left: 5px solid var(--base-color);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .problem-list li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* --- Benefits Section --- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .benefit-item-icon {
+            font-size: 3rem;
+            color: var(--base-color);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.2rem;
+            color: var(--base-color);
+            margin-bottom: 10px;
+        }
+
+        .emphasis-box {
+            background-color: #eef7f2;
+            border: 2px solid var(--base-color);
+            padding: 30px;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 8px;
+        }
+
+        .emphasis-box p {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* --- Diagnosis Section --- */
+        .diagnosis-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .diagnosis-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .question-item {
+            margin-bottom: 25px;
+        }
+
+        .question-item p {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .radio-group input {
+            margin-right: 8px;
+        }
+        
+        .diagnosis-button-wrapper {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #diagnosis-result {
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            display: none; /* Initially hidden */
+        }
+        
+        #diagnosis-result.low { background-color: #e6f3ff; border: 2px solid #007bff; }
+        #diagnosis-result.medium { background-color: #fffbe6; border: 2px solid #ffc107; }
+        #diagnosis-result.high { background-color: #ffe6e6; border: 2px solid #dc3545; }
+
+        #diagnosis-result h3 {
+            margin-bottom: 15px;
+        }
+
+        /* --- Flow Section --- */
+        .flow-steps {
+            counter-reset: step-counter;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .flow-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            bottom: 20px;
+            width: 4px;
+            background-color: #ddd;
+        }
+
+        .flow-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .flow-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            background-color: var(--base-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 4px solid var(--background-color);
+        }
+        
+        .flow-step h3 {
+            font-size: 1.5rem;
+            color: var(--base-color);
+            margin-bottom: 10px;
+        }
+
+        /* --- Price Section --- */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .price-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .price-card.recommended {
+            border-color: var(--accent-color);
+            border-width: 3px;
+        }
+
+        .price-card h3 {
+            font-size: 1.5rem;
+            color: var(--base-color);
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 10px 0;
+        }
+        
+        .price-amount span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: var(--text-color);
+        }
+
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+            padding: 0 15px;
+        }
+
+        .price-features li {
+            margin-bottom: 10px;
+        }
+        
+        .price-features li::before {
+            content: '✓';
+            color: var(--base-color);
+            margin-right: 8px;
+        }
+        
+        .price-note {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* --- Contact Section --- */
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-button-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* --- Animations --- */
+        @keyframes pulse-animation {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 7px 25px rgba(255, 65, 108, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #2a2a2a;
+            color: #ccc;
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 0.5em;
+        }
+        
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .gnav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .fv {
+                padding: 60px 0;
+            }
+
+            .fv-catch {
+                font-size: 1.8rem;
+            }
+
+            .fv-subcopy {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+            
+            .diagnosis-form, .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">アセント社労士事務所</div>
+            <nav class="gnav">
+                <ul>
+                    <li><a href="#problems">お悩み</a></li>
+                    <li><a href="#benefits">メリット</a></li>
+                    <li><a href="#diagnosis">リスク診断</a></li>
+                    <li><a href="#flow">流れ</a></li>
+                    <li><a href="#price">料金</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <!-- Main Visual -->
+        <section class="fv">
+            <div class="container">
+                <h1 class="fv-catch">その就業規則、<br>会社の“お守り”になっていますか？</h1>
+                <p class="fv-subcopy">
+                    トラブルが起きてからでは、もう遅いかもしれません。<br>
+                    「昔作ったまま」「とりあえずネットのひな形で作った」<br>
+                    そんな就業規則が、気づかないうちに会社のリスクになっていることがあります。<br>
+                    いまこそ、会社を守り、従業員も納得できるルールに整えませんか。
+                </p>
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <a href="就業規則を時限爆弾からお守りへ変える.m4a" style="display: inline-block; background: linear-gradient(45deg, #ff4b2b, #ff416c); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer; animation: pulse-animation 2.5s infinite; transition: transform 0.3s ease;" onmouseover="this.style.animationPlayState='paused'; this.style.transform='scale(1.1)'" onmouseout="this.style.animationPlayState='running'; this.style.transform='none'" target="_blank">この資料の説明を音声で聴く</a>
+                </div>
+                <a href="#diagnosis" class="cta-button">今すぐリスクをセルフチェックする</a>
+            </div>
+        </section>
+
+        <!-- Problems -->
+        <section id="problems">
+            <div class="container">
+                <h2 class="section-title">こんなお悩みはありませんか？</h2>
+                <ul class="problem-list">
+                    <li>何年も前に作った就業規則を、そのまま放置している</li>
+                    <li>顧問から「そろそろ見直した方がいい」と言われているが、手つかずの状態</li>
+                    <li>副業・テレワーク・SNSなど、新しい働き方にルールが追いついていない</li>
+                    <li>問題社員がいても、就業規則を根拠にどう対応していいか分からない</li>
+                    <li>労基署の調査や、突然の労務トラブルが正直こわい</li>
+                    <li>就業規則はあるが、社員にきちんと説明したことがない</li>
+                </ul>
+                <div class="emphasis-box">
+                    <p>ひとつでも当てはまったら、「就業規則の見直しどき」かもしれません。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section id="benefits">
+            <div class="container">
+                <h2 class="section-title">見直すことで、こんなメリットが生まれます</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-item-icon">🛡️</div>
+                        <h3>トラブルを未然に防ぐ</h3>
+                        <p>懲戒・解雇などのルールが明確になり、労務トラブルを「起きてから対応」ではなく「起きる前に予防」できます。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item-icon">⚖️</div>
+                        <h3>公平なルール運用</h3>
+                        <p>労働時間・残業・有給休暇など、グレーな運用を減らし、すべての従業員に公平なルールを適用できます。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item-icon">🏢</div>
+                        <h3>会社の信頼性アップ</h3>
+                        <p>採用・定着に強い「安心して働ける会社」としてイメージが向上し、優秀な人材の確保につながります。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item-icon">📈</div>
+                        <h3>経営の土台が固まる</h3>
+                        <p>助成金申請や働き方改革に取り組む際の「土台」として活用でき、経営戦略の選択肢が広がります。</p>
+                    </div>
+                </div>
+                <div class="emphasis-box">
+                    <p>就業規則は、「お飾りのファイル」ではなく、<br>会社の経営を支える“ルールブック”です。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnosis -->
+        <section id="diagnosis">
+            <div class="container">
+                <h2 class="section-title">かんたん就業規則リスク診断</h2>
+                <div class="diagnosis-intro">
+                    <p>いきなり全部作り直す必要はありません。<br>
+                    まずは、今の就業規則にどれくらいリスクが潜んでいるか、かんたんなチェックで確認してみましょう。</p>
+                </div>
+                <form id="diagnosis-form" class="diagnosis-form">
+                    <div class="question-item">
+                        <p>1. 最後に就業規則を見直してから3年以上経過している</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q1" value="yes" required> はい</label>
+                            <label><input type="radio" name="q1" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>2. 法改正（育児・介護休業法、パワハラ防止など）の内容が反映されているか分からない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q2" value="yes" required> はい</label>
+                            <label><input type="radio" name="q2" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>3. パートタイマーや契約社員用の規定がない、または正社員と全く同じ内容だ</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q3" value="yes" required> はい</label>
+                            <label><input type="radio" name="q3" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>4. テレワークや在宅勤務に関するルール（費用負担、労働時間管理など）が定められていない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q4" value="yes" required> はい</label>
+                            <label><input type="radio" name="q4" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>5. 副業・兼業について、許可制なのか届出制なのか、ルールが明確でない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q5" value="yes" required> はい</label>
+                            <label><input type="radio" name="q5" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>6. SNSの私的利用に関する注意喚起や、会社の信用を損なう行為に関する規定がない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q6" value="yes" required> はい</label>
+                            <label><input type="radio" name="q6" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>7. 懲戒処分の種類や、どのような場合にどの処分になるかが具体的に定められていない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q7" value="yes" required> はい</label>
+                            <label><input type="radio" name="q7" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>8. 私傷病による休職の期間や、復職の手続きが明確でない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q8" value="yes" required> はい</label>
+                            <label><input type="radio" name="q8" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>9. 従業員がいつでも就業規則を閲覧できる状態になっていない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q9" value="yes" required> はい</label>
+                            <label><input type="radio" name="q9" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <p>10. 従業員数が10人以上なのに、就業規則を労働基準監督署へ届け出ていない</p>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q10" value="yes" required> はい</label>
+                            <label><input type="radio" name="q10" value="no"> いいえ</label>
+                        </div>
+                    </div>
+                    <div class="diagnosis-button-wrapper">
+                        <button type="submit" class="cta-button">診断する</button>
+                    </div>
+                </form>
+                <div id="diagnosis-result"></div>
+            </div>
+        </section>
+
+        <!-- Flow -->
+        <section id="flow">
+            <div class="container">
+                <h2 class="section-title">就業規則見直しサポートの流れ</h2>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <h3>Step 1. 無料相談・ヒアリング</h3>
+                        <p>まずはお客様の現状のお悩みやご要望を詳しくお伺いします。現在の就業規則や運用状況についてもお聞かせください。</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>Step 2. リスク診断・お見積もり</h3>
+                        <p>お預かりした就業規則を専門家の視点で分析し、法的なリスクや改善点を洗い出します。最適なプランとお見積もりをご提案します。</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>Step 3. 改定案の作成・ご提案</h3>
+                        <p>ヒアリング内容と診断結果に基づき、お客様の会社に最適化した就業規則の改定案を作成します。条文の意図も分かりやすくご説明します。</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>Step 4. 納品・運用サポート</h3>
+                        <p>完成した就業規則を納品します。届出や社員説明会の実施、その後の運用に関するご相談など、アフターフォローも万全です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price -->
+        <section id="price">
+            <div class="container">
+                <h2 class="section-title">料金プラン</h2>
+                <div class="price-grid">
+                    <div class="price-card">
+                        <h3>ライトプラン</h3>
+                        <p>法改正対応・部分修正</p>
+                        <div class="price-amount">15<span>万円～ (税別)</span></div>
+                        <ul class="price-features">
+                            <li>法改正への対応</li>
+                            <li>特定条項の追加・修正</li>
+                            <li>簡易リスク診断</li>
+                        </ul>
+                        <a href="#contact" class="cta-button" style="background-color: var(--base-color);">このプランで相談</a>
+                    </div>
+                    <div class="price-card recommended">
+                        <h3>スタンダードプラン</h3>
+                        <p>全体見直し・フルオーダーメイド</p>
+                        <div class="price-amount">30<span>万円～ (税別)</span></div>
+                        <ul class="price-features">
+                            <li>全体的な構成の見直し</li>
+                            <li>実態に合わせた完全オーダーメイド作成</li>
+                            <li>詳細リスク診断</li>
+                            <li>社労士による研修</li>
+                        </ul>
+                        <div style="text-align: center; color: #d9534f; font-weight: bold; margin-top: 20px; padding: 0 15px; font-size: 0.95rem;">最大25万円支給される働き方改革推進支援助成金の対象になる場合があります。</div>
+                        <div style="text-align: center; margin-top: 10px; font-size: 0.9rem;">
+                            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000120692.html" target="_blank" rel="noopener noreferrer">働き方改革推進支援助成金について</a>
+                        </div>
+                        <a href="#contact" class="cta-button">このプランで相談</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>顧問契約プラン</h3>
+                        <p>継続的なサポート</p>
+                        <div class="price-amount">5<span>万円～/月 (税別)</span></div>
+                        <ul class="price-features">
+                            <li>就業規則の継続的なメンテナンス</li>
+                            <li>労務相談（回数無制限）</li>
+                            <li>法改正情報の提供</li>
+                        </ul>
+                        <a href="#contact" class="cta-button" style="background-color: var(--base-color);">このプランで相談</a>
+                    </div>
+                </div>
+                <p class="price-note">※上記は標準的な料金です。従業員数や改定内容のボリュームによって変動します。まずはお気軽にお見積もりをご依頼ください。</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">ご相談・お問い合わせ</h2>
+                <p style="text-align: center; margin-bottom: 40px;">就業規則の見直しに関するご相談は、こちらからお気軽にどうぞ。初回相談は無料です。</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="company">会社名</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">ご担当者様名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">ご相談内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="contact-button-wrapper">
+                        <button type="submit" class="cta-button">メールで相談する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-info">
+                <p class="logo">アセント社労士事務所</p>
+                <p>所在地: 〒541-0054 大阪市中央区南本町2-3-12 EDGE本町3階</p>
+                <p>TEL: 06-7878-3790 / E-mail: nagata@ascent-sr.jp</p>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Ascent Social Insurance and Labor Office. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Diagnosis Form Logic
+            const diagnosisForm = document.getElementById('diagnosis-form');
+            const resultDiv = document.getElementById('diagnosis-result');
+
+            if (diagnosisForm) {
+                diagnosisForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(diagnosisForm);
+                    let yesCount = 0;
+                    for (let pair of formData.entries()) {
+                        if (pair[1] === 'yes') {
+                            yesCount++;
+                        }
+                    }
+
+                    let resultHTML = '';
+                    let resultClass = '';
+
+                    if (yesCount <= 2) {
+                        resultHTML = `
+                            <h3>診断結果：リスク度【低】</h3>
+                            <p>「はい」は ${yesCount}個でした。<br>現状、大きなリスクは少ないようです。ただし、法改正は頻繁に行われます。一度専門家に確認してもらうと、より安心できるでしょう。</p>
+                        `;
+                        resultClass = 'low';
+                    } else if (yesCount <= 5) {
+                        resultHTML = `
+                            <h3>診断結果：リスク度【中】</h3>
+                            <p>「はい」は ${yesCount}個でした。<br>要注意レベルです。いくつかの項目で、現在の法律や働き方に合っていない可能性があります。トラブルが発生する前に見直しを検討しましょう。</p>
+                        `;
+                        resultClass = 'medium';
+                    } else {
+                        resultHTML = `
+                            <h3>診断結果：リスク度【高】</h3>
+                            <p>「はい」は ${yesCount}個でした。<br>リスクが高い状態です。知らないうちに法律違反をしていたり、トラブルの火種を抱えているかもしれません。早急に専門家へ相談し、就業規則の全体的な見直しをおすすめします。</p>
+                        `;
+                        resultClass = 'high';
+                    }
+                    
+                    resultDiv.innerHTML = resultHTML;
+                    resultDiv.className = resultClass;
+                    resultDiv.style.display = 'block';
+                    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+
+            // Contact Form Logic
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const company = contactForm.querySelector('#company').value;
+                    const name = contactForm.querySelector('#name').value;
+                    const email = contactForm.querySelector('#email').value;
+                    const message = contactForm.querySelector('#message').value;
+
+                    const mailto = 'nagata@ascent-sr.jp';
+                    const subject = '就業規則LPからのお問い合わせ';
+                    
+                    const body = `
+お問い合わせありがとうございます。
+以下の内容でお問い合わせを受け付けました。
+--------------------------------
+会社名： ${company}
+お名前： ${name}
+メールアドレス： ${email}
+ご相談内容：
+${message}
+--------------------------------
+                    `;
+
+                    let mailtoUrl = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body.trim())}`;
+                    
+                    window.location.href = mailtoUrl;
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
