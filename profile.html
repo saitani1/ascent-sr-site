@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代表プロフィール | アセント社労士事務所</title>
+    <meta name="description" content="アセント社労士事務所代表・長田充博のプロフィール。サービス業の現場経験15年、100kmマラソンを完走する体力と精神力で、御社の労務課題に伴走します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-sub-bg {
+            background-color: #111827;
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Timeline line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: #e5e7eb;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="pricing.html"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="profile.html"
+                        class="text-accent-500 font-bold border-b-2 border-accent-500 text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="pricing.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="profile.html"
+                    class="block px-3 py-2 rounded-md text-base font-bold text-accent-500 bg-orange-50">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="hero-sub-bg py-24 text-white text-center px-4">
+            <div class="container mx-auto">
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">代表プロフィール</h1>
+                <p class="text-gray-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                    サービス業の労務を知り尽くした社労士が、<br class="hidden md:block">
+                    あなたの会社の成長を全力でバックアップします。
+                </p>
+            </div>
+        </section>
+
+        <!-- Profile Intro -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                    <div class="w-full md:w-1/3">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+                            <img src="images/representative-profile.jpg" alt="長田 充博" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <span class="text-accent-500 font-bold tracking-widest text-sm">REPRESENTATIVE PROFILE</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2 mb-1">
+                            長田 充博
+                        </h2>
+                        <p class="text-gray-500 text-lg mb-6">Nagata Mitsuhiro</p>
+
+                        <div class="prose prose-lg text-gray-600 leading-relaxed mb-8">
+                            <p class="mb-4">
+                                アセント社労士事務所 代表。<br>
+                                社会保険労務士。
+                            </p>
+                            <p>
+                                2010年、社会保険労務士の資格を取得。それと同時期に、複合アミューズメント事業を展開するサービス企業に入社し、15年間一貫して本社人事労務部門に所属。1万人を超えるアルバイトスタッフを抱える会社の労務管理、教育、トラブル対応に携わってきました。
+                            </p>
+                            <p>
+                                日々の店長との会話や相談窓口対応、店舗ヒアリングを通じて、現場の苦悩も、経営者の意思決定の重さも間近で見てきたからこそ、「法律論」だけでは終わらせない、現場で実行できる「解決策」を提示できることが強みです。<br>
+                                プライベートでは100kmウルトラマラソンを完走するランナーでもあります。
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <span
+                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#サービス業一筋</span>
+                            <span
+                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#現場主義</span>
+                            <span
+                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#100kmマラソン</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">VISION</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        目指す社労士像
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="bg-white p-10 md:p-14 rounded-2xl shadow-lg border-l-8 border-accent-500">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-6">「守りの労務」で、「攻めの経営」を支える。</h3>
+                    <p class="text-gray-600 leading-loose mb-6">
+                        サービス業の経営は、まさに時間との戦いです。
+                        日々のオペレーション、集客、品質管理...。社長や店長は、常に「攻め」の姿勢でいなければなりません。
+                        しかし、ひとたび労務トラブルが起きれば、その時間は奪われ、マインドは消耗し、本来注ぐべき「お客様へのサービス」が疎かになってしまいます。
+                    </p>
+                    <p class="text-gray-600 leading-loose">
+                        私の役割は、そんな経営者や店長の皆様の「背中を守る」ことです。
+                        面倒な手続きや、頭を悩ませるスタッフとのトラブル対応を私が引き受けることで、
+                        皆様には安心して前を向いて走っていただきたい。
+                        「長田さんがいるから大丈夫」。そう言っていただける、最強のパートナーでありたいと考えています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career History -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">CAREER</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        これまでの経歴
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Item 1: 2000 -->
+                <div class="relative z-10 flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
+                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                    </div>
+                    <div class="flex-1 pb-12 border-b border-gray-100 last:border-0 last:pb-0">
+                        <span class="text-accent-500 font-bold text-lg block mb-1">2000年 前後</span>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">大学生時代　キャンプリーダーに明け暮れる</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            キャンプ場でボランティアをしていました。子どもたちを集めてキャンプを企画して運営することに明け暮れていました。活動を通じて、働くって何だろう？喜んでもらうって何だろう？と感じた時期でした。<br>
+                            社労士という言葉は知りませんでしたが、そういうものに興味を持ち始めたのかもしれません。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2: 2002 -->
+                <div class="relative z-10 flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
+                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                    </div>
+                    <div class="flex-1 pb-12 border-b border-gray-100 last:border-0 last:pb-0">
+                        <span class="text-accent-500 font-bold text-lg block mb-1">2002年</span>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">就職。営業や総務を学ぶ一方、働き方に疑問も。</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            就職してからはBtoBの営業を学びました。同時に働くということがどういうことかも。法人営業だったので、他の会社の方と接する機会も多く、自然と多くの会社の働き方を見聞きしました。<br>
+                            もう完全に働き方に興味をもってしまった時期です。社内で総務部への公募があり、応募したところ異動が叶い、そこで労務や社会保険を学びました。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3: 2010 -->
+                <div class="relative z-10 flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
+                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                    </div>
+                    <div class="flex-1 pb-12 border-b border-gray-100 last:border-0 last:pb-0">
+                        <span class="text-accent-500 font-bold text-lg block mb-1">2010年</span>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">転職。社労士資格合格。</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            転職、その直後に社労士試験合格（3回目の受験）。以後15年にわたり、1万人規模のアルバイト労務管理を担当。<br>
+                            社会保険手続き、就業規則変更、労基署対応、ハラスメント事案などの労務トラブルを一手に引き受ける。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4: 2025 -->
+                <div class="relative z-10 flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
+                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                    </div>
+                    <div class="flex-1">
+                        <span class="text-accent-500 font-bold text-lg block mb-1">2025年</span>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">アセント社労士事務所 開業</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            「現場を知る社労士」として、大阪のサービス業を元気にしたいという想いで独立。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="py-20 bg-navy-900 text-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">HOBBIES</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                        趣味・プライベート
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="images/hobby-running.jpg" alt="マラソン画像"
+                            class="rounded-xl shadow-2xl border-4 border-white/10">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent-500 mb-4">100kmウルトラマラソン</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            年に数回、100km以上を走るウルトラマラソン（トレイルランニング）の大会に出場しています。
+                            ただひたすらにゴールを目指して走り続ける時間は、自分自身と向き合う大切な時間です。
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            マラソンは準備が9割と言われます。日々の練習、食事管理、道具の準備・・・
+                            あらゆるトラブルを想定して準備する姿勢は、社労士業務における「リスク管理」にも通じていると感じています。<br>
+                            そして残り1割は何が起こっても何とかする力。
+                        </p>
+                        <p class="font-bold text-white text-lg">
+                            「諦めずに最後まで伴走する」。<br>
+                            それが私のモットーです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-navy-900 mb-6">まずは一度、お話を聞かせてください</h2>
+                <p class="text-gray-600 mb-8">
+                    御社の現状や課題感、将来のビジョンなど、ざっくばらんにお話ししましょう。<br>
+                </p>
+                <a href="index.html#contact-form-anchor"
+                    class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i> 無料相談に申し込む
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div>
+                    <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 text-sm">
+                    <a href="index.html" class="hover:text-white">ホーム</a>
+                    <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                    <a href="pricing.html" class="hover:text-white">サービス案内</a>
+                    <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col items-center justify-center">
+                <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                    target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                        class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                </a>
+                <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-600">
+                &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

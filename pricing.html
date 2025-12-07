@@ -1,192 +1,462 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アセント社労士事務所</title>
+    <title>サービス・料金 | アセント社労士事務所</title>
+    <meta name="description" content="アセント社労士事務所のサービス内容と料金プランのご案内。顧問契約、スポット対応、就業規則作成など、お客様のニーズに合わせたプランをご用意しています。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/ascent1.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-sub-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('images/office-1.jpg');
+            /* Fallback or specific image if available, otherwise reuse hero or allow default pattern */
+            background-color: #1a202c;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Checkmark list style */
+        .check-list li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .check-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #f97316;
+            /* accent-500 */
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="index.html">
-                    <img src="images/ascent1.png" alt="アセント社労士事務所 ロゴ">
-                    <span style="font-size: 80%;">アセント社労士事務所</span>
-                </a>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="pricing.html"
+                        class="text-accent-500 font-bold border-b-2 border-accent-500 text-sm transition">サービス案内</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <nav class="header-nav">
-                <button class="nav-toggle" aria-label="メニューを開閉する">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul>
-                    <li><a href="index.html#hero">トップ</a></li>
-                    <li><a href="index.html#news">お知らせ</a></li>
-                    <li><a href="index.html#office-overview">代表あいさつ</a></li>
-                    <li><a href="pricing.html">サービス・料金</a></li>
-                    <li><a href="index.html#access">アクセス</a></li>
-                    <li><a href="index.html#office-overview-details">事務所概要</a></li>
-                    <li><a href="index.html#contact" class="button-contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="pricing.html"
+                    class="block px-3 py-2 rounded-md text-base font-bold text-accent-500 bg-orange-50">サービス案内</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="services" class="main-services">
-            <div class="container">
-                <p class="section-subtitle-large">労務の不安ゼロへ。社労士が毎月“伴走”します</p>
-                <p class="section-description">日々の労務相談から規程整備、法改正対応、緊急トラブルまで、貴社の右肩に常にプロを</p>
-                <h2 class="section-title">サービス内容</h2>
-                <div class="service-grid">
-                    <div class="service-item">
-                        <h3>労務相談</h3>
-                        <p>日常的な労務相談から、法改正への対応、従業員トラブルの解決まで、継続的にサポートします。経営者様が本業に専念できるよう、労務管理の負担を軽減します。</p>
-                        <ul>
-                            <li>労務相談（電話・メール・訪問）</li>
-                            <li>労務監査</li>
-                            <li>労基署調査対応</li>
-                            <li>法改正情報提供</li>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="hero-sub-bg py-24 text-white text-center px-4">
+            <div class="container mx-auto">
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">サービス・料金案内</h1>
+                <p class="text-gray-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                    社長は経営の「攻め」を。私は労務の「守り」を。<br class="hidden md:block">
+                    あなたの会社の「最強の右腕」として、成長を支えます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">OUR SERVICES</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        サービス一覧
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="text-accent-500 text-3xl mb-4"><i class="fas fa-handshake"></i></div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">労務相談</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            「これって法的にどうなの？」という疑問から、スタッフとのトラブル対応まで。
+                            いつでも気軽に相談できるパートナーとして、経営判断をスピードアップさせます。
+                        </p>
+                        <ul class="text-sm text-gray-600 check-list space-y-1">
+                            <li>チャット・電話相談（無制限）</li>
+                            <li>労基署是正勧告 対応サーポート</li>
+                            <li>問題社員対応アドバイス</li>
                         </ul>
                     </div>
-                    <div class="service-item">
-                        <h3>就業規則作成・改定</h3>
-                        <p>貴社の実情に合わせたオーダーメイドの就業規則を作成・改定します。トラブルを未然に防ぎ、従業員が安心して働ける環境を整備します。</p>
-                        <ul>
-                            <li>就業規則、賃金規程、育児介護休業規程などの作成・改定</li>
-                            <li>各種規程の運用アドバイス</li>
+                    <!-- Service 2 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="text-accent-500 text-3xl mb-4"><i class="fas fa-file-contract"></i></div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">就業規則作成・改定</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            ネットのひな形では会社は守れません。
+                            サービス業特有の「シフト制」「変動労働時間」に対応した、現場で使える“生きたルール”を作ります。
+                        </p>
+                        <ul class="text-sm text-gray-600 check-list space-y-1">
+                            <li>リスク回避型就業規則の作成</li>
+                            <li>未払い残業対策規定の整備</li>
+                            <li>運用ルールの徹底サポート</li>
                         </ul>
                     </div>
-                    <div class="service-item">
-                        <h3>助成金申請サポート</h3>
-                        <p>複雑な助成金制度の中から、貴社が受給可能な助成金を診断し、申請手続きを代行します。資金調達を支援し、事業の発展をサポートします。</p>
-                        <ul>
-                            <li>助成金診断・情報提供</li>
-                            <li>申請書類作成・提出代行</li>
+                    <!-- Service 3 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="text-accent-500 text-3xl mb-4"><i class="fas fa-yen-sign"></i></div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">助成金申請サポート</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            知っていれば貰えるお金を、逃していませんか？
+                            キャリアアップ助成金など、サービス業で使いやすい助成金を積極的にご提案します。
+                        </p>
+                        <ul class="text-sm text-gray-600 check-list space-y-1">
+                            <li>受給可能性の無料診断</li>
+                            <li>面倒な書類作成の代行</li>
+                            <li>完全成功報酬制で安心</li>
                         </ul>
                     </div>
-                    <div class="service-item">
-                        <h3>セミナー・研修講師</h3>
-                        <p>従業員向けのハラスメント研修や、管理職向けの労務管理研修など、貴社のニーズに合わせたセミナー・研修を実施します。</p>
-                        <ul>
-                            <li>ハラスメント研修</li>
-                            <li>管理職向け労務管理研修</li>
-                            <li>新入社員向け社会保険研修</li>
+                    <!-- Service 4 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="text-accent-500 text-3xl mb-4"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">店長・マネージャー研修</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            「パワハラと言われない指導法」や「Z世代との接し方」など。
+                            現場の最前線に立つ店長やマネージャーを、労務知識で武装させます。
+                        </p>
+                        <ul class="text-sm text-gray-600 check-list space-y-1">
+                            <li>ハラスメント防止研修</li>
+                            <li>管理職向け労務基礎講座</li>
+                            <li>社内コミュニケーション研修</li>
                         </ul>
                     </div>
-                    <div class="service-item">
-                        <h3>社会保険手続き</h3>
-                        <p>従業員の入社から退職まで、複雑で多岐にわたる社会保険・労働保険の手続きを代行します。正確かつ迅速な処理で、担当者様の事務負担を大幅に軽減します。</p>
-                        <ul>
-                            <li>健康保険・厚生年金保険の資格取得・喪失</li>
-                            <li>労働保険の年度更新</li>
-                            <li>算定基礎届の作成・提出</li>
+                    <!-- Service 5 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="text-accent-500 text-3xl mb-4"><i class="fas fa-file-invoice"></i></div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">社会保険手続き代行</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            入退社のたびに発生する煩雑な手続きをゼロに。
+                            電子申請対応でスピーディーに処理。あなたは本業に集中してください。
+                        </p>
+                        <ul class="text-sm text-gray-600 check-list space-y-1">
+                            <li>入退社手続き（資格取得・喪失）</li>
+                            <li>毎月の保険料計算サポート</li>
                             <li>各種給付金の申請代行</li>
                         </ul>
                     </div>
-                    <div class="service-item service-item--photo">
-                        <h3>写真撮影事業</h3>
-                        <p>プロカメラマンでもある代表が、企業の魅力を内外に伝えるための写真撮影を提供します。求人サイトやウェブサイトに使用する、従業員の表情やオフィス風景を撮影し、ブランドイメージ向上に貢献します。</p>
-                        <ul>
-                            <li>求人採用サイト向け写真撮影</li>
-                            <li>ウェブサイト用素材写真</li>
-                            <li>イベント・セミナーの記録撮影</li>
-                            <li>役員・従業員のプロフィール写真</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="pricing-intro" class="pricing-intro">
-            <div class="container">
-                <h2 class="section-title">料金プラン</h2>
-                <p class="intro-text">豊富なサービスを一つにまとめた、分かりやすいプランをご用意しました。貴社の労務管理をトータルでサポートします。</p>
-            </div>
-        </section>
+                    <!-- Service 6 -->
 
-        <section id="pricing-table" class="pricing-table">
-            <div class="container">
-                <div class="price-card">
-                    <h3>顧問サービス</h3>
-                    <p class="price">一律<span>40,000</span>円<small>/月</small></p>
-                    <p>※次のサービス全てをご利用いただけます。</p>
-                    <table class="service-table">
-                        <tr><td>１．訪問による情報提供・ご相談</td><td>月１回</td></tr>
-                        <tr><td>２．人事や労務に関する相談（メール・電話）</td><td>無制限</td></tr>
-                        <tr><td>３．就業規則や賃金規程等の作成・変更</td><td>無制限</td></tr>
-                        <tr><td>４．助成金申請の着手金（成功報酬10％）</td><td>無料</td></tr>
-                        <tr><td>５．労務監査</td><td>年1回</td></tr>
-                        <tr><td>６．事務手続きに関するアドバイス</td><td>無制限</td></tr>
-                        <tr><td>７．従業員向け研修</td><td>年１回</td></tr>
-                        <tr><td>８．社外相談窓口（電話）</td><td>月5件</td></tr>
-                        <tr><td>９．写真撮影（イベント・HP素材等）</td><td>年1回</td></tr>
-                    </table>
-                    
-                </div>
-                <div class="price-card">
-                    <h3>スポットサービス</h3>
-                    <p>※顧問サービスをご契約でない場合のサービスです</p>
-                    <table class="service-table">
-                        <tr><td>１．就業規則や賃金規程等の作成</td><td>150,000円</td></tr>
-                        <tr><td>２．社会保険の手続き（加入者50名以下）<br>　　※加入者30名以下の場合、顧問サービスご契約で無料。</td><td>30,000円</td></tr>
-                        <tr><td>３．助成金申請の着手金（成功報酬１５％）</td><td>30,000円</td></tr>
-                    </table>
-                    <p>上記以外のスポットサービスは適宜お問い合わせください。</p>
-                </div>
-                <a href="index.html#contact" class="button button-primary" style="display: block; width: fit-content; margin: 40px auto 0;">お問い合わせ</a>
-            </div>
-        </section>
-
-        <section id="faq" class="faq">
-            <div class="container">
-                <h2 class="section-title">よくある質問</h2>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">初回相談は無料ですか？</button>
-                        <div class="accordion-content">
-                            <p>はい、初回のご相談は無料で承っております。貴社の状況を詳しくお伺いし、最適なサポート内容をご提案させていただきます。まずはお気軽にお問い合わせください。</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">大阪府外の企業でも依頼できますか？</button>
-                        <div class="accordion-content">
-                            <p>ご訪問は大阪府内の企業様を対象としておりますが、オンラインでのご対応も可能です。</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">顧問契約の途中解約は可能ですか？</button>
-                        <div class="accordion-content">
-                            <p>はい、可能です。解約をご希望される月の前月末までにご連絡いただければ、翌月からの契約を解除させていただきます。違約金等は発生いたしませんのでご安心ください。</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Pricing Section -->
+        <section class="py-20 bg-gray-50" id="pricing">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">PLANS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        料金プラン
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        「何にお金がかかるの？」という不安をなくすために。<br>
+                        分かりやすいワンプライスの顧問プランをご用意しました。
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+                    <!-- Advisory Plan (Highlighted) -->
+                    <div
+                        class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-accent-500 transform md:-translate-y-4">
+                        <div class="bg-accent-500 text-white text-center py-3 font-bold tracking-widest text-sm">
+                            RECOMMENDED
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <h3 class="text-2xl font-bold text-navy-900 text-center mb-2">顧問サービス</h3>
+                            <div class="text-center mb-6 pb-6 border-b border-gray-100">
+                                <span class="text-sm text-gray-500 font-medium align-top top-2 relative">月額</span>
+                                <span class="text-5xl font-black text-navy-900">40,000</span>
+                                <span class="text-sm text-gray-500 font-medium">円（税別）</span>
+                                <p class="text-xs text-gray-400 mt-2 flex items-center justify-center gap-1">
+                                    <i class="fas fa-info-circle"></i> 定額制で相談し放題
+                                </p>
+                            </div>
+
+                            <p class="font-bold text-navy-900 mb-4 text-center">このプランひとつで、<br>労務の<span
+                                    class="text-accent-500">すべてをカバー</span>します。</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">訪問による定期ミーティング（月1回）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">チャット・電話・メール相談（無制限）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">労務に関する情報提供（随時）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">就業規則・規程作成・変更（追加費用なし）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">社会保険手続き（30名以下）　（追加費用無し）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">助成金申請サポート（着手金無料+成功報酬15%）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">労務監査（年1回）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <span class="text-gray-700 font-medium">スタッフ向け社外相談窓口（月5件まで）</span>
+                                </li>
+
+                            </ul>
+
+                            <a href="index.html#contact-form-anchor"
+                                class="block w-full py-4 text-center bg-navy-900 text-white font-bold rounded-lg hover:bg-navy-800 transition shadow-lg transform hover:-translate-y-1">
+                                まずは無料で相談してみる
+                                <span class="block text-xs font-normal opacity-80 mt-1">（初回60分無料）</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Spot Plan -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="p-8 md:p-10">
+                            <h3 class="text-2xl font-bold text-navy-900 text-center mb-2">スポットサービス</h3>
+                            <p class="text-center text-gray-500 text-sm mb-6">必要な時だけ依頼したい方へ</p>
+
+                            <div class="space-y-6">
+                                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                                    <h4 class="font-bold text-navy-900 mb-2">就業規則・規程作成</h4>
+                                    <div class="flex justify-between items-baseline mb-1">
+                                        <span class="text-gray-600 text-sm">基本セット作成</span>
+                                        <span class="font-bold text-xl text-accent-500">200,000<span
+                                                class="text-sm text-gray-500">円</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 leading-snug">※ヒアリングから作成、労基署への届出まで一括サポート</p>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                                    <h4 class="font-bold text-navy-900 mb-2">社会保険手続き</h4>
+                                    <div class="flex justify-between items-baseline mb-1">
+                                        <span class="text-gray-600 text-sm">月額（50名以下）</span>
+                                        <span class="font-bold text-xl text-accent-500">30,000<span
+                                                class="text-sm text-gray-500">円</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 text-accent-500 font-bold">★顧問契約なら30名以下の場合0円</p>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                                    <h4 class="font-bold text-navy-900 mb-2">助成金申請代行</h4>
+                                    <div class="flex justify-between items-baseline mb-1">
+                                        <span class="text-gray-600 text-sm">着手金</span>
+                                        <span class="font-bold text-xl text-accent-500">30,000<span
+                                                class="text-sm text-gray-500">円</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">＋成功報酬 20%</p>
+                                    <p class="text-xs text-gray-500 text-accent-500 font-bold mt-1">★顧問契約なら着手金0円 / 報酬10%
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <a href="index.html#contact-form-anchor"
+                                    class="block w-full py-4 text-center border-2 border-navy-900 text-navy-900 font-bold rounded-lg hover:bg-navy-900 hover:text-white transition">
+                                    お見積もりはこちらから
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-12">
+                    <span class="text-accent-500 font-bold tracking-wider">FAQ</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mt-2">
+                        よくあるご質問
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. まだ従業員が数名しかいないのですが、顧問契約は可能ですか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. はい、もちろん可能です。</p>
+                            むしろ、従業員が少ない段階からしっかりとした就業ルールを作っておくことで、将来のトラブル（未払い残業代請求や不当解雇トラブルなど）を未然に防ぐことができます。
+                            「転ばぬ先の杖」として、ぜひご活用ください。
+                        </div>
+                    </details>
+                    <!-- FAQ 2 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. 大阪市やサービス業以外の依頼も受け付けていますか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. 大阪市・サービス業以外のお客様からのご相談・ご依頼も承っております。</p>
+                            当事務所は「大阪市内のサービス業」を中心に実務経験と知見を蓄積しているため、その範囲に比べると、どうしてもご提案の精度やスピードが一段階落ちる場合があります。<br>
+                            ただし、法令そのものは全国共通ですので、内容によっては十分にお力になれるケースも多くございます。
+                        </div>
+                    </details>
+                    <!-- FAQ 3 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. 契約期間の縛りはありますか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. 最低契約期間などの縛りはございません。</p>
+                            もしサービスにご満足いただけない場合は、解約希望月の前月末までにご連絡いただければ、いつでも解約が可能です。
+                            違約金等も一切かかりませんので、安心してお試しください。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="index.html#hero">トップ</a></li>
-                    <li><a href="index.html#news">お知らせ</a></li>
-                    <li><a href="index.html#office-overview">代表あいさつ</a></li>
-                    <li><a href="pricing.html">サービス・料金</a></li>
-                    <li><a href="index.html#access">アクセス</a></li>
-                    <li><a href="index.html#contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
-            <p class="copyright">&copy; 2025 アセント社労士事務所. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div>
+                    <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 text-sm">
+                    <a href="index.html#home" class="hover:text-white">ホーム</a>
+                    <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                    <a href="pricing.html" class="hover:text-white">サービス案内</a>
+                    <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col items-center justify-center">
+                <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                    target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                        class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                </a>
+                <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-600">
+                &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
+
 </html>

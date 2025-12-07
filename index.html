@@ -1,258 +1,782 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アセント社労士事務所</title>
-    <!-- サイト更新テスト -->
-    <meta name="description" content="サービス業（飲食・小売・介護等）を得意とした大阪の社労士事務所。代表の15年の実務経験を活かし、労務コンサルティング・労務相談、各種研修、就業規則作成等をご提供します。">
-    <meta property="og:title" content="アセント社労士事務所">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ascent-sr.jp/images/ascent1.png">
-    <meta property="og:description" content="労務相談・労務コンサルティングお任せください。労務問題で悩まない、働きがいのある会社に！">
-    <meta property="og:url" content="https://ascent-sr.jp/">
+    <title>アセント社労士事務所 | 大阪市のサービス業の労務トラブル対応なら</title>
+    <meta name="description" content="大阪のサービス業（飲食・小売・アミューズメント・介護福祉）の労務トラブル、シフト管理、就業規則ならアセント社労士事務所へ。現場経験豊富な社労士が解決します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/ascent1.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hero Section Background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Legacy Styles for Preserved Sections */
+        :root {
+            --primary-color: #0A2463;
+            --accent-color: #e67e22;
+            --accent-hover: #d35400;
+            --primary-gradient: linear-gradient(135deg, #0A2463 0%, #1e3a8a 100%);
+            --accent-gradient: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+            --text-color: #333333;
+            --light-text-color: #666666;
+            --heading-color: #0A2463;
+            --bg-color: #ffffff;
+            --light-bg-color: #f4f7f6;
+            --border-color: #e1e8ed;
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --box-shadow-card: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .legacy-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 70px;
+            font-weight: 700;
+            color: var(--heading-color);
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        /* Access Map */
+        .access-map .address {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--heading-color);
+        }
+
+        .google-map {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-card);
+            border: 1px solid var(--border-color);
+        }
+
+        .transportation {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--light-text-color);
+        }
+
+        /* Office Overview Details */
+        .office-details-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .office-details-table th,
+        .office-details-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .office-details-table tr:last-child th,
+        .office-details-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .office-details-table th {
+            background-color: var(--light-bg-color);
+            font-weight: 700;
+            width: 30%;
+            color: var(--primary-color);
+            text-align: left;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background-color: var(--light-bg-color);
+            padding: 90px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--light-text-color);
+            margin-top: -50px;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-card);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--heading-color);
+            font-size: 0.95rem;
+        }
+
+        .form-group .required {
+            color: #e74c3c;
+            font-size: 0.8rem;
+            margin-left: 5px;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 1rem;
+            font-family: var(--font-family);
+            transition: var(--transition);
+            background-color: var(--light-bg-color);
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(15, 155, 142, 0.1);
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Button Styles for Form */
+        .button {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            border: none;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: center;
+            color: #fff;
+            background: var(--primary-color);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 0.9;
+        }
+
+        .button-primary {
+            background: var(--accent-gradient);
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background: var(--accent-hover);
+            color: #fff;
+        }
+
+        /* Contact Form Section Overrides */
+        .contact-form-section {
+            background-color: #111827;
+            color: #ffffff;
+        }
+
+        .contact-form-section .section-title {
+            color: #ffffff;
+        }
+
+        .contact-form-section .section-subtitle {
+            color: #d1d5db;
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="index.html">
-                    <img src="images/ascent1.png" alt="アセント社労士事務所 ロゴ">
-                    <span style="font-size: 80%;">アセント社労士事務所</span>
-                </a>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="#" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+
+                    <a href="#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ブログ</a>
+                    <a href="#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <nav class="header-nav">
-                <button class="nav-toggle" aria-label="メニューを開閉する">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul>
-                    <li><a href="#hero">トップ</a></li>
-                    <li><a href="#news">お知らせ</a></li>
-                    <li><a href="#office-overview">代表あいさつ</a></li>
-                    <li><a href="pricing.html">サービス・料金</a></li>
-                    
-                    
-                    <li><a href="#access">アクセス</a></li>
-                    <li><a href="#office-overview-details">事務所概要</a></li>
-                    <li><a href="#contact" class="button-contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+
+                <a href="#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ブログ</a>
+                <a href="#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-text">
-                    <h2 class="hero-title">「ヒト・モノ・カネ」<br>「ヒト」の課題は社労士へ</h2>
-                    <p class="hero-subtitle">労務問題で消耗していませんか？<br>現場を知る社労士が、経営の悩みに寄り添います。</p>
-                    <div class="button-wrapper"><a href="#contact" class="button button-primary">初回相談はこちらから</a></div>
-                    <div class="button-wrapper" style="margin-top: 10px;"><a href="https://saitani1.github.io/ascent/rulebook/" class="button button-highlight">就業規則見直しサポート 特設サイト公開中！</a></div>
-                </div>
-                <div class="hero-image">
-                </div>
-            </div>
-        </section>
+    <!-- Main Content -->
+    <main class="pt-20">
 
-        <section id="strengths" class="strengths">
-            <div class="container">
-                <h2 class="section-title">アセント社労士事務所の３つの対応力</h2>
-                <div class="strengths-grid">
-                    <div class="strength-item">
-                        <img src="images/icon-service-industry.svg" alt="サービス業のアイコン" class="strength-icon">
-                        <h3>法令順守</h3>
-                        <p><strong>法律を守れているか不安…<br>そんな経営者の味方です</strong></p>
-                        <ul>
-                            <li>就業規則の作成・改定</li>
-                            <li>労基署等の調査対応</li>
-                            <li>残業代、労働時間管理</li>
-                            <li>法改正対応</li>
-                        </ul>
-                    </div>
-                    <div class="strength-item">
-                        <img src="images/icon-labor-disputes.svg" alt="柔軟な対応力のアイコン" class="strength-icon">
-                        <h3>労務トラブル</h3>
-                        <p><strong>問題が起こる前に！<br>でも、起きた後も頼れる存在に</strong></p>
-                        <ul>
-                            <li>ハラスメント対策</li>
-                            <li>問題社員対応</li>
-                            <li>労務管理セミナー</li>
-                            <li>相談窓口対応</li>
-                        </ul>
-                    </div>
-                    <div class="strength-item">
-                        <img src="images/icon-cost.svg" alt="コストのアイコン" class="strength-icon">
-                        <h3>事務負担の軽減</h3>
-                        <p><strong>煩雑な事務手続きも、<br>会社のステージに合わせて提案</strong></p>
-                        <ul>
-                            <li>社会保険手続き</li>
-                            <li>各種協定書作成</li>
-                            <li>雇用契約書作成</li>
-                            <li>助成金申請サポート</li>
-                        </ul>
-                    </div>
+        <!-- 1. Hero Section (First View) -->
+        <section id="home"
+            class="hero-bg relative h-[600px] md:h-[700px] flex items-center justify-center text-white px-4">
+            <div class="container mx-auto text-center z-10">
+                <p
+                    class="text-accent-500 font-bold tracking-widest uppercase mb-4 text-sm md:text-base bg-navy-900/80 inline-block px-4 py-1 rounded-full">
+                    大阪市のサービス業の労務トラブル対応なら
+                </p>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 drop-shadow-lg">
+                    アルバイト1万人を<br class="hidden md:block">15年支えてきた、<br class="hidden md:block">
+                    <span class="text-accent-500">現場あがり</span>の社労士が<br class="hidden md:block">サポートします。
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+                    シフト・ハラスメント・退職トラブル…<br>
+                    「現場のリアル」を知っているから、机上の空論ではない解決策をご提案します。
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="#contact-form-anchor"
+                        class="w-full md:w-auto bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transition transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-check-circle mr-2"></i> まずは無料相談（60分）
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="news">
-            <div class="container">
-                <h2 class="section-title">お知らせ</h2>
-                <div class="news-scroll-container">
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-11-15">2025年11月15日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20251115.html">就業規則見直し・作成サポート特設サイトを公開しました</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">就業規則の見直し・作成をサポートする特設サイトを公開しました。「昔作ったまま」「ネットのひな形をほぼそのまま使っている」——そんな就業規則が、実は会社のリスクになっているケースが増えています。</p>
-                            <a href="news-20251115.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-10-22">2025年10月22日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20251022.html">Osaka社労士フェスタで登壇します</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">OSAKA社労士フェスタ2025 「10：00～11：30　登録シンポジウム」と「11：50～13：30　合格者の集い」のセクションで登壇します。体験談を話しさせていただいたり、参加者の方と交流をさせていただいたりする予定です。他にも様々なセミナーやプログラムがご用意されています。ぜひ、お越しください！日程：2025年10月25日（土）　場所：天満橋OMMビル</p>
-                            <a href="news-20251022.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-09-27">2025年9月27日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20250927.html">「経営者モーニングセミナー」で講話いたします</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">10月16日（火）に大阪府枚方市で開催される「経営者モーニングセミナー」で講話をさせていただきます。テーマは「倫理を学ぶ理由と走る理由」。主催は枚方交野倫理法人会です。</p>
-                            <a href="news-20250927.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-08-28">2025年8月28日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20250828.html">社労士診断認証制度の認定社労士になりました</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">このたび、全国社会保険労務士会連合会が運営し、「会社の現状を診断し、改善に導く専門家」であることを証明する制度である「社労士診断認証制度」において認定社労士として登録を受けました。</p>
-                            <a href="news-20250828.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-08-19">2025年8月19日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20250819.html">大阪サムライ検索ウェブに掲載されました</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">大阪商工会議所の『大阪サムライ検索ウェブ』にアセント社労士事務所が掲載されました。こちらは社労士をはじめ、弁護士や税理士など様々な士業（サムライ業）を検索できるサービスです。</p>
-                            <a href="news-20250819.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <time datetime="2025-07-16">2025年7月16日</time>
-                            <span class="news-tag">お知らせ</span>
-                        </div>
-                        <h3 class="news-title"><a href="news-20250716.html">事務所開設のお知らせ</a></h3>
-                        <div class="news-excerpt-wrapper">
-                            <p class="news-excerpt">15 年間の企業労務経験を活かし、**「会社と従業員を幸せにする」**を使命とする アセント社会保険労務士事務所 を開設しました。</p>
-                            <a href="news-20250716.html" class="read-more">続きを読む</a>
-                        </div>
-                    </div>
-                </article>
+        <!-- 2. Target Audience Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">TARGET</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        こんなお悩みのある、<br class="md:hidden">大阪市のサービス業経営者・人事担当者さまへ
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                
+                <!-- Industry Icons -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="p-6 bg-gray-50 rounded-xl text-center border hover:shadow-lg transition">
+                        <div class="text-4xl text-navy-900 mb-3"><i class="fas fa-utensils"></i></div>
+                        <h3 class="font-bold">飲食店</h3>
+                        <p class="text-sm text-gray-600">レストラン・居酒屋</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl text-center border hover:shadow-lg transition">
+                        <div class="text-4xl text-navy-900 mb-3"><i class="fas fa-microphone-alt"></i></div>
+                        <h3 class="font-bold">娯楽・レジャー</h3>
+                        <p class="text-sm text-gray-600">ゲーセン・スポーツ施設</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl text-center border hover:shadow-lg transition">
+                        <div class="text-4xl text-navy-900 mb-3"><i class="fas fa-shopping-bag"></i></div>
+                        <h3 class="font-bold">小売・販売</h3>
+                        <p class="text-sm text-gray-600">スーパー・物販店</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl text-center border hover:shadow-lg transition">
+                        <div class="mb-3 h-10 flex items-center justify-center">
+                            <img src="images/icon-medical.png" alt="介護・医療" class="h-full w-auto object-contain">
+                        </div>
+                        <h3 class="font-bold">介護・医療</h3>
+                        <p class="text-sm text-gray-600">訪問介護・歯科医院</p>
+                    </div>
+                </div>
 
-                
+                <!-- Pain Points List -->
+                <div class="bg-red-50 border-2 border-red-100 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3 text-xl"></i>
+                            <span class="text-lg font-bold text-gray-800">アルバイトのシフト・休み希望が多くて、いつも人が足りない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3 text-xl"></i>
+                            <span class="text-lg font-bold text-gray-800">退職したスタッフから、残業代の未払いを指摘された</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3 text-xl"></i>
+                            <span class="text-lg font-bold text-gray-800">店長が「ハラスメントだ」と言われないか不安で指導できない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3 text-xl"></i>
+                            <span class="text-lg font-bold text-gray-800">労基署から連絡が来て、何から手を付ければいいか分からない</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="office-overview">
-            <h2 class="section-title">代表あいさつ</h2>
-                <div class="greeting-content">
-                    <img src="images/IMG_4413(1).png" alt="代表者写真" class="representative-photo">
-                    <div class="greeting-text">
-                        <h3 class="mission-statement-title">「働く」で困っている会社をゼロにする</h3>
-                        <p>こんにちは。訪問いただきありがとうございます。<br>
-                        アセント社労士事務所 代表　長田充博 です。</p>
-                        <p>会社の現場では、こんなお悩みはありませんか？</p>
-                        <ul>
-                            <li>法改正のスピードが速く、ついていけない</li>
-                            <li>ハラスメント対応に不安がある</li>
-                            <li>就業規則をどう整備したらいいか分からない</li>
-                            <li>離職率が下げたいが、自社にあった働き方が分からない</li>
-                            <li>労働基準監督署からの是正勧告にどう対応すればいいか不安</li>
-                        </ul>
-                        <p>私は、店舗数100店・アルバイト10,000人以上を抱えるサービス業の管理部門において、<br>15年間にわたり労務管理の最前線を経験してきました。</p>
-                        <p>膨大な従業員を抱える現場で起こった様々なトラブルや制度対応を実務で解決してきた経験を活かし、<br>企業が直面する労務課題を的確にサポートします。</p>
-                        <p><strong>「会社と従業員が安心して働ける環境をつくること」</strong><br>
-                        <strong>「経営者が本業に専念できる体制を整えること」</strong><br>
-                        これを使命に、アセント社労士事務所は伴走していきます。</p>
-                        <p>&nbsp;</p>
-                        <p>※ stand.fm にて音声パーソナリティをしています。<br>
-                        ※ note にてブログ発信をしています。</p>
+        <!-- 3. Reasons to Choose -->
+        <section id="reasons" class="py-20 bg-navy-900 text-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">WHY ASCENT?</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                        アセント社労士事務所が選ばれる理由
+                    </h2>
+                    <p class="mt-4 text-gray-300">サービス業のアルバイト1万人を15年支えてきた、労務トラブル対応のプロ社労士</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Reason 1 -->
+                    <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
+                        <div class="text-accent-500 text-5xl font-black mb-4">01</div>
+                        <h3 class="text-xl font-bold mb-3">現場目線の就業ルール作り</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            机上の理想論ではなく、現場が回ることを前提に就業規則やシフト運用を設計します。24時間営業・深夜労働・学生・ダブルワーカーなど、多様な働き方に対応します。
+                        </p>
+                    </div>
+                    <!-- Reason 2 -->
+                    <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
+                        <div class="text-accent-500 text-5xl font-black mb-4">02</div>
+                        <h3 class="text-xl font-bold mb-3">トラブルの「起こる前」に手を打つ</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            採用・教育・評価・コミュニケーションまで含めた仕組み作りで、労務トラブルを未然に防ぎます。
+                        </p>
+                    </div>
+                    <!-- Reason 3 -->
+                    <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
+                        <div class="text-accent-500 text-5xl font-black mb-4">03</div>
+                        <h3 class="text-xl font-bold mb-3">大阪市のサービス業に特化した情報感度</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            トラブル時に迅速訪問。地域の行政指導傾向や賃金動向を踏まえた提案が可能です。
+                        </p>
+                    </div>
+                    <!-- Reason 4 -->
+                    <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
+                        <div class="text-accent-500 text-5xl font-black mb-4">04</div>
+                        <h3 class="text-xl font-bold mb-3">100km走る社労士の「伴走力」</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            趣味はウルトラマラソン。長距離を走り抜く粘り強さで、御社の課題が解決するまで諦めずに伴走します。
+                        </p>
                     </div>
                 </div>
-        </section>
-        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-            <a href="https://stand.fm/channels/65cf53400a4a74f98f1f7e20" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin: 0 15px;">
-                <img src="images/Standfm_logo_icon.png" alt="stand.fm" style="width: 120px; height: auto;">
-            </a>
-            <a href="https://note.com/nice_oxalis920" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin: 0 15px;">
-                <img src="images/Note_logo.png" alt="note" style="width: 120px; height: auto;">
-            </a>
-        </div>
-        
-        
 
-        <section id="pricing-cta" class="cta">
-            <div class="container">
-                <h2 class="cta-title">サービス内容や料金について</h2>
-                <p class="cta-text">豊富なサービスを一つにまとめた、分かりやすいワンプランをご用意しました。貴社の労務管理をトータルでサポートします。</p>
-                <a href="pricing.html" class="button button-primary">サービス・料金を見る</a>
+                <!-- Mission -->
+                <div class="mt-16 bg-white/10 rounded-2xl p-8 text-center max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-accent-500 mb-4">なぜサービス業にこだわるのか？</h3>
+                    <p class="text-lg leading-relaxed font-medium">
+                        サービス業の現場は、アルバイト・パートが土台を支えています。<br>
+                        しかし、シフトや労働時間・社会保険など、他の業種より複雑な労務管理に手が回らない。<br>
+                        その結果、「現場を支える人ほど守られていない」職場も少なくありません。<br>
+                        そこを仕組みで支え直したい──それが、私がサービス業にこだわる理由です。
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="about-intro">
-            <div class="container">
+        <!-- 4. Services -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">SERVICE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        サービス案内
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 font-medium">労務の不安に、一人にしない。顧問として伴走します。</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">労務相談<br><span
+                                class="text-sm font-normal text-gray-600">（サービス業特化プラン）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">シフト・労働時間管理、アルバイト雇用契約、ハラスメント相談、是正勧告対応などを丸ごとサポート。</p>
+
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">社会保険手続き<br><span
+                                class="text-sm font-normal text-gray-600">（人事担当者の負担削減）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">アルバイトの加入基準の設計・入退社・算定基礎・育児介護など、日常の業務を代行します。</p>
+
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">就業規則・整備<br><span
+                                class="text-sm font-normal text-gray-600">（お店の運用ルール）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">「サービス業の現場にフィットする就業規則」。深夜・土日・早朝などを前提にしたルール設計。</p>
+
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">助成金サポート<br><span
+                                class="text-sm font-normal text-gray-600">（キャリアアップ助成金等）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">アルバイトから正社員、生産性向上のための設備投資など、サービス業で使いやすい助成金にフォーカスしてご提案。</p>
+
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">店長・新人向け研修<br><span
+                                class="text-sm font-normal text-gray-600">（労務研修）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">「アルバイトのトラブルを防ぐマネジメント」「“それ、パワハラかも？”と言われない知識」を伝授。</p>
+
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+                        <div
+                            class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">スポット対応<br><span
+                                class="text-sm font-normal text-gray-600">（スタートアップ企業様へ）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">社会保険の新規適用手続き、就業規則新規作成、セカンドオピニオンとしても。</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="pricing.html"
+                        class="inline-block border-2 border-navy-900 text-navy-900 font-bold py-3 px-8 rounded-full hover:bg-navy-900 hover:text-white transition">料金・プランを見る</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 6. Profile -->
+        <section id="profile" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row">
+                    <!-- Image Area (Placeholder for Runner/Pro Photo) -->
+                    <div class="md:w-2/5 bg-gray-200 h-64 md:h-auto relative">
+                        <img src="images/representative-profile.jpg" alt="永田 充博" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <p class="text-white text-sm font-bold opacity-90">100km走る社労士</p>
+                        </div>
+                    </div>
+                    <!-- Text Area -->
+                    <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                        <p class="text-accent-500 font-bold text-sm tracking-widest mb-2">REPRESENTATIVE</p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-0">長田 充博</h2>
+                        <p class="text-gray-500 text-sm mb-1">Nagata Mitsuhiro</p>
+                        <p class="text-gray-500 text-sm mb-6">アセント社労士事務所 代表 ／ 社会保険労務士</p>
+
+                        <h3 class="text-lg font-bold text-navy-800 mb-4 border-l-4 border-accent-500 pl-3">
+                            「サービス業のアルバイト1万人を15年支えてきた、現場あがりの社労士」
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            アルバイトが10,000以上在籍するサービス業の人事・労務部門を15年経験。現場の楽しさと難しさの両方を見てきました。
+                            「現場を知らない専門家」ではなく、汗をかく現場の皆様と同じ目線で、解決策を一緒に考えます。
+                        </p>
+                        <div>
+                            <a href="profile.html"
+                                class="text-navy-900 font-bold border-b-2 border-accent-500 hover:text-accent-500 transition">詳しいプロフィールを読む
+                                &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Blog (Column) -->
+        <section id="blog" class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-accent-500 font-bold tracking-wider">BLOG</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        サービス業の労務ブログ<br>
+                        <span class="text-xl md:text-2xl">～必見の３選～</span>
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <a href="https://note.com/nice_oxalis920/n/n7f19b0091f64" class="group block" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100 relative">
+                            <img src="images/blog-employment-termination.jpg" alt="「雇い止め」の正しい手順解説イラスト"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2 py-1 rounded">雇い止め</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 group-hover:text-accent-500 transition mb-2">
+                            アルバイトは簡単に辞めさせられる？「雇い止め」の正しい手順を社労士が解説
+                        </h3>
+
+                    </a>
+                    <!-- Article 2 -->
+                    <a href="https://note.com/nice_oxalis920/n/nc53f48e53158" class="group block" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100 relative">
+                            <img src="images/blog-2-month-rule.jpg" alt="「2ヶ月連続」ルール解説イラスト"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2 py-1 rounded">2ヶ月ルール</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 group-hover:text-accent-500 transition mb-2">
+                            短時間労働者の社会保険は「2ヶ月連続」がカギ　週20時間を超えたら、いつ加入させるべき？
+                        </h3>
+
+                    </a>
+                    <!-- Article 3 -->
+                    <a href="https://note.com/nice_oxalis920/n/nf481646d96ef" class="group block" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100 relative">
+                            <img src="images/blog-side-job-overtime.jpg" alt="「副業・残業代」ルール解説イラスト"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2 py-1 rounded">副業・残業代</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 group-hover:text-accent-500 transition mb-2">
+                            副業の残業代は誰が払う？企業が知っておくべきルールと実務対策を社労士が解説
+                        </h3>
+
+                    </a>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="https://note.com/nice_oxalis920" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center border border-gray-300 text-gray-700 px-10 py-4 rounded-full hover:bg-gray-100 transition text-lg font-bold shadow-sm">
+                        <img src="images/note-icon.png" alt="note" class="h-6 mr-3">ブログ一覧へ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.5. News Section -->
+        <section id="news" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-accent-500 font-bold tracking-wider">NEWS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        お知らせ
+                    </h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-10">
+                    <ul class="space-y-6">
+                        <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+                            <a href="work-rules.html"
+                                class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-gray-500 text-sm font-medium">2025.11.15</span>
+                                    <span class="bg-navy-900 text-white text-xs px-2 py-1 rounded">お知らせ</span>
+                                </div>
+                                <p class="text-navy-900 font-bold group-hover:text-accent-500 transition flex-1">
+                                    就業規則見直しサポート特設サイトを公開しました
+                                </p>
+                                <span
+                                    class="text-accent-500 text-sm font-bold opacity-0 group-hover:opacity-100 transition transform translate-x-[-10px] group-hover:translate-x-0">
+                                    Read More &rarr;
+                                </span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+                            <a href="festa2025.html"
+                                class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-gray-500 text-sm font-medium">2025.10.22</span>
+                                    <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">セミナー</span>
+                                </div>
+                                <p class="text-navy-900 font-bold group-hover:text-accent-500 transition flex-1">
+                                    Osaka社労士フェスタで登壇します
+                                </p>
+                                <span
+                                    class="text-accent-500 text-sm font-bold opacity-0 group-hover:opacity-100 transition transform translate-x-[-10px] group-hover:translate-x-0">
+                                    Read More &rarr;
+                                </span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+                            <a href="seminar-morning.html"
+                                class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-gray-500 text-sm font-medium">2025.9.27</span>
+                                    <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">セミナー</span>
+                                </div>
+                                <p class="text-navy-900 font-bold group-hover:text-accent-500 transition flex-1">
+                                    「経営者モーニングセミナー」で講話いたします
+                                </p>
+                                <span
+                                    class="text-accent-500 text-sm font-bold opacity-0 group-hover:opacity-100 transition transform translate-x-[-10px] group-hover:translate-x-0">
+                                    Read More &rarr;
+                                </span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+                            <a href="certified-sr.html"
+                                class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-gray-500 text-sm font-medium">2025.8.28</span>
+                                    <span class="bg-navy-900 text-white text-xs px-2 py-1 rounded">お知らせ</span>
+                                </div>
+                                <p class="text-navy-900 font-bold group-hover:text-accent-500 transition flex-1">
+                                    社労士診断認証制度の認定社労士になりました
+                                </p>
+                                <span
+                                    class="text-accent-500 text-sm font-bold opacity-0 group-hover:opacity-100 transition transform translate-x-[-10px] group-hover:translate-x-0">
+                                    Read More &rarr;
+                                </span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="text-center mt-8 pt-4 border-t border-gray-100">
+                        <a href="news.html" class="text-sm font-bold text-navy-900 hover:text-accent-500 transition">
+                            お知らせ一覧を見る &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preserved Legacy Sections -->
+        <section id="about" class="about-intro py-20 bg-white">
+            <div class="legacy-container">
                 <div class="access-map" id="access">
                     <h2 class="section-title">アクセス</h2>
                     <p class="address">〒541-0054 大阪府大阪市中央区南本町2-3-12 EDGE本町3階</p>
                     <div class="google-map">
-                        <iframe src="https://maps.google.com/maps?q=大阪府大阪市中央区南本町2-3-12 EDGE本町3階&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=大阪府大阪市中央区南本町2-3-12 EDGE本町3階&output=embed"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <p class="transportation">地下鉄 堺筋本町駅から徒歩２分</p>
                 </div>
             </div>
         </section>
 
-        <section id="office-overview-details" class="office-overview-details">
-            <div class="container">
+        <section id="office-overview-details" class="office-overview-details py-20 bg-gray-50">
+            <div class="legacy-container">
                 <h2 class="section-title">事務所概要</h2>
                 <table class="office-details-table">
                     <tr>
@@ -264,7 +788,7 @@
                         <td>2025年7月16日</td>
                     </tr>
                     <tr>
-                        <th>登録会</th>
+                        <th>登録番号</th>
                         <td>大阪府社会保険労務士会</td>
                     </tr>
                     <tr>
@@ -275,18 +799,21 @@
             </div>
         </section>
 
-        <section id="cta" class="cta">
-            <div class="container">
-                <h2 class="cta-title">まずはお気軽にご相談ください</h2>
-                <p class="cta-text">「こんなこと相談してもいいのかな？」<br>と思うような些細なことでも構いません。<br>貴社の状況をヒアリングし、最適なプランをご提案します。</p>
-                
-            </div>
-        </section>
+        <section id="contact-form-anchor" class="contact-form-section">
+            <div class="legacy-container">
+                <h2 class="section-title">お問い合わせフォーム</h2>
+                <p class="section-subtitle">ご相談、ご質問、お見積もりのご依頼など、<br>お気軽におお問い合わせください。</p>
 
-    <section id="contact" class="contact-form-section">
-            <div class="container">
-                <h2 class="section-title">お問い合わせ</h2>
-                <p class="section-subtitle">ご相談、ご質問、お見積もりのご依頼など、<br>お気軽にお問い合わせください。</p>
+                <div class="bg-white/5 p-6 rounded-xl max-w-3xl mx-auto text-left mb-12">
+                    <p class="text-center font-bold mb-4 text-gray-300">よくあるお問い合わせ</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">就業規則を作りたい</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">残業代請求された</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">労基署対応</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">社会保険手続き依頼</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">店長研修の依頼</span>
+                    </div>
+                </div>
                 <form action="https://formspree.io/f/xdkdnwjl" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name">お名前 <span class="required">必須</span></label>
@@ -311,25 +838,128 @@
             </div>
         </section>
 
-            </main>
+        <!-- FAQ Section -->
+        <section class="py-20 bg-navy-900">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-12">
+                    <span class="text-accent-500 font-bold tracking-wider">FAQ</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mt-2">
+                        よくあるご質問
+                    </h2>
+                </div>
 
-    <footer class="footer">
-        <div class="container">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#hero">トップ</a></li>
-                    <li><a href="#news">お知らせ</a></li>
-                    <li><a href="#office-overview">代表あいさつ</a></li>
-                    <li><a href="pricing.html">サービス・料金</a></li>
-                    <li><a href="#access">アクセス</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </nav>
-            <p class="copyright">&copy; 2025 アセント社労士事務所. All Rights Reserved.</p>
-            <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157" target="_blank"><img src="images/zrwemlc.jpg" alt="new image"></a>
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. まだ従業員が数名しかいないのですが、顧問契約は可能ですか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. はい、もちろん可能です。</p>
+                            むしろ、従業員が少ない段階からしっかりとした就業ルールを作っておくことで、将来のトラブル（未払い残業代請求や不当解雇トラブルなど）を未然に防ぐことができます。
+                            「転ばぬ先の杖」として、ぜひご活用ください。
+                        </div>
+                    </details>
+                    <!-- FAQ 2 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. 大阪市やサービス業以外の依頼も受け付けていますか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. 大阪市・サービス業以外のお客様からのご相談・ご依頼も承っております。</p>
+                            当事務所は「大阪市内のサービス業」を中心に実務経験と知見を蓄積しているため、その範囲に比べると、どうしてもご提案の精度やスピードが一段階落ちる場合があります。<br>
+                            ただし、法令そのものは全国共通ですので、内容によっては十分にお力になれるケースも多くございます。
+                        </div>
+                    </details>
+                    <!-- FAQ 3 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. 契約期間の縛りはありますか？</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. 最低契約期間などの縛りはございません。</p>
+                            もしサービスにご満足いただけない場合は、解約希望月の前月末までにご連絡いただければ、いつでも解約が可能です。
+                            違約金等も一切かかりませんので、安心してお試しください。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div>
+                    <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 text-sm">
+                    <a href="#home" class="hover:text-white">ホーム</a>
+                    <a href="#reasons" class="hover:text-white">選ばれる理由</a>
+                    <a href="#services" class="hover:text-white">サービス案内</a>
+                    <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col items-center justify-center">
+                <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                    target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                        class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                </a>
+                <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-600">
+                &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for Anchor Links (Optional JS fallback/enhancement)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden'); // Close mobile menu on click
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
