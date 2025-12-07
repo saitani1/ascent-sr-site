@@ -634,6 +634,7 @@ section {
     font-family: var(--font-family);
     transition: var(--transition);
     background-color: var(--light-bg-color);
+    color: #000000;
 }
 
 .form-group input[type="text"]:focus,
