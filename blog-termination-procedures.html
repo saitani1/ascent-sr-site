@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アルバイトは簡単に辞めさせられる？「雇い止め」の正しい手順を社労士が解説 | アセント社労士事務所</title>
+    <meta name="description" content="アルバイトの「解雇」と「雇い止め」の違い、トラブルにならない正しい雇い止めの手順（期待権の管理など）を解説します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">BLOG</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    アルバイトは簡単に辞めさせられる？<br>「雇い止め」の正しい手順を社労士が解説
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-termination-procedures.jpg" alt="雇い止めの正しい手順解説イラスト" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            「正社員とは違い、アルバイトなら簡単に辞めさせられる」と考えていませんか。しかし、これは大きな誤解です。
+                        </p>
+                        <p class="mb-6">
+                            アルバイトであっても、従業員を辞めさせようとする場合、法律に基づいた厳格なルールを守る必要があります。手順を誤ると、後に大きなトラブルへ発展しかねません。<br>
+                            本記事では、アルバイトに辞めてもらう場合の「解雇」と「雇い止め」の違い、そして特に注意が必要な「雇い止め」の正しい進め方について、アセント社労士事務所が詳しく解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            「辞めさせる」には2種類ある：「解雇」と「雇い止め」の違い
+                        </h2>
+                        <p class="mb-6">
+                            従業員に辞めてもらう場合、その理由によって「解雇」と「雇い止め」の2つに大別されます。両者は手続きが大きく異なるため、まずはその違いを正しく理解しましょう。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">解雇：重大な問題行動があった場合</h3>
+                        <p class="mb-4">
+                            解雇とは、従業員本人に重大な非がある場合に、会社が一方的に労働契約を終了させることです。これは正社員、アルバイトといった雇用形態に関わらず適用されます。<br>
+                            ただし、解雇を有効にするには、その理由が客観的に合理的で、社会通念上相当であると認められなければなりません。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-gray-50 p-6 rounded-lg">
+                            <li class="mb-2">会社の金銭を横領した</li>
+                            <li class="mb-2">同僚や顧客に暴力を振るった</li>
+                            <li>正当な理由なく無断欠勤が続く</li>
+                        </ul>
+                        <p class="mb-6">
+                            重要なのは、これらの解雇事由が<strong>就業規則に明記されていること</strong>です。どんなに悪質な行為であっても、就業規則に記載のない理由で解雇することは原則としてできません。従業員が10人未満の事業所でも、こうしたトラブルを防ぐために就業規則を作成しておくことが非常に重要です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">雇い止め：契約期間満了で更新しないこと</h3>
+                        <p class="mb-6">
+                            雇い止めとは、半年や1年など、<strong>契約期間の定めがある従業員（有期労働契約者）に対し、期間満了をもって契約を更新しないこと</strong>を指します。<br>
+                            多くのアルバイトは有期労働契約のため、この「雇い止め」が検討されるケースが多いでしょう。契約期間の途中で辞めさせる場合は「解雇」となり、手続きが全く異なるため注意が必要です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            雇い止めは「30日前の予告」だけでは不十分
+                        </h2>
+                        <p class="mb-6">
+                            雇い止めについて、少し知識のある方は「30日前までに予告すれば問題ない」と考えているかもしれません。確かに、厚生労働省は以下のいずれかに該当する従業員を雇い止めする場合、30日前までの予告を義務付けています。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-red-50 p-6 rounded-lg border border-red-100">
+                            <li class="mb-2 font-bold text-red-800">有期労働契約が3回以上更新されている</li>
+                            <li class="font-bold text-red-800">1年を超えて継続して勤務している</li>
+                        </ul>
+                        <p class="mb-6">
+                            しかし、<strong>この予告さえすれば誰でも自由に雇い止めができるわけではありません。</strong>ここに大きな落とし穴があります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">なぜ危険？カギとなる「更新への期待権」</h3>
+                        <p class="mb-6">
+                            労働契約法では、従業員の<strong>「期待権」</strong>が保護されています。期待権とは、過去に契約が何度も更新されてきた実績がある場合や、他の同僚が皆更新されている状況において、従業員が「次も当然更新されるだろう」と期待する権利のことです。<br>
+                            この期待権がある状態で、会社が一方的に「30日後で契約は終わりです」と通告することは、期待を裏切る行為とみなされ、雇い止めが無効になるリスクがあります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            期待権をなくすための具体的な3ステップ
+                        </h2>
+                        <p class="mb-6">
+                            では、アルバイトの雇い止めを適法に行うにはどうすればよいのでしょうか。それは、事前に「次の更新はないかもしれない」と本人に認識させ、期待権をなくしていく作業が必要になります。
+                        </p>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-lg text-white bg-navy-900 px-4 py-2 inline-block rounded-t-lg">
+                                ステップ1：業務改善通知書の発行</h4>
+                            <div class="border-2 border-navy-900 rounded-b-lg rounded-tr-lg p-6 bg-white">
+                                <p class="mb-0">
+                                    接客態度が悪い、遅刻が多いなど、従業員に改善すべき点がある場合、まずは「業務改善通知書」を交付します。<br>
+                                    この際、「態度が悪い」といった抽象的な指摘は避けましょう。「お客様には敬語を使う」「2分前には持ち場につく」など、誰が見ても判断できる具体的な内容を記載することが重要です。そして、「いつまでに改善されなければ、次の契約更新は行いません」という旨を明確に伝えます。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-lg text-white bg-navy-900 px-4 py-2 inline-block rounded-t-lg">
+                                ステップ2：改善期間中の観察と記録</h4>
+                            <div class="border-2 border-navy-900 rounded-b-lg rounded-tr-lg p-6 bg-white">
+                                <p class="mb-0">
+                                    通知書を渡した後は、改善期間（最低でも1ヶ月以上が望ましい）を設けて、本人の働きぶりを客観的に観察します。<br>
+                                    改善が見られれば問題ありませんが、もし再び問題行動があれば、その都度「先日の通知書でお伝えした点が守られていません」と指導し、日時や内容を記録に残しておきましょう。この記録が、後々のトラブルを防ぐための証拠となります。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-lg text-white bg-navy-900 px-4 py-2 inline-block rounded-t-lg">
+                                ステップ3：期待権がなくなった状態での雇い止め通知</h4>
+                            <div class="border-2 border-navy-900 rounded-b-lg rounded-tr-lg p-6 bg-white">
+                                <p class="mb-0">
+                                    改善期間が過ぎても状況が変わらない場合、本人の中には「このままでは契約更新されないかもしれない」という認識が生まれます。<br>
+                                    この「期待権がなくなった状態」で、契約満了の30日前までに、改めて契約を更新しない旨を正式に通知します。これが、法的に認められる雇い止めの基本的な流れです。
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            【注意】勤続3年以上のアルバイトを雇い止めする場合
+                        </h2>
+                        <p class="mb-6">
+                            勤続3年以上の従業員を雇い止めする場合、さらに注意が必要です。この場合、本人が失業保険を受給する際に「会社都合退職」として扱われる可能性があり、会社の助成金受給などに影響が出るケースがあります。<br>
+                            そのため、「今回で雇い止めです」と通告するのではなく、「次の契約期間が最後の更新です」と事前に伝えるなど、より慎重な対応が求められます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <p class="mb-4 font-bold text-navy-900">アルバイトの雇用に関するトラブルを防ぐために、以下の点を押さえておきましょう。</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>アルバイトであっても、正当な理由なく一方的に辞めさせることはできない。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>解雇には、就業規則に明記された客観的で合理的な理由が不可欠。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>雇い止めは「30日前の予告」だけでなく、従業員の「期待権」をなくす手順が重要。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>問題行動には業務改善通知書で具体的に指摘し、改善期間中の指導記録を残す。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>複雑な労務問題はリスクが高いため、専門家である社労士へ相談することが賢明。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">就業規則の作成や見直し、従業員とのトラブルに関するご相談は</h3>
+                            <p class="mb-8 text-gray-300">
+                                専門知識を持つアセント社労士事務所までお気軽にお問い合わせください。<br>
+                                貴社の状況に合わせた最適なサポートを提供します。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="index.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; トップページに戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

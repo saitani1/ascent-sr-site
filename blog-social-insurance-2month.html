@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短時間労働者の社会保険は「2ヶ月連続」がカギ　週20時間を超えたら、いつ加入させるべき？ | アセント社労士事務所</title>
+    <meta name="description" content="パート・アルバイトの社会保険加入基準、特に「2ヶ月連続ルール」について解説。週20時間を超える月がある場合の判断基準やリスク、シフト管理のポイントを紹介。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">BLOG</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    短時間労働者の社会保険は「2ヶ月連続」がカギ<br>週20時間を超えたら、いつ加入させるべき？
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-social-insurance-2month.jpg" alt="社会保険2ヶ月連続ルール解説イラスト"
+                            class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            「今月はたまたま忙しかっただけだから、まだ加入させなくていいよね？」「20時間を超える月もあるけれど、基準はどこで見るの？」
+                        </p>
+                        <p class="mb-6">
+                            パート・アルバイトのシフトが月ごとに増えたり減ったりすると、判断に迷う場面が多くなります。<br>
+                            ポイントは「1ヶ月だけ」ではなく<strong>「2ヶ月連続」</strong>して基準を超えているかどうか。<br>
+                            本記事では、短時間労働者の社会保険加入で実務上とても重要な「2ヶ月連続ルール」 にフォーカスして、アセント社労士事務所がわかりやすく解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            社会保険の加入基準は「時間」と「規模」からスタート
+                        </h2>
+                        <p class="mb-6">
+                            まず大前提として、短時間労働者の社会保険（健康保険・厚生年金）の加入義務は「1週間の所定労働時間」と「会社の規模（社会保険の被保険者数）」で決まります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-gray-50 p-6 rounded-lg">
+                            <li class="mb-2"><strong>被保険者数50人以下の会社</strong>：週30時間以上で加入義務</li>
+                            <li><strong>被保険者数51人以上の会社</strong>：週20時間以上で加入義務</li>
+                        </ul>
+                        <p class="mb-6">
+                            ここで詳しく説明しすぎると本題からそれるので、この記事では<strong>「週20時間のラインを超えたら、加入の検討が必要になる」</strong>という前提だけ押さえておいてください。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            実務で超重要なのは「2ヶ月連続ルール」
+                        </h2>
+                        <p class="mb-6">
+                            では、シフト制で毎月の労働時間がバラバラなパートさんの場合、どのタイミングで社会保険加入に切り替えるべきでしょうか。
+                        </p>
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1ヶ月だけ超えた場合はどう考える？</h3>
+                        <p class="mb-4">
+                            例えば、雇用契約書では「週15時間程度」の予定でも、繁忙期で
+                        </p>
+                        <div class="bg-gray-100 p-4 rounded mb-6">
+                            <p class="mb-1">・1ヶ月目：平均 週22時間（＝月約95時間勤務）</p>
+                            <p class="mb-0">・2ヶ月目：平均 週23時間（＝月約100時間勤務）</p>
+                        </div>
+                        <p class="mb-6">
+                            となることがあります。このような場合、実務上の目安として使われているのが<strong>「2ヶ月連続で週20時間（月換算で約87時間）を超えたかどうか」</strong>です。
+                        </p>
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">年金事務所の調査でもよく使われる考え方</h3>
+                        <p class="mb-6">
+                            年金事務所が調査に入った際も、「直近数ヶ月の勤務実績を確認し、2ヶ月連続で週20時間以上で働いているのに、社会保険に入れていない」という点を指摘されるケースがよくあります。<br>
+                            そのため、実務では<strong>「2ヶ月連続で基準時間（週20時間・月約87時間）を超えたら、3ヶ月目から社会保険に加入させる」</strong>という運用が、現場での一つの「ライン」になっています。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            具体的なイメージ：このパートさん、いつから加入？
+                        </h2>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div class="border-2 border-red-200 rounded-xl p-6 bg-red-50">
+                                <h3 class="text-lg font-bold text-red-800 mb-3 border-b-2 border-red-200 pb-2">
+                                    ケース1：繁忙期に2ヶ月連続で基準超え</h3>
+                                <ul class="mb-4 text-sm">
+                                    <li>4月：週18時間（加入基準未満）</li>
+                                    <li class="font-bold text-red-600">5月：週22時間（基準超え）</li>
+                                    <li class="font-bold text-red-600">6月：週21時間（基準超え）</li>
+                                </ul>
+                                <p class="text-sm">
+                                    5月・6月と<strong>2ヶ月連続で基準超え</strong><br>
+                                    ↓<br>
+                                    <strong>7月から社会保険に加入させる</strong>のが安全な運用
+                                </p>
+                            </div>
+                            <div class="border-2 border-blue-200 rounded-xl p-6 bg-blue-50">
+                                <h3 class="text-lg font-bold text-blue-800 mb-3 border-b-2 border-blue-200 pb-2">
+                                    ケース2：単発的に1ヶ月だけ増えた</h3>
+                                <ul class="mb-4 text-sm">
+                                    <li>4月：週18時間</li>
+                                    <li class="font-bold text-red-600">5月：週22時間（基準超え）</li>
+                                    <li>6月：週17時間（基準未満）</li>
+                                </ul>
+                                <p class="text-sm">
+                                    一時的に1ヶ月だけ超えただけで、その後また下がった場合は、直ちに加入義務があるとまでは言い切れないケースもあります。ただし、「今後も同じような働き方が続きそうか」など見込みを踏まえた判断が必要です。
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            加入が遅れた場合のリスク：遡及適用でまとめて負担が発生
+                        </h2>
+                        <p class="mb-6">
+                            「忙しくて手続きを先延ばしにしていた」「ギリギリセーフだと思っていた」そんな状態のまま年金事務所の調査が入ると、加入漏れの指導を受けることがあります。
+                        </p>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-8">
+                            <h3 class="text-lg font-bold text-yellow-800 mb-2">遡及適用（そきゅうてきよう）とは？</h3>
+                            <p class="mb-4">
+                                過去にさかのぼって社会保険の加入手続きを行い、<strong>会社・本人双方の保険料をまとめて納付</strong>することです。
+                            </p>
+                            <p class="mb-0 text-sm">
+                                保険料は最大で<strong>過去2年分</strong>さかのぼって請求される可能性があります。<br>
+                                対象者が複数人いたり、勤務時間が長かったりすると、会社負担分だけでも数十万円〜数百万円規模になることも。さらに本人からも過去分の保険料を徴収しなければならず、大きなトラブルの原因になります。
+                            </p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            「2ヶ月連続ルール」を活かした勤怠・シフト管理のポイント
+                        </h2>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                                    1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">ボーダーラインの従業員をリストアップする</h4>
+                                    <p class="text-sm text-gray-600">週18〜22時間程度で働いている人や、繁忙期にシフトが増えがちな人を事前に把握しておきましょう。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                                    2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">毎月の実績時間を「累積」でチェックする</h4>
+                                    <p class="text-sm text-gray-600">毎月、「2ヶ月連続で月87時間前後を超えていないか」をチェックするルーティンを作りましょう。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                                    3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">超えそうな場合は、事前に本人と相談する</h4>
+                                    <p class="text-sm text-gray-600">
+                                        「このままだと加入ラインを超えます」と伝え、加入してしっかり働くか、扶養内に抑えるか、本人の希望を確認しましょう。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                                    4</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">2ヶ月連続で超えたら、迷わず加入手続きへ</h4>
+                                    <p class="text-sm text-gray-600">「2ヶ月連続で超えた」「今後も続きそう」なら、速やかに加入手続きへ。先延ばしはリスクです。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <p class="mb-4 font-bold text-navy-900">2ヶ月連続で超えたら「3ヶ月目から加入」が安全ラインです。</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>短時間労働者の社会保険加入は、週20時間前後で働く人が要注意。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>実務上は「2ヶ月連続で週20時間（月約87時間）を超えたか」が重要な判断材料。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>加入漏れは「遡及適用」で最大2年分の保険料を請求されるリスクがある。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">社会保険の加入判断やシフト管理のご相談は</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、短時間労働者の加入判断や、リスクのないシフト管理の運用サポートを行っています。<br>
+                                「うちのパートさん、このままで大丈夫？」と迷ったら、お気軽にご相談ください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="index.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; トップページに戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

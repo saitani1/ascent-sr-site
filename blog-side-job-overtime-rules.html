@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>副業の残業代は誰が払う？企業が知っておくべきルールと実務対策を社労士が解説 | アセント社労士事務所</title>
+    <meta name="description" content="副業解禁時代の残業代ルール（労働時間の通算）と企業が取るべき対策を解説。後から雇った会社が残業代を払う原則や、採用時・在籍時のチェックポイントを紹介。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">BLOG</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    副業の残業代は誰が払う？<br>企業が知っておくべきルールと実務対策を社労士が解説
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-side-job-overtime-rules.jpg" alt="副業の残業代ルール解説イラスト" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            「残業代は誰が払うの？」 副業解禁時代の“見落とし”がちなリスク
+                        </p>
+                        <p class="mb-6">
+                            副業を認める企業が増える一方、<strong>「異なる会社で働いている場合の残業代計算」</strong>に悩む相談が急増しています。<br>
+                            現行ルールでは、本業と副業の労働時間を合算（通算）し、1日8時間・週40時間を超えた分は時間外労働（残業）として割増賃金の支払いが必要です。<br>
+                            特に<strong>「後から雇用した会社」</strong>の負担が発生しやすい点が、採用側の大きなリスクになります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            副業における残業代の基本ルール
+                        </h2>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1. 労働時間の「通算」とは</h3>
+                        <p class="mb-4">
+                            従業員が2社で勤務している場合、<strong>両社の労働時間を合計して管理します（通算）。</strong><br>
+                            合算した結果、1日8時間または週40時間を超えた部分は「残業」となり、割増賃金（通常の1.25倍以上）の支払いが必要になります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">2. 残業代は誰が払う？</h3>
+                        <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                            <p class="mb-2 font-bold">原則：後から雇用契約を結んだ会社</p>
+                            <p class="text-sm">
+                                原則として、「後から雇用契約を結んだ会社」が、通算の結果発生した残業代を支払う義務を負います。<br>
+                                （例：A社で雇用 → 後からB社でも雇用の場合、B社が残業部分を負担）
+                            </p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            よくある実務上の困りごと
+                        </h2>
+                        <ul class="list-none space-y-4 mb-8">
+                            <li class="flex items-start bg-red-50 p-4 rounded-lg">
+                                <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3"></i>
+                                <span>本業A社ですでに8時間勤務した後に出勤してきた場合、<strong>最初の1分から残業（割増賃金）</strong>になる。</span>
+                            </li>
+                            <li class="flex items-start bg-red-50 p-4 rounded-lg">
+                                <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3"></i>
+                                <span>採用直後の新人アルバイトでも、<strong>業務習熟度にかかわらず割増賃金対象</strong>になるため、人件費が想定より高くなる。</span>
+                            </li>
+                        </ul>
+                        <p class="mb-6">
+                            これを知らずに採用すると、人件費の想定超過やシフト管理の混乱につながります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            企業が取るべき具体的な対策リスト
+                        </h2>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">A. 採用・面接段階の対策</h3>
+                        <div class="bg-white border text-sm border-gray-200 p-6 rounded-lg shadow-sm mb-6">
+                            <h4 class="font-bold border-b border-gray-200 pb-2 mb-3">チェックリスト</h4>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center"><i class="fas fa-check-square text-accent-500 mr-2"></i>
+                                    副業の有無／雇用形態（正社員・契約・アルバイト）を確認</li>
+                                <li class="flex items-center"><i class="fas fa-check-square text-accent-500 mr-2"></i>
+                                    他社の所定労働時間・残業見込み・就業時間帯を確認</li>
+                                <li class="flex items-center"><i class="fas fa-check-square text-accent-500 mr-2"></i>
+                                    雇用開始日（どちらが先か）を確認</li>
+                            </ul>
+                            <div class="bg-gray-100 p-4 rounded text-xs">
+                                <strong>面接での質問例：</strong><br>
+                                「現在の勤務先での1週あたりの労働時間と勤務時間帯を教えてください」<br>
+                                「貴社（本業）との雇用関係の開始日を示す書類は提示可能ですか？」
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">B. 在籍中の申告・請求への対応</h3>
+                        <p class="mb-4">
+                            従業員から「副業なので残業代を」と申告があった場合、原則支払い義務があります。ただし、口頭ではなく<strong>客観資料での確認</strong>を徹底しましょう。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6">
+                            <li>本業の雇用契約書（雇用開始日の確認）</li>
+                            <li>本業の勤務表・タイムカード（実労働時間の確認）</li>
+                        </ul>
+                        <p class="text-sm bg-gray-50 p-4 rounded mb-6">
+                            ※書類が提出されず客観把握ができない場合、残業代の正確な計算が困難なため、通常賃金の支払いにとどめるのが実務的な対応ケースが多いです。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">C. 規程・体制の整備</h3>
+                        <p class="mb-4">
+                            就業規則や副業規定を整備し、リスクをコントロールしましょう。
+                        </p>
+                        <ul class="list-disc pl-6 mb-8">
+                            <li><strong>副業からの労働時間報告義務</strong>を明記する</li>
+                            <li>虚偽申告時の対応を定めておく</li>
+                            <li>「通算で上限時間を超えないようなシフト調整」への協力義務を定める</li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <ul class="space-y-3 font-medium">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>基本：副業の労働時間は通算。1日8h／週40h超は残業。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>支払者：原則、後から雇用した会社が負担。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>採用時：他社勤務状況の確認が必須。人件費リスクを事前に把握。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>運用：就業規則や契約書で「報告義務」「通算管理」のルール化を。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">副業規定や採用時のルール整備でお困りですか？</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、副業規定の新設・見直し、雇用契約書のテンプレート整備、勤怠・シフト運用の設計など、副業時代の労務リスク対策をサポートしています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="index.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; トップページに戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
