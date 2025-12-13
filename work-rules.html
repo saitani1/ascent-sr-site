@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>就業規則見直しサポート | アセント社労士事務所</title>
-    <meta name="description" content="大阪のサービス業向け就業規則見直しサポート。リスク診断、トラブル予防、法改正対応など。">
+    <meta name="description" content="大阪のサービス業向け就業規則見直しサポート。「昔作ったまま」「ひな形そのまま」の就業規則はリスクです。現場に合ったルールで見直しませんか？">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="就業規則見直しサポート | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/work-rules.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/representative-profile.jpg">
+    <meta property="og:description" content="「昔作ったまま」「ひな形そのまま」の就業規則はリスクです。現場に合ったルールで見直しませんか？簡単なリスク診断も公開中。">
+    <meta name="twitter:card" content="summary_large_image">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,9 +60,9 @@
                 </div>
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex space-x-6 items-center">
-                    <a href="index.html#home"
+                    <a href="index.html"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
-                    <a href="index.html#services"
+                    <a href="pricing.html"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
                     <a href="index.html#contact-form-anchor"
                         class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
@@ -66,86 +75,362 @@
 
     <main class="pt-20">
         <!-- Hero -->
-        <section class="bg-navy-900 text-white py-20">
-            <div class="container mx-auto px-4 text-center">
-                <span class="text-accent-500 font-bold tracking-wider">SPECIAL CONTENTS</span>
-                <h1 class="text-3xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-                    就業規則見直しサポート<br>特設サイトを公開しました
+        <section class="bg-navy-900 text-white py-24 relative overflow-hidden">
+            <!-- Background Decoration (Optional) -->
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <span
+                    class="inline-block bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wide">SPECIAL
+                    CONTENTS</span>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-8 drop-shadow-lg">
+                    その就業規則、会社の<br>
+                    <span class="text-accent-500">“お守り”</span>になっていますか？
                 </h1>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                    「昔作ったまま」「ネットのひな形をほぼそのまま使っている」——<br>
-                    そんな就業規則が、実は会社のリスクになっているケースが増えています。
+                <p class="text-xl text-gray-200 font-bold mb-6">
+                    トラブルが起きてからでは、もう遅いかもしれません。
                 </p>
-                <div class="mt-10">
-                    <a href="https://saitani1.github.io/ascent/rulebook/" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 text-lg">
-                        就業規則見直しサポート 特設サイト公開中！ <i class="fas fa-external-link-alt ml-2"></i>
-                    </a>
+                <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        「昔作ったまま」「とりあえずネットのひな形で作った」<br>
+                        そんな就業規則が、気づかないうちに会社のリスクになっていることがあります。<br>
+                        いまこそ、会社を守り、従業員も納得できるルールに整えませんか。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#diagnosis"
+                            class="inline-flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 w-full sm:w-auto">
+                            <i class="fas fa-check-circle mr-2"></i> 今すぐリスクをチェック
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Content -->
+        <!-- Manga Section -->
+        <section class="py-16 bg-orange-50">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-8 items-center justify-center flex gap-3">
+                    <i class="fas fa-book-open text-accent-500"></i>
+                    <span>マンガでわかる！<br class="md:hidden">就業規則の落とし穴</span>
+                </h2>
+                <div
+                    class="bg-white p-4 rounded-xl shadow-2xl inline-block transform hover:scale-[1.01] transition duration-500">
+                    <img src="images/manga-work-rules.jpg" alt="マンガ：就業規則の落とし穴"
+                        class="w-full max-w-lg mx-auto h-auto rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-
-                <div class="mb-16">
-                    <h2 class="text-2xl font-bold text-navy-900 mb-6 border-l-4 border-accent-500 pl-4">就業規則を放置するリスク
-                    </h2>
-                    <p class="leading-relaxed text-gray-600 mb-6">
-                        法改正は頻繁に行われており、数年前に作成した就業規則では現在の法律に対応できていない可能性があります。
-                        未払賃金のリスクや、ハラスメント対応の不備など、古い規則を使い続けることは経営上の大きなリスクとなり得ます。
-                    </p>
-                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
-                                <span class="font-bold">法改正に対応できていない（育児介護休業法、パワハラ防止法など）</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
-                                <span class="font-bold">実態と乖離している（残業代の計算方法、休憩時間など）</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
-                                <span class="font-bold">トラブル時の根拠規定がない</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-navy-900">こんなお悩みはありませんか？</h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div class="mb-16">
-                    <h2 class="text-2xl font-bold text-navy-900 mb-6 border-l-4 border-accent-500 pl-4">見直すことで得られるメリット
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="font-bold text-lg mb-3 text-navy-900">リスクの低減</h3>
-                            <p class="text-sm text-gray-600">労使トラブルを未然に防ぎ、万が一の際も会社を守る根拠となります。</p>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="font-bold text-lg mb-3 text-navy-900">助成金の活用</h3>
-                            <p class="text-sm text-gray-600">最新の就業規則に整備することで、様々な助成金の申請要件を満たせる場合があります。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-12">
-                    <h2 class="text-2xl font-bold text-navy-900 mb-6 border-l-4 border-accent-500 pl-4">リスク診断とご相談</h2>
-                    <p class="leading-relaxed text-gray-600 mb-8">
-                        当事務所では、貴社の就業規則の現状を分析し、リスクを診断する「かんたんセルフチェック」をご用意しています。<br>
-                        数分でチェックできますので、「うちは大丈夫かな？」と思われたタイミングで、ぜひ一度お試しください。
+                <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-2xl p-8 md:p-12">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i
+                                class="fas fa-exclamation-triangle text-accent-500 mt-1.5 mr-3 text-xl flex-shrink-0"></i>
+                            <span class="text-lg font-bold text-gray-700">何年も前に作った就業規則を、そのまま放置している</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i
+                                class="fas fa-exclamation-triangle text-accent-500 mt-1.5 mr-3 text-xl flex-shrink-0"></i>
+                            <span class="text-lg font-bold text-gray-700">顧問から「そろそろ見直した方がいい」と言われているが、手つかずの状態</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i
+                                class="fas fa-exclamation-triangle text-accent-500 mt-1.5 mr-3 text-xl flex-shrink-0"></i>
+                            <span class="text-lg font-bold text-gray-700">副業・テレワーク・SNSなど、新しい働き方にルールが追いついていない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i
+                                class="fas fa-exclamation-triangle text-accent-500 mt-1.5 mr-3 text-xl flex-shrink-0"></i>
+                            <span class="text-lg font-bold text-gray-700">問題社員がいても、就業規則を根拠にどう対応していいか分からない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i
+                                class="fas fa-exclamation-triangle text-accent-500 mt-1.5 mr-3 text-xl flex-shrink-0"></i>
+                            <span class="text-lg font-bold text-gray-700">労基署の調査や、突然の労務トラブルが正直こわい</span>
+                        </li>
+                    </ul>
+                    <p class="mt-8 text-center text-xl font-bold text-navy-900">
+                        ひとつでも当てはまったら、<span class="text-accent-500 bg-yellow-100 px-2">「就業規則の見直しどき」</span>かもしれません。
                     </p>
                 </div>
-
-                <div class="text-center">
-                    <a href="index.html#contact-form-anchor"
-                        class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-12 rounded-full text-lg shadow-xl transition transform hover:scale-105">
-                        <i class="fas fa-clipboard-check mr-2"></i> 就業規則の見直しについて相談する
-                    </a>
-                </div>
-
             </div>
         </section>
+
+        <!-- Benefits -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">MERIT</span>
+                    <h2 class="text-3xl font-bold text-navy-900 mt-2">見直すことで、こんなメリットが生まれます</h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Merit 1 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div
+                            class="w-16 h-16 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-2xl mx-auto mb-6">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 mb-3">トラブルを<br>未然に防ぐ</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            懲戒・解雇などのルールが明確になり、労務トラブルを「起きてから対応」ではなく「起きる前に予防」できます。</p>
+                    </div>
+                    <!-- Merit 2 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div
+                            class="w-16 h-16 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-2xl mx-auto mb-6">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 mb-3">公平な<br>ルール運用</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            労働時間・残業・有給休暇など、グレーな運用を減らし、すべての従業員に公平なルールを適用できます。</p>
+                    </div>
+                    <!-- Merit 3 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div
+                            class="w-16 h-16 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-2xl mx-auto mb-6">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 mb-3">会社の<br>信頼性アップ</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">採用・定着に強い「安心して働ける会社」としてイメージが向上し、優秀な人材の確保につながります。
+                        </p>
+                    </div>
+                    <!-- Merit 4 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div
+                            class="w-16 h-16 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-2xl mx-auto mb-6">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-navy-900 mb-3">経営の<br>土台が固まる</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">助成金申請や働き方改革に取り組む際の「土台」として活用でき、経営戦略の選択肢が広がります。
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-center mt-12 text-lg font-bold text-navy-900">
+                    就業規則は、「お飾りのファイル」ではなく、<br>
+                    会社の経営を支える<span class="text-accent-500 text-2xl">“ルールブック”</span>です。
+                </p>
+            </div>
+        </section>
+
+        <!-- Diagnosis Checklist -->
+        <section id="diagnosis" class="py-20 bg-navy-900 text-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">CHECK LIST</span>
+                    <h2 class="text-3xl font-bold mt-2">かんたん就業規則リスク診断</h2>
+                    <p class="mt-4 text-gray-300">
+                        いきなり全部作り直す必要はありません。<br>
+                        まずは、今の就業規則にどれくらいリスクが潜んでいるかチェックしてみましょう。
+                    </p>
+                </div>
+
+                <div class="bg-navy-800 p-8 md:p-12 rounded-2xl border border-navy-700">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <input type="checkbox"
+                                class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer text-accent-500 rounded focus:ring-offset-0">
+                            <span class="text-lg text-gray-200">最後に就業規則を見直してから3年以上経過している</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">法改正（育児・介護休業法、パワハラ防止など）の内容が反映されているか分からない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">パートタイマーや契約社員用の規定がない、または正社員と全く同じ内容だ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">テレワークや在宅勤務に関するルール（費用負担、労働時間管理など）が定められていない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">副業・兼業について、許可制なのか届出制なのか、ルールが明確でない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">SNSの私的利用に関する注意喚起や、会社の信用を損なう行為に関する規定がない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">懲戒処分の種類や、どのような場合にどの処分になるかが具体的に定められていない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">私傷病による休職の期間や、復職の手続きが明確でない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">従業員がいつでも就業規則を閲覧できる状態になっていない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-accent-500 cursor-pointer">
+                            <span class="text-lg text-gray-200">従業員数が10人以上なのに、就業規則を労働基準監督署へ届け出ていない</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-gray-300 mb-6">チェックがついた項目など、気になる点があればお気軽にご相談ください。</p>
+                    <a href="index.html#contact-form-anchor"
+                        class="inline-block bg-white text-navy-900 font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-105">
+                        無料相談・診断を申し込む
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">FLOW</span>
+                    <h2 class="text-3xl font-bold text-navy-900 mt-2">サポートの流れ</h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4">
+                    <!-- Step 1 -->
+                    <div class="relative p-6 bg-gray-50 rounded-lg text-center">
+                        <div class="text-accent-500 font-black text-4xl opacity-20 absolute top-2 right-4">01</div>
+                        <h3 class="font-bold text-navy-900 mb-3 text-lg">ヒアリング</h3>
+                        <p class="text-sm text-gray-600">現状のお悩みやご要望、現在の運用状況について詳しくお伺いします。</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative p-6 bg-gray-50 rounded-lg text-center">
+                        <div class="text-accent-500 font-black text-4xl opacity-20 absolute top-2 right-4">02</div>
+                        <h3 class="font-bold text-navy-900 mb-3 text-lg">リスク診断</h3>
+                        <p class="text-sm text-gray-600">現行の就業規則を分析し、法的リスクや改善点を洗い出し、お見積もりいたします。</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative p-6 bg-gray-50 rounded-lg text-center">
+                        <div class="text-accent-500 font-black text-4xl opacity-20 absolute top-2 right-4">03</div>
+                        <h3 class="font-bold text-navy-900 mb-3 text-lg">改定案作成</h3>
+                        <p class="text-sm text-gray-600">会社に最適化した改定案を作成。条文の意図も分かりやすくご説明します。</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative p-6 bg-gray-50 rounded-lg text-center">
+                        <div class="text-accent-500 font-black text-4xl opacity-20 absolute top-2 right-4">04</div>
+                        <h3 class="font-bold text-navy-900 mb-3 text-lg">納品・運用</h3>
+                        <p class="text-sm text-gray-600">届出や社員説明会の実施、その後の運用サポートもお任せください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent-500 font-bold tracking-wider">PLANS</span>
+                    <h2 class="text-3xl font-bold text-navy-900 mt-2">料金プラン</h2>
+                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Plan 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                        <div class="bg-gray-100 py-4 text-center font-bold text-gray-700">ライトプラン</div>
+                        <div class="p-8 flex-1">
+                            <h3 class="text-xl font-bold text-center text-navy-900 mb-4">法改正対応<br>部分修正</h3>
+                            <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    法改正への対応</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    特定条項の追加・修正</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    簡易リスク診断</li>
+                            </ul>
+                            <div class="text-center mt-auto">
+                                <a href="index.html#contact-form-anchor"
+                                    class="block w-full py-2 border border-navy-900 text-navy-900 rounded font-bold hover:bg-navy-50 transition">相談する</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-xl overflow-hidden border-2 border-accent-500 transform scale-105 z-10 flex flex-col">
+                        <div class="bg-accent-500 py-4 text-center font-bold text-white">スタンダードプラン</div>
+                        <div class="p-8 flex-1">
+                            <h3 class="text-xl font-bold text-center text-navy-900 mb-2">全体見直し<br>フルオーダーメイド</h3>
+                            <p class="text-xs text-center text-gray-500 mb-6">★働き方改革推進支援助成金 対象</p>
+                            <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    全体的な構成の見直し</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    完全オーダーメイド作成</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    詳細リスク診断</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    社労士による研修</li>
+                            </ul>
+                            <div class="text-center mt-auto">
+                                <a href="index.html#contact-form-anchor"
+                                    class="block w-full py-3 bg-navy-900 text-white rounded font-bold hover:bg-navy-800 transition shadow-lg">このプランで相談する</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                        <div class="bg-gray-100 py-4 text-center font-bold text-gray-700">顧問契約プラン</div>
+                        <div class="p-8 flex-1">
+                            <h3 class="text-xl font-bold text-center text-navy-900 mb-4">継続的な<br>運用サポート</h3>
+                            <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    就業規則の継続メンテナンス</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    労務相談（回数無制限）</li>
+                                <li class="flex items-start"><i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    法改正情報の提供</li>
+                            </ul>
+                            <div class="text-center mt-auto">
+                                <a href="index.html#contact-form-anchor"
+                                    class="block w-full py-2 border border-navy-900 text-navy-900 rounded font-bold hover:bg-navy-50 transition">相談する</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-8">※料金は従業員数や改定ボリュームにより変動します。お気軽にお見積もりをご依頼ください。</p>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-24 bg-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-navy-900 mb-6">初回相談は無料です</h2>
+                <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+                    「まだ依頼するか分からない」「ちょっと話を聞いてみたい」という場合でも大歓迎です。<br>
+                    御社の状況に合わせた最適なプランをご提案します。
+                </p>
+                <a href="index.html#contact-form-anchor"
+                    class="inline-flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-5 px-12 rounded-full shadow-xl transition transform hover:scale-105 text-lg">
+                    <i class="fas fa-paper-plane mr-2"></i> お問い合わせはこちら
+                </a>
+                <div class="mt-8 text-sm text-gray-500">
+                    <p>アセント社労士事務所</p>
+                    <p>大阪市中央区南本町2-3-12 EDGE本町3階</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
