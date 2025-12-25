@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>労務に効く 最新ブログ | アセント社労士事務所</title>
+    <meta name="description" content="大阪のサービス業専門社労士、アセント社労士事務所のブログ一覧ページです。労務の現場で役立つ情報や最新の法改正情報を発信しています。">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="労務に効く 最新ブログ | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-list.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/representative-new.jpg">
+    <meta property="og:description" content="大阪のサービス業専門社労士、アセント社労士事務所のブログ一覧ページです。労務の現場で役立つ情報や最新の法改正情報を発信しています。">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-20 px-4">
+            <div class="container mx-auto text-center max-w-4xl">
+                <span class="text-accent-500 font-bold tracking-wider block mb-2">LATEST BLOG</span>
+                <h1 class="text-3xl md:text-5xl font-black mb-6">労務に効く 最新ブログ</h1>
+                <p class="text-gray-300 text-lg">
+                    日々の業務で感じたこと、サービス業の現場における労務のヒント、<br class="hidden md:inline">
+                    最新の法改正情報などを綴っています。
+                </p>
+            </div>
+        </section>
+
+        <!-- Blog List Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+
+                <!-- Blog Entries Container -->
+                <div class="grid gap-8">
+
+                    <!-- New Entry: 2026 Labor Law Reform -->
+                    <article
+                        class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row">
+                        <div
+                            class="md:w-1/3 aspect-[16/9] relative bg-gray-100 flex items-center justify-center text-gray-300 text-4xl">
+                            <img src="images/blog-2026-labor-law-reform.jpg" alt="2026年労働基準法改正案見送り"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-4 mb-3 text-sm">
+                                <span class="text-gray-500"><i class="far fa-calendar-alt mr-2"></i>2025.12.24</span>
+                                <span class="bg-navy-900 text-white px-2 py-1 rounded text-xs">ニュース</span>
+                            </div>
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-navy-900 mb-3 hover:text-accent-500 transition">
+                                <a href="blog-2026-labor-law-reform.html">2026年労働基準法改正案が見送りに！</a>
+                            </h2>
+                            <p class="text-gray-600 line-clamp-3 mb-4">
+                                2026年提出予定の労基法改正案は議論未成熟で見送り。週44→40統一、勤務間インターバル義務化、労働者代表選出適正化、副業時間通算見直し等は延期し再提出は2027年以降見込み。
+                            </p>
+                            <a href="blog-2026-labor-law-reform.html"
+                                class="text-accent-500 font-bold hover:underline flex items-center">
+                                続きを読む <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Entry Template (Paste this block to add a new entry) -->
+                    <!-- 
+                    <article class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row">
+                        <div class="md:w-1/3 aspect-[16/9] relative bg-gray-200">
+                           <img src="images/sample-image.jpg" alt="Article Thumbnail" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-4 mb-3 text-sm">
+                                <span class="text-gray-500"><i class="far fa-calendar-alt mr-2"></i>2024.01.01</span>
+                                <span class="bg-accent-500 text-white px-2 py-1 rounded text-xs">カテゴリー</span>
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-bold text-navy-900 mb-3 hover:text-accent-500 transition">
+                                <a href="#">記事のタイトルをここに入力します記事のタイトルをここに入力します</a>
+                            </h2>
+                            <p class="text-gray-600 line-clamp-3 mb-4">
+                                記事の抜粋や導入文をここに入力します。記事の抜粋や導入文をここに入力します。記事の抜粋や導入文をここに入力します。
+                            </p>
+                            <a href="#" class="text-accent-500 font-bold hover:underline flex items-center">
+                                続きを読む <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </article> 
+                    -->
+
+                    <!-- Example Entry 1 -->
+                    <article
+                        class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row">
+                        <div
+                            class="md:w-1/3 aspect-[16/9] relative bg-gray-100 flex items-center justify-center text-gray-300 text-4xl">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-4 mb-3 text-sm">
+                                <span class="text-gray-500"><i class="far fa-calendar-alt mr-2"></i>2025.12.25</span>
+                                <span class="bg-navy-900 text-white px-2 py-1 rounded text-xs">日記</span>
+                            </div>
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-navy-900 mb-3 hover:text-accent-500 transition">
+                                <a href="#">ブログページを開設しました</a>
+                            </h2>
+                            <p class="text-gray-600 line-clamp-3 mb-4">
+                                本日より、こちらのページで日々の気づきやコラムを更新していきます。これまでのnoteでの更新に加え、より自社サイト内での情報発信を強化していきたいと思います。
+                            </p>
+                            <a href="#" class="text-accent-500 font-bold hover:underline flex items-center">
+                                続きを読む <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Example Entry 2 -->
+                    <article
+                        class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row">
+                        <div
+                            class="md:w-1/3 aspect-[16/9] relative bg-gray-100 flex items-center justify-center text-gray-300 text-4xl">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-4 mb-3 text-sm">
+                                <span class="text-gray-500"><i class="far fa-calendar-alt mr-2"></i>2025.12.20</span>
+                                <span class="bg-accent-500 text-white px-2 py-1 rounded text-xs">マラソン</span>
+                            </div>
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-navy-900 mb-3 hover:text-accent-500 transition">
+                                <a href="#">週末のトレーニング日誌：30km走</a>
+                            </h2>
+                            <p class="text-gray-600 line-clamp-3 mb-4">
+                                次のウルトラマラソンに向けて、週末は30kmのロングランを行いました。冬の寒空の下ですが、走り終わった後の爽快感は格別です。継続は力なり。社労士業務もマラソンも、コツコツとした積み重ねが大切です。
+                            </p>
+                            <a href="#" class="text-accent-500 font-bold hover:underline flex items-center">
+                                続きを読む <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination (Optional for future) -->
+                <div class="mt-16 flex justify-center gap-2">
+                    <span class="px-4 py-2 bg-navy-900 text-white rounded-lg font-bold">1</span>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">2</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">3</a>
+                    <span class="px-4 py-2 text-gray-500">...</span>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">Next
+                        &raquo;</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div>
+                    <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 text-sm">
+                    <a href="index.html#home" class="hover:text-white">ホーム</a>
+                    <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                    <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                    <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col items-center justify-center">
+                <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                    target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                        class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                </a>
+                <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-600">
+                &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
