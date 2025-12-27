@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス業の年末年始！有給休暇の時季変更権は使える？ | アセント社労士事務所</title>
+    <meta name="description"
+        content="年末年始の繁忙期に有給休暇申請があった場合、会社は「時季変更権」を行使できるのか？具体的なケース（業務運営不可能、複数人申請、長期休暇）や対策について解説します。">
+    <meta property="og:title" content="サービス業の年末年始！有給休暇の時季変更権は使える？ | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-paid-leave-holiday.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/blog-paid-leave.jpg">
+    <meta property="og:description" content="年末年始の繁忙期に有給休暇申請があった場合、会社は「時季変更権」を行使できるのか？具体的なケースや対策について解説します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">対応事例</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    サービス業の年末年始！<br>有給休暇の時季変更権は使える？
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-paid-leave.jpg" alt="年末年始の有給休暇と時季変更権" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            「ぐぬぬ…戦場だ！この忙しい時に有給！？」「社長、お待ちください！」<br>
+                            シフトが崩れる…でも有休は原則OK。では時季変更権を使えるのはどんなとき？
+                        </p>
+                        <p class="mb-6">
+                            年末年始は多くのサービス業で繁忙期を迎えます。この時期、従業員からの有給休暇申請に対し、会社側が「時季変更権」を行使できるのか、といったご相談が増える時期でもあります。<br>
+                            今回は、有給休暇の時季変更権について、具体的なケースを交えながら解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            サービス業の年末年始と有給休暇
+                        </h2>
+                        <p class="mb-6">
+                            クリスマスから年末年始にかけて、サービス業では多忙を極める時期です。従業員の方々が活躍される一方で、この時期に有給休暇の取得を希望されるケースもあります。会社としては、業務への支障を懸念されることでしょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            繁忙期の有給申請、会社は「時季変更権」を使えるのか？
+                        </h2>
+                        <p class="mb-6">
+                            結論から言うと、<strong>単に「忙しいから」という理由だけでは、時季変更権の行使は認められにくい</strong>のが現状です。<br>
+                            有給休暇の取得は労働者の権利であり、原則として希望する日に取得させなければなりません。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            時季変更権の行使が認められるケース
+                        </h2>
+                        <p class="mb-6">
+                            では、どのような場合に会社は時季変更権を行使できるのでしょうか。主なケースを3つご紹介します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1. 業務の運営が不可能になる場合</h3>
+                        <p class="mb-4">
+                            特定の従業員が有給休暇を取得することで、以下のような状況に陥る場合です。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-gray-50 p-6 rounded-lg">
+                            <li class="mb-2">その従業員がいなければ、店舗や施設を閉鎖せざるを得ない</li>
+                            <li>事業の運営そのものが成り立たなくなる</li>
+                        </ul>
+                        <p class="mb-6">
+                            単に「忙しくなる」「他の従業員の負担が増える」というだけでは、この条件には該当しません。事業の存続に関わるような、客観的に見て避けられない事態である必要があります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">2. 複数人の申請により業務に支障が出る場合</h3>
+                        <p class="mb-4">
+                            同一日に複数名の従業員から有給休暇の申請があり、全員の取得を認めると事業の正常な運営に著しい支障をきたす場合です。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-gray-50 p-6 rounded-lg">
+                            <li class="mb-2">店舗が機能しない、営業が停止するといった状況</li>
+                            <li>この場合、一部の従業員に対して時季変更権を行使できます。</li>
+                            <li>ただし、全員に対して一律に行使することは困難です。</li>
+                        </ul>
+                        <div class="bg-gray-100 p-4 rounded mb-6">
+                            <h4 class="font-bold mb-2">申請理由の重要性</h4>
+                            <p class="text-sm">
+                                誰の申請を優先し、誰に時季変更を求めるかという判断基準の一つに、有給休暇の「申請理由」が挙げられます。<br>
+                                現在でも多くの会社で有給休暇の申請書に理由欄がありますが、本来、従業員は有給休暇の理由を会社に伝える義務はありません。<br>
+                                しかし、複数人による同時申請で時季変更が必要になった際、申請理由が時季変更の可否を判断する材料となることがあります。たとえば、「この日でなければならない」という明確な理由がある場合と、「私用のため」という理由で調整が可能な場合とでは、対応が変わることがあります。
+                            </p>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">3. 長期間の有給休暇申請の場合</h3>
+                        <p class="mb-6">
+                            有給休暇は、法律上最大で40日まで繰り越して取得可能です。仮に40日間の有給休暇を一括で申請された場合、その間の休日を含めると実質2ヶ月程度の長期休暇となります。このような長期間の有給休暇申請は、事業運営に大きな影響を及ぼす可能性があります。
+                        </p>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-8">
+                            <h4 class="font-bold text-yellow-800 mb-2">事前準備の重要性</h4>
+                            <p class="mb-2">従業員が長期間の有給休暇を取得する際には、以下の点が見られます。</p>
+                            <ul class="list-disc pl-6 mb-0 text-sm">
+                                <li class="mb-1">自身の業務の引き継ぎや、他の従業員への配慮をどの程度行ったか</li>
+                                <li>休暇中の業務体制について、事前に準備や調整を行ったか</li>
+                            </ul>
+                        </div>
+                        <p class="mb-6">
+                            何の準備もなく、いきなり長期休暇を申請された場合には、会社側が時季変更権を行使できる余地が出てくることがあります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>繁忙期という理由だけでは、有給休暇の時季変更権は原則として行使できません。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>時季変更権が認められるのは、事業の運営が不可能になる、または著しい支障が生じるケースに限られます。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>複数人による同時申請の際には、申請理由が時季変更の判断材料となることがあります。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>長期間の有給休暇申請においては、従業員による事前の準備や配慮も考慮されます。</span>
+                                </li>
+                            </ul>
+                            <p class="mt-4 font-bold text-navy-900 text-center">有給休暇の時季変更権は、非常に限定的な状況でしか使えない権利です。</p>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">年末年始の労務管理や有給休暇に関するご相談は</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、大阪を拠点に、サービス業をはじめとした多様な企業の働き方をサポートし、貴社の「アセント（上昇）」を応援します。<br>
+                                年末年始の対応や有給休暇のトラブルで迷ったら、お気軽にご相談ください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
