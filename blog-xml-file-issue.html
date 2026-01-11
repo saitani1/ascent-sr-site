@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公文書（xmlファイル）が真っ白で開けないときの対処法 | アセント社労士事務所</title>
+    <meta name="description"
+        content="公文書（XMLファイル）を開こうとしたら、真っ白な画面で何も表示されない…そんなときの対処メモです。Microsoft EdgeのInternet Explorerモード（IEモード）を使えば解決します。手順を画像付きで解説。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">情報提供</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    公文書（xmlファイル）が真っ白で開けないときの対処法
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-xml-file-issue.jpg" alt="公文書（xmlファイル）の開き方解説図" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            社会保険手続きを電子申請したときに発行される「公文書」。このファイルを開くのには一筋縄でいきません。<br>
+                            「え、ファイル壊れてる？」となる前に、真っ白な画面で何も表示されないときの対処法を解説します。
+                        </p>
+
+                        <p class="mb-6">
+                            結論から言うと、<strong>Microsoft Edgeの Internet Explorer モード（IEモード）で再読み込みする</strong>と表示できます。<br>
+                            ※この記事の手順は、上の画像（解説図）と同じ内容です。図を見ながら進めると迷いません。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            こうなる現象（あるある）
+                        </h2>
+                        <ul class="list-disc pl-6 mb-8 space-y-2">
+                            <li>XMLファイルをEdgeで開く</li>
+                            <li>でも<strong>白紙のまま</strong>で表示されない</li>
+                            <li>「え、ファイル壊れてる？」となる（だいたい壊れてません）</li>
+                        </ul>
+                        <p class="mb-6">
+                            原因はざっくり言うと、XMLの表示方法（スタイル指定など）とブラウザ側の相性です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            手順：EdgeでIEモード表示に切り替える
+                        </h2>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1. まずは一度、Edgeで開く</h3>
+                        <p class="mb-4">
+                            まずは普通にXMLファイルをMicrosoft Edgeブラウザで開きます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">2. 真っ白の画面が開かれて何も見えない</h3>
+                        <p class="mb-4">
+                            おそらく真っ白な画面になります。ここで焦らないでください。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">3. URLをコピーする</h3>
+                        <p class="mb-4">
+                            この真っ白の画面のアドレスバーにあるURL（https://〜 または file:///〜）をコピーします。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">4. 画面右上の「…」から「設定」を選択</h3>
+                        <p class="mb-4">
+                            ブラウザ右上の「…」（設定など）をクリックし、メニューから「設定」を選びます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">5. 設定画面の左側「既定のブラウザー」を選択</h3>
+                        <p class="mb-4">
+                            設定メニューの左側にある「既定のブラウザー」をクリックします。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">6. 「Internet Explorer
+                            モードでサイトの再読み込みを許可」を「許可」にする</h3>
+                        <p class="mb-4">
+                            「Internet Explorer の互換性」セクションにある設定を「許可」に変更します。<br>
+                            ※再起動を求められる場合は、ブラウザを再起動してください。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">7. 「Internet Explorer モード ページ」の「追加」をクリック
+                        </h3>
+                        <p class="mb-4">
+                            同ページ内の「Internet Explorer モード ページ」セクションにある「追加」ボタンをクリックします。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">8. コピーしたURLを貼り付ける</h3>
+                        <p class="mb-4">
+                            先ほどコピーしておいた、真っ白な画面のURLをここに貼り付けて「追加」します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">9. 最初の真っ白な画面に戻り、更新をクリック</h3>
+                        <p class="mb-4">
+                            元の真っ白だったタブ（または再度ファイルを開く）に戻り、ページを再読み込み（更新ボタン、F5キー）します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">10. 表示される！</h3>
+                        <p class="mb-4">
+                            これで無事に公文書の内容が表示されるはずです。「もっと簡単にしてくれ〜！」と思いますが、現状はこの手順が必要なケースが多いです。
+                        </p>
+
+                        <div class="bg-gray-100 p-6 rounded-lg mb-6 mt-8">
+                            <p class="mb-2 font-bold text-navy-900">まとめ</p>
+                            <p class="text-sm">
+                                公文書が開けないときは、ファイル破損を疑う前に「EdgeのIEモード」を試してみてください。一度設定しておくと、次回からは（有効期限内であれば）自動でIEモードで開いてくれることもあります。
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
