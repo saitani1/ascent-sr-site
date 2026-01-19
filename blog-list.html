@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -122,6 +123,8 @@
                 </p>
             </div>
         </section>
+
+
 
         <!-- Blog List Section -->
         <section class="py-20 bg-white">
@@ -423,14 +426,15 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    });
     </script>
 </body>
 

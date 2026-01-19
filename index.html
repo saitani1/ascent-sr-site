@@ -42,6 +42,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper {
+            width: 600px;
+            height: 450px;
+        }
+
+        @media (max-width: 640px) {
+            .swiper {
+                width: 320px;
+                height: 240px;
+            }
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -504,18 +538,74 @@
                         </h3>
                     </a>
                 </div>
-                <div class="text-center mt-12">
-                    <a href="blog-list.html" target="_blank"
-                        class="inline-block p-[3px] rounded-full bg-gradient-to-r from-navy-900 via-purple-800 to-accent-500 shadow-xl transform hover:scale-105 transition duration-300">
-                        <div class="bg-white px-12 py-4 rounded-full flex items-center justify-center gap-3">
-                            <i class="fas fa-pen-nib text-accent-500 text-xl"></i>
-                            <span
-                                class="bg-gradient-to-r from-navy-900 to-accent-600 bg-clip-text text-transparent font-black text-xl tracking-widest">
-                                労務に効く 最新ブログ一覧
-                            </span>
+            </div>
+
+            <!-- Featured Carousel Section -->
+            <div class="mt-12 mb-8 overflow-hidden">
+                <div class="container mx-auto px-4">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="blog-child-support-fund.html" style="display:block; width:100%; height:100%;">
+                                    <img src="images/child-support-fund.jpg" alt="Child Support Fund" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-maternity-leave-payout.html"
+                                    style="display:block; width:100%; height:100%;">
+                                    <img src="images/maternity-leave-payout.jpg" alt="Maternity Leave" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-xml-file-issue.html" style="display:block; width:100%; height:100%;">
+                                    <img src="images/blog-xml-file-issue.jpg" alt="XML Issue" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-ai-workflow.html" style="display:block; width:100%; height:100%;">
+                                    <img src="images/ai-workflow.jpg" alt="AI Workflow" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-monthly-variable-working-hours.html"
+                                    style="display:block; width:100%; height:100%;">
+                                    <img src="images/blog-monthly-variable-working-hours.jpg"
+                                        alt="Variable Working Hours" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-paid-leave-holiday.html" style="display:block; width:100%; height:100%;">
+                                    <img src="images/blog-paid-leave.jpg" alt="Paid Leave" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-work-rules-under-10.html" style="display:block; width:100%; height:100%;">
+                                    <img src="images/blog-work-rules-under-10.jpg" alt="Work Rules" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="blog-2026-labor-law-reform.html"
+                                    style="display:block; width:100%; height:100%;">
+                                    <img src="images/blog-2026-labor-law-reform.jpg" alt="Labor Law Reform" />
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="blog-list.html" target="_blank"
+                    class="inline-block p-[3px] rounded-full bg-gradient-to-r from-navy-900 via-purple-800 to-accent-500 shadow-xl transform hover:scale-105 transition duration-300">
+                    <div class="bg-white px-12 py-4 rounded-full flex items-center justify-center gap-3">
+                        <i class="fas fa-pen-nib text-accent-500 text-xl"></i>
+                        <span
+                            class="bg-gradient-to-r from-navy-900 to-accent-600 bg-clip-text text-transparent font-black text-xl tracking-widest">
+                            労務に効く 最新ブログ一覧
+                        </span>
+                    </div>
+                </a>
+            </div>
             </div>
         </section>
 
@@ -1000,6 +1090,19 @@
                     }
                 }
             });
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            cardsEffect: {
+                perSlideOffset: 10, // Slides offset in px
+                perSlideRotate: 2, // Rotate angle in degrees
+                slideShadows: true, // Enable slide shadows
+            },
         });
     </script>
 </body>
