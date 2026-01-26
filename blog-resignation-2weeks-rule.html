@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>民法627条の退職ルールは強行法規？就業規則との関係を解説 | アセント社労士事務所</title>
+    <meta name="description" content="「2週間で退職できる」は絶対？民法627条の「2週間ルール」と就業規則の関係について、現場の視点から解説します。強行法規か任意法規か？大阪の社労士が紐解きます。">
+    <meta property="og:title" content="民法627条の退職ルールは強行法規？就業規則との関係を解説 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-resignation-2weeks-rule.html">
+    <meta property="og:image"
+        content="https://saitani1.github.io/ascent-sr-site/images/blog-resignation-2weeks-rule.jpg">
+    <meta property="og:description"
+        content="「2週間で退職できる」は絶対？民法627条の「2週間ルール」と就業規則の関係について、現場の視点から解説します。強行法規か任意法規か？大阪の社労士が紐解きます。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">対応事例</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    民法627条の退職ルールは強行法規？<br>就業規則との関係を解説
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-resignation-2weeks-rule.jpg" alt="民法627条退職ルール" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            「退職は2週間前でOK」は本当？<br>
+                            民法627条1項の「2週間ルール」が、実は強行法規ではない可能性が高いことをご存知ですか？就業規則との関係や、企業が知るべきポイントを解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            民法627条1項とは？
+                        </h2>
+                        <p class="mb-6">
+                            民法627条1項は、期間の定めのない雇用契約（無期雇用契約）において、従業員が退職を申し出る場合、原則として申し入れから2週間を経過すると雇用契約が終了することを定めています。<br>
+                            この規定は、退職を希望する従業員にとって重要な権利の一つです。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            「強行法規」と「任意法規」の違い
+                        </h2>
+                        <p class="mb-6">
+                            この民法627条1項の解釈を理解するためには、「強行法規」と「任意法規」の違いを知る必要があります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">強行法規とは</h3>
+                        <p class="mb-4">
+                            強行法規とは、法律が定めた内容を、当事者間の合意によっても変更することができない規定です。違反する合意は無効となります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 bg-gray-50 p-6 rounded-lg">
+                            <li class="mb-2"><strong>有給休暇の付与日数</strong>（入社半年後の10日間など）</li>
+                            <li><strong>最低賃金</strong></li>
+                        </ul>
+                        <p class="mb-6">
+                            例えば、会社が「有給は9日」と定めても、法律で定められた10日を下回るため無効です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">任意法規とは</h3>
+                        <p class="mb-6">
+                            任意法規とは、当事者間の合意があれば、法律の規定と異なる内容を定めることができる規定です。法律に定めがない場合や、当事者間の合意を優先する場面で適用されます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            民法627条1項は強行法規ではない？
+                        </h2>
+                        <p class="mb-6">
+                            結論から述べると、<strong>民法627条1項は強行法規ではないという見解が有力です。</strong>
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">就業規則の規定が優先されるケース</h3>
+                        <p class="mb-6">
+                            多くの企業では、就業規則に退職の申し入れ期間を定めています。一般的には「1ヶ月前」と定める企業が多く、民法の「2週間前」という規定はあまりみられません。<br>
+                            民法627条1項が任意法規であれば、会社が定める就業規則の規定が原則として優先されます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">不当な拘束にならないように注意</h3>
+                        <p class="mb-6">
+                            ただし、会社が定める規定が不当に長い期間を設定し、従業員の退職の自由（職業選択の自由）を制限することは認められません。<br>
+                            例えば、退職の申し入れを3ヶ月前や6ヶ月前とする規定は、従業員の自由を過度に侵害する可能性があり、注意が必要です。期間だけの話であれば、一般的には<strong>1ヶ月前であれば、合理的な範囲と判断されることが多い</strong>でしょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            個別事情を考慮したケースバイケースの対応
+                        </h2>
+                        <p class="mb-6">
+                            退職の申し入れ期間に関する原則はありますが、個別事情も考慮し、ケースバイケースで対応する必要があります。<br>
+                            例えば、ハラスメントが原因での退職など、やむを得ない事情がある場合は、2週間の期間を待たずに即時退職が認められることもあります。会社は従業員の状況を丁寧にヒアリングし、適切な対応を心がけるべきです。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>民法627条1項の「退職2週間前」規定は、強行法規ではない可能性が高いです。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>会社が就業規則で定める退職申し入れ期間（例: 1ヶ月前）が原則として優先されます。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>ただし、会社の規定は不当な拘束とならないよう、職業選択の自由とのバランスが重要です。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>退職代行サービスからの申し入れにも、冷静かつ的確に対応するための重要な知識です。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span>個別事情を考慮した柔軟な対応も、企業には求められます。</span>
+                                </li>
+                            </ul>
+                            <p class="mt-4 font-bold text-navy-900 text-center">
+                                複雑な労働問題でお困りの際は、アセント社会保険労務士事務所にご相談ください。<br>
+                                大阪の企業様の労務管理をサポートいたします。
+                            </p>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">退職トラブルや就業規則のご相談は</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、大阪を拠点に、現場の“あるある”トラブル解決をサポートします。<br>
+                                「急にスタッフが辞めると言ってきた」「規則を見直したい」など、お気軽にご相談ください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
