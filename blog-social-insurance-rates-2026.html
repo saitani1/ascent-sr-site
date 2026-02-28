@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年度（令和8年度）】社会保険料率の変更点と子ども子育て支援金の解説 | アセント社労士事務所</title>
+    <meta name="description"
+        content="新年度の社会保険料率はどうなる？健康保険等の引下げに対し、新制度「支援金」の導入でトータル負担は実質微増の予測です。複雑化する料率変更と、絶対に間違えてはいけない適用タイミングについて実務目線で整理しました。">
+    <meta property="og:title" content="【2026年度（令和8年度）】社会保険料率の変更点と子ども子育て支援金の解説 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-social-insurance-rates-2026.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/hokenryo.jpg">
+    <meta property="og:description"
+        content="新年度の社会保険料率はどうなる？健康保険等の引下げに対し、新制度「支援金」の導入でトータル負担は実質微増の予測です。複雑化する料率変更と、絶対に間違えてはいけない適用タイミングについて実務目線で整理しました。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">お知らせ</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    【2026年度（令和8年度）】社会保険料率の変更点と子ども子育て支援金の解説
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/hokenryo.jpg" alt="【2026年度（令和8年度）】社会保険料率の変更点と子ども子育て支援金の解説"
+                            class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            2026年2月16日、新年度に向けた準備が本格化する時期となりました。給与計算を担当される皆様にとって、毎年この時期は保険料率の改定情報が気になる季節ではないでしょうか。<br>
+                            特に今年は、例年以上に複雑な変更が含まれており、実務上の注意が必要です。本記事では、アセント社労士事務所が最新情報を整理し、大阪のサービス業をはじめとする企業の皆様へ、働き方を上昇させるためのヒントをお届けします。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            2026年度 社会保険料率改定の全体像
+                        </h2>
+                        <p class="mb-6">
+                            今年度の改定における最大のトピックは、新たに導入される「子ども子育て支援金」です。これに伴い、給与からの徴収項目が増加するため、事務手続きが従来よりも煩雑になります。<br>
+                            全体的な傾向としては、健康保険料と雇用保険料が引き下げられる一方で、支援金が追加される形となります。トータルでの負担増減や、実務担当者が押さえておくべき徴収開始時期のズレについて、詳細を確認していきましょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            各保険料率の変更詳細
+                        </h2>
+                        <p class="mb-6">
+                            ここからは、厚生年金、健康保険、そして新設される支援金、雇用保険の順に、具体的な料率の変化を解説します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            1. 厚生年金保険料：変更なし
+                        </h3>
+                        <p class="mb-6">
+                            まず、もっとも金額の大きい厚生年金保険料についてです。こちらは変更がなく、労使合計で18.3%となります。これを労使で折半するため、従業員・事業主それぞれの負担率は9.15%です。<br>
+                            厚生年金の保険料率は段階的に引き上げられてきましたが、現在は上限の18.3%で固定されています。先の衆院選において「チームみらい」などが社会保険料の引き下げを主張していた経緯もあり、将来的な変動の可能性は否定できません。しかし、2026年度においては現状維持となります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            2. 健康保険料率（協会けんぽ）：引き下げ
+                        </h3>
+                        <p class="mb-6">
+                            次に健康保険料率です。ここでは、多くの中小企業が加入している「協会けんぽ（全国健康保険協会）」の料率について触れます。組合健保にご加入の企業様は、各組合の公表数値をご確認ください。<br>
+                            今年度の協会けんぽの料率は、わずかながら引き下げられます。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 mb-6 ml-4">
+                            <li><strong>40歳未満（介護保険該当なし）</strong>： 労使合計 10.24% → 10.13% に変更</li>
+                            <li><strong>40歳以上（介護保険該当あり）</strong>： 労使合計 11.83% → 11.75% に変更</li>
+                        </ul>
+                        <p class="mb-6">
+                            このように、全体として料率が下がる傾向にあります。従業員負担分は、この数値の半分の料率となります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            3. 【新設】子ども子育て支援金：0.23%
+                        </h3>
+                        <p class="mb-6">
+                            今年度より新たに追加されるのが「子ども子育て支援金」です。この制度は、少子化対策の財源確保を目的として導入されました。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 mb-6 ml-4">
+                            <li><strong>料率</strong>： 労使合計 0.23%</li>
+                            <li><strong>負担</strong>： 労使折半</li>
+                        </ul>
+                        <p class="mb-6">
+                            具体的な金額イメージとしては、標準報酬月額が30万円の方の場合、労使合計で月額690円の負担増となります。これを折半するため、従業員個人の給与天引き額は345円程度です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            4. 雇用保険料率：引き下げの見込み
+                        </h3>
+                        <p class="mb-6">
+                            雇用保険料率についても、引き下げの方向で調整が進んでいます。正式な告示は3月中旬頃となりますが、現段階（2/16）での情報は以下の通りです。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 mb-6 ml-4">
+                            <li><strong>全体料率</strong>： 1.45% → 1.35%（0.1%の引き下げ）</li>
+                            <li><strong>労働者負担分</strong>： 0.55% → 0.5%（0.05%の引き下げ）</li>
+                        </ul>
+                        <p class="mb-6">
+                            雇用保険は事業主負担の割合がやや高い制度ですが、労働者負担分に関しても0.05%の減少が見込まれます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            負担額のトータルシミュレーション
+                        </h2>
+                        <p class="mb-6">
+                            これまでの変更点を踏まえ、従業員の給与手取りにどのような影響があるのかを整理します。
+                        </p>
+
+                        <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                            <h4 class="font-bold mb-3 text-navy-900">【減少要因】</h4>
+                            <ul class="list-disc list-inside space-y-1 mb-4">
+                                <li>健康保険料率：約0.11% 減少</li>
+                                <li>雇用保険料率：約0.05% 減少</li>
+                                <li><strong>合計：約0.16% の負担減</strong></li>
+                            </ul>
+                            <h4 class="font-bold mb-3 text-navy-900">【増加要因】</h4>
+                            <ul class="list-disc list-inside space-y-1 mb-4">
+                                <li><strong>こども子育て支援金：0.23% の負担増</strong></li>
+                            </ul>
+                            <p class="font-bold text-red-600 mt-4">
+                                結果： 減少分（0.16%）よりも増加分（0.23%）が上回るため、トータルでは微増となる傾向です。
+                            </p>
+                        </div>
+
+                        <p class="mb-6 text-sm">
+                            ただし、健康保険や厚生年金は「標準報酬月額」に基づいて計算される一方、雇用保険は「総支給額」に対する実額計算となります。給与額が等級の狭間にある場合などは、個別の計算結果が異なる可能性があります。単純比較はできませんが、総じて「こども子育て支援金」の影響により、保険料負担はわずかに上昇すると認識しておくのが無難です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            【重要】実務上の注意点：徴収開始時期のズレ
+                        </h2>
+                        <p class="mb-6">
+                            給与計算実務において、今年もっとも注意すべき点は「徴収開始時期」の不一致です。サービス業など、従業員数が多く入退社が頻繁な企業では、特にミスのないよう設定を確認する必要があります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            通常の社会保険料・雇用保険料
+                        </h3>
+                        <p class="mb-6">
+                            健康保険、厚生年金、雇用保険の料率変更は、例年通り4月分（新年度）から適用されます。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 mb-6 ml-4">
+                            <li><strong>健康保険・厚生年金</strong>：3月分保険料から適用されます。一般的に翌月徴収の企業が多いため、その場合は、3月分保険料を4月支給の給与で精算します。
+                            </li>
+                            <li><strong>雇用保険</strong>：4月支給の給与から新料率で計算します。</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            こども子育て支援金
+                        </h3>
+                        <p class="mb-6">
+                            一方で、新設される「こども子育て支援金」は、他の保険料とは異なり1ヶ月遅れでの徴収開始となります。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 mb-6 ml-4">
+                            <li><strong>適用開始</strong>： 4月分保険料から適用されます。</li>
+                            <li><strong>給与天引き</strong>： 翌月徴収の企業の場合、4月分として5月支給給与からの徴収</li>
+                        </ul>
+                        <div class="bg-red-50 border border-red-200 p-6 rounded-lg mb-6 text-red-800 font-bold">
+                            <p>
+                                この「1ヶ月のズレ」が非常に厄介です。給与計算ソフトの設定において、健康保険料の料率変更と、支援金の徴収開始設定を別々に行う必要があるかもしれません。お使いのシステムの対応状況を早急に確認することをお勧めします。
+                            </p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mb-12">
+                            <p class="mb-4 font-bold">
+                                2026年度の社会保険料率は、項目の増減が入り混じり、例年以上に複雑な様相を呈しています。特に、新設項目の徴収タイミングには十分な注意が必要です。</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>厚生年金：</strong> 変更なし（18.3%）。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>健康保険（協会）：</strong> わずかに引き下げ（10.13% / 11.75%）。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>雇用保険：</strong> 引き下げの見込み（労働者負担0.5%へ）。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>こども子育て支援金：</strong> 新設（0.23%）。労使折半で負担。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>全体影響：</strong> 支援金の追加により、トータルでは微増の傾向。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3"></i>
+                                    <span><strong class="text-red-600">最重要事項：</strong>
+                                        支援金のみ徴収開始時期が1ヶ月遅れるため、給与ソフトの設定には細心の注意を払うこと。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 flex flex-wrap gap-2 text-sm text-gray-500">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full">#雇用保険</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full">#厚生年金</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full">#子ども子育て支援金</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full">#料率</span>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl mt-12">
+                            <h3 class="text-2xl font-bold mb-4">複雑化する社会保険手続きにお悩みですか？</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、こうした法改正への対応を含め、企業の働き方を上昇させるためのサポートを行っています。<br>
+                                面倒な社会保険手続きや労務管理について、ご不明な点がございましたらお気軽にご相談ください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
