@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストレスチェックの結果取り扱いにおける注意点と法的義務 | アセント社労士事務所</title>
+    <meta name="description"
+        content="2028年度から全事業所で義務化されるストレスチェック。実は会社が結果を勝手に見ることは法律で禁止されています。法令違反を防ぎ、従業員との信頼関係を守るための正しい運用ルールと注意点を詳しく解説します。">
+    <meta property="og:title" content="ストレスチェックの結果取り扱いにおける注意点と法的義務 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-stress-check-rules.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/blog-stress-check-rules.jpg">
+    <meta property="og:description"
+        content="2028年度から全事業所で義務化されるストレスチェック。実は会社が結果を勝手に見ることは法律で禁止されています。法令違反を防ぎ、従業員との信頼関係を守るための正しい運用ルールと注意点を詳しく解説します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c',
+                            900: '#111827',
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-accent-500 text-white text-xs px-3 py-1 rounded-full mb-4">お知らせ</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    ストレスチェックの結果取り扱いにおける注意点と法的義務
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-stress-check-rules.jpg" alt="ストレスチェックの鉄則・結果を見るな" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            大阪を中心にサービス業などの人事労務をサポートするアセント社労士事務所です。<br>
+                            2028年より、全事業所でのストレスチェックが義務化されます。本記事では、事業主が知っておくべき結果の取り扱いルールを解説します。不適切な運用は法令違反となるだけでなく、従業員との信頼関係を損なう恐れがあります。正しい知識を持ち、実効性のある制度設計を目指しましょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            ストレスチェック結果の不適切な取り扱い実態
+                        </h2>
+                        <p class="mb-6">
+                            SNS上では、ストレスチェックの結果を会社側が把握しているとの投稿が見受けられます。「結果を見た会社から呼び出された」「結果が人事評価に直結している」といった内容です。もしこれらが事実であれば、法令に抵触する重大な問題です。ストレスチェックは本来、個人のセルフケアを目的としたツールです。他者との比較ではなく、自身の過去データと比較して活用すべきものです。しかし、情報の取り扱いを誤ると、従業員に不利益を及ぼす可能性があります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            会社は原則として個人の結果を知ることができない
+                        </h2>
+                        <p class="mb-6">
+                            ストレスチェックの結果は、原則として会社（事業者）が知ることはできません。この原則は労働安全衛生法（労働者の安全と健康を確保するための法律）で定められています。情報の漏洩や不適切な取り扱いには、罰則規定も設けられています。従業員が「会社に知られる」と懸念すれば、正直に回答できなくなります。これではストレスチェックの本来の目的が果たせません。会社は結果を直接閲覧できず、従業員に結果の提供を強要することも禁止されています。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            実施者と社内担当者の役割分担
+                        </h2>
+                        <p class="mb-6">
+                            ストレスチェックを実施するのは「実施者」と呼ばれる専門家です。具体的には、産業医や外部の医師、保健師などがこれに当たります。検診機関や専門のサービス会社が提供するツールを利用する場合も多いでしょう。社内の人事担当者が従業員に案内を送ることは問題ありません。しかし、人事担当者が「実施者」として直接回答を回収することはできません。例えば、紙の回答用紙を人事担当者が回収し保管する行為は完全に不適切です。外部の実施者が結果を管理し、本人にのみ通知する仕組みを徹底してください。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            健康診断とストレスチェックの決定的な違い
+                        </h2>
+                        <p class="mb-6">
+                            ストレスチェックと健康診断は、結果の取り扱いが大きく異なります。一般的な健康診断の結果は、会社が内容を把握することが認められています。数値が著しく悪い従業員に対し、会社は就業上の措置を講じる義務があるためです。一方、ストレスチェックの結果は、本人の同意がない限り会社へ開示されません。「健康診断と同じ感覚」で結果を閲覧しようとする管理者は注意が必要です。会社が関与できる範囲は、健康診断よりも厳格に制限されていると認識してください。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            2028年度の義務化に向けた体制整備
+                        </h2>
+                        <p class="mb-6">
+                            現在は従業員50名未満の事業場では努力義務ですが、法改正により状況が変わります。2028年度（令和10年度）5月までに、全事業所での実施が義務化される予定です。小規模な事業所においても、適切な運用体制の構築が急務となります。形だけを整えて実施するだけでは、十分な効果は得られません。むしろ情報の扱いを誤れば、実施自体が従業員のストレス要因になりかねません。正しい知識に基づき、プライバシーに配慮した制度設計を行う必要があります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            例外的に会社が結果を知ることができるケース
+                        </h2>
+                        <p class="mb-6">
+                            原則として秘匿される結果ですが、例外的に会社が把握できるケースが2つあります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            1. 本人が面談を希望し、結果の開示に同意した場合
+                        </h3>
+                        <p class="mb-6">
+                            高ストレス者と判定された本人が、産業医による面談を希望する場合です。面談を申し出た時点で、結果が会社に開示されることに同意したとみなされます。会社は面談結果に基づき、就業場所の変更や労働時間の短縮などの措置を検討します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-10 mb-4">
+                            2. 集団分析の結果
+                        </h3>
+                        <p class="mb-6">
+                            部署ごとのストレス傾向を分析した「集団分析」の結果は会社が把握できます。ただし、集団の人数が少ない場合は個人が特定される恐れがあります。一般的に10人未満の集団については、全員の同意がない限り分析結果を提示できません。個人の特定を防ぐための細かな制限があることを理解しておきましょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            効果的なストレスチェック運用のために
+                        </h2>
+                        <p class="mb-6">
+                            ストレスチェックを単なる事務作業にしてはいけません。従業員が安心して受検できる環境を整えることが、職場改善の第一歩です。「会社には結果が漏れない」という信頼があってこそ、正確なデータが集まります。そのデータをもとに集団分析を行い、職場環境の改善につなげることが本来の姿です。次回の実施に向けて運用ルールを再確認してください。法改正への対応や実務上の不明点は、専門家である社会保険労務士への相談をお勧めします。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-12">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>結果の秘匿：</strong>ストレスチェックの結果は、原則として会社が知ることはできない</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>罰則がある：</strong>労働安全衛生法により、情報の漏洩や不適切な利用には罰則がある</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>義務化の対応：</strong>2028年度までに全事業所での実施が義務化されるため、早期の体制構築が必要</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>法令の遵守：</strong>人事担当者が直接回答を回収・保管する行為は法令違反となる</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <span><strong>例外ケース：</strong>高ストレス者の面談申し出や、一定人数以上の集団分析のみ会社は把握可能</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">社労士へのご相談はこちら</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、大阪のサービス業を中心に、負担の少ないストレスチェックの導入支援を行っています。<br>
+                                制度の形式的な導入に留まらず、従業員の定着率向上や生産性の改善につながる労働環境づくりをサポートいたします。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
