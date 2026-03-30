@@ -45,18 +45,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         .swiper {
-            width: 600px;
-            height: 450px;
-        }
-
-        @media (max-width: 640px) {
-            .swiper {
-                width: 320px;
-                height: 240px;
-            }
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 50px; /* Space for pagination */
         }
 
         .swiper-slide {
+            width: 300px;
+            height: 225px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -66,6 +62,20 @@
             color: #fff;
             background-color: #fff;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Emphasize the center slide */
+        .swiper-slide-active {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        @media (max-width: 640px) {
+            .swiper-slide {
+                width: 240px;
+                height: 180px;
+            }
         }
 
         .swiper-slide img {
@@ -74,6 +84,36 @@
             height: 100%;
             object-fit: contain;
             border-radius: 18px;
+        }
+
+        /* Custom Pagination and Navigation Styling */
+        .swiper-pagination-fraction {
+            font-size: 16px;
+            font-weight: 900;
+            color: #1a202c; /* navy-800 */
+            letter-spacing: 2px;
+            bottom: 0px !important;
+        }
+        .swiper-pagination-current {
+            color: #f97316; /* accent-500 */
+            font-size: 20px;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #f97316 !important;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 20px !important;
+            font-weight: 900 !important;
+        }
+        /* 最初と最後で矢印を薄くする */
+        .swiper-button-disabled {
+            opacity: 0.3 !important;
+            cursor: not-allowed;
         }
     </style>
     <script>
@@ -653,100 +693,104 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="blog-stress-check-rules.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-stress-check-rules.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-stress-check-rules.jpg" alt="ストレスチェックの鉄則" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-stress-check-2028.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-stress-check-2028.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-stress-check-2028.jpg" alt="ストレスチェック 効果を高める方法" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-social-insurance-rates-2026.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/hokenryo.jpg" alt="社会保険料率の変更点と子ども子育て支援金の解説" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-industrial-accident-reduction-steps.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-industrial-accident-reduction-steps.jpg"
                                         alt="Industrial Accident Reduction" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-teachers-labor-standards.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-teachers-labor-standards.jpg"
                                         alt="Teachers and Labor Standards" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-student-part-time-insurance.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-student-part-time-insurance.jpg"
                                         alt="Student Part-time Insurance" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-harassment-consultation-tips.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-harassment-consultation-tips.jpg"
                                         alt="Harassment Consultation Tips" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-resignation-2weeks-rule.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-resignation-2weeks-rule.jpg" alt="Resignation Rule" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-child-support-fund.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-child-support-fund.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/child-support-fund.jpg" alt="Child Support Fund" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-maternity-leave-payout.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/maternity-leave-payout.jpg" alt="Maternity Leave" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-xml-file-issue.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-xml-file-issue.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-xml-file-issue.jpg" alt="XML Issue" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-ai-workflow.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-ai-workflow.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/ai-workflow.jpg" alt="AI Workflow" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-monthly-variable-working-hours.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-monthly-variable-working-hours.jpg"
                                         alt="Variable Working Hours" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-paid-leave-holiday.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-paid-leave-holiday.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-paid-leave.jpg" alt="Paid Leave" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-work-rules-under-10.html" style="display:block; width:100%; height:100%;">
+                                <a href="blog-work-rules-under-10.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-work-rules-under-10.jpg" alt="Work Rules" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-2026-labor-law-reform.html"
-                                    style="display:block; width:100%; height:100%;">
+                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-2026-labor-law-reform.jpg" alt="Labor Law Reform" />
                                 </a>
                             </div>
                         </div>
+                        <!-- Add Pagination and Navigation -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
@@ -1220,12 +1264,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-            effect: "cards",
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 20,
             grabCursor: true,
-            cardsEffect: {
-                perSlideOffset: 10, // Slides offset in px
-                perSlideRotate: 2, // Rotate angle in degrees
-                slideShadows: true, // Enable slide shadows
+            // ループを解除して「最初」と「最後」を明確にする
+            loop: false, 
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction", // ドットから「1 / 16」のような数値に変更
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
     </script>
