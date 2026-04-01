@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在職老齢年金の支給停止基準が65万円に緩和！ | アセント社労士事務所</title>
+    <meta name="description"
+        content="【2026年4月最新】在職老齢年金の支給停止基準が65万円に引き上げられました！「働くと年金が減る」という心理的障壁が緩和され、シニア層の活躍の場が広がります。改正の仕組みから具体的な計算例まで、大阪の社労士が企業の視点で分かりやすく解説。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">お知らせ</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    在職老齢年金の支給停止基準が65万円に緩和！
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/zaishoku.jpg" alt="在職老齢年金の支給停止基準が65万円に緩和！" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            大阪にあるアセント社労士事務所です。2026年4月1日より、働きながら年金を受け取る「在職老齢年金」の支給停止基準額が改定されました。<br>
+                            本記事では、企業の皆様に向け、支給停止の仕組みや改正内容、社会的な背景について詳しく解説します。シニア層の継続雇用や処遇改善を検討している経営者・人事担当者の方は、ぜひ内容をご確認ください。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            在職老齢年金制度の概要
+                        </h2>
+                        <p class="mb-4">
+                            在職老齢年金とは、65歳以降も会社などで働き、厚生年金保険に加入しながら受け取る老齢厚生年金のことを指します。この制度では、月々の賃金と年金額の合計が一定の基準を超えた場合、年金の一部または全額が支給停止される仕組みとなっています。
+                        </p>
+                        <p class="mb-4">
+                            多くの方が「厚生年金保険料を納めてきたのに、多く働くと年金が減らされるのは納得がいかない」と感じる制度かもしれません。しかし、現行の年金制度では、一定以上の収入がある方には年金の支給を抑える仕組みが維持されています。
+                        </p>
+                        <p class="mb-6 font-bold text-navy-900 border-b pb-2">
+                            今回の制度改正により、この「支給停止が始まるボーダーライン」が大幅に引き上げられ、それにより働きやすくなったことが大きなポイントです。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            2026年4月からの変更点：基準額が51万円から65万円へ
+                        </h2>
+                        <p class="mb-4">
+                            2026年4月1日より、支給停止の判断基準となる金額が改定されました。これまでの基準額は51万円でしたが、本日（2026.4.1）から<span class="text-accent-600 font-bold">65万円</span>へと引き上げられました。
+                        </p>
+                        <p class="mb-4">
+                            今回の改正により、月々の収入が以前より14万円多くても、年金が全額支給されるようになりました。65歳以上で働く方にとっては、支給停止のリスクが大幅に軽減されたことになります。
+                        </p>
+                        <div class="bg-gray-100 p-6 rounded-lg mb-6 shadow-sm">
+                            <p class="mb-0">
+                                今回は一度に14万円という大幅な引き上げが実施されました。2～3万円といった小幅な見直しではなく、かなり思い切った額です。これは、<span class="font-bold text-accent-600">国がシニア層の就労を強く後押ししたいという姿勢の表れ</span>だと言えるでしょう。
+                            </p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            支給停止額を決定する3つの要素
+                        </h2>
+                        <p class="mb-6">
+                            支給停止の対象となるか、あるいはいくら停止されるかを算出するには、以下の3つの要素を合算して「月額換算の収入」を計算します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1. 標準報酬月額（毎月の給与目安）</h3>
+                        <p class="mb-4">
+                            標準報酬月額とは、社会保険料（厚生年金・健康保険）を計算する際の基礎となる金額です。基本給だけでなく、役職手当や通勤手当、残業代など、諸手当を含めた総支給額が対象となります。
+                        </p>
+                        <p class="mb-6">
+                            実際には、数万円単位のレンジ（等級）で区切られた金額が適用されます。例えば、総支給額が40万円から43万円の範囲内であれば、標準報酬月額は42万円といった形式で決定されます。概算としては、<span class="font-bold">月々の総支給額に近い数字</span>と考えて差し支えありません。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">2. 標準賞与額（直近12ヶ月のボーナス）</h3>
+                        <p class="mb-6">
+                            賞与（ボーナス）も支給停止の判定に含まれます。直近12ヶ月間に受け取った標準賞与額の合計額を12で割り、1ヶ月あたりの金額を算出します。月給だけでなく、年間のボーナス額も年金の受け取りに影響する点に注意が必要です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">3. 老齢厚生年金の月額</h3>
+                        <p class="mb-4">
+                            受け取る年金のうち、支給停止の対象となるのは「老齢厚生年金」のみです。 日本の年金制度は2階建て構造になっており、以下の違いがあります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2">
+                            <li><strong>老齢基礎年金（1階部分）：</strong> 国民年金から支給される部分です。こちらはどれだけ収入があっても支給停止されません。</li>
+                            <li><strong>老齢厚生年金（2階部分）：</strong> 会社員時代に納めた保険料に応じた部分です。在職老齢年金の支給停止対象となります。</li>
+                        </ul>
+                        <p class="mb-6 text-sm text-gray-600 bg-yellow-50 p-4 border-l-4 border-yellow-400">
+                            ※ なお、家族がいる場合に加算される「加給年金」についても、今回の支給停止判定の計算には含みません。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            支給停止額の具体的な計算例
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+                            <p class="font-bold text-navy-900 mb-2">【計算式】</p>
+                            <p class="text-lg text-accent-600 font-bold text-center">
+                                （標準報酬月額 ＋ 年間賞与の1/12 ＋ 厚生年金月額 － 65万円）÷ 2
+                            </p>
+                        </div>
+                        <p class="mb-6">
+                            合計額が65万円を超えた場合、その超過した金額の<span class="font-bold text-red-600">半分</span>が、厚生年金から差し引かれます。<br>
+                            新基準（65万円）におけるシミュレーションは以下の通りです。
+                        </p>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold text-navy-900">合計収入が60万円の場合</span><br>
+                                    基準額の65万円以下であるため、年金は<span class="font-bold text-accent-600">全額支給</span>されます。
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold text-navy-900">合計収入が70万円の場合</span><br>
+                                    基準額を5万円超過しています。その半分の<span class="font-bold text-red-600">2万5,000円</span>が月々の年金から停止されます。
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="mb-6 font-bold">
+                            以前の51万円基準と比較すると、収入が同じであっても、手元に残る年金額は増えることになります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            今回の改正が企業とシニア層に与える影響
+                        </h2>
+                        <p class="mb-6">
+                            基準額が大幅に引き上げられた背景には、深刻な人手不足と、それに伴う定年延長を促進させる動きがあります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">定年引き上げと役職維持の促進</h3>
+                        <p class="mb-4">
+                            これまでの基準（51万円）では、定年後に再雇用される際、年金の支給停止を避けるためにあえて給与を下げるケースが多く見られました。特に管理職や専門職など、高い能力を持つ人材が、給与を抑えて「アルバイト的な働き方」を選択せざるを得ない側面がありました。
+                        </p>
+                        <p class="mb-6">
+                            基準額が65万円に上がったことで、企業は高いスキルを持つシニア層に対し、現役時代に近い高い給与を提示しやすくなります。本人としても「働いても年金が減るから損」という心理的な壁が低くなり、モチベーションを維持したまま継続雇用に応じやすくなるでしょう。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">サービス業などにおける人材確保の鍵</h3>
+                        <p class="mb-4">
+                            例えばサービス業では、ベテラン層の接客スキルや店舗管理能力が大きな資産となります。今回の改正を機に、定年を70歳まで引き上げたり、役職を維持したまま雇用を継続したりする制度を整えることは、優秀な人材の流出を防ぐ有効な手段となります。
+                        </p>
+                        <div class="p-6 bg-navy-50 rounded-lg border-l-4 border-navy-800 mb-6">
+                            <p class="mb-0 text-navy-900 font-medium">
+                                「年金が止まらない範囲で給与を支払う」という消極的な考え方から、「正当な評価に基づいてしっかりと給与を支払い、長く活躍してもらう」という積極的な人材戦略への転換が求められています。
+                            </p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <p class="mb-4">2026年4月からの在職老齢年金制度の改正ポイントをまとめます。</p>
+                        <ul class="list-disc pl-6 mb-8 space-y-2 text-navy-800">
+                            <li>支給停止の基準額が<span class="font-bold text-accent-600">51万円から65万円へ</span>引き上げられました。</li>
+                            <li>対象となるのは「老齢厚生年金」のみであり、基礎年金は減額されません。</li>
+                            <li>判定には「給与」「ボーナス」「年金」の月額換算合計を用います。</li>
+                            <li>基準を超えた場合、超過分の半分が年金から差し引かれます。</li>
+                            <li>企業にとっては、シニア層を高待遇で継続雇用するための絶好の機会です。</li>
+                        </ul>
+                        
+                        <p class="mb-8 font-medium">
+                            今回の改正により、シニア層がその能力を最大限に発揮できる環境が整いつつあります。<br>
+                            少子高齢化が進む中で、経験豊富なベテラン社員に「アクセント（アセント）」を加え、企業の成長を加速させていきましょう。<br>
+                            アセント社労士事務所では、こうした制度改正に伴う就業規則の見直しや、賃金設計のご相談を承っております。
+                        </p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">シニア層の活用や制度見直しも、ぜひご相談ください</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所は、大阪のサービス業をはじめとする多業種の働き方をサポートしています。<br>
+                                働き方の質を「上昇（アセント）」させるためのヒントをお届けします。人事制度、労務トラブル、就業規則など、お気軽にご相談ください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
