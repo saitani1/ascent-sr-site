@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>労務・社会保険、従業員数の数え方にご注意を！ | アセント社労士事務所</title>
+    <meta name="description"
+        content="従業員数の数え方は法律ごとに異なり、正しく把握しないと法令違反のリスクも。社会保険の51人、安衛法の50人など、複雑な基準を徹底解説。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    労務・社会保険、従業員数の数え方にご注意を！
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/blog-employee-count.jpg" alt="労務・社会保険、従業員数の数え方にご注意を！" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            社会保険や労働保険の適用基準となる「従業員数」の定義は、法令ごとに異なります。大阪でサービス業を営む経営者にとって、この基準の把握は極めて重要です。本記事では、アセント社労士事務所が、非常に複雑な従業員数のカウント方法や注意点を分かりやすく解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            社会保険の適用拡大における「51人」の定義
+                        </h2>
+                        <p class="mb-4">
+                            厚生労働省は、パート・アルバイトへの社会保険適用拡大を推進しています。現在、従業員数が51人以上の企業は、週20時間以上勤務する労働者を社会保険に加入させる義務があります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">被保険者の人数が基準</h3>
+                        <p class="mb-6">
+                            この「51人以上」という基準は、全従業員の総数ではありません。正社員や、週30時間以上勤務する「社会保険被保険者」の人数を指します。つまり、社会保険に加入している人数が51人を超えた場合、週20時間以上の短時間労働者も適用対象となります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            労働安全衛生法に関する手続き（50人以上）
+                        </h2>
+                        <p class="mb-4">
+                            労働安全衛生法（安衛法）では、事業場の規模に応じて衛生管理者や産業医の選任が義務付けられています。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">全従業員をカウントする</h3>
+                        <p class="mb-4">
+                            安衛法には「50人以上」という基準がありますが、カウントの方法が社会保険とは異なります。ここでは、社会保険の加入有無に関わらず、アルバイトやパートを含むすべての従業員をカウントします。週1日勤務のスタッフであっても、1人として数える点に注意が必要です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">事業場（拠点）単位での判定</h3>
+                        <p class="mb-4">
+                            また、企業全体ではなく「事業場（拠点）」ごとに人数を判定する点です。大阪市内に本社があり、支店が複数ある場合、各拠点で50人を超えているかを確認します。50人未満の事業場であれば、原則として衛生管理者の選任義務は発生しません。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">産業医の選任義務</h3>
+                        <p class="mb-6">
+                            産業医（労働者の健康管理を行う医師）の選任も、事業場単位で50人以上の場合に必要です。たとえ正社員が少なく、アルバイトが多い店舗であっても、頭数で50人を超えれば選任しなければなりません。労働実態に合わせた柔軟な基準を求める声もありますが、現行法では厳格な頭数管理が求められます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            労働基準法に関連する手続き
+                        </h2>
+                        <p class="mb-4">労働基準法に関連する手続きでも、従業員数のカウントの確認は必要です。</p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">就業規則の作成（10人以上）</h3>
+                        <p class="mb-4">
+                            就業規則は、常時10人以上の労働者を使用する事業場に作成・届出義務があります。この「10人」も事業場単位でカウントします。アルバイトやパートも含めて判定します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">36協定と過半数代表者</h3>
+                        <p class="mb-6">
+                            時間外・休日労働に関する「36（サブロク）協定（時間外・休日労働に関する労使協定）」の締結には、従業員の過半数代表者の選任が必要です。この過半数の判定時も、アルバイトを含めた全従業員が分母となります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            独自の計算方法を用いる法律
+                        </h2>
+                        <p class="mb-4">最近の法改正や特定の法律では、さらに独自の計算方法が採用されています。</p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">女性活躍推進法（101人以上）</h3>
+                        <p class="mb-4">
+                            2024年4月から、情報の公表義務が従業員101人以上の企業に拡大されました。この人数は、企業全体の総数で判定します。ただし、短期アルバイトは除外され、1年以上継続雇用が見込まれる人が対象となります。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">障害者雇用率の計算（40人以上）</h3>
+                        <p class="mb-6">
+                            障害者雇用義務は、現在40人以上の企業に課せられています。今後、基準は37.5人以上へと厳格化されます。この計算では、短時間労働者を「0.5人」として数えるなど、非常に特殊な算出方法を用います。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+                            <p class="mb-4 font-bold text-navy-900">従業員数の数え方は、法律によって「企業単位か事業場単位か」「社会保険被保険者のみか全従業員か」がバラバラです。</p>
+                            <ul class="space-y-4 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <div><strong>社会保険の適用拡大：</strong> 企業全体の「被保険者数」で判定</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <div><strong>衛生管理者・産業医：</strong> 事業場ごとの「全従業員の頭数」で判定</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <div><strong>就業規則・36協定：</strong> 事業場ごとの「全従業員の頭数」で判定</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <div><strong>女性活躍推進法：</strong> 企業全体の「継続雇用者数」で判定</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-3"></i>
+                                    <div><strong>障害者雇用：</strong> 労働時間に応じた「独自の係数」で判定</div>
+                                </li>
+                            </ul>
+                            <p class="mb-0 text-sm text-gray-600">※ 上記は一例です。基準の境目にいる企業は、数え方の誤りが法令違反に直結する恐れがあります。</p>
+                        </div>
+                        
+                        <p class="mb-6">
+                            大阪でサービス業を展開する皆様は、正確な判定のために以下のようなポイントを日常的に把握しておくことが重要です。
+                        </p>
+                        <ul class="list-disc pl-6 mb-8 space-y-2 text-navy-800">
+                            <li>自社の社会保険被保険者が何人いるか把握しているか</li>
+                            <li>各事業場（店舗・支店）ごとの全スタッフ数は何人か</li>
+                            <li>雇用予定のアルバイトが、どの法律のカウント対象になるか</li>
+                            <li>法改正による人数の引き下げスケジュールを把握しているか</li>
+                        </ul>
+                        
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">従業員数の管理や社会保険のお悩みを解決します</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所は、大阪のサービス業を中心に働き方改革をサポートしています。<br>
+                                複雑な労務管理や社会保険の手続きに関するご相談は、当事務所までお気軽にお問い合わせください。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
