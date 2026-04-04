@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『出勤』時間の「1分単位管理」と労務リスクの回避策 | アセント社労士事務所</title>
+    <meta name="description"
+        content="はま寿司の是正勧告から、『出勤』時間の「15分単位管理」に潜むリスクを社労士が解説。1分の遅刻カットが巨額の未払い賃金問題に発展します。自社の管理が法的に適切か、今すぐ確認すべきチェックリストを公開。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市のサービス業専門・労務トラブル解決</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    『出勤』時間の「1分単位管理」と労務リスクの回避策
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/出勤ということばを強調して16：9の横長画像を作って_202604041542.jpg" alt="『出勤』時間の「1分単位管理」と労務リスクの回避策" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            大手回転寿司チェーン「はま寿司」が、労働基準監督署から是正勧告を受けました。アルバイトの出勤打刻を15分単位で管理し、数分の遅刻で労働時間をカットしていたことが原因です。<br><br>
+                            大阪でサービス業の支援を行うアセント社労士事務所が、この事例を教訓に、見落としがちな「出勤打刻の1分単位管理」の重要性と、企業が取り組むべき注意点を詳しく解説します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            1. はま寿司への是正勧告：事件の概要と背景
+                        </h2>
+                        <p class="mb-4">
+                            今回の是正勧告は、はま寿司で働くアルバイト従業員からの訴えにより、労働基準監督署が動いたことで明らかになりました。
+                        </p>
+                        <p class="mb-4">
+                            報道によると、同社では出勤の打刻時間を15分刻みで設定していました。そのため、数分の遅刻が発生した際、本来の労働時間の一部が切り捨てられていたのです。はま寿司側はこの事実を認め、過去に遡って未払い賃金を支払う方針を示しました。
+                        </p>
+                        <p class="mb-6">
+                            この事件は、単なる一企業の不祥事ではなく、多くの企業が抱える「勤怠管理の盲点」を浮き彫りにしました。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            2. なぜ「退勤」ではなく「出勤」の打刻が問題なのか
+                        </h2>
+                        <p class="mb-4">
+                            今回の是正勧告において、最も注目すべき点は「出勤時の打刻」が焦点となっていることです。
+                        </p>
+                        <p class="mb-4">
+                            多くの企業では、残業代の計算に関わるため、退勤時間は1分単位で管理する意識が定着しています。しかし、出勤時間については、以下のような理由から「15分単位」などの端数処理を行っているケースが散見されます。
+                        </p>
+                        <ul class="list-decimal pl-6 mb-4 space-y-2 text-navy-800 font-bold">
+                            <li>始業時間（例：午前9時）に合わせてキリよく管理したい。</li>
+                            <li>数分の遅刻に対して、事務処理の簡便化を優先したい。</li>
+                            <li>早めに出勤して打刻する従業員の時間を、労働時間としてカウントしたくない。</li>
+                        </ul>
+                        <p class="mb-6">
+                            特にサービス業では、シフト制で出勤時間が細かくなりがちです。しかし、出勤時間だけを15分単位にすることは、労働基準法上の「賃金全額払いの原則」に抵触するリスクを孕んでいます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            3. 出勤前の10分間は「休憩」か「労働」か
+                        </h2>
+                        <p class="mb-4">
+                            たとえば、始業時間が9時00分の職場において、従業員が8時50分に打刻したケースを考えてみましょう。この「始業前の10分間」の扱いに、多くの労務リスクが潜んでいます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 労働時間とみなされるケース</h3>
+                        <p class="mb-4">
+                            始業時間前に以下のような行動を義務付けている、あるいは黙認している場合は、労働時間として1分単位で賃金を支払う必要があります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2 text-navy-800">
+                            <li>制服への着替え</li>
+                            <li>店舗やオフィスの掃除</li>
+                            <li>PCの起動やメールチェック</li>
+                            <li>朝礼やミーティングへの参加</li>
+                            <li>当日の作業準備</li>
+                        </ul>
+                        <p class="mb-6 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <span class="font-bold text-accent-600"><i class="fas fa-lightbulb mr-2"></i>補足：</span>「9時00分からすぐに働ける状態にしておくこと」という指示がある場合、その準備時間は指揮命令下にあるとみなされ、労働時間として判断される可能性が極めて高くなります。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 休憩時間（自由利用）とみなされるケース</h3>
+                        <p class="mb-6">
+                            一方で、8時50分に打刻しても、9時00分までは完全に自由な時間であり、一切の業務が禁止されている（スマホを見ていても良いなど）のであれば、労働時間には含まれないと言えます。しかし、実態として何らかの作業を行っている場合は、是正勧告の対象となる可能性が高いと言えます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            4. 1分単位の勤怠管理を運用に落とし込むための課題
+                        </h2>
+                        <p class="mb-4">
+                            労働時間は1分単位で計算することが大原則です。しかし、物理的な制約が運用の壁になることもあります。
+                        </p>
+                        <p class="mb-4">
+                            例えば、大人数の従業員が同じ始業時間に設定されている場合、タイムレコーダーの前に列ができ、全員がジャストに打刻することは不可能です。そのため、多くの企業では「始業の数分前に打刻し、始業を待つ」という運用が行われています。
+                        </p>
+                        <p class="mb-4">
+                            はま寿司の事例では、システム上の設定が「出勤は15分単位まで切り捨てる」というロジックになっていたと考えられます。9時1分に打刻した際、勤務開始を9時15分として扱うような処理が労働基準法違反と扱われました。
+                        </p>
+                        <p class="mb-4 font-bold text-navy-900">今後の労務管理においては、以下の2点を徹底する必要があります。</p>
+                        <ul class="list-decimal pl-6 mb-6 space-y-4 text-navy-800">
+                            <li><strong>打刻ロジックの修正：</strong><br>遅刻した場合でも、打刻した瞬間から労働時間としてカウントする設定に変更する。</li>
+                            <li><strong>早出管理のルール化：</strong><br>勝手な早出残業を防ぐため、始業前の打刻と労働開始の境界線を明確にする。例えば、「始業時間の〇分前までは打刻しない」などのルール徹底が必要です。</li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            5. 今すぐ確認すべきチェックリスト
+                        </h2>
+                        <p class="mb-4">
+                            アセント社労士事務所では、特に大阪を中心としたサービス業の経営者様に、ご自身の店舗や会社の仕組みとして以下のチェックを推奨します。
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>勤怠システムの再確認：</strong><br>出勤・退勤ともに、切り捨て処理（丸め処理）が行われていないか。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>着替え時間の扱い：</strong><br>制服に着替える場所や時間を指定している場合、その時間を労働時間に含めているか。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>準備・清掃・朝礼：</strong><br>これらが始業時間前に行われていないか、あるいは正しく賃金が支払われているか。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>遅刻時の控除ルール：</strong><br>1分の遅刻に対して、15分や30分単位で賃金をカットしていないか。</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-6">
+                            一度是正勧告を受けると、過去に遡った賃金支払い（現在は最大3年分）だけでなく、企業の社会的信用にも影響を及ぼします。特に昨今は、SNSや掲示板を通じて従業員が声を上げやすい環境にあります。また、再計算など事務担当者の負担も甚大なものとなります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：働き方のアップデートに向けて
+                        </h2>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+                            <p class="mb-4 font-bold text-navy-900">今回の事件は、改めて「労働時間の定義」を問い直す機会となりました。</p>
+                            <ul class="space-y-3 mb-4 list-disc pl-6 text-navy-800">
+                                <li>労働時間は、原則として1分単位で管理・計算しなければならない。</li>
+                                <li>出勤時の15分単位などの切り捨ては、法的に認められない。</li>
+                                <li>始業前の準備（着替え、掃除、朝礼）は、労働時間に含まれる可能性が高い。</li>
+                                <li>デジタル化が進む中、システムの設定ミスが巨額の未払い賃金リスクに直結する。</li>
+                            </ul>
+                            <p class="text-sm text-gray-600 mt-4 border-t pt-4">
+                                <strong>💡 取れる対策のヒント：</strong><br>システム上、早出を原則禁止し許可制にする設定を導入することで、不要な早出残業を防ぐことが可能です。
+                            </p>
+                        </div>
+                        
+                        <p class="mb-8">
+                            出勤時間の管理を見直すことは、従業員の不満解消だけでなく、企業を守るための防衛策でもあります。自社の運用に少しでも不安がある場合は、早急に専門家へ相談し、適切な労務管理体制を整えてください。
+                        </p>
+                        
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">大阪でサービス業を展開されている企業の皆様へ</h3>
+                            <p class="mb-8 text-gray-300">
+                                働き方のアップデートを共に進めていきませんか。勤怠管理システムの導入・見直し支援から、就業規則の改定まで、アセント社労士事務所がサポートいたします。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
