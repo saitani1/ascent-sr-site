@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雇用保険料率の変更はいつから？給与の締日の違いによる反映タイミング | アセント社労士事務所</title>
+    <meta name="description"
+        content="4月から変わる雇用保険料率。実は「4月の給与から変えればOK」ではありません。正しい反映タイミングは自社の「締め日」で決まります。間違いやすい判定ルールとシステム設定の落とし穴を、社労士が詳しく解説します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">お知らせ</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    雇用保険料率の変更はいつから？給与の締日の違いによる反映タイミング
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/横長の画像にして_202604071717.jpg" alt="雇用保険料率の変更はいつから？給与の締日の違いによる反映タイミング" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            毎年4月は雇用保険料率が見直される時期です。2026年度（令和8年度）も料率が変更されましたが、実務担当者が最も迷うのは「いつの給与から新しい料率を適用すべきか」という点です。<br><br>
+                            本記事では、大阪でサービス業を中心に人事労務をサポートするアセント社労士事務所が、給与計算における反映タイミングの注意点を詳しく解説します。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            雇用保険料率の変更内容と現状
+                        </h2>
+                        <p class="mb-4">
+                            雇用保険料率は、社会情勢や雇用保険制度の財政状況に応じて毎年4月に見直されます。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 令和8年度の料率引き下げ</h3>
+                        <p class="mb-6">
+                            2026年度（令和8年度）の雇用保険料率は、事業の種類によって異なります。一般の事業の場合、従業員（被保険者）が負担する保険料率は0.5％となりました。前年度の0.55％から0.05％の引き下げとなります。
+                        </p>
+                        <p class="mb-6">
+                            雇用保険料率をいつから変更するかについては、明確なルールが存在します。多くの担当者が「4月に支払う給与から変える」と誤解しがちですが、正しくは「締め日」を基準に判断します。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            「4月1日以降に初めて迎える締め日」が基準
+                        </h2>
+                        <p class="mb-4">
+                            新しい雇用保険料率は「4月1日以降に、初めて支払期日の到来する賃金」ではなく、「4月1日以降の期間に対応する賃金」から適用することとされています。
+                        </p>
+                        <p class="mb-6">
+                            実務上の公式ルールは以下の通りです。<br>
+                            <strong>「4月1日以降に、初めて迎える給与の締め日」</strong><br>
+                            この締め日以降に支払われる給与から、新しい料率を適用します。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 具体的な判定パターン</h3>
+                        <p class="mb-4">
+                            自社の給与規定が以下のどちらに該当するか確認してください。
+                        </p>
+                        <ul class="list-decimal pl-6 mb-6 space-y-4 text-navy-800">
+                            <li>
+                                <strong>3月末締めで4月に支払う場合（旧料率を適用）</strong><br>
+                                例：3月31日締め・4月10日払い<br>
+                                この場合、4月10日に支払う給与は「3月分の労働」に対する対価です。4月1日よりも前に締め日が到来しているため、適用するのは「変更前の旧料率（0.55％）」となります。
+                            </li>
+                            <li>
+                                <strong>4月中に締め日があり同月内に支払う場合（新料率を適用）</strong><br>
+                                例：15日締め・当月25日払い<br>
+                                4月15日に締め日を迎える場合、これは4月1日以降の期間を含みます。したがって、4月25日に支払う給与から「新しい料率（0.5％）」を適用します。
+                            </li>
+                        </ul>
+                        
+                        <p class="mb-6">
+                            多くの企業では給与計算システムを導入していますが、システムの自動更新には注意が必要です。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            システム設定の落とし穴
+                        </h2>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ システムが「支払い月」で判定している可能性</h3>
+                        <p class="mb-4">
+                            システムによっては、単純に「4月支給分」から自動的に料率を変更する設定になっている場合があります。前述の「3月末締め・4月払い」の会社がこの設定のまま計算すると、誤った料率で控除してしまいます。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 担当者によるロジックの理解が不可欠</h3>
+                        <p class="mb-6">
+                            システムの設定を鵜呑みにせず、自社の締め日がルールのどちらに該当するかを把握してください。設定ミスは、全従業員の過不足精算という膨大な修正作業につながります。<br><br>
+                            雇用保険料率の適用時期を間違えると、年1回の「労働保険料の年度更新（確定保険料の計算）」で整合性が取れなくなります。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            確定保険料との関係とサービス業の注意点
+                        </h2>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 確定保険料との関係</h3>
+                        <p class="mb-4">
+                            労働保険料（雇用保険・労災保険）は、毎年4月1日から翌年3月31日までに支払いが確定した賃金の総額に料率を乗じて計算します。
+                        </p>
+                        <p class="mb-6">
+                            3月末締めの給与を4月に支払う場合、その賃金は「前年度分」として集計されます。もしここで新年度の料率を適用してしまうと、年度更新時に算出される確定保険料の金額と、実際に給与から控除した金額の合計が一致しなくなります。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ サービス業における注意点</h3>
+                        <p class="mb-6">
+                            サービス業など、シフト制で給与計算が複雑な職場では、特に締め日の管理が重要です。変形労働時間制を採用している場合も、基本となる締め日を基準に判断してください。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：今すぐ確認すべきポイント
+                        </h2>
+                        <p class="mb-4">
+                            雇用保険料率の変更に伴い、以下のポイントを必ず確認しましょう。
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>自社の給与締め日を確認する：</strong><br>4月1日以降に最初の締め日が来るかを確認します。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>3月末締め・4月払いは「旧料率」：</strong><br>今月の給与から下げてしまわないよう注意してください。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>4月締め・4月払いは「新料率」：</strong><br>今月の給与から新しい料率を適用します。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>システム設定の再確認：</strong><br>自動更新が自社の締め日ルールと合致しているか検証してください。</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>年度更新を見据えた管理：</strong><br>正確な控除が、次回の確定保険料計算の正確性に直結します。</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-8">
+                            もし設定を間違えてしまった場合は、速やかに翌月の給与で精算するなどの対応が必要です。不安な場合は、アセント社労士事務所までご相談ください。
+                        </p>
+                        
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">大阪でサービス業を展開されている企業の皆様へ</h3>
+                            <p class="mb-8 text-gray-300">
+                                労務管理の適正化、給与計算の効率化など、企業の成長をサポートします。アセント社労士事務所は大阪を拠点に働き方を「アセント（上昇）」させていくためのヒントを発信中です。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
