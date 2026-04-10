@@ -47,7 +47,8 @@
         .swiper {
             width: 100%;
             padding-top: 20px;
-            padding-bottom: 50px; /* Space for pagination */
+            padding-bottom: 50px;
+            /* Space for pagination */
         }
 
         .swiper-slide {
@@ -64,7 +65,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             transition: transform 0.3s ease;
         }
-        
+
         /* Emphasize the center slide */
         .swiper-slide-active {
             transform: scale(1.05);
@@ -90,15 +91,20 @@
         .swiper-pagination-fraction {
             font-size: 16px;
             font-weight: 900;
-            color: #1a202c; /* navy-800 */
+            color: #1a202c;
+            /* navy-800 */
             letter-spacing: 2px;
             bottom: 0px !important;
         }
+
         .swiper-pagination-current {
-            color: #f97316; /* accent-500 */
+            color: #f97316;
+            /* accent-500 */
             font-size: 20px;
         }
-        .swiper-button-next, .swiper-button-prev {
+
+        .swiper-button-next,
+        .swiper-button-prev {
             color: #f97316 !important;
             background-color: rgba(255, 255, 255, 0.9);
             width: 44px !important;
@@ -106,10 +112,13 @@
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
-        .swiper-button-next::after, .swiper-button-prev::after {
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
             font-size: 20px !important;
             font-weight: 900 !important;
         }
+
         /* 最初と最後で矢印を薄くする */
         .swiper-button-disabled {
             opacity: 0.3 !important;
@@ -452,16 +461,24 @@
                 </p>
                 <h1 class="font-black leading-tight mb-8 drop-shadow-lg text-white">
                     <span class="block text-[2.5rem] md:text-[4.5rem] leading-[1.3] tracking-widest"
-                        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);"><span class="text-accent-500">採れる</span>会社・<br class="md:hidden"><span class="text-accent-500">整う</span>会社へ。</span>
+                        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);"><span class="text-accent-500">採れる</span>会社・<br
+                            class="md:hidden"><span class="text-accent-500">整う</span>会社へ。</span>
                 </h1>
-                <div class="bg-navy-900/50 backdrop-blur-md rounded-2xl p-6 md:p-8 inline-block shadow-2xl border border-white/10 mb-8 w-full max-w-4xl mx-auto relative overflow-hidden group hover:bg-navy-900/60 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-5 relative z-10">
-                        <span class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#採用難</span>
-                        <span class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#人材定着</span>
-                        <span class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#労務リスク</span>
+                <div
+                    class="bg-navy-900/50 backdrop-blur-md rounded-2xl p-6 md:p-8 inline-block shadow-2xl border border-white/10 mb-8 w-full max-w-4xl mx-auto relative overflow-hidden group hover:bg-navy-900/60 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                     </div>
-                    <p class="text-base md:text-2xl text-white leading-relaxed font-bold tracking-wide text-center relative z-10" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-5 relative z-10">
+                        <span
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#採用難</span>
+                        <span
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#人材定着</span>
+                        <span
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#労務リスク</span>
+                    </div>
+                    <p class="text-base md:text-2xl text-white leading-relaxed font-bold tracking-wide text-center relative z-10"
+                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
                         人が育つ仕組みと制度整備で、<br class="md:hidden">採用コストと労務リスクを抑え、安定経営を支えます。
                     </p>
                 </div>
@@ -683,131 +700,162 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="blog-health-insurance-child-support-2026.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/給与への変更はいつから？_という文言を入れて作成して_202604081043.jpg" alt="給与への変更はいつから？健康保険料率改定と子ども・子育て支援金" />
+                                <a href="blog-health-insurance-child-support-2026.html"
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="images/給与への変更はいつから？_という文言を入れて作成して_202604081043.jpg"
+                                        alt="給与への変更はいつから？健康保険料率改定と子ども・子育て支援金" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-employment-insurance-rate-change.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/横長の画像にして_202604071717.jpg" alt="雇用保険料率の変更はいつから？給与の締日の違いによる反映タイミング" />
+                                <a href="blog-employment-insurance-rate-change.html"
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="images/横長の画像にして_202604071717.jpg"
+                                        alt="雇用保険料率の変更はいつから？給与の締日の違いによる反映タイミング" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-time-management-1min-rule.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/出勤ということばを強調して16：9の横長画像を作って_202604041542.jpg" alt="『出勤』時間の「1分単位管理」と労務リスクの回避策" />
+                                <a href="blog-time-management-1min-rule.html"
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="images/出勤ということばを強調して16：9の横長画像を作って_202604041542.jpg"
+                                        alt="『出勤』時間の「1分単位管理」と労務リスクの回避策" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-hamasushi-working-hours.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-hamasushi-working-hours.html"
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/はま寿司是正勧告_労働時間_202604031517.jpg" alt="はま寿司の是正勧告から学ぶ労働時間管理の重要性" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-employee-count.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-employee-count.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-employee-count.jpg" alt="労務・社会保険、従業員数の数え方にご注意を！" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-working-oldage-pension.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-working-oldage-pension.html"
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/zaishoku.jpg" alt="在職老齢年金の支給停止基準が65万円に緩和！" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-customer-harassment.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-customer-harassment.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-customer-harassment.jpg" alt="カスタマーハラスメント対策" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-stress-check-rules.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-stress-check-rules.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-stress-check-rules.jpg" alt="ストレスチェックの鉄則" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-stress-check-2028.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-stress-check-2028.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-stress-check-2028.jpg" alt="ストレスチェック 効果を高める方法" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-social-insurance-rates-2026.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/hokenryo.jpg" alt="社会保険料率の変更点と子ども子育て支援金の解説" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-industrial-accident-reduction-steps.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-industrial-accident-reduction-steps.jpg"
                                         alt="Industrial Accident Reduction" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-teachers-labor-standards.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-teachers-labor-standards.jpg"
                                         alt="Teachers and Labor Standards" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-student-part-time-insurance.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-student-part-time-insurance.jpg"
                                         alt="Student Part-time Insurance" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-harassment-consultation-tips.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-harassment-consultation-tips.jpg"
                                         alt="Harassment Consultation Tips" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-resignation-2weeks-rule.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-resignation-2weeks-rule.jpg" alt="Resignation Rule" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-child-support-fund.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-child-support-fund.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/child-support-fund.jpg" alt="Child Support Fund" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-maternity-leave-payout.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/maternity-leave-payout.jpg" alt="Maternity Leave" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-xml-file-issue.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-xml-file-issue.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-xml-file-issue.jpg" alt="XML Issue" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-ai-workflow.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-ai-workflow.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/ai-workflow.jpg" alt="AI Workflow" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-monthly-variable-working-hours.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-monthly-variable-working-hours.jpg"
                                         alt="Variable Working Hours" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-paid-leave-holiday.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-paid-leave-holiday.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-paid-leave.jpg" alt="Paid Leave" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="blog-work-rules-under-10.html" style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                <a href="blog-work-rules-under-10.html" style="display:block; width:100%; height:100%;"
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="images/blog-work-rules-under-10.jpg" alt="Work Rules" />
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="blog-2026-labor-law-reform.html"
-                                    style="display:block; width:100%; height:100%;" target="_blank" rel="noopener noreferrer">
+                                    style="display:block; width:100%; height:100%;" target="_blank"
+                                    rel="noopener noreferrer">
                                     <img src="images/blog-2026-labor-law-reform.jpg" alt="Labor Law Reform" />
                                 </a>
                             </div>
@@ -844,7 +892,7 @@
                     <h2 class="text-3xl md:text-5xl font-black text-accent-500 mt-2 leading-tight">
                         アセント社労士事務所が選ばれる理由
                     </h2>
-                    <p class="mt-4 text-gray-300">サービス業のアルバイト1万人を15年支えてきた、労務トラブル対応に強い社労士</p>
+                    <p class="mt-5 text-lg font-bold text-white bg-white/10 inline-block px-6 py-2 rounded-lg">サービス業のアルバイト1万人を15年支えてきた、労務トラブル対応に強い社労士</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -853,7 +901,7 @@
                         <div class="text-accent-500 text-5xl font-black mb-4">01</div>
                         <h3 class="text-xl font-bold mb-3">課題対応の量と種類</h3>
                         <p class="text-gray-300 leading-relaxed">
-                            1万人規模の組織では、あらゆる種類のトラブルが日常的に発生します。24時間営業、深夜労働、学生、ダブルワーカー等、サービス業で起こる課題を即座に解決する『質』を提供します。
+                            1万人規模の組織では、あらゆる種類のトラブルが日常的に発生します。24時間営業、深夜労働、学生、ダブルワーカー等、こなした『量』から、サービス業特有の課題を即座に解決する『質』を提供します。
                         </p>
                     </div>
                     <!-- Reason 2 -->
@@ -862,13 +910,13 @@
                         <h3 class="text-xl font-bold mb-3">トラブル対応の感度</h3>
                         <p class="text-gray-300 leading-relaxed">
                             小規模での発生頻度をそのまま大規模に当てはめることはできません。
-                            一方で、10,000人規模の実績データがあれば、例えばハラスメントの発生頻度を主観的に評価でき、制度・運用の見直し要否まで整理してご提案できます。
+                            一方で、1万人規模の実績データがあれば、労務トラブルの発生頻度を客観的に評価でき、制度・運用の見直し要否まで整理してご提案できます。
                         </p>
                     </div>
                     <!-- Reason 3 -->
                     <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
                         <div class="text-accent-500 text-5xl font-black mb-4">03</div>
-                        <h3 class="text-xl font-bold mb-3">大阪市のサービス業に特化した情報感度</h3>
+                        <h3 class="text-xl font-bold mb-3">大阪のサービス業に特化した情報感度</h3>
                         <p class="text-gray-300 leading-relaxed">
                             トラブル時に迅速訪問。地域の行政指導傾向や賃金動向を踏まえた提案が可能です。
                         </p>
@@ -1207,7 +1255,7 @@
             spaceBetween: 20,
             grabCursor: true,
             // ループを解除して「最初」と「最後」を明確にする
-            loop: false, 
+            loop: false,
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
