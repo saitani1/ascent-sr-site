@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確定拠出年金（DC）導入が採用とコスト削減に効く理由 | アセント社労士事務所</title>
+    <meta name="description"
+        content="「今の退職金、若手に響いていますか？」転職が当たり前の時代、選ばれる会社になるための武器が確定拠出年金です。従業員の節税メリットと会社の経営効率化を両立する、新時代の福利厚生術を分かりやすく公開します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    確定拠出年金（DC）導入が採用とコスト削減に効く理由
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年4月20日 11_32_30.jpg" alt="確定拠出年金（DC）導入が採用とコスト削減に効く理由" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            働き方のアセント上昇を目指すヒントをお届けする、大阪のアセント社労士事務所です。今回は、近年着実に普及している「確定拠出年金（DC）」について解説します。<br><br>従来の退職金制度が抱える課題を整理し、なぜ今、企業がこの制度を導入すべきなのか、その圧倒的なメリットを詳しくお伝えします。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            従来の退職金制度は「オワコン」か？現代の労働観とのズレ
+                        </h2>
+                        <p class="mb-4">
+                            かつての主流であった「退職時に一括で支払われる退職金制度」は、現代の労働環境では魅力を失いつつあります。この制度は、一つの会社に長く勤め上げることを前提として設計されているからです。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 長期勤続を前提としないキャリア形成</h3>
+                        <p class="mb-6">
+                            現代では、定年まで同じ会社で働くことを前提に入社する人は少数派です。従来の制度は長期間勤めた人が最も得をする仕組みであり、転職が当たり前の世代には響きません。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 中途採用社員や若手社員の不公平感</h3>
+                        <p class="mb-6">
+                            中途採用者は定年までの期間が短く、十分な退職金を受け取れないケースが目立ちます。また、若手社員は「自分の給与に反映されたかもしれない原資が、年配者の退職金に回っている」と不満を抱く可能性もあります。会社の存続自体に不安を感じる時代において、数十年先の退職金は現実的なインセンティブになり得ません。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            確定拠出年金（DC）とは？
+                        </h2>
+                        <p class="mb-4">
+                            確定拠出年金は、毎月の給与の一部を積み立て、自ら運用する退職金制度です。2026年にも制度改正が実施される予定で、拠出限度額が引き上げられるなど、国を挙げて拡充が進んでいます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 資産運用の成果が将来の受取額になる</h3>
+                        <p class="mb-6">
+                            会社が拠出（積み立て）したお金を、従業員が運営管理機関を通じて運用します。運用の成果に応じて将来の受取額が決まるため、個人のリテラシーに応じた資産形成が可能です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ リテラシーの高い人材へのアピール</h3>
+                        <p class="mb-6">
+                            「確定拠出年金制度がある」という事実は、求人において大きな武器になります。特に金融リテラシーの高い優秀な層は、福利厚生の充実度を厳しくチェックしています。従業員の将来を真剣に考える「良い会社」としてのブランディングに直結します。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            従業員にとっての圧倒的メリット：3段階の税制優遇
+                        </h2>
+                        <p class="mb-4">
+                            確定拠出年金には、通常の貯蓄や投資にはない強力な節税メリットが3段階で存在します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ ① 拠出時の所得税・住民税が非課税</h3>
+                        <p class="mb-6">
+                            毎月の拠出金は、所得としてカウントされません。そのため、その分にかかる所得税や住民税を軽減できます。給与として受け取ってから自分で投資に回すよりも、効率的に元本を確保できます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ ② 運用益が非課税</h3>
+                        <p class="mb-6">
+                            通常、株式や投資信託の運用益には約20％の税金がかかります。しかし、確定拠出年金内の運用益はすべて非課税です。本来税金として引かれる分も再投資に回せるため、複利効果が最大化されます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ ③ 受取時の税制優遇</h3>
+                        <p class="mb-6">
+                            将来、一時金（退職金）として受け取る場合も「退職所得控除」が適用されます。年金形式で受け取る場合も「公的年金等控除」の対象となり、受取時の税負担が大幅に抑えられる仕組みです。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            会社側（経営者）のメリット：コスト削減と採用力強化
+                        </h2>
+                        <p class="mb-4">
+                            確定拠出年金の導入は、従業員だけでなく会社側にも経営上のメリットをもたらします。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 社会保険料の節約</h3>
+                        <p class="mb-6">
+                            拠出金は給与（報酬）とみなされないため、社会保険料の算定基礎から除外されます。従業員の標準報酬月額が下がれば、会社が負担する社会保険料（健康保険・厚生年金）も軽減されます。サービス業など、人件費比率の高い業種では、このコスト削減効果が経営に大きく貢献します。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 残業代の算定基礎からの除外</h3>
+                        <p class="mb-6">
+                            拠出金は給与ではないため、残業代計算の基礎となる単価に含まれません。これにより、実質的な労務コストの適正化を図ることが可能です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 採用市場での競争優位性</h3>
+                        <p class="mb-6">
+                            求人票に「確定拠出年金あり」と記載できる点は、他社との差別化要素になります。福利厚生を整えることで、離職率の低下や採用ミスマッチの防止にもつながります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            最大の懸念点「60歳まで引き出せない」の捉え方
+                        </h2>
+                        <p class="mb-4">
+                            確定拠出年金の最大の懸念点として「60歳まで資金を引き下ろすことができない」ことが挙げられます。しかし、これは長期的な資産形成においてメリットと捉えるべきです。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 確実な老後資金の確保</h3>
+                        <p class="mb-6">
+                            老後資金がゼロの状態で60歳を迎えることは、非常に大きなリスクです。強制的に積み立てが行われることで、将来の生活基盤を確実に構築できます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 若年層こそ早期スタートが重要</h3>
+                        <p class="mb-6">
+                            若いうちは目の前の消費を優先しがちですが、少額からでも早期に始めることで時間の利を活かせます。50歳を過ぎてから慌てて老後資金を作るのは困難です。「引き出せない」仕組みは、個人の資産を守るためのセーフガードとして機能します。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：選ばれる会社になるために
+                        </h2>
+                        <p class="mb-4">
+                            確定拠出年金は、従業員と会社の双方にメリットがある合理的な制度です。
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>従来の退職金制度は現代のキャリア観に合わなくなっている</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>3段階の税制優遇（拠出・運用・受取）により、効率的な資産形成が可能</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>会社側は社会保険料や残業代の適正化、採用力の向上を期待できる</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>「60歳まで引き出せない」仕組みは、老後破産を防ぐセーフガード</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-8">
+                            導入していないことは、今の時代において「選ばれない会社」になるリスクを含んでいます。制度の詳細や導入シミュレーションについては、ぜひアセント社労士事務所までご相談ください。
+                        </p>
+                        
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">こんなお悩みのある、サービス業経営者・人事担当者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                労務管理の適正化、給与計算の効率化など、企業の成長をサポートします。アセント社労士事務所は働き方を「アセント（上昇）」させていくためのヒントを発信中です。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
