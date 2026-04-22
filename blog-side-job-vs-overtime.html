@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>副業か残業か？人手不足を解消する選択に注意が必要です。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="働き方改革関連法の施行から5年が経過しました。厚生労働省の調査では、自社での労働時間を増やしたい労働者はわずか1割に留まっています。一方で、別調査ですが、副業を希望する層は4割に達しており、企業と労働者の意識の乖離が浮き彫りになりました。本記事では、人手不足解消の鍵となる「外部副業人材」の活用について、アセント社労士事務所が詳しく解説します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c', // Dark Navy
+                            900: '#111827', // Darker Navy
+                        },
+                        accent: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Dark Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    副業か残業か？人手不足を解消する選択に注意が必要です。
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年4月22日 15_44_22.jpg" alt="副業か残業か？人手不足を解消する選択に注意が必要です。" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            働き方改革関連法の施行から5年が経過しました。厚生労働省の調査では、自社での労働時間を増やしたい労働者はわずか1割に留まっています。一方で、別調査ですが、副業を希望する層は4割に達しており、企業と労働者の意識の乖離が浮き彫りになりました。本記事では、人手不足解消の鍵となる「外部副業人材」の活用について、アセント社労士事務所が詳しく解説します。
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            働き方改革5年目の現状：自社での長時間労働を望む人はわずか1割
+                        </h2>
+                        <p class="mb-4">
+                            厚生労働省は、働き方改革関連法（残業時間の上限規制などを定めた法律）の施行5年を迎え、労働者調査を実施しました。現在の勤務先で「労働時間を増やしたいか」という問いに対し、「増やしたい」と回答した方は10.5％に留まっています。
+                        </p>
+                        <p class="mb-6">
+                            一方で、労働時間を「減らしたい」と答えた方は約3割、「現状維持でよい」と答えた方は約6割という結果になりました。多くの労働者は、現在の会社で今以上に働くことに対して消極的であることが分かります。
+                        </p>
+                        <p class="mb-6">
+                            政界では、厳格すぎる残業規制が人手不足や賃金上昇の妨げになっているという意見があります。一部では、心身の健康を維持しつつも、より柔軟に残業ができる環境を整えるべきだという議論もなされてきました。実際に、物価上昇が続く中で賃金が上がらない現状への対策として、労働時間の延長（残業時間の緩和）を検討する動きもあります。しかし、前述の通り「自社で長く働きたい」と願う労働者はわずか1割です。
+                        </p>
+                        <p class="mb-6">
+                            厚生労働大臣（調査時点）も、上限規制自体の見直しよりも、現在の範囲内での働き方に着目して検討を進める考えを示しています。昨年末に予定されていた労働基準法の改正が見送られた背景にも、こうした現場の意識との乖離があると考えられます。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            「今の会社で残業」から「他社で副業」へ。意識の乖離
+                        </h2>
+                        <p class="mb-6">
+                            自社での労働時間を増やしたい人は1割ですが、別の調査では「副業をしたい」と考える人は約4割にのぼります。この3割の差をどう捉えるかが、今後の人事管理において非常に重要な視点となります。労働者は決して「働きたくない」わけではありません。しかし、同じ会社で同じ業務を長時間続けることには限界を感じているかもしれません。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            なぜ「副業するなら自社で残業して」は通用しないのか？労働者の本音
+                        </h2>
+                        <p class="mb-4">
+                            多くの経営者は「副業をするくらいなら、自社でもっと働いてほしい。その分、残業代をしっかり出す」と考えがちです。社内業務に精通した既存の従業員が長く働くことは、教育コストもかからず合理的であるように見えます。しかし、労働者の本音は異なります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>今の仕事内容でこれ以上、心身を削りたくない</li>
+                            <li>給与は欲しいが、今の会社での昇進や管理職登用には魅力を感じない</li>
+                            <li>自社以外の環境でスキルアップやキャリア形成をしたい</li>
+                        </ul>
+                        <p class="mb-6">
+                            最近では「静かな退職（必要最低限の仕事しかこなさない働き方）」という言葉も注目されています。自社への貢献意欲が低いわけではなく、自分の生活やキャリアを多角化したいというニーズが強まっているのです。深刻な人手不足に悩む企業にとって、既存の従業員に無理な残業を強いることは離職リスクを高めるだけです。そこで注目すべきなのが、他社で働く「副業人材」の受け入れです。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            人手不足解消の鍵：既存スタッフに頼らず「外部副業人材」を活用する
+                        </h2>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 1. 自社の従業員に頼らない体制づくり</h3>
+                        <p class="mb-6">
+                            「もっと働いてほしい」というニーズに対し、自社従業員に頼るのではなく、外部の力を借りる発想への転換が必要です。副業を希望している4割の層を、自社の戦力として取り込むことを検討しましょう。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 2. 「単なる労働力」以上の価値を見出す</h3>
+                        <p class="mb-4">
+                            副業人材を活用する場合、単なるアルバイト（単純労働）として募集するだけでは短絡的になります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>他社での経験や専門スキルを自社の課題解決に活かしてもらう</li>
+                            <li>高度なスキルを持つ人材に、週に数時間だけ業務委託で入ってもらう</li>
+                            <li>自社の従業員にはない視点を取り入れ、組織を活性化させる</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">■ 3. 雇用形態の多様化：アルバイトと業務委託の使い分け</h3>
+                        <p class="mb-6">
+                            他社で正社員として働く人を採用する場合、労働時間管理が複雑になります。本業と副業の労働時間は通算されるため、法定労働時間を超えるリスクがあるからです。
+                        </p>
+                        <p class="mb-6">
+                            そこで、雇用契約（アルバイト）だけでなく、業務委託という選択肢が取れるのであればそれも有効です（業務委託は指揮命令が行えないなど、一定の制限があります）。業務委託であれば、労働時間管理の枠組みにとらわれず、成果に対して対価を支払うことが可能です。自社の業務内容に応じて、最適な契約形態を選択しましょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：時代に合った人材戦略を
+                        </h2>
+                        <p class="mb-4">
+                            労働者のニーズは「一つの会社での長時間労働」から「複数拠点でのキャリア形成」へと確実に変化しています。
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>自社で労働時間を増やしたい人はわずか1割である</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>一方で、副業を希望する人は4割に達している</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>「副業するなら自社で残業して」という説得は、現代では響きにくい</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>深刻な人手不足には、他社の副業人材を自社に呼び込む工夫が必要である</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>専門性を活かせる仕事内容や、業務委託などの柔軟な契約形態を検討すべきである</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-8">
+                            大阪でサービス業を展開する経営者の皆様、人手不足を「既存スタッフの残業」で解決しようとしていませんか？アセント社労士事務所では、副業人材の活用支援や、法改正に合わせた就業規則の整備など、時代の変化に合わせた労務管理をご提案しています。
+                        </p>
+                        
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">こんなお悩みのある、サービス業経営者・人事担当者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                労務管理の適正化、給与計算の効率化など、企業の成長をサポートします。アセント社労士事務所は働き方を「アセント（上昇）」させていくためのヒントを発信中です。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
