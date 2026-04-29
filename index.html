@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アセント社労士事務所 | 大阪のサービス業の労務課題に強い事務所</title>
-    <meta name="description" content="大阪のサービス業（飲食・小売・アミューズメント・介護福祉）の労務トラブル、シフト管理、就業規則ならアセント社労士事務所へ。現場経験豊富な社労士が解決します。">
+    <title>アセント社労士事務所 | その労務の迷いに、現場で回る答えを。</title>
+    <meta name="description" content="大阪のサービス業の労務課題に強い社労士事務所。シフト、社会保険、雇い止め、ハラスメント対応などの迷いを整理し、採用コストやトラブルコストが乱高下しにくい会社づくりを支援します。">
 
     <!-- OGP Tags -->
-    <meta property="og:title" content="アセント社労士事務所 | 大阪のサービス業の労務課題に強い事務所">
+    <meta property="og:title" content="アセント社労士事務所 | その労務の迷いに、現場で回る答えを。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/index.html">
     <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/representative-new.jpg">
     <meta property="og:description"
-        content="大阪のサービス業（飲食・小売・アミューズメント・介護福祉）の労務トラブル、シフト管理、就業規則ならアセント社労士事務所へ。現場経験豊富な社労士が解決します。">
+        content="大阪のサービス業の労務課題に強い社労士事務所。採用コストやトラブルコストが乱高下しにくい、利益の安定する会社づくりを支援します。">
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- JSON-LD Structured Data -->
@@ -381,6 +381,190 @@
         .contact-form-section .section-subtitle {
             color: #333333;
         }
+
+        /* 2026 top page redesign */
+        body {
+            background:
+                linear-gradient(180deg, #f7f9fc 0%, #ffffff 38%, #f7f9fc 100%);
+        }
+
+        header {
+            border-bottom: 1px solid rgba(10, 36, 99, 0.08);
+            background: rgba(255, 255, 255, 0.94) !important;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08) !important;
+        }
+
+        header nav a:not(:last-child) {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        header nav a:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            background: #f97316;
+            transition: transform 0.25s ease;
+        }
+
+        header nav a:not(:last-child):hover::after {
+            transform: scaleX(1);
+        }
+
+        .hero-bg {
+            background-image:
+                linear-gradient(90deg, rgba(7, 22, 56, 0.93) 0%, rgba(10, 36, 99, 0.82) 47%, rgba(10, 36, 99, 0.34) 100%),
+                url('images/service-industry-complexity.png');
+            background-size: cover;
+            background-position: center right;
+        }
+
+        #home::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 70px;
+            background: linear-gradient(180deg, rgba(247, 249, 252, 0), #f7f9fc);
+            pointer-events: none;
+        }
+
+        main section {
+            position: relative;
+        }
+
+        main section:nth-of-type(odd):not(#home):not(#reasons):not(.contact-form-section) {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(247, 249, 252, 0.92));
+        }
+
+        .rounded-xl,
+        .rounded-2xl {
+            border-radius: 8px !important;
+        }
+
+        .shadow-md,
+        .shadow-lg,
+        .shadow-xl,
+        .shadow-2xl,
+        .shadow-sm {
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08) !important;
+        }
+
+        .border,
+        .border-gray-100,
+        .border-red-100 {
+            border-color: rgba(10, 36, 99, 0.1) !important;
+        }
+
+        .bg-gray-50 {
+            background-color: #f7f9fc !important;
+        }
+
+        .bg-red-50 {
+            background: linear-gradient(135deg, #fff8f4 0%, #fff 64%) !important;
+        }
+
+        .bg-red-50 .text-red-500,
+        .bg-red-50 .border-red-500 {
+            color: #f97316 !important;
+            border-color: #f97316 !important;
+        }
+
+        .bg-navy-900 {
+            background-color: #071638 !important;
+        }
+
+        .bg-navy-800 {
+            background: #10224d !important;
+        }
+
+        .button,
+        a[class*="rounded-full"],
+        button[class*="rounded-full"] {
+            box-shadow: 0 14px 32px rgba(249, 115, 22, 0.2);
+        }
+
+        a[class*="rounded-full"]:hover,
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-title,
+        section h2 {
+            letter-spacing: 0;
+        }
+
+        section h2 {
+            line-height: 1.35;
+        }
+
+        #lead-magnet .grid>div,
+        #cases article,
+        #services .grid>div,
+        #reasons .grid>div {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        #lead-magnet .grid>div:hover,
+        #cases article:hover,
+        #services .grid>div:hover,
+        #reasons .grid>div:hover {
+            transform: translateY(-4px);
+            border-color: rgba(249, 115, 22, 0.35) !important;
+            box-shadow: 0 22px 52px rgba(15, 23, 42, 0.12) !important;
+        }
+
+        #blog .group>div,
+        .swiper-slide {
+            border: 1px solid rgba(10, 36, 99, 0.08);
+        }
+
+        .contact-form {
+            border: 1px solid rgba(10, 36, 99, 0.1);
+            box-shadow: 0 22px 52px rgba(15, 23, 42, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border: 1px solid rgba(10, 36, 99, 0.14);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 3px solid rgba(249, 115, 22, 0.18);
+            border-color: #f97316;
+        }
+
+        .office-details-table,
+        .google-map {
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-image:
+                    linear-gradient(180deg, rgba(7, 22, 56, 0.94) 0%, rgba(10, 36, 99, 0.9) 58%, rgba(10, 36, 99, 0.74) 100%),
+                    url('images/service-industry-complexity.png');
+                background-position: center;
+            }
+
+            #home {
+                min-height: 680px;
+            }
+
+            header img {
+                height: 40px !important;
+            }
+        }
     </style>
 </head>
 
@@ -393,16 +577,19 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
-                    <a href="#" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                    <a href="#" class="font-bold text-lg md:text-xl text-navy-900 tracking-tight">
                         アセント社労士事務所
                         <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden lg:flex space-x-6 items-center">
+                <nav class="hidden xl:flex gap-4 items-center">
                     <a href="#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
-                    <a href="#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="#lead-magnet"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">無料診断</a>
+                    <a href="#cases" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">改善事例</a>
+                    <a href="#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務コラム</a>
                     <a href="#reasons"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
                     <a href="#profile"
@@ -412,14 +599,14 @@
                     <a href="#access"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
 
-                    <a href="#contact-form-anchor"
+                    <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
                         class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
-                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                        <i class="fas fa-clipboard-check mr-1"></i> 5分診断
                     </a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <div class="lg:hidden">
+                <div class="xl:hidden">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -428,12 +615,16 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
                 <a href="#blog"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務コラム</a>
+                <a href="#lead-magnet"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">無料診断・資料請求</a>
+                <a href="#cases"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">改善事例</a>
                 <a href="#reasons"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
                 <a href="#profile"
@@ -442,8 +633,8 @@
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
                 <a href="#access"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
-                <a href="#contact-form-anchor"
-                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">5分診断を受ける</a>
             </div>
         </div>
     </header>
@@ -453,41 +644,81 @@
 
         <!-- 1. Hero Section (First View) -->
         <section id="home"
-            class="hero-bg relative min-h-[700px] md:h-[700px] flex items-start pt-32 md:pt-0 md:items-center justify-center text-white px-4">
-            <div class="container mx-auto text-center z-10">
+            class="hero-bg relative min-h-[720px] flex items-start pt-32 md:pt-0 md:items-center justify-center text-white px-4">
+            <div class="container mx-auto z-10">
                 <p
-                    class="text-accent-500 font-bold tracking-widest uppercase mb-4 text-sm md:text-base bg-navy-900/80 inline-block px-4 py-1 rounded-full">
+                    class="text-accent-500 font-bold tracking-widest uppercase mb-5 text-sm md:text-base bg-navy-900/80 inline-block px-4 py-1 rounded-full">
                     大阪のサービス業の労務課題に強い事務所
                 </p>
-                <h1 class="font-black leading-tight mb-8 drop-shadow-lg text-white">
-                    <span class="block text-[2.5rem] md:text-[4.5rem] leading-[1.3] tracking-widest"
-                        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);"><span class="text-accent-500">採れる</span>会社・<br
-                            class="md:hidden"><span class="text-accent-500">整う</span>会社へ。</span>
+                <h1 class="font-black leading-tight mb-7 drop-shadow-lg text-white max-w-5xl">
+                    <span class="block text-[2.4rem] md:text-[4.4rem] leading-[1.25]"
+                        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);">
+                        その労務の迷いに、<br><span class="text-accent-500">現場で回る答え</span>を。
+                    </span>
                 </h1>
                 <div
-                    class="bg-navy-900/50 backdrop-blur-md rounded-2xl p-6 md:p-8 inline-block shadow-2xl border border-white/10 mb-8 w-full max-w-4xl mx-auto relative overflow-hidden group hover:bg-navy-900/60 transition duration-500">
+                    class="bg-navy-900/55 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/10 mb-8 w-full max-w-4xl relative overflow-hidden group hover:bg-navy-900/65 transition duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                     </div>
-                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-5 relative z-10">
+                    <div class="flex flex-wrap gap-3 md:gap-4 mb-5 relative z-10">
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#採用難</span>
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#シフト</span>
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#人材定着</span>
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#採用コスト</span>
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#労務リスク</span>
+                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#利益の安定</span>
                     </div>
-                    <p class="text-base md:text-2xl text-white leading-relaxed font-bold tracking-wide text-center relative z-10"
+                    <p class="text-base md:text-2xl text-white leading-relaxed font-bold tracking-wide relative z-10"
                         style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
-                        人が育つ仕組みと制度整備で、<br class="md:hidden">採用コストと労務リスクを抑え、安定経営を支えます。
+                        「これで合っているのか」「もっといいやり方があるのではないか」。<br>
+                        労務の迷いを整理し、採用やトラブルにかかるコストが乱高下しにくい会社づくりを支えます。
                     </p>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <a href="#contact-form-anchor"
+                <div class="flex flex-col sm:flex-row gap-4 items-start">
+                    <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
                         class="w-full md:w-auto bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transition transform hover:scale-105 flex items-center justify-center">
-                        <i class="fas fa-check-circle mr-2"></i> まずは無料相談（60分）
+                        <i class="fas fa-clipboard-check mr-2"></i> 労務リスク5分診断
                     </a>
+                    <a href="#contact-form-anchor"
+                        class="w-full md:w-auto bg-white/95 hover:bg-white text-navy-900 font-bold py-4 px-8 rounded-full text-lg shadow-xl transition flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2 text-accent-500"></i> 無料相談（60分）
+                    </a>
+                </div>
+                <p class="mt-5 text-sm md:text-base text-white/85 max-w-3xl">
+                    飲食店、小売店、アミューズメント施設、介護・医療の現場へ。アルバイトやパートが多い職場ほど、労務の安定がそのまま経営の安定につながります。
+                </p>
+            </div>
+        </section>
+
+        <!-- Trust Signals -->
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-4xl mx-auto text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-navy-900">サービス業の現場を、15年見てきました。</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        アセント社労士事務所は、大阪市中央区・堺筋本町を拠点に、法律だけでなく「現場で運用できる形」まで見て支援します。
+                        労務を安定させることは、採用費やトラブル対応費のブレを小さくし、経営の数字をじわじわ守る仕事でもあります。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
+                    <div class="border bg-white p-5 text-center">
+                        <p class="text-3xl font-black text-navy-900 leading-none">15年</p>
+                        <p class="mt-2 text-sm font-bold text-gray-600">サービス業人事労務経験</p>
+                    </div>
+                    <div class="border bg-white p-5 text-center">
+                        <p class="text-3xl font-black text-navy-900 leading-none">1万人</p>
+                        <p class="mt-2 text-sm font-bold text-gray-600">アルバイト規模の現場対応</p>
+                    </div>
+                    <div class="border bg-white p-5 text-center">
+                        <p class="text-3xl font-black text-navy-900 leading-none">大阪</p>
+                        <p class="mt-2 text-sm font-bold text-gray-600">中央区・堺筋本町拠点</p>
+                    </div>
+                    <div class="border bg-white p-5 text-center">
+                        <p class="text-3xl font-black text-navy-900 leading-none">現場</p>
+                        <p class="mt-2 text-sm font-bold text-gray-600">法律と運用をつなぐ支援</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -498,9 +729,9 @@
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row">
                     <!-- Image Area (Placeholder for Runner/Pro Photo) -->
                     <div class="md:w-2/5 bg-gray-200 h-64 md:h-auto relative">
-                        <img src="images/representative-new.jpg" alt="永田 充博" class="w-full h-full object-cover">
+                        <img src="images/representative-new.jpg" alt="長田 充博" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
-                            <p class="text-white text-sm font-bold opacity-90">100km走る社労士</p>
+                            <p class="text-white text-sm font-bold opacity-90">現場と法律をつなぐ社労士</p>
                         </div>
                     </div>
                     <!-- Text Area -->
@@ -511,11 +742,12 @@
                         <p class="text-gray-500 text-sm mb-6">アセント社労士事務所 代表 ／ 社会保険労務士</p>
 
                         <h3 class="text-lg font-bold text-navy-800 mb-4 border-l-4 border-accent-500 pl-3">
-                            「アルバイト1万人規模のサービス業の会社を15年支えた労務経験値を有する社労士」
+                            現場と法律、どちらもわかる社労士です。
                         </h3>
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            アルバイトが10,000人以上在籍するサービス業の人事・労務部門を15年経験した後に開業しました。労務管理は労働基準法をはじめとした法律に従って行っていく必要があります。しかしながら、卓上の理論のみを現場に落とし込もうとすると現場がうまく回りません。一方、現場の都合を重視しすぎると法律に抵触することもあります。どのようにすれば法律を守りながら現場が回る仕組みを作るか、その楽しさと難しさの両方を見てきました。<br>
-                            「現場を知らない専門家」ではなく、汗をかく現場の皆様と同じ目線で、解決策を一緒に考えます。
+                            アルバイト1万人規模のサービス業を含む現場で、15年にわたり人事・労務に関わってきました。制度だけ整えても、現場で運用できなければ意味がありません。
+                            一方で、現場に合わせることばかりを優先すると、あとで大きなコストになることもあります。<br>
+                            法律を守りながら現場が回り、利益がブレにくい状態をどう作るか。その難しさも価値も見てきた立場で、解決策を一緒に考えます。
                         </p>
                         <div>
                             <a href="profile.html"
@@ -531,11 +763,15 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">TARGET</span>
+                    <span class="text-accent-500 font-bold tracking-wider">ISSUE</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        こんなお悩みのある、<br class="md:hidden">サービス業経営者・人事担当者さまへ
+                        売上はあるのに、<br class="md:hidden">利益が安定しない会社があります。
                     </h2>
                     <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-5 text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                        その原因が商品や集客ではなく、労務にあることは少なくありません。採用してもすぐ辞める、店長が疲弊する、トラブル対応に時間もお金も取られる。
+                        こうしたことが続くと、売上が安定していても利益が残りにくくなります。
+                    </p>
                 </div>
 
                 <!-- Industry Icons -->
@@ -566,6 +802,11 @@
 
                 <!-- Pain Points List -->
                 <div class="bg-red-50 border-2 border-red-100 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-navy-900">
+                            こんな「なんとなく不安」を、<br class="md:hidden">抱えたままになっていませんか。
+                        </h3>
+                    </div>
                     <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
                         <!-- Item 1 -->
                         <div class="flex items-start">
@@ -573,8 +814,8 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 1</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">社会保険・扶養の壁でシフトが崩れる</h3>
-                                <p class="text-sm text-gray-700">色々な壁があってよく分からない。どのようにシフトを組めばいい？</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">社会保険・扶養の壁で迷う</h3>
+                                <p class="text-sm text-gray-700">シフトを組むたびに、週20時間、扶養、2か月ルールの判断があいまいになる。</p>
                             </div>
                         </div>
                         <!-- Item 2 -->
@@ -583,8 +824,8 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 2</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">採用が難しい・定着しない</h3>
-                                <p class="text-sm text-gray-700">本質的に人事に強い会社は、社内制度や人事評価制度がどうなっているか知りたい。</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">採用しても定着しない</h3>
+                                <p class="text-sm text-gray-700">採用のやり直しが増え、現場責任者の負担ばかり大きくなっている。</p>
                             </div>
                         </div>
                         <!-- Item 3 -->
@@ -593,8 +834,8 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 3</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">雇止め・更新トラブル</h3>
-                                <p class="text-sm text-gray-700">更新しないだけのつもりが『不当だ』と言われて話が大きくなる</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">雇い止めトラブルが不安</h3>
+                                <p class="text-sm text-gray-700">契約更新をしないだけのつもりが、説明不足で大きな問題になりそうで怖い。</p>
                             </div>
                         </div>
                         <!-- Item 4 -->
@@ -603,8 +844,8 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 4</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">休職・復職のルールがなくて揉める</h3>
-                                <p class="text-sm text-gray-700">メンタル不調の休職者が復職したいって言ってるけど、大丈夫？</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">休職・復職の判断が属人的</h3>
+                                <p class="text-sm text-gray-700">対応する人によって説明が変わり、判断のたびに不安が残る。</p>
                             </div>
                         </div>
                         <!-- Item 5 -->
@@ -613,8 +854,8 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 5</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">指導とハラスメントの境界</h3>
-                                <p class="text-sm text-gray-700">注意したいのに、『それパワハラ？』が怖くて店長が黙ってしまう</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">店長が注意できない</h3>
+                                <p class="text-sm text-gray-700">「それはハラスメントでは」と言われるのが怖くて、必要な指導が止まっている。</p>
                             </div>
                         </div>
                         <!-- Item 6 -->
@@ -623,17 +864,91 @@
                                 class="flex-shrink-0 w-10 h-10 bg-white border-2 border-red-500 text-red-500 font-black rounded-full flex items-center justify-center mr-4 text-xl shadow-sm">
                                 6</div>
                             <div>
-                                <h3 class="text-lg font-bold text-navy-900 mb-1">労基署・年金事務所等の調査対応</h3>
-                                <p class="text-sm text-gray-700">労基署から電話。何を確認される？ 普段から気を付けておくことは？</p>
+                                <h3 class="text-lg font-bold text-navy-900 mb-1">行政からの連絡に慌てる</h3>
+                                <p class="text-sm text-gray-700">労基署や年金事務所から連絡が来たとき、何から確認すべきかわからない。</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-8 text-center border-t border-red-200 pt-6">
                         <p class="text-lg font-bold text-navy-900 bg-white/50 inline-block px-4 py-2 rounded-lg">
-                            法律論だけで終わらせず、「現場で回る運用」まで一緒に設計します。
+                            こうした迷いを放置すると、採用のやり直しや対応ミスが増え、利益が残りにくくなります。
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Magnet / Middle CV -->
+        <section id="lead-magnet" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-accent-500 font-bold tracking-wider">FREE CHECK</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        相談前に、まずは「どこで利益が削られているか」を整理しませんか。
+                    </h2>
+                    <p class="mt-4 text-gray-600 font-medium max-w-3xl mx-auto">
+                        「今すぐ相談するほどではない気がする」。そう感じる段階でも、無料診断や資料請求で自社の課題を整理する価値は十分あります。
+                        採用コストやトラブルコストを押し上げている原因を、見える形にしていきます。
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-md border border-gray-100 p-7 flex flex-col order-1">
+                        <div class="w-12 h-12 bg-accent-500 text-white rounded-lg flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <p class="text-sm font-bold text-accent-500 mb-2">5分診断</p>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">サービス業の労務リスクセルフチェック</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+                            シフト、社会保険、労働時間、ハラスメント、雇い止め。現場で迷いやすい論点を短時間で確認し、「なんとなく不安」を経営課題として見える状態にします。
+                        </p>
+                        <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center rounded-full bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 transition">
+                            5分診断を受ける
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md border border-gray-100 p-7 flex flex-col order-3">
+                        <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <p class="text-sm font-bold text-accent-500 mb-2">無料相談</p>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">労務の不安を整理しませんか？</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+                            経営リスクになる前に、まずは60分の無料相談で、御社の状況に合わせて「どこから整えるべきか」を一緒に確認します。すでにトラブルが起きているという緊急性の高い場合もご相談ください。
+                        </p>
+                        <a href="#contact-form-anchor"
+                            class="inline-flex items-center justify-center rounded-full border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-bold px-5 py-3 transition">
+                            無料相談を申し込む
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md border border-gray-100 p-7 flex flex-col order-2">
+                        <div class="w-12 h-12 bg-gray-800 text-white rounded-lg flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <p class="text-sm font-bold text-accent-500 mb-2">継続接触</p>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">大阪のサービス業向け 労務コラム</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+                            法改正や保険料率だけでなく、退職代行、カスタマーハラスメント、労働時間管理など、現場で判断に迷いやすいテーマを発信しています。
+                        </p>
+                        <a href="#blog"
+                            class="inline-flex items-center justify-center rounded-full border-2 border-accent-500 text-accent-600 hover:bg-accent-500 hover:text-white font-bold px-5 py-3 transition">
+                            最新コラムを見る
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-10 bg-navy-900 text-white rounded-2xl p-6 md:p-8 max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                    <div>
+                        <p class="text-accent-500 font-bold mb-1">相談に進む前に整理できます</p>
+                        <p class="text-lg font-bold">「無料診断希望」「資料請求希望」だけでも大丈夫です。必要な支援だけをご相談いただけます。</p>
+                    </div>
+                    <a href="#contact-form-anchor"
+                        class="shrink-0 inline-flex items-center justify-center bg-white text-navy-900 hover:text-accent-600 font-bold rounded-full px-6 py-3 transition">
+                        入力フォームへ
+                    </a>
                 </div>
             </div>
         </section>
@@ -645,8 +960,11 @@
                     <span class="text-accent-500 font-bold tracking-wider">BLOG</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
                         サービス業の“あるある”労務相談<br>
-                        <span class="text-xl md:text-2xl">～必見の３選～</span>
+                        <span class="text-xl md:text-2xl">迷ったときに見返せる実務情報</span>
                     </h2>
+                    <p class="mt-4 text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                        制度改正を知っているだけでは、現場の問題は解決しません。雇い止め、社会保険加入、副業と残業代、カスタマーハラスメントなど、サービス業で起きやすい論点を発信しています。
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
@@ -904,6 +1222,62 @@
                     </div>
                 </a>
             </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="cases" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-accent-500 font-bold tracking-wider">CASE STUDY</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        労務を整えると、現場が安定し、利益のブレも小さくなります。
+                    </h2>
+                    <p class="mt-4 text-gray-600 font-medium max-w-3xl mx-auto">
+                        制度を作るだけでは、現場は変わりません。店長やスタッフが迷わず動ける状態まで落とし込んで、はじめて意味があります。
+                        守秘義務に配慮した形で整理した事例です。
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-7 max-w-6xl mx-auto">
+                    <article class="bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden">
+                        <div class="bg-navy-900 text-white p-5">
+                            <p class="text-accent-500 text-sm font-bold mb-1">飲食店 / 従業員30名</p>
+                            <h3 class="text-xl font-bold">店長が注意できない職場を改善</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm font-bold text-gray-500 mb-2">Before</p>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-5">指導とパワハラの境界が曖昧で、遅刻や接客態度を注意しづらい状態に。</p>
+                            <p class="text-sm font-bold text-accent-500 mb-2">After</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">注意の手順、記録の残し方、相談ルートを整備。問題の放置や人間関係の悪化が減り、離職や採用のやり直しコストも抑えやすくなりました。</p>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden">
+                        <div class="bg-navy-900 text-white p-5">
+                            <p class="text-accent-500 text-sm font-bold mb-1">小売業 / パート比率高め</p>
+                            <h3 class="text-xl font-bold">年収の壁で崩れるシフトを再設計</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm font-bold text-gray-500 mb-2">Before</p>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-5">週20時間、扶養、2か月ルールの判断が属人化し、月末にシフト修正が頻発。</p>
+                            <p class="text-sm font-bold text-accent-500 mb-2">After</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">加入基準と確認タイミングを明文化。月末の修正や説明の行き違いが減り、採用後の運用コストを下げやすい状態になりました。</p>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden">
+                        <div class="bg-navy-900 text-white p-5">
+                            <p class="text-accent-500 text-sm font-bold mb-1">介護・医療 / 小規模事業所</p>
+                            <h3 class="text-xl font-bold">退職・休職トラブルを未然に防止</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm font-bold text-gray-500 mb-2">Before</p>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-5">休職、復職、雇い止めの基準が曖昧で、説明のたびに不安が残る状態に。</p>
+                            <p class="text-sm font-bold text-accent-500 mb-2">After</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">就業規則と面談フロー、説明資料を整備。後追い対応にかかる時間とコストを減らしやすい状態になりました。</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -912,20 +1286,20 @@
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center mb-16">
                     <span class="text-accent-500 font-bold tracking-wider">WHY ASCENT?</span>
-                    <p class="text-lg md:text-xl font-bold text-yellow-400 mt-2">“お客様の笑顔”の裏側にいる“働く人”を大事にしたい</p>
+                    <p class="text-lg md:text-xl font-bold text-yellow-400 mt-2">法律を守るだけでも、現場に合わせるだけでも足りません。</p>
                     <h2 class="text-3xl md:text-5xl font-black text-accent-500 mt-2 leading-tight">
-                        アセント社労士事務所が選ばれる理由
+                        サービス業の労務コストを、乱高下させないための支援ができます。
                     </h2>
-                    <p class="mt-5 text-lg font-bold text-white bg-white/10 inline-block px-6 py-2 rounded-lg">サービス業のアルバイト1万人を15年支えてきた、労務トラブル対応に強い社労士</p>
+                    <p class="mt-5 text-lg font-bold text-white bg-white/10 inline-block px-6 py-2 rounded-lg">正しいだけではなく、続けられること。きれいな制度だけではなく、利益を守れる運用になっていることを重視します。</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <!-- Reason 1 -->
                     <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
                         <div class="text-accent-500 text-5xl font-black mb-4">01</div>
-                        <h3 class="text-xl font-bold mb-3">課題対応の量と種類</h3>
+                        <h3 class="text-xl font-bold mb-3">課題対応の量と種類が違います</h3>
                         <p class="text-gray-300 leading-relaxed">
-                            1万人規模の組織では、あらゆる種類のトラブルが日常的に発生します。24時間営業、深夜労働、学生、ダブルワーカー等、こなした『量』から、サービス業特有の課題を即座に解決する『質』を提供します。
+                            1万人規模の組織では、さまざまな労務トラブルが日常的に発生します。その量を見てきたからこそ、机上の理屈ではない現実的な答えをご提案できます。
                         </p>
                     </div>
                     <!-- Reason 2 -->
@@ -933,8 +1307,7 @@
                         <div class="text-accent-500 text-5xl font-black mb-4">02</div>
                         <h3 class="text-xl font-bold mb-3">トラブル対応の感度</h3>
                         <p class="text-gray-300 leading-relaxed">
-                            小規模での発生頻度をそのまま大規模に当てはめることはできません。
-                            一方で、1万人規模の実績データがあれば、労務トラブルの発生頻度を客観的に評価でき、制度・運用の見直し要否まで整理してご提案できます。
+                            どの問題を放置すると危ないのか。どこから整えれば、採用コストやトラブル対応コストが膨らみにくくなるのか。優先順位をつけて整理できます。
                         </p>
                     </div>
                     <!-- Reason 3 -->
@@ -942,27 +1315,27 @@
                         <div class="text-accent-500 text-5xl font-black mb-4">03</div>
                         <h3 class="text-xl font-bold mb-3">大阪のサービス業に特化した情報感度</h3>
                         <p class="text-gray-300 leading-relaxed">
-                            トラブル時に迅速訪問。地域の行政指導傾向や賃金動向を踏まえた提案が可能です。
+                            地域の事情や賃金感覚も踏まえて、大阪のサービス業の現場に合う形で支援します。必要なときに相談しやすい距離感も強みです。
                         </p>
                     </div>
                     <!-- Reason 4 -->
                     <div class="bg-navy-800 p-8 rounded-xl border border-navy-800 hover:border-accent-500 transition">
                         <div class="text-accent-500 text-5xl font-black mb-4">04</div>
-                        <h3 class="text-xl font-bold mb-3">100km走る社労士の「伴走力」</h3>
+                        <h3 class="text-xl font-bold mb-3">制度だけで終わらず、伴走します</h3>
                         <p class="text-gray-300 leading-relaxed">
-                            趣味はウルトラマラソン。長距離を走り抜く粘り強さで、御社の課題が解決するまで諦めずに伴走します。
+                            就業規則を作る、フローを整える。それだけではなく、本当に現場で使えるかまで見て、利益が安定しやすい状態を一緒に整えていきます。
                         </p>
                     </div>
                 </div>
 
                 <!-- Mission -->
                 <div class="mt-16 bg-white/10 rounded-2xl p-8 text-center max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold text-accent-500 mb-4">サービス業の労務、実はとても複雑です</h3>
+                    <h3 class="text-2xl font-bold text-accent-500 mb-4">アセントの考え方</h3>
                     <p class="text-lg leading-relaxed font-medium">
-                        サービス業の現場は、アルバイト・パートが土台を支えています。<br>
-                        しかし、シフトや労働時間・社会保険など、他の業種より複雑な労務管理に手が回らない。<br>
-                        その結果、「現場を支える人ほど守られていない」職場も少なくありません。<br>
-                        だからこそ、法律だけでなく、現場の実情を踏まえて対応できる社労士が必要です。
+                        労務管理は法律に従って進める必要があります。<br>
+                        でも、卓上の理屈だけで現場に落とし込もうとすると、店は回らなくなります。<br>
+                        一方で、現場の都合だけを優先すると、気づかないうちに大きなリスクを抱えることにもなります。<br>
+                        法律を守りながら、現場で無理なく回り、余計なコストが膨らまない形を作ります。
                     </p>
                     <div class="mt-8">
                         <img src="images/service-industry-complexity.png" alt="サービス業の現場の複雑さ"
@@ -978,10 +1351,12 @@
                 <div class="text-center mb-16">
                     <span class="text-accent-500 font-bold tracking-wider">SERVICE</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        サービス・料金案内
+                        課題に合わせて、必要な支援を選べます。
                     </h2>
                     <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
-                    <p class="mt-4 text-gray-600 font-medium">労務の不安に、一人にしない。顧問として伴走します。</p>
+                    <p class="mt-4 text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                        労務の課題は会社ごとに違います。一律の正解を押しつけるのではなく、今の課題に合った支援を選べるようにしています。
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -991,9 +1366,9 @@
                             class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">労務相談<br><span
-                                class="text-sm font-normal text-gray-600">（サービス業特化プラン）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">シフト・労働時間管理、アルバイト雇用契約、ハラスメント相談、是正勧告対応などを丸ごとサポート。</p>
+                        <h3 class="text-xl font-bold mb-2">顧問契約<br><span
+                                class="text-sm font-normal text-gray-600">（日常相談・運用改善）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">日常の労務相談から、トラブル予防、制度整備、運用改善まで継続して支援します。</p>
 
                     </div>
 
@@ -1003,9 +1378,9 @@
                             class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
                             <i class="fas fa-comment-dots"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">社会保険手続き<br><span
-                                class="text-sm font-normal text-gray-600">（人事担当者の負担削減）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">アルバイトの加入基準の設計・入退社・算定基礎・育児介護など、日常の業務を代行します。</p>
+                        <h3 class="text-xl font-bold mb-2">社会保険・労働保険手続き<br><span
+                                class="text-sm font-normal text-gray-600">（担当者の負担削減）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">煩雑でミスの許されない手続きを、正確かつスムーズに進め、本来の業務に集中しやすくします。</p>
 
                     </div>
 
@@ -1015,9 +1390,9 @@
                             class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">就業規則・整備<br><span
-                                class="text-sm font-normal text-gray-600">（お店の運用ルール）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">「サービス業の現場にフィットする就業規則」。深夜・土日・早朝などを前提にしたルール設計。</p>
+                        <h3 class="text-xl font-bold mb-2">就業規則・各種規程<br><span
+                                class="text-sm font-normal text-gray-600">（現場で使えるルール）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">作って終わりの規則ではなく、サービス業の現場で運用しやすい形を重視して整えます。</p>
 
                     </div>
                     <!-- Service 4 -->
@@ -1028,7 +1403,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-2">助成金サポート<br><span
                                 class="text-sm font-normal text-gray-600">（キャリアアップ助成金等）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">アルバイトから正社員、生産性向上のための設備投資など、サービス業で使いやすい助成金にフォーカスしてご提案。</p>
+                        <p class="text-gray-600 text-sm mb-4">使えそうなものを何でも案内するのではなく、現実的に活用可能なものを見極めてご提案します。</p>
 
                     </div>
                     <!-- Service 5 -->
@@ -1037,9 +1412,9 @@
                             class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">店長・新人向け研修<br><span
-                                class="text-sm font-normal text-gray-600">（労務研修）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">「アルバイトのトラブルを防ぐマネジメント」「“それ、パワハラかも？”と言われない知識」を伝授。</p>
+                        <h3 class="text-xl font-bold mb-2">ハラスメント・管理職研修<br><span
+                                class="text-sm font-normal text-gray-600">（店長が動ける状態へ）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">注意したいのに注意できない状態を防ぎ、管理職や店長が安心して動ける状態を作ります。</p>
 
                     </div>
                     <!-- Service 6 -->
@@ -1048,9 +1423,33 @@
                             class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-xl mb-4">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">スポット対応<br><span
-                                class="text-sm font-normal text-gray-600">（スタートアップ企業様へ）</span></h3>
-                        <p class="text-gray-600 text-sm mb-4">社会保険の新規適用手続き、就業規則新規作成、セカンドオピニオンとしても。</p>
+                        <h3 class="text-xl font-bold mb-2">スポット相談<br><span
+                                class="text-sm font-normal text-gray-600">（まず一件だけ相談）</span></h3>
+                        <p class="text-gray-600 text-sm mb-4">いきなり顧問契約ではなく、まずは一件だけ相談したい会社さまにも対応します。</p>
+                    </div>
+                </div>
+
+                <div class="mt-14 bg-white rounded-2xl shadow-md border border-gray-100 p-6 md:p-8 max-w-5xl mx-auto">
+                    <div class="text-center mb-8">
+                        <span class="text-accent-500 font-bold tracking-wider">COST PERFORMANCE</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-navy-900 mt-2">社労士支援は、手続き代行だけではありません。</h3>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5">
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-2">社内対応だけだと</p>
+                            <h4 class="font-bold text-navy-900 mb-2">判断が属人化しやすい</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">店長や担当者ごとに説明が変わり、後から「言った・言わない」になりやすくなります。</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-2">トラブル1件で</p>
+                            <h4 class="font-bold text-navy-900 mb-2">時間と信用を失いやすい</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">未払い残業、雇い止め、ハラスメント対応は、初動の遅れが大きな負担につながります。</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                            <p class="text-sm font-bold text-accent-500 mb-2">顧問契約なら</p>
+                            <h4 class="font-bold text-navy-900 mb-2">利益のブレを小さくする</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">相談、手続き、就業規則、店長研修を組み合わせ、採用費やトラブル対応費がふくらみにくい状態を作ります。</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1061,8 +1460,67 @@
             </div>
         </section>
 
+        <!-- Consultation Flow -->
+        <section id="flow" class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-accent-500 font-bold tracking-wider">FLOW</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
+                        ご相談は、このような流れで進みます。
+                    </h2>
+                    <p class="mt-4 text-gray-600 font-medium max-w-3xl mx-auto">
+                        無理に契約をおすすめすることはありません。「まず状況を整理したい」という段階でも大丈夫です。
+                    </p>
+                </div>
 
+                <div class="grid md:grid-cols-4 gap-5 max-w-6xl mx-auto">
+                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                        <p class="text-accent-500 text-sm font-black mb-2">STEP 01</p>
+                        <h3 class="font-bold text-navy-900 mb-2">ご連絡</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">無料診断、資料請求、無料相談のいずれかからご連絡ください。</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                        <p class="text-accent-500 text-sm font-black mb-2">STEP 02</p>
+                        <h3 class="font-bold text-navy-900 mb-2">課題整理</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">今の状況を整理し、どこでコストが膨らみやすいのかを確認します。</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                        <p class="text-accent-500 text-sm font-black mb-2">STEP 03</p>
+                        <h3 class="font-bold text-navy-900 mb-2">支援内容のご案内</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">継続支援が必要な場合は、内容と費用をご案内します。</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                        <p class="text-accent-500 text-sm font-black mb-2">STEP 04</p>
+                        <h3 class="font-bold text-navy-900 mb-2">支援開始</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">ご納得いただけた場合のみ、支援を開始します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Final CTA -->
+        <section class="py-20 bg-navy-900 text-white">
+            <div class="container mx-auto px-4 md:px-8 text-center max-w-4xl">
+                <span class="text-accent-500 font-bold tracking-wider">START</span>
+                <h2 class="text-3xl md:text-5xl font-black mt-3 leading-tight text-navy-900">
+                    その労務の迷いに、<br>現場で回る答えを。
+                </h2>
+                <p class="mt-6 text-lg leading-relaxed text-navy-900 bg-white/95 rounded-2xl px-6 py-5 shadow-lg">
+                    法律と現場の両方を見ながら、採用費やトラブル対応費がふくらみにくく、利益が安定しやすい労務の形を一緒に整えます。
+                    売上が安定していても、利益が安定しない会社をなくすために。
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
+                        class="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transition">
+                        労務リスク5分診断を受ける
+                    </a>
+                    <a href="#contact-form-anchor"
+                        class="bg-white hover:bg-gray-100 text-navy-900 font-bold py-4 px-8 rounded-full text-lg shadow-xl transition">
+                        無料相談（60分）を予約する
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- Preserved Legacy Sections -->
         <section id="about" class="about-intro py-20 bg-white">
@@ -1093,7 +1551,7 @@
                         <td>2025年7月16日</td>
                     </tr>
                     <tr>
-                        <th>登録番号</th>
+                        <th>所属</th>
                         <td>大阪府社会保険労務士会</td>
                     </tr>
                     <tr>
@@ -1106,22 +1564,26 @@
 
         <section id="contact-form-anchor" class="contact-form-section">
             <div class="legacy-container">
-                <h2 class="section-title">お問い合わせフォーム</h2>
-                <p class="section-subtitle">ご相談、ご質問、お見積もりのご依頼など、<br>お気軽におお問い合わせください。</p>
+                <h2 class="section-title">その迷いを、利益を削る前に整理しませんか。</h2>
+                <p class="section-subtitle">労務の迷いは、問題が起きてから相談するより、迷っている段階で整理した方がうまくいきます。<br>「無料診断希望」「資料請求希望」だけでも大丈夫です。</p>
 
                 <div class="bg-gray-50 p-6 rounded-xl max-w-3xl mx-auto text-left mb-12 border border-gray-100">
                     <p class="text-center font-bold mb-4 text-navy-900">よくあるお問い合わせ</p>
                     <div class="flex flex-wrap gap-2 justify-center">
                         <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">就業規則を作りたい</span>
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">無料診断希望</span>
                         <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">残業代請求された</span>
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">資料請求希望</span>
                         <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">労基署対応</span>
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">シフトと社会保険を整理したい</span>
                         <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">社会保険手続き依頼</span>
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">雇い止め対応を相談したい</span>
                         <span
                             class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">店長研修の依頼</span>
+                        <span
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">労基署・年金事務所対応</span>
+                        <span
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">就業規則を見直したい</span>
                     </div>
                 </div>
                 <form action="https://formspree.io/f/xdkdnwjl" method="POST" class="contact-form">
@@ -1140,6 +1602,7 @@
                     <div class="form-group">
                         <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
                         <textarea id="message" name="message" rows="5" required></textarea>
+                        <p class="text-sm text-gray-500 mt-2">例：無料診断希望／資料請求希望／飲食店30名、シフトと社会保険の整理について相談したい</p>
                     </div>
                     <div class="form-submit">
                         <button type="submit" class="button button-primary">送信する</button>
@@ -1164,15 +1627,14 @@
                         class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
                         <summary
                             class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
-                            <span>Q. まだ従業員が数名しかいないのですが、顧問契約は可能ですか？</span>
+                            <span>Q. まだ顧問契約を考えていないのですが、相談できますか。</span>
                             <span class="transition group-open:rotate-180">
                                 <i class="fas fa-chevron-down text-accent-500"></i>
                             </span>
                         </summary>
                         <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
-                            <p class="font-bold text-accent-500 mb-2">A. はい、もちろん可能です。</p>
-                            むしろ、従業員が少ない段階からしっかりとした就業ルールを作っておくことで、将来のトラブル（未払い残業代請求や不当解雇トラブルなど）を未然に防ぐことができます。
-                            「転ばぬ先の杖」として、ぜひご活用ください。
+                            <p class="font-bold text-accent-500 mb-2">A. はい、大丈夫です。</p>
+                            まずはスポット相談や、無料診断・資料請求から始めていただけます。必要に応じて、継続支援をご検討ください。
                         </div>
                     </details>
                     <!-- FAQ 2 -->
@@ -1180,15 +1642,14 @@
                         class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
                         <summary
                             class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
-                            <span>Q. 大阪市やサービス業以外の依頼も受け付けていますか？</span>
+                            <span>Q. サービス業以外でも相談できますか。</span>
                             <span class="transition group-open:rotate-180">
                                 <i class="fas fa-chevron-down text-accent-500"></i>
                             </span>
                         </summary>
                         <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
-                            <p class="font-bold text-accent-500 mb-2">A. 大阪市・サービス業以外のお客様からのご相談・ご依頼も承っております。</p>
-                            当事務所は「大阪市内のサービス業」を中心に実務経験と知見を蓄積しているため、その範囲に比べると、どうしてもご提案の精度やスピードが一段階落ちる場合があります。<br>
-                            ただし、法令そのものは全国共通ですので、内容によっては十分にお力になれるケースも多くございます。
+                            <p class="font-bold text-accent-500 mb-2">A. はい、ご相談可能です。</p>
+                            特に強みを発揮しやすいのは、飲食、小売、娯楽・レジャー、介護・医療などのサービス業です。内容によっては、他業種でも十分にお力になれるケースがあります。
                         </div>
                     </details>
                     <!-- FAQ 3 -->
@@ -1196,15 +1657,29 @@
                         class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
                         <summary
                             class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
-                            <span>Q. 契約期間の縛りはありますか？</span>
+                            <span>Q. 小規模な会社でも相談できますか。</span>
                             <span class="transition group-open:rotate-180">
                                 <i class="fas fa-chevron-down text-accent-500"></i>
                             </span>
                         </summary>
                         <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
-                            <p class="font-bold text-accent-500 mb-2">A. 最低契約期間などの縛りはございません。</p>
-                            もしサービスにご満足いただけない場合は、解約希望月の前月末までにご連絡いただければ、いつでも解約が可能です。
-                            違約金等も一切かかりませんので、安心してお試しください。
+                            <p class="font-bold text-accent-500 mb-2">A. もちろん可能です。</p>
+                            人数規模にかかわらず、人と現場の課題がある会社さまを支援しています。小さいうちにルールを整えることで、後からの修正コストを抑えやすくなります。
+                        </div>
+                    </details>
+                    <!-- FAQ 4 -->
+                    <details
+                        class="group bg-gray-50 rounded-lg open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center font-bold text-navy-900 cursor-pointer p-6 list-none">
+                            <span>Q. 何を相談していいかわからない段階でも大丈夫ですか。</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down text-accent-500"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 px-6 pb-6 text-sm leading-relaxed">
+                            <p class="font-bold text-accent-500 mb-2">A. 大丈夫です。</p>
+                            現状を一緒に整理しながら、何が課題で、何から手をつけるべきかを確認していきます。まずは「無料診断希望」だけでもお送りください。
                         </div>
                     </details>
                 </div>
@@ -1218,10 +1693,12 @@
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
                 <div>
                     <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
-                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    <p class="text-sm">その労務の迷いに、現場で回る答えを。</p>
                 </div>
                 <div class="flex flex-col md:flex-row gap-6 text-sm">
                     <a href="#home" class="hover:text-white">ホーム</a>
+                    <a href="#lead-magnet" class="hover:text-white">無料診断</a>
+                    <a href="#cases" class="hover:text-white">改善事例</a>
                     <a href="#reasons" class="hover:text-white">選ばれる理由</a>
                     <a href="#services" class="hover:text-white">サービス案内</a>
                     <a href="#" class="hover:text-white">プライバシーポリシー</a>
