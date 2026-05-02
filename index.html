@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
 
 <head>
@@ -40,7 +40,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
@@ -420,9 +420,51 @@
         .hero-bg {
             background-image:
                 linear-gradient(90deg, rgba(7, 22, 56, 0.93) 0%, rgba(10, 36, 99, 0.82) 47%, rgba(10, 36, 99, 0.34) 100%),
-                url('images/service-industry-complexity.png');
+                url('images/hero-bg-representative-work.png');
             background-size: cover;
             background-position: center right;
+        }
+
+        .hero-kicker {
+            color: #e6c98b;
+            border-left: 4px solid #e8c982;
+            border-bottom: 1px solid rgba(232, 201, 130, 0.48);
+            letter-spacing: 0.08em;
+            line-height: 1.55;
+            text-shadow: 0 3px 16px rgba(2, 8, 23, 0.62);
+        }
+
+        .hero-title {
+            color: #f7f2e8;
+            font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-shadow: 0 18px 46px rgba(2, 8, 23, 0.55), 0 2px 12px rgba(2, 8, 23, 0.34);
+        }
+
+        .hero-title-accent {
+            color: #e8c982;
+            font-weight: 900;
+            text-shadow: 0 14px 38px rgba(2, 8, 23, 0.46);
+        }
+
+        .hero-copy-panel {
+            background: rgba(7, 22, 56, 0.46);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 22px 52px rgba(2, 8, 23, 0.28);
+        }
+
+        .hero-chip {
+            color: #f3ddb0;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(230, 201, 139, 0.28);
+            box-shadow: 0 12px 28px rgba(2, 8, 23, 0.18);
+        }
+
+        .hero-copy {
+            color: rgba(255, 251, 242, 0.92);
+            text-shadow: 0 2px 10px rgba(2, 8, 23, 0.42);
+            font-weight: 500;
         }
 
         #home::after {
@@ -553,8 +595,12 @@
             .hero-bg {
                 background-image:
                     linear-gradient(180deg, rgba(7, 22, 56, 0.94) 0%, rgba(10, 36, 99, 0.9) 58%, rgba(10, 36, 99, 0.74) 100%),
-                    url('images/service-industry-complexity.png');
+                    url('images/hero-bg-representative-work.png');
                 background-position: center;
+            }
+
+            .hero-kicker {
+                letter-spacing: 0.02em;
             }
 
             #home {
@@ -595,7 +641,7 @@
                     <a href="#profile"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
                     <a href="#services"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス・料金案内</a>
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
                     <a href="#access"
                         class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
 
@@ -630,7 +676,7 @@
                 <a href="#profile"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
                 <a href="#services"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス・料金案内</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
                 <a href="#access"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
                 <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
@@ -646,31 +692,28 @@
         <section id="home"
             class="hero-bg relative min-h-[720px] flex items-start pt-32 md:pt-0 md:items-center justify-center text-white px-4">
             <div class="container mx-auto z-10">
-                <p
-                    class="text-accent-500 font-bold tracking-widest uppercase mb-5 text-sm md:text-base bg-navy-900/80 inline-block px-4 py-1 rounded-full">
-                    大阪のサービス業の労務課題に強い事務所
+                <p class="hero-kicker font-bold uppercase mb-5 text-base md:text-xl inline-block pl-4 pr-2 pb-2">
+                    大阪のサービス業の労務管理に強い事務所
                 </p>
-                <h1 class="font-black leading-tight mb-7 drop-shadow-lg text-white max-w-5xl">
-                    <span class="block text-[2.4rem] md:text-[4.4rem] leading-[1.25]"
-                        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);">
-                        その労務の迷いに、<br><span class="text-accent-500">現場で回る答え</span>を。
+                <h1 class="hero-title leading-tight mb-7 max-w-5xl">
+                    <span class="block text-[2.35rem] md:text-[4.2rem] leading-[1.28]">
+                        その労務の迷いに、<br><span class="hero-title-accent">現場で回る答え</span>を。
                     </span>
                 </h1>
                 <div
-                    class="bg-navy-900/55 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/10 mb-8 w-full max-w-4xl relative overflow-hidden group hover:bg-navy-900/65 transition duration-500">
+                    class="hero-copy-panel backdrop-blur-md rounded-2xl p-6 md:p-8 mb-8 w-full max-w-4xl relative overflow-hidden group transition duration-500">
                     <div
-                        class="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        class="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                     </div>
                     <div class="flex flex-wrap gap-3 md:gap-4 mb-5 relative z-10">
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#シフト</span>
+                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">働き方改革</span>
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#採用コスト</span>
+                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">労務トラブル</span>
                         <span
-                            class="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-2 rounded-lg text-sm md:text-xl font-black shadow-lg shadow-accent-500/30 tracking-widest transform hover:scale-105 transition duration-300">#利益の安定</span>
+                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">利益の安定</span>
                     </div>
-                    <p class="text-base md:text-2xl text-white leading-relaxed font-bold tracking-wide relative z-10"
-                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                    <p class="hero-copy text-base md:text-xl leading-relaxed tracking-wide relative z-10">
                         「これで合っているのか」「もっといいやり方があるのではないか」。<br>
                         労務の迷いを整理し、採用やトラブルにかかるコストが乱高下しにくい会社づくりを支えます。
                     </p>
@@ -1453,10 +1496,6 @@
                     </div>
                 </div>
 
-                <div class="text-center mt-12">
-                    <a href="pricing.html"
-                        class="inline-block border-2 border-navy-900 text-navy-900 font-bold py-3 px-8 rounded-full hover:bg-navy-900 hover:text-white transition">料金・プランを見る</a>
-                </div>
             </div>
         </section>
 
@@ -1703,15 +1742,6 @@
                     <a href="#services" class="hover:text-white">サービス案内</a>
                     <a href="#" class="hover:text-white">プライバシーポリシー</a>
                 </div>
-            </div>
-
-            <div class="mt-8 flex flex-col items-center justify-center">
-                <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
-                    target="_blank" rel="noopener noreferrer" class="inline-block">
-                    <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
-                        class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
-                </a>
-                <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
             </div>
 
             <div class="mt-12 text-center text-xs text-gray-600">
