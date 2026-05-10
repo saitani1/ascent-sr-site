@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採用3か月以内の退職を防ぐ「労務安定度」の重要性 | アセント社労士事務所</title>
+    <meta name="description"
+        content="採用して3か月以内に退職する方はいませんか？採用ミスマッチが生む労務コストについて整理し、サービス業の早期離職を防ぐための労務安定度の見方と対策を解説します。">
+    <meta property="og:title" content="採用3か月以内の退職を防ぐ「労務安定度」の重要性 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-labor-stability-early-turnover.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/生成画像1.jpg">
+    <meta property="og:description"
+        content="採用して3か月以内に退職する方はいませんか？採用ミスマッチが生む労務コストについて整理し、対策を講じましょう。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c',
+                            900: '#111827',
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header / Global Menu -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access"
+                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790"
+                        class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor"
+                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790"
+                    class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span
+                    class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">対応事例</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    採用3か月以内の退職を防ぐ「労務安定度」の重要性
+                </h1>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <!-- Main Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/生成画像1.jpg" alt="採用3か月以内の退職を防ぐ労務安定度5分診断" class="w-full h-auto">
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-6">
+                            採用した人が3か月以内に辞めてしまう。正社員だけでなく、アルバイト・パートでも同じことが繰り返される。サービス業の現場では、これは珍しい悩みではありません。
+                        </p>
+                        <p class="mb-6">
+                            ただ、早期退職を「最近の若い人は続かない」「採用市場が厳しいから仕方がない」で片づけてしまうと、採用費、教育時間、現場の疲弊が積み重なります。3か月以内の退職は、採用活動だけの問題ではなく、職場の労務安定度を映すサインです。
+                        </p>
+                        <p class="mb-8">
+                            アセント社労士事務所では、サービス業の経営者・人事担当者の方が自社の労務リスクを短時間で確認できるように、「サービス業の労務安定度5分診断」を公開しています。今回は、その診断項目のうち最初の問いである「採用して3か月以内に辞める人が一定数いますか」を軸に、早期離職を防ぐための考え方を整理します。
+                        </p>
+
+                        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+                            <p class="font-bold text-navy-900 mb-3">この記事で確認したいこと</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>1か月以内の退職と3か月以内の退職では、原因の見方が違う</li>
+                                <li>採用ミスマッチは、求人費だけでなく現場の生産性も削る</li>
+                                <li>面接時の説明、入社後の受け入れ、労働条件の運用を分けて点検する</li>
+                                <li>早期離職を減らすには、採用力より先に労務安定度を整える必要がある</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            サービス業の労務安定度5分診断とは
+                        </h2>
+                        <p class="mb-6">
+                            「サービス業の労務安定度5分診断」は、12個の質問に対して「当てはまる」「どちらでもない」「当てはまらない」の3択で回答し、自社の労務管理上のリスクを確認する簡易診断です。
+                        </p>
+                        <p class="mb-6">
+                            診断で見ているのは、単に法律違反の有無だけではありません。離職の予兆、職場内の不満、労働条件の伝わり方、現場管理者の負担、トラブルが表面化する前の小さな違和感も含めて、会社がどれだけ安定して人を受け入れ、育て、定着させられる状態にあるかを確認します。
+                        </p>
+                        <p class="mb-6">
+                            なかでも「採用して3か月以内に辞める人が一定数いるか」は、非常に重要な入口です。なぜなら、入社直後の退職は、本人の適性だけではなく、会社側の説明・受け入れ・現場環境が複合的に影響して起きるからです。
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+                            <p class="mb-4">
+                                自社の状態を先に確認したい方は、こちらの診断ページをご利用ください。
+                            </p>
+                            <a href="labor-stability-diagnosis.html"
+                                class="inline-flex items-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-6 rounded-full transition">
+                                労務安定度5分診断を見る <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            第1問：採用から3か月以内に辞める人が一定数いますか？
+                        </h2>
+                        <p class="mb-6">
+                            この質問で想定しているのは、正社員だけではありません。アルバイト、パート、契約社員など、雇用形態にかかわらず「採用したのにすぐ辞める」状態が続いているかどうかです。
+                        </p>
+                        <p class="mb-6">
+                            実際に退職届が出ていなくても、入社直後から元気がない、シフト希望が急に減る、質問が少なくなる、先輩との会話を避ける、といった兆候がある場合は、同じリスクとして見ておく必要があります。
+                        </p>
+                        <p class="mb-6">
+                            3か月という区切りには意味があります。入社直後の期待と現場の現実がぶつかり、仕事の全体像や人間関係、労働条件の実態が見え始めるのがこの時期だからです。つまり、3か月以内の退職は「採用した人の我慢が足りない」だけではなく、入社前後の設計にミスマッチがある可能性を知らせています。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            1か月以内の退職は「直感的なミスマッチ」を疑う
+                        </h2>
+                        <p class="mb-6">
+                            採用から1か月以内に辞める場合、多くは職場環境や仕事内容に対する直感的な違和感が原因です。本人が職場に入った瞬間に「思っていた働き方と違う」「この空気は自分に合わない」と感じ、その感覚が早い段階で退職につながります。
+                        </p>
+                        <p class="mb-6">
+                            サービス業は、お客様として接していると華やかで楽しそうに見えることがあります。しかし、働く側に回ると、清掃、準備、片づけ、クレーム対応、繁忙時間帯のスピード、立ち仕事の負担など、表からは見えにくい作業が多くあります。
+                        </p>
+                        <p class="mb-6">
+                            若い方や未経験者ほど、利用者として受けていたサービスの印象と、働く側としての現実に大きな差を感じやすくなります。この差が大きいほど、入社後すぐに「自分には無理かもしれない」という判断につながります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            採用面接では、よい面だけでなく厳しさも伝える
+                        </h2>
+                        <p class="mb-6">
+                            人手不足の状況では、応募者に辞退されたくないため、職場のよい面ばかりを伝えたくなります。しかし、入社前の期待値を上げすぎると、入社後の落差が大きくなり、早期退職の原因になります。
+                        </p>
+                        <p class="mb-6">
+                            面接では、現場の厳しさや大変な側面も説明する必要があります。ただし、単に「忙しいです」「厳しいです」と伝えるだけでは、応募者を不安にさせるだけです。大切なのは、厳しさと同時に、その厳しさを乗り越えるための支援や得られる経験をセットで伝えることです。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>繁忙時間帯は慌ただしいが、最初は担当範囲を絞って教える</li>
+                            <li>立ち仕事は多いが、休憩の取り方やシフト配分は相談できる</li>
+                            <li>お客様対応で迷う場面はあるが、責任者へつなぐ基準を決めている</li>
+                            <li>覚えることは多いが、チェックリストと教育担当者を用意している</li>
+                        </ul>
+                        <p class="mb-6">
+                            仕事のリアルを隠さず伝えることで、入社後のギャップを小さくできます。これは応募者をふるい落とすためではなく、入社後に長く働ける人と会社が互いに納得して始めるための工程です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            3か月以内の退職は「人間関係」と「労働条件」が見えたサイン
+                        </h2>
+                        <p class="mb-6">
+                            入社から1か月、2か月を何とか乗り越えた人が3か月前後で辞める場合、問題はもう少し深いところにあります。仕事内容そのものよりも、職場の人間関係、先輩社員の働き方、実際の労働条件とのズレが見えてきたタイミングだからです。
+                        </p>
+                        <p class="mb-6">
+                            たとえば、面接時には「丁寧に教えます」と聞いていたのに、実際には忙しくて放置される。求人票では「シフト相談可」と書かれていたのに、現場では相談しづらい。先輩がいつも疲れ切っていて、数か月後の自分の姿に希望を持てない。こうした実感は、入社してしばらく働かないと見えてきません。
+                        </p>
+                        <p class="mb-4">
+                            特に離職の引き金になりやすいのは、次のような状態です。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>上司や先輩の言い方がきつく、質問しにくい</li>
+                            <li>教育担当が決まっておらず、人によって教え方が違う</li>
+                            <li>ロールモデルになる先輩が疲弊している</li>
+                            <li>求人票や面接で聞いた労働条件と実態が違う</li>
+                            <li>休憩、残業、シフト変更のルールがあいまい</li>
+                            <li>ミスをしたときに助けてもらえる安心感がない</li>
+                        </ul>
+                        <p class="mb-6">
+                            これらは面接時の説明だけでは解決できません。入社後の受け入れ体制、現場管理者の関わり方、労働条件の運用そのものを見直す必要があります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            採用ミスマッチが生む労務コスト
+                        </h2>
+                        <p class="mb-6">
+                            早期退職の損失は、求人広告費だけではありません。採用担当者の面接時間、雇用契約書や社会保険・雇用保険の手続き、初期研修、制服や備品の準備、現場スタッフが教える時間など、見えにくいコストが積み上がります。
+                        </p>
+                        <p class="mb-6">
+                            さらに、早期退職が続くと、残ったスタッフにも負担がかかります。「また新人が辞めた」「どうせ教えても続かない」という空気が生まれると、教育の質も落ち、次の新人にとってさらに働きにくい職場になります。
+                        </p>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+                            <p class="font-bold text-navy-900 mb-3">早期退職で発生しやすいコスト</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>求人媒体、採用代行、紹介料などの採用費</li>
+                                <li>面接、連絡、入社手続きにかかる管理部門の時間</li>
+                                <li>教育担当者や現場責任者の指導時間</li>
+                                <li>シフト穴埋めのための残業、人員調整コスト</li>
+                                <li>既存スタッフの疲弊、モチベーション低下</li>
+                                <li>お客様対応品質のばらつきやクレームリスク</li>
+                            </ul>
+                        </div>
+                        <p class="mb-6">
+                            つまり、採用ミスマッチは「採用の失敗」だけではなく、労務管理、現場運営、利益率にまで影響する経営課題です。だからこそ、採用人数を増やす前に、辞めにくい状態を作ることが重要になります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まずは原因を「1か月以内」と「3か月以内」に分ける
+                        </h2>
+                        <p class="mb-6">
+                            早期退職が続いている会社では、退職者をひとまとめにせず、退職時期ごとに原因を分けて見ます。
+                        </p>
+                        <div class="overflow-x-auto mb-8">
+                            <table class="w-full border-collapse text-sm md:text-base">
+                                <thead>
+                                    <tr class="bg-navy-900 text-white">
+                                        <th class="border border-gray-200 p-3 text-left">退職時期</th>
+                                        <th class="border border-gray-200 p-3 text-left">主な原因</th>
+                                        <th class="border border-gray-200 p-3 text-left">見直すべきポイント</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-200 p-3 font-bold">1か月以内</td>
+                                        <td class="border border-gray-200 p-3">仕事内容・職場の空気との直感的なミスマッチ</td>
+                                        <td class="border border-gray-200 p-3">求人票、面接説明、職場見学、初日の案内</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-200 p-3 font-bold">2〜3か月以内</td>
+                                        <td class="border border-gray-200 p-3">人間関係、教育体制、労働条件の実態への不信感</td>
+                                        <td class="border border-gray-200 p-3">教育担当、面談、シフト運用、休憩・残業ルール</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mb-6">
+                            この切り分けを行うと、打つべき対策が明確になります。1か月以内の退職が多いなら、入社前の情報提供を見直す。3か月以内の退職が多いなら、入社後の現場運用と労働条件の整合性を見直す。原因が違えば、対策も変わります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            入社後3か月で確認したい実務チェック
+                        </h2>
+                        <p class="mb-6">
+                            早期離職を防ぐには、入社してから放置しないことが大切です。特にサービス業では、現場が忙しいほど「困ったら聞いてね」で終わりがちですが、新人は何を聞けばよいのかも分からないことがあります。
+                        </p>
+                        <p class="mb-4">
+                            最低限、次のタイミングで短い面談や声かけを行うと、退職の予兆を拾いやすくなります。
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>入社初日：</strong>勤務ルール、休憩、相談先、緊急時の連絡方法を確認する</li>
+                            <li><strong>入社1週間：</strong>仕事内容のギャップ、質問しにくいこと、体力面の負担を聞く</li>
+                            <li><strong>入社1か月：</strong>教育の進み具合、人間関係、シフト希望とのズレを確認する</li>
+                            <li><strong>入社2か月：</strong>独り立ち後の不安、ミスへの対応、継続意思を確認する</li>
+                            <li><strong>入社3か月：</strong>今後続けるうえで改善してほしい点、期待する働き方を確認する</li>
+                        </ul>
+                        <p class="mb-6">
+                            面談は長時間でなくても構いません。大切なのは、会社が「見ている」「相談してよい」というメッセージを継続して出すことです。退職の意思が固まってから引き止めるより、違和感が小さいうちに整える方が効果的です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            労務安定度を高める3つの改善策
+                        </h2>
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">1. 求人票と面接説明を現場基準にそろえる</h3>
+                        <p class="mb-6">
+                            求人票に書いていること、面接で説明していること、実際の現場で起きていることがズレていないかを確認します。特にシフト、残業、休憩、休日、教育体制は、応募者が入社後に不信感を持ちやすい項目です。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">2. 教育担当と相談先を明確にする</h3>
+                        <p class="mb-6">
+                            新人が誰に聞けばよいか分からない状態は、想像以上に負担になります。教育担当者、シフトの相談先、労務条件の相談先を分け、初日に明示しておくと安心感が生まれます。
+                        </p>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">3. 現場責任者だけに抱え込ませない</h3>
+                        <p class="mb-6">
+                            早期離職は現場責任者の努力不足だけで起きるものではありません。人員計画、採用基準、教育時間、労働条件の整備など、経営側・管理部門が関わるべき領域も多くあります。現場責任者が「忙しい中で新人教育も全部見る」状態になっているなら、そこから見直す必要があります。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：早期離職を防ぐための3つのポイント
+                        </h2>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>3か月以内の退職には、採用・教育・労働条件のどこかに理由がある</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>1か月以内の退職は、入社前の情報提供と期待値調整で減らせる</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>3か月以内の退職は、職場環境と労働条件の運用を見直すサインである</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-8">
+                            採用してもすぐ辞める状態が続くと、会社は常に人手不足のまま走り続けることになります。採用活動を強化する前に、まずは自社の労務安定度を確認し、入社した人が安心して働き続けられる土台を整えましょう。
+                        </p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">早期離職・採用ミスマッチにお悩みのサービス業経営者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、採用後の定着、労働条件の整備、現場で回るルールづくりを支援しています。退職が起きてから慌てる前に、今の職場の状態を一緒に確認しましょう。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
