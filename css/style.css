@@ -138,6 +138,16 @@ section {
     color: #fff;
 }
 
+.header-phone {
+    color: var(--accent-color);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.header-phone:hover {
+    color: var(--accent-hover);
+}
+
 .button-pulse {
     animation: pulse 2s infinite;
 }
