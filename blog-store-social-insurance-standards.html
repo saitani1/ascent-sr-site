@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗ごとに異なる社会保険加入の判断基準を統一し、労務リスクを回避する方法 | アセント社労士事務所</title>
+    <meta name="description"
+        content="店舗ごとに社会保険の加入基準がバラバラではありませんか？年金事務所の調査で指摘されないための「2ヶ月連続ルール」など、サービス業特有の労務リスクを回避し、組織を安定させる具体的な運用術を解説します。">
+    <meta property="og:title" content="店舗ごとに異なる社会保険加入の判断基準を統一し、労務リスクを回避する方法 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-store-social-insurance-standards.html">
+    <meta property="og:image"
+        content="https://saitani1.github.io/ascent-sr-site/images/ChatGPT Image 2026年5月21日 16_40_47 (1).jpg">
+    <meta property="og:description"
+        content="店舗ごとに社会保険の加入基準がバラバラではありませんか？年金事務所の調査で指摘されないための「2ヶ月連続ルール」など、サービス業特有の労務リスクを回避する具体的な運用術を解説します。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a202c',
+                            900: '#111827',
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    店舗ごとに異なる社会保険加入の判断基準を統一し、労務リスクを回避する方法
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.05.21
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年5月21日 16_40_47 (1).jpg"
+                            alt="店舗ごとに異なる社会保険の判断基準を統一する労務管理のイラスト" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            複数店舗を運営していると、社会保険に加入させるかどうかの判断が、店長や担当者ごとに微妙に変わってしまうことがあります。A店では週20時間を超えたらすぐ確認するのに、B店では本人が希望しないから様子を見る。C店では繁忙期だけだから加入させていない。こうしたばらつきは、年金事務所の調査や遡及加入の場面で大きなリスクになります。
+                        </p>
+                        <p class="mb-6">
+                            大阪を中心にサービス業の労務支援を行うアセント社労士事務所では、労務安定度を高めるために「店舗ごとの判断」ではなく「会社としての統一基準」を作ることを重視しています。本記事では、社会保険加入の基本、シフトが変動するスタッフへの2ヶ月連続ルール、新規入社者の加入タイミング、調査対応まで、現場で使える形に整理します。
+                        </p>
+
+                        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+                            <p class="font-bold text-navy-900 mb-3">この記事で確認したいこと</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>社会保険の加入基準は、企業規模と働き方で判断する</li>
+                                <li>シフト変動者は「2ヶ月連続で基準超過なら3ヶ月目から加入」を運用ルールにする</li>
+                                <li>加入を希望しないスタッフがいる場合は、会社側が基準を超えないシフト管理を行う</li>
+                                <li>年金事務所の調査では、賃金台帳・勤務実績・加入手続きの整合性が見られる</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            社会保険の加入基準と今後の適用拡大
+                        </h2>
+                        <p class="mb-6">
+                            2026年5月時点では、まず「4分の3基準」を確認します。1週間の所定労働時間および1か月の所定労働日数が、同じ事業所で働く通常の労働者のおおむね4分の3以上であれば、企業規模にかかわらず健康保険・厚生年金保険の加入対象になります。
+                        </p>
+                        <p class="mb-6">
+                            4分の3基準を満たさない短時間労働者でも、特定適用事業所などに勤務し、週の所定労働時間が20時間以上、学生ではないなどの要件を満たす場合は、社会保険の加入対象になります。現在は厚生年金保険の被保険者数が51人以上の企業等が主な対象ですが、今後は企業規模要件が段階的に縮小されます。
+                        </p>
+                        <ul class="list-disc pl-6 mb-8 bg-gray-50 p-6 rounded-lg space-y-2">
+                            <li>2027年9月まで：従業員数51人以上の企業が対象</li>
+                            <li>2027年10月から：従業員数36〜50人の企業も対象</li>
+                            <li>2029年10月から：従業員数21〜35人の企業も対象</li>
+                            <li>2032年10月から：従業員数11〜20人の企業も対象</li>
+                            <li>2035年10月から：従業員数10人以下の企業も対象</li>
+                        </ul>
+                        <p class="mb-8">
+                            つまり、現時点では週30時間ラインで運用している会社でも、今後は週20時間ラインを前提にしたシフト設計・雇用契約・本人説明が必要になります。特にアルバイト比率の高い飲食、小売、美容、宿泊、介護などでは、早めに社内基準を作っておくことが重要です。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            ポイント1：シフトが変動するアルバイトは「2ヶ月連続」で見る
+                        </h2>
+                        <p class="mb-6">
+                            サービス業では、繁忙期、欠員補充、学生の長期休暇、急な退職などにより、アルバイトの勤務時間が月ごとに大きく変わります。そのため、社会保険の加入基準付近で働く人について、どの月を基準に判断するのかが曖昧になりがちです。
+                        </p>
+                        <p class="mb-6">
+                            実務上の大切な目安が「2ヶ月連続」です。所定労働時間が週20時間未満でも、実際の労働時間が2ヶ月連続で週20時間以上となり、その後も同じ状態が続くと見込まれる場合は、3ヶ月目から加入対象になります。週30時間基準で運用している会社でも、同じ考え方で「基準超過が2ヶ月続いたら3ヶ月目から加入」と統一しておくと、判断のばらつきを抑えられます。
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div class="border-2 border-red-200 rounded-xl p-6 bg-red-50">
+                                <h3 class="text-lg font-bold text-red-800 mb-3 border-b-2 border-red-200 pb-2">リスクの高い運用</h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>本人が希望しないから加入させない</li>
+                                    <li>店長判断で「繁忙期だけ」と扱う</li>
+                                    <li>店舗ごとに週20時間、週25時間、週30時間など基準が違う</li>
+                                    <li>賃金台帳上は基準超過なのに手続きしていない</li>
+                                </ul>
+                            </div>
+                            <div class="border-2 border-blue-200 rounded-xl p-6 bg-blue-50">
+                                <h3 class="text-lg font-bold text-blue-800 mb-3 border-b-2 border-blue-200 pb-2">安定する運用</h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>毎月、基準付近のスタッフを本部で確認する</li>
+                                    <li>2ヶ月連続で基準超過なら3ヶ月目から加入する</li>
+                                    <li>加入しない人は、会社が基準を超えないシフトを組む</li>
+                                    <li>雇用契約書、勤務実績、給与計算の情報を一致させる</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-navy-800 mt-8 mb-4">本人が加入を望まない場合ほど、会社の管理が問われる</h3>
+                        <p class="mb-6">
+                            扶養の範囲で働きたい、手取りが減るのを避けたい、家族の健康保険に入り続けたい。こうした理由で、スタッフ本人が社会保険加入を希望しないことは珍しくありません。しかし、加入対象かどうかは本人の希望だけで決めるものではありません。基準を満たす働き方になっているなら、会社には資格取得届を提出する責任があります。
+                        </p>
+                        <p class="mb-8">
+                            そのため、加入を希望しないスタッフについては、面談で希望を確認したうえで、基準を超えない勤務時間に調整する必要があります。「本人が嫌がったから加入しなかった」という説明は、調査対応では通りにくいと考えてください。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            ポイント2：新規入社者の加入タイミングを決めておく
+                        </h2>
+                        <p class="mb-6">
+                            新規採用したアルバイトスタッフについても、「いつから社会保険に加入させるか」を店舗任せにすると混乱します。入社時から週20時間以上、または週30時間以上で働く契約で、2ヶ月を超えて雇用される見込みがある場合は、原則として加入手続きの検討が必要です。
+                        </p>
+                        <p class="mb-6">
+                            一方で、サービス業では短期間で離職するケースもあります。入社してすぐに社会保険に加入し、同じ月に退職する「同月得喪」が発生すると、給与計算、保険料控除、会社負担、本人説明のすべてが複雑になります。だからこそ、採用時点で働き方を整理しておくことが大切です。
+                        </p>
+                        <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                            <h3 class="font-bold text-navy-900 mb-3">入社時に決めておきたい運用例</h3>
+                            <ol class="list-decimal pl-6 space-y-2">
+                                <li>最初から基準を満たす契約なら、加入前提で説明して手続きする</li>
+                                <li>定着を見ながら時間を増やす予定なら、当初1〜2ヶ月は基準未満で契約・勤務する</li>
+                                <li>基準を超えるタイミングを本部に共有し、3ヶ月目以降の加入漏れを防ぐ</li>
+                                <li>本人の扶養希望がある場合は、勤務可能時間を数値で確認し、シフト上限を設定する</li>
+                            </ol>
+                        </div>
+                        <p class="mb-8">
+                            ここで重要なのは、「様子見だから加入しない」という曖昧な扱いにしないことです。様子を見るなら、雇用契約と実際の勤務時間も基準未満にそろえる。最初から基準を超える働き方をしてもらうなら、加入前提で進める。この線引きを会社として明文化しましょう。
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            年金事務所の調査では「実態」が見られる
+                        </h2>
+                        <p class="mb-6">
+                            年金事務所の調査では、賃金台帳、出勤簿、雇用契約書、資格取得届の提出状況などを確認されます。紙のルールでは週20時間未満になっていても、実際の勤務実績が2ヶ月連続で基準を超えていれば、加入漏れを指摘される可能性があります。
+                        </p>
+                        <p class="mb-6">
+                            遡って加入することになると、会社負担分だけでなく本人負担分の保険料処理も問題になります。すでに退職している人、給与から控除できない人、扶養から外れる説明ができていなかった人がいると、金銭面だけでなく信頼面のトラブルにも発展します。
+                        </p>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-8">
+                            <h3 class="text-lg font-bold text-yellow-800 mb-2">調査前に確認したい書類</h3>
+                            <ul class="list-disc pl-6 space-y-2 mb-0">
+                                <li>雇用契約書の週所定労働時間と実際の勤務時間が合っているか</li>
+                                <li>2ヶ月連続で基準を超えたスタッフを抽出できるか</li>
+                                <li>加入を希望しないスタッフのシフト上限が管理されているか</li>
+                                <li>店舗ごとの判断ではなく、本部基準で加入・非加入を決めているか</li>
+                                <li>店長が「誰に相談すればよいか」を理解しているか</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            店舗展開企業が作るべき社内ルール
+                        </h2>
+                        <p class="mb-6">
+                            社会保険の制度は法律で決まっていますが、現場で迷わない運用に落とし込むのは会社の役割です。次のようなルールを作っておくと、店長の判断負担を下げながら、加入漏れを防ぎやすくなります。
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">基準付近のスタッフを毎月リスト化する</h4>
+                                    <p class="text-sm text-gray-600">週18〜22時間、週28〜32時間など、加入ラインに近い人を本部で把握します。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">2ヶ月連続の基準超過を自動チェックする</h4>
+                                    <p class="text-sm text-gray-600">勤怠締め後に、前月・当月の実績を並べて確認するルーティンを作ります。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">加入しない人のシフト上限を数値で決める</h4>
+                                    <p class="text-sm text-gray-600">「扶養内で」ではなく、週何時間・月何時間までかを店長と本人で共有します。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-navy-900 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">店長判断で例外を作らない</h4>
+                                    <p class="text-sm text-gray-600">本人事情がある場合も、本部・労務担当へ相談する流れに統一します。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            まとめ：社会保険は「店舗の判断」から「会社の基準」へ
+                        </h2>
+                        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>社会保険の適用拡大に備え、週20時間ラインを意識した社内基準を作る</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>シフト変動者は、2ヶ月連続で基準を超えたら3ヶ月目から加入する運用に統一する</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>加入を希望しないスタッフには、会社が基準を超えないシフト管理を行う</strong></div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-square text-accent-500 mt-1 mr-3 text-xl"></i>
+                                    <div><strong>賃金台帳、勤怠、雇用契約、加入手続きの整合性を毎月確認する</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="mb-8">
+                            社会保険の加入判断は、現場任せにすると必ずばらつきます。ばらつきは、加入漏れ、遡及保険料、扶養トラブル、店長の説明負担につながります。複数店舗を運営している会社ほど、「誰が見ても同じ判断になる基準」を作り、毎月の勤怠確認に組み込むことが、労務リスクを下げる一番現実的な方法です。
+                        </p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">社会保険の加入基準を全店舗で統一したい事業者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、サービス業のシフト実態に合わせて、社会保険加入基準、扶養希望者の管理、年金事務所調査に備えた書類整備まで支援しています。
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="labor-stability-diagnosis.html"
+                                    class="inline-block bg-white hover:bg-gray-100 text-navy-900 font-bold py-4 px-8 rounded-full text-base shadow-lg transition transform hover:scale-105">
+                                    労務安定度5分診断を受ける
+                                </a>
+                                <a href="index.html#contact-form-anchor"
+                                    class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-base shadow-lg transition transform hover:scale-105">
+                                    無料相談（60分）に申し込む
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
