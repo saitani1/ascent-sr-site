@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仕事と家族、どちらを優先しますか？ | アセント社労士事務所</title>
+    <meta name="description"
+        content="仕事と家族の予定が重なったとき、あなたはどちらを優先しますか。インドの方から得た学びをきっかけに、ワークライフバランスと労務管理の課題を考えます。">
+    <meta property="og:title" content="仕事と家族、どちらを優先しますか？ | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-work-family-priority.html">
+    <meta property="og:image" content="https://saitani1.github.io/ascent-sr-site/images/work-family-priority-thumbnail.jpg">
+    <meta property="og:description"
+        content="仕事と家族の予定が重なったとき、あなたはどちらを優先しますか。インドの方から得た学びをきっかけに、ワークライフバランスと労務管理の課題を考えます。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    仕事と家族、どちらを優先しますか？
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.06.03
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/work-family-priority-thumbnail.jpg"
+                            alt="仕事と家族の優先順位を考えるイラスト" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">
+                            仕事と家族の予定が重なったとき、あなたはどちらを優先しますか。<br>
+                            日本では、多くの人が「仕事」と答えるかもしれません。<br>
+                            家族の用事があっても、友人との約束があっても、仕事が入れば仕事を優先する。
+                        </p>
+                        <p class="mb-6">それが社会人として当然だと考えている人も多いと思います。</p>
+                        <p class="mb-6">でも、昨日話したインド出身の方は、その感覚に強い違和感を持っていました。</p>
+                        <p class="mb-6">その方は、20年ほど日本に住んでいる方です。</p>
+                        <p class="mb-6">日本語も流暢で、日本の働き方にも慣れています。</p>
+                        <p class="mb-6">それでも、「日本人はなぜそこまで仕事を優先するのか」と話していました。</p>
+                        <p class="mb-6">この言葉を聞いて、私自身も考えました。</p>
+                        <p class="mb-8">仕事を第一優先にする理由は、今も本当にあるのでしょうか。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            インドでは、家族や友人の予定が先に来る
+                        </h2>
+                        <p class="mb-6">その方によると、インドでは仕事よりも、家族や友人を優先することが多いそうです。</p>
+                        <p class="mb-6">家族の用事がある。</p>
+                        <p class="mb-6">友人との予定がある。</p>
+                        <p class="mb-6">そういう予定が入っていれば、まずそちらを済ませる。</p>
+                        <p class="mb-6">仕事はそのあとにする。</p>
+                        <p class="mb-6">もちろん、国や地域、職種によって違いはあります。</p>
+                        <p class="mb-6">ただ、少なくともその方にとっては、「仕事のために家族や友人の予定を後回しにする」という日本的な感覚は、あまり理解しにくいものだったようです。</p>
+                        <p class="mb-6">実際、昨日も似たような場面がありました。</p>
+                        <p class="mb-6">本来は別の方がそのインドの方を迎えに行く予定でした。</p>
+                        <p class="mb-6">ところが、仕事が入ったため行けなくなり、私が代わりに迎えに行くことになりました。</p>
+                        <p class="mb-6">そのことについても、その方はこう話していました。</p>
+                        <p class="mb-6"><strong>インドでは、友人との予定が入っていたら、友人の予定を優先しますよ</strong>（その方を責めるようなものではないです）。</p>
+                        <p class="mb-6">仕事ばかり優先する日本人は、なぜそこまで仕事を優先するのですか。</p>
+                        <p class="mb-8">この言葉は、かなり印象に残りました。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            仕事を優先してきた対価は何だったのか
+                        </h2>
+                        <p class="mb-6">その方は、もうひとつ興味深いことを話していました。</p>
+                        <p class="mb-6"><strong>仕事を第一優先にしなくても、インドではみんな普通に生活していますよ。</strong></p>
+                        <p class="mb-6">お金に困って、食べていけないというわけではありませんよ。</p>
+                        <p class="mb-6">この言葉を聞いて、日本が仕事を第一優先にしてきた対価は何だったのかと考えました。</p>
+                        <p class="mb-6">仕事を最優先にしてきた結果、日本人全員が経済的に豊かになったのか。</p>
+                        <p class="mb-6">誰もが満足できる暮らしを手に入れたのか。</p>
+                        <p class="mb-6">もちろん、仕事を頑張って豊かになった人もいます。</p>
+                        <p class="mb-6">でも、多くの人にとっては、そう単純な話ではないはずです。</p>
+                        <p class="mb-6">仕事を優先してきた。</p>
+                        <p class="mb-6">でも、生活はそこまで楽になっていない。</p>
+                        <p class="mb-6">家族との時間も少ない。</p>
+                        <p class="mb-6">友人との関係も薄くなる。</p>
+                        <p class="mb-6">趣味に打ち込む時間もない。</p>
+                        <p class="mb-8">だとすると、仕事を第一優先にする意味を、今一度考える必要があります。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            昔は、仕事を第一優先にする理由があった
+                        </h2>
+                        <p class="mb-6">もちろん、昔は仕事を第一優先にする理由がありました。</p>
+                        <p class="mb-6">年功序列がありました。</p>
+                        <p class="mb-6">終身雇用がありました。</p>
+                        <p class="mb-6">同じ会社で頑張っていれば、少しずつ給料が上がっていく。</p>
+                        <p class="mb-6">会社も定年まで面倒を見てくれる。</p>
+                        <p class="mb-6">そういう時代であれば、仕事を第一優先にすることにも一定の合理性がありました。</p>
+                        <p class="mb-6">仕事を頑張れば報われる。</p>
+                        <p class="mb-6">会社に尽くせば、将来が安定する。</p>
+                        <p class="mb-6">そういうロールモデルもありました。</p>
+                        <p class="mb-6">仕事を第一優先にして頑張っている先輩が、出世して、給料も上がって、家庭を持って、家を買う。</p>
+                        <p class="mb-6">そういう姿を見て、「自分もああなりたい」と思えた時代があったのだと思います。</p>
+                        <p class="mb-6">でも、今は状況が変わっています。</p>
+                        <p class="mb-6">年功序列は弱くなっています。</p>
+                        <p class="mb-6">終身雇用も当たり前ではなくなっています。</p>
+                        <p class="mb-6">転職も珍しくありません。</p>
+                        <p class="mb-6">会社に尽くせば、必ず将来が保証されるわけでもありません。</p>
+                        <p class="mb-8">そうなると、仕事を第一優先にする理由は、かなり薄れてきています。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            何のために仕事をするのか
+                        </h2>
+                        <p class="mb-6"><strong>では、私たちは何のために仕事をするのでしょうか。</strong></p>
+                        <p class="mb-6"><strong>ここが、今の日本でかなり曖昧になっている気がします。</strong></p>
+                        <p class="mb-6">本来、仕事は人生を支えるためのものです。</p>
+                        <p class="mb-6">家族と暮らすため。</p>
+                        <p class="mb-6">友人と楽しい時間を過ごすため。</p>
+                        <p class="mb-6">趣味に打ち込むため。</p>
+                        <p class="mb-6">自分が大切にしたい生活を守るため。</p>
+                        <p class="mb-6">そういう目的のために、仕事があるはずです。</p>
+                        <p class="mb-6">ところが日本では、仕事そのものが目的になりやすい。</p>
+                        <p class="mb-6">家族のために仕事をしているはずなのに、家族の予定より仕事を優先する。</p>
+                        <p class="mb-6">自分の生活をよくするために仕事をしているはずなのに、生活のほとんどが仕事で埋まってしまう。</p>
+                        <p class="mb-6">これは、どこかで順番が逆になっています。</p>
+                        <p class="mb-6">インドの方が話していた感覚は、とてもシンプルです。</p>
+                        <p class="mb-6">家族のために仕事をしている。</p>
+                        <p class="mb-6">それなら、家族の用事が入ったら、家族を優先するのが自然ではないか。</p>
+                        <p class="mb-8">この考え方は、日本人にとって耳が痛い部分もあると思います。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            仕事以外に、何を第一優先にするのか
+                        </h2>
+                        <p class="mb-6">ただ、ここで難しいのは、仕事を減らせば自動的に幸せになるわけではないということです。</p>
+                        <p class="mb-6">最近は、残業も以前より減ってきています。</p>
+                        <p class="mb-6">企業もホワイト化しています。</p>
+                        <p class="mb-6">昔のように、夜遅くまで働き続けることが美徳とされる空気は、少しずつ弱くなっています。</p>
+                        <p class="mb-6">では、仕事をしなくなった時間を、何に使うのか。</p>
+                        <p class="mb-6">ここで迷っている人が多いのではないかと思います。</p>
+                        <p class="mb-6">家族のために使う。</p>
+                        <p class="mb-6">友人のために使う。</p>
+                        <p class="mb-6">趣味のために使う。</p>
+                        <p class="mb-6">地域のために使う。</p>
+                        <p class="mb-6">学びのために使う。</p>
+                        <p class="mb-6">本来はいろいろな選択肢があります。</p>
+                        <p class="mb-6">でも、それらに本気で向き合えている人は、まだ少ないのかもしれません。</p>
+                        <p class="mb-6">仕事を第一優先にする理由は弱くなっている。</p>
+                        <p class="mb-6">でも、仕事以外に第一優先にしたいものも見つかっていない。</p>
+                        <p class="mb-6">その結果、何を頑張ればいいのかわからない。</p>
+                        <p class="mb-8">そういう迷子状態にある人が、今の日本には多いのではないかと感じます。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            これから選ばれるのは、生活を大切にできる職場です
+                        </h2>
+                        <p class="mb-6">これは、個人だけの問題ではありません。</p>
+                        <p class="mb-6">会社側も考える必要があります。</p>
+                        <p class="mb-6">社員が家族の用事を大切にできるか。</p>
+                        <p class="mb-6">友人との予定や、地域での活動を犠牲にしすぎていないか。</p>
+                        <p class="mb-6">休みを取ることに、罪悪感を持たせていないか。</p>
+                        <p class="mb-6">これからの職場づくりでは、こうした点がますます重要になります。</p>
+                        <p class="mb-6">給料だけで人を引き止めるのは難しくなっています。</p>
+                        <p class="mb-6">働く人は、収入だけでなく、生活の質も見ています。</p>
+                        <p class="mb-6">だからこそ、会社は「仕事を最優先できる人」だけを評価するのではなく、「生活を大切にしながら働ける仕組み」を整える必要があります。</p>
+                        <p class="mb-8">それが結果的に、採用にも、定着にも、職場の信頼にもつながっていくはずです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">
+                            第一優先を見直す時期に来ている
+                        </h2>
+                        <p class="mb-6">仕事を第一優先にする時代は、少しずつ終わりに近づいているのかもしれません。</p>
+                        <p class="mb-6">少なくとも、仕事だけを人生の中心に置くことは、以前ほど合理的ではなくなっています。</p>
+                        <p class="mb-6">では、これから何を第一優先にするのか。</p>
+                        <p class="mb-6">家族なのか。</p>
+                        <p class="mb-6">友人なのか。</p>
+                        <p class="mb-6">趣味なのか。</p>
+                        <p class="mb-6">健康なのか。</p>
+                        <p class="mb-6">学びなのか。</p>
+                        <p class="mb-6">地域なのか。</p>
+                        <p class="mb-6">自分の中で、仕事以外の優先順位を考え直す必要があります。</p>
+                        <p class="mb-6">仕事を軽視するという話ではありません。</p>
+                        <p class="mb-6">仕事は大切です。</p>
+                        <p class="mb-6">生活を支えるものですし、社会との接点にもなります。</p>
+                        <p class="mb-6">ただ、仕事は人生のすべてではありません。</p>
+                        <p class="mb-6">何のために働くのか。</p>
+                        <p class="mb-6">誰のために働くのか。</p>
+                        <p class="mb-6">働いた先に、どんな生活を作りたいのか。</p>
+                        <p class="mb-6">ここを考えないまま働き続けると、気づいたときに何も残らないかもしれません。</p>
+                        <p class="mb-6">今回、インドの方と話していて感じたのは、まさにそのことでした。</p>
+                        <p class="mb-6">仕事を第一優先にする理由が弱くなっている時代に、私たちは何を第一優先にして生きるのか。</p>
+                        <p class="mb-8">そろそろ、それぞれが考えるタイミングに来ています。</p>
+
+                        <hr class="my-10 border-gray-200">
+                        <p class="mb-6">あなたは、仕事と家族の予定が重なったとき、どちらを優先しますか。</p>
+                        <p class="mb-6">正解がある話ではありません。</p>
+                        <p class="mb-6">ただ、自分が何を第一優先にして働いているのかを考えることは、これからの時代に必要だと思います。</p>
+                        <p class="mb-6">働き方や職場づくりについて感じたことがあれば、ぜひ返信で教えてください。</p>
+                        <p class="mb-8">今後も、働き方を少しずつ上昇させるヒントをお届けします。</p>
+
+                        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+                            <h2 class="text-xl font-bold text-navy-900 mb-4">労務管理上の補足</h2>
+                            <p class="mb-4">
+                                会社側は、年次有給休暇、育児休業、介護休業、子の看護等休暇、介護休暇など、生活と仕事の調整に関わる制度を「使える制度」として整えておく必要があります。
+                            </p>
+                            <p class="mb-0">
+                                就業規則に書くだけでなく、申請手順、シフト調整、代替体制、取得を理由に不利益な扱いをしない運用を管理職まで共有しておくことが、採用・定着・職場の信頼につながります。
+                            </p>
+                        </div>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">ワークライフバランスと労務管理を見直したい事業者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、サービス業の実態に合わせた就業規則、休暇制度、シフト運用、評価制度の整備を支援しています。家庭事情に強い職場づくりは、人材定着の土台になります。
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="labor-stability-diagnosis.html"
+                                    class="inline-block bg-white hover:bg-gray-100 text-navy-900 font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    労務安定度5分診断
+                                </a>
+                                <a href="index.html#contact-form-anchor"
+                                    class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    無料相談（60分）に申し込む
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
