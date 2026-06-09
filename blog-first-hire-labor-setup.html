@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初めて人を雇う会社ほど、最初に労務環境を整えたほうがいい理由 | アセント社労士事務所</title>
+    <meta name="description"
+        content="初めて人を雇う、そのときの手続き、社会保険、労働保険、雇用契約書、就業規則。何をどこまで整えておくべきか。その不安を解消し、初めての採用を成功に導きます。助成金受給も見通した設計を案内します。">
+    <meta property="og:title" content="初めて人を雇う会社ほど、最初に労務環境を整えたほうがいい理由 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-first-hire-labor-setup.html">
+    <meta property="og:image"
+        content="https://saitani1.github.io/ascent-sr-site/images/ChatGPT Image 2026年6月8日 22_35_04 (1).jpg">
+    <meta property="og:description"
+        content="初めて人を雇う、そのときの手続き、社会保険、労働保険、雇用契約書、就業規則。何をどこまで整えておくべきか。その不安を解消し、初めての採用を成功に導きます。助成金受給も見通した設計を案内します。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    初めて人を雇う会社ほど、最初に労務環境を整えたほうがいい理由
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.06.09
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年6月8日 22_35_04 (1).jpg"
+                            alt="初めて人を雇う前に労務の土台を整えるべき理由" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">「初めての採用で失敗しないための、会社づくりの初期設定」</p>
+                        <p class="mb-6">会社を立ち上げて、初めて人を雇う。</p>
+                        <p class="mb-6">個人事業から法人化して、いよいよ従業員を採用する。</p>
+                        <p class="mb-6">このタイミングは、事業にとって大きな一歩です。</p>
+                        <p class="mb-6">社長ひとりで回していた仕事を、誰かと一緒に進めていく段階に入るわけですね。</p>
+                        <p class="mb-6">売上を伸ばすためにも、現場を強くするためにも、人を雇うことは大きな前進です。</p>
+                        <p class="mb-6">ただ、このタイミングで後回しにされやすいものがあります。</p>
+                        <p class="mb-6">それが「労務環境の整備」です。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>雇用契約書。</li>
+                            <li>社会保険の手続き。</li>
+                            <li>労働保険の手続き。</li>
+                            <li>就業規則。</li>
+                            <li>勤怠管理。</li>
+                            <li>有給休暇。</li>
+                            <li>残業代。</li>
+                        </ul>
+                        <p class="mb-6">こうした話は、売上や営業に比べると、どうしても地味に見えます。</p>
+                        <p class="mb-6">でも、初めて人を雇う会社ほど、最初にここを整えておいたほうがいいです。</p>
+                        <p class="mb-6">なぜなら、労務環境は「会社を守る土台」だからです。</p>
+                        <p class="mb-8">そして、土台が崩れると・・・</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">初めての採用は、思った以上に分からないことだらけです</h2>
+                        <p class="mb-6">初めて従業員を雇うとき、多くの社長が悩みます。</p>
+                        <p class="mb-6">雇用契約書は、どこまで細かく作るべきなのか。</p>
+                        <p class="mb-6">社会保険の手続きは、いつ何をすればいいのか。</p>
+                        <p class="mb-6">労働保険には、どのタイミングで加入するのか。</p>
+                        <p class="mb-6">就業規則は、まだ人数が少なくても必要なのか。</p>
+                        <p class="mb-6">助成金は、最初から考えておいたほうがいいのか。</p>
+                        <p class="mb-6">このあたりは、慣れていないと分かりにくいです。</p>
+                        <p class="mb-6">ネットで調べれば情報は出てきます。</p>
+                        <p class="mb-6"><strong>でも、情報が多すぎて、結局どれを自社に当てはめればいいのか分からない。</strong></p>
+                        <p class="mb-6">こうなりがちです。</p>
+                        <p class="mb-6">そして、立ち上げ直後の社長にとって、時間は本当に貴重です。</p>
+                        <p class="mb-6">営業もしないといけません。</p>
+                        <p class="mb-6">採用もしないといけません。</p>
+                        <p class="mb-6">商品づくりもあります。</p>
+                        <p class="mb-6">資金繰りもあります。</p>
+                        <p class="mb-6">現場の仕組みづくりもあります。</p>
+                        <p class="mb-6">その中で、労務手続きや書類づくりに何日も悩むのは、もったいないです。</p>
+                        <p class="mb-6">社長がやるべきことは、事業を前に進めることです。</p>
+                        <p class="mb-8">労務の土台づくりは、最初から専門家と一緒に整えてしまったほうがいい場面があります。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">労務整備は「守り」ではなく、採用を伸ばすための準備です</h2>
+                        <p class="mb-6">労務というと、守りのイメージが強いですよね。</p>
+                        <p class="mb-6">トラブルを防ぐ。</p>
+                        <p class="mb-6">法律に対応する。</p>
+                        <p class="mb-6">書類を整える。</p>
+                        <p class="mb-6">もちろん、それも大切です。</p>
+                        <p class="mb-6">でも、労務整備の価値はそれだけではありません。</p>
+                        <p class="mb-6">きちんと雇用契約書がある。</p>
+                        <p class="mb-6">勤務時間や休日のルールが明確になっている。</p>
+                        <p class="mb-6">有給休暇や残業の扱いが整理されている。</p>
+                        <p class="mb-6">会社としての判断基準がある。</p>
+                        <p class="mb-6">こういう状態を作っておくと、従業員も安心して働けます。</p>
+                        <p class="mb-6">社長も、毎回その場の感覚で判断しなくて済みます。</p>
+                        <p class="mb-6">これは採用にも効いてきます。</p>
+                        <p class="mb-6">人を雇うというのは、単に労働力を増やす話ではありません。</p>
+                        <p class="mb-6"><strong>社長ひとりの事業から、組織として動く会社に変わっていくということです。</strong></p>
+                        <p class="mb-6"><strong>そのときに必要なのが、会社のルールです。</strong></p>
+                        <p class="mb-6">ルールがない会社は、最初は自由に見えます。</p>
+                        <p class="mb-6">でも、人数が増えるほど、だんだん苦しくなります。</p>
+                        <p class="mb-6">誰かにとっての自由が、誰かにとっての不安になるからです。</p>
+                        <p class="mb-8">だからこそ、最初に土台を作っておくのです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">10人未満でも、就業規則は作っておいたほうがいいです</h2>
+                        <p class="mb-6">就業規則は、原則として常時10人以上の従業員がいる事業所で作成義務があります。</p>
+                        <p class="mb-6">そのため、初めて1人目を雇う段階では、法律上は作成義務がないケースも多いです。</p>
+                        <p class="mb-6">ここで多くの会社が、こう考えます。</p>
+                        <p class="mb-6">「まだ1人目だから、就業規則は後でいいですよね。」</p>
+                        <p class="mb-6">気持ちは分かります。</p>
+                        <p class="mb-6">でも、人数が少ない会社ほど、最初に簡易的でもいいので就業規則を整えておく価値があります。</p>
+                        <p class="mb-6">就業規則は、会社のルールブックです。</p>
+                        <p class="mb-6">勤務時間はどうするのか。</p>
+                        <p class="mb-6">休日はどうするのか。</p>
+                        <p class="mb-6">有給休暇はどう扱うのか。</p>
+                        <p class="mb-6">残業はどう管理するのか。</p>
+                        <p class="mb-6">欠勤や遅刻があった場合はどうするのか。</p>
+                        <p class="mb-6">問題行動があった場合、会社はどう対応するのか。</p>
+                        <p class="mb-6">こうした基本ルールを先に決めておくことで、会社も従業員も安心できます。</p>
+                        <p class="mb-6">逆に、ルールがないまま走り出すと、何か起きたときに困ります。</p>
+                        <p class="mb-6">「前はこう言いましたよね。」</p>
+                        <p class="mb-6">「聞いていた話と違います。」</p>
+                        <p class="mb-6">「これは残業代が出ると思っていました。」</p>
+                        <p class="mb-6">「有給は自由に取れると思っていました。」</p>
+                        <p class="mb-6">こうした認識のズレは、最初は小さく見えます。</p>
+                        <p class="mb-6">でも、小さな会社では、1人とのトラブルが事業全体に響きます。</p>
+                        <p class="mb-6">社長の時間も削られます。</p>
+                        <p class="mb-6">気力も削られます。</p>
+                        <p class="mb-8">だから、最初の1人目こそ大事なのです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">「とりあえず雇う」は、あとから高くつきます</h2>
+                        <p class="mb-6">初めての採用では、どうしても急ぎたくなります。</p>
+                        <p class="mb-6">人が足りない。</p>
+                        <p class="mb-6">仕事が回らない。</p>
+                        <p class="mb-6">早く採用したい。</p>
+                        <p class="mb-6">だから、とりあえず雇用契約書を簡単に作る。</p>
+                        <p class="mb-6">社会保険や労働保険の手続きは、後で調べる。</p>
+                        <p class="mb-6">就業規則は、人数が増えてから考える。</p>
+                        <p class="mb-6">こういう流れになりやすいです。</p>
+                        <p class="mb-6">でも、労務は後から整えるほうが大変です。</p>
+                        <p class="mb-6">最初に曖昧な契約で始めてしまうと、あとから条件を変えるのが難しくなります。</p>
+                        <p class="mb-6">最初にルールを決めないまま働き方が定着すると、後からルール化したときに反発が出やすくなります。</p>
+                        <p class="mb-6">助成金の活用を考えたときも、最初の雇用契約や就業規則の内容が影響することがあります。</p>
+                        <p class="mb-6">つまり、最初に何も考えずに雇ってしまうと、あとから選べるはずだった選択肢を失うことがあるのです。</p>
+                        <p class="mb-6">大切なのは、「とりあえず雇う」ではありません。</p>
+                        <p class="mb-6">「あとから選べる状態にしておく」ことです。</p>
+                        <p class="mb-8">この違いは非常に大きいのです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">はじめての労務整備スタートパックで支援すること</h2>
+                        <p class="mb-6">そこで、アセント社労士事務所では、法人化や初めての採用にあわせて労務環境を整えたい方向けに、</p>
+                        <p class="mb-6">「はじめての労務整備スタートパック」</p>
+                        <p class="mb-6">を用意しています。</p>
+                        <p class="mb-6">支援内容は、主に以下です。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>雇用契約書の作成。</li>
+                            <li>社会保険の手続き。</li>
+                            <li>労働保険の手続き。</li>
+                            <li>就業規則の作成。</li>
+                            <li>3ヶ月間の労務コンサルティング。</li>
+                        </ul>
+                        <p class="mb-6">単に書類を作って終わりではありません。</p>
+                        <p class="mb-6">初めて人を雇うと、実際に細かい疑問がたくさん出てきます。</p>
+                        <p class="mb-6">残業はどう扱えばいいのか。</p>
+                        <p class="mb-6">有給休暇はいつから発生するのか。</p>
+                        <p class="mb-6">勤怠管理はどうすればいいのか。</p>
+                        <p class="mb-6">従業員から相談を受けたとき、どう返せばいいのか。</p>
+                        <p class="mb-6">勤務態度に気になる点がある場合、どう対応すればいいのか。</p>
+                        <p class="mb-6">こういうことを、社長ひとりで判断するのは不安ですよね。</p>
+                        <p class="mb-6">だから、最初の3ヶ月間は相談できる期間として設計しています。</p>
+                        <p class="mb-6">会社の実態に合わせて、使えるルールに整えていく。</p>
+                        <p class="mb-8">ここを大切にしています。</p>
+
+                        <div class="mb-10 rounded-xl overflow-hidden shadow">
+                            <img src="images/ChatGPT Image 2026年6月8日 22_35_04 (1).jpg"
+                                alt="労務整備スタートパックの案内" class="w-full h-auto">
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">助成金を見据えた労務設計も大切です</h2>
+                        <p class="mb-6">将来的にキャリアアップ助成金などの活用を考える場合、最初の労務設計が重要になることがあります。</p>
+                        <p class="mb-6">もちろん、助成金は必ず受給できるものではありません。</p>
+                        <p class="mb-6">制度の内容は変わります。</p>
+                        <p class="mb-6">会社の状況によって、対象になるかどうかも変わります。</p>
+                        <p class="mb-6">審査もあります。</p>
+                        <p class="mb-6">なので、「必ずもらえます」とは言えません。</p>
+                        <p class="mb-6">ただ、最初から助成金を意識して雇用契約書や就業規則を整えておくことで、あとから選択肢が広がる可能性があります。</p>
+                        <p class="mb-6">逆に、何も考えずに雇用してしまうと、あとから助成金を使いたいと思っても、要件を満たせないことがあります。</p>
+                        <p class="mb-6">労務整備の価値は、今の安心だけではありません。</p>
+                        <p class="mb-8">将来の選択肢を残すことにもあります。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">費用は20万円を想定しています</h2>
+                        <p class="mb-6">「はじめての労務整備スタートパック」は、20万円前後での提供を想定しています。</p>
+                        <p class="mb-6">初めて人を雇う会社にとって、20万円は小さな金額ではありません。</p>
+                        <p class="mb-6">社会保険の手続きだけなら、もっと安く済ませる方法もあるでしょう。</p>
+                        <p class="mb-6">ただ、このパッケージは、手続きだけの商品ではありません。</p>
+                        <p class="mb-6">雇用契約書を整えます。</p>
+                        <p class="mb-6">社会保険と労働保険の手続きを進めます。</p>
+                        <p class="mb-6">就業規則を作ります。</p>
+                        <p class="mb-6">3ヶ月間、労務相談もできます。</p>
+                        <p class="mb-6">そして、将来的な助成金活用の可能性も見据えて、最初の労務環境を設計します。</p>
+                        <p class="mb-6">ここまで含めると、初めて人を雇う会社にとっては使いやすい内容になっています。</p>
+                        <p class="mb-6">また、助成金を活用できる可能性がある場合、費用を回収できる可能性もあります。</p>
+                        <p class="mb-6">もちろん、助成金の受給は確約できません。</p>
+                        <p class="mb-6">ただ、助成金が使えなかったとしても、労務環境が整う価値は残ります。</p>
+                        <p class="mb-6">会社の土台ができます。</p>
+                        <p class="mb-6">従業員との約束が明確になります。</p>
+                        <p class="mb-6">トラブルを防ぐ準備ができます。</p>
+                        <p class="mb-6">社長が本業に集中しやすくなります。</p>
+                        <p class="mb-8">ここに投資する意味が生まれます。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">初めての採用は、会社づくりの始まりです</h2>
+                        <p class="mb-6">人を雇うというのは、会社が次の段階に進むということです。</p>
+                        <p class="mb-6">社長ひとりで頑張る事業から、人に任せる事業へ。</p>
+                        <p class="mb-6">その場の判断で動く事業から、ルールで動く会社へ。</p>
+                        <p class="mb-6">個人の延長から、組織へ。</p>
+                        <p class="mb-6">この変化は大きいです。</p>
+                        <p class="mb-6">だからこそ、最初が大事です。</p>
+                        <p class="mb-6">最初にルールを曖昧にすると、あとから直すのが大変です。</p>
+                        <p class="mb-6">最初に雇用契約を曖昧にすると、認識のズレが生まれます。</p>
+                        <p class="mb-6">最初に就業規則を作らないまま進めると、トラブル時の判断基準がなくなります。</p>
+                        <p class="mb-6">逆に、最初に整えておけば、2人目、3人目を雇うときも楽になります。</p>
+                        <p class="mb-6">すでに土台がある状態で採用できます。</p>
+                        <p class="mb-6">これは、会社にとって大きな差になります。</p>
+                        <p class="mb-6">採用は攻めの一手です。</p>
+                        <p class="mb-6">でも、攻めるためには守りの土台が必要です。</p>
+                        <p class="mb-6">労務環境の整備は、単なる事務作業ではありません。</p>
+                        <p class="mb-8">会社を長く続けるための準備です。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">こんな方におすすめです</h2>
+                        <p class="mb-6">「はじめての労務整備スタートパック」は、次のような方に向いています。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>法人化と同時に従業員を雇う方。</li>
+                            <li>初めて社会保険や労働保険の手続きが必要になる方。</li>
+                            <li>雇用契約書をどう作ればいいか分からない方。</li>
+                            <li>就業規則を作るべきか迷っている方。</li>
+                            <li>従業員とのトラブルを未然に防ぎたい方。</li>
+                            <li>将来的に助成金の活用も考えたい方。</li>
+                        </ul>
+                        <p class="mb-6">初めての採用は、不安があって当然です。</p>
+                        <p class="mb-6">何をどこまで整えればいいのか、最初から分かる社長のほうが少ないです。</p>
+                        <p class="mb-6">だからこそ、最初の段階で相談してください。</p>
+                        <p class="mb-6">手続きだけで終わらせず、会社の土台づくりまで一緒に整えていきます。</p>
+                        <p class="mb-8">「初めての採用で失敗しないための、会社づくりの初期設定」</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">初めて人を雇う前に、労務の土台を整えたい事業者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、雇用契約書、就業規則、社会保険・労働保険手続き、3ヶ月間の労務相談、助成金を見据えた初期設計までまとめて支援しています。
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="first-hire-lp.html"
+                                    class="inline-block bg-white hover:bg-gray-100 text-navy-900 font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    スタートパックを見る
+                                </a>
+                                <a href="index.html#contact-form-anchor"
+                                    class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    無料相談（60分）に申し込む
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
