@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワークライフハーモニーを実践してみたら、いきなり壁にぶつかりました。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="「休日はついダラダラしてしまう…」そんな悩みは、仕事の生産性を下げる原因かも？大阪の社労士が、私生活の充実を業務の活力に変える「ワークライフハーモニー」を実践。労務管理のプロが教える、調和の秘訣。">
+    <meta property="og:title" content="ワークライフハーモニーを実践してみたら、いきなり壁にぶつかりました。 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-work-life-harmony-practice.html">
+    <meta property="og:image"
+        content="https://saitani1.github.io/ascent-sr-site/images/ChatGPT Image 2026年6月15日 22_04_01 (1).jpg">
+    <meta property="og:description"
+        content="「休日はついダラダラしてしまう…」そんな悩みは、仕事の生産性を下げる原因かも？大阪の社労士が、私生活の充実を業務の活力に変える「ワークライフハーモニー」を実践。労務管理のプロが教える、調和の秘訣。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">労務コラム</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    ワークライフハーモニーを実践してみたら、いきなり壁にぶつかりました。
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.06.15
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年6月15日 22_04_01 (1).jpg"
+                            alt="ワークライフハーモニーを実践して壁にぶつかった体験" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">前回、「ワークライフハーモニー」という考え方について話しました。</p>
+                        <p class="mb-6">仕事と生活を分けて、バランスを取るのではありません。</p>
+                        <p class="mb-6">生活を充実させることで、仕事の質を上げる。</p>
+                        <p class="mb-6">仕事の質が上がることで、生活もさらに豊かになる。</p>
+                        <p class="mb-6">そういう「調和」を目指す考え方です。</p>
+                        <p class="mb-6">ワークライフバランスが、仕事と生活を天秤にかける考え方だとしたら、ワークライフハーモニーは、仕事と生活を響き合わせる考え方です。</p>
+                        <p class="mb-6">いい考え方ですよね。</p>
+                        <p class="mb-6">私自身も、これはこれからの働き方にかなり必要になると感じています。</p>
+                        <p class="mb-6">ただ、実際にやってみると、思ったより難しかったです。</p>
+                        <p class="mb-8">今日はその話をします。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">「休みが楽しみだから仕事を頑張れる」は、簡単ではありません。</h2>
+                        <p class="mb-6">ワークライフハーモニーの実践で大事になる一つの要素は、休みの充実です。</p>
+                        <p class="mb-6">次の休みに、これをやりたい。</p>
+                        <p class="mb-6">この予定があるから、平日の仕事を効率よく終わらせたい。</p>
+                        <p class="mb-6">土日にしっかり楽しみたいから、平日にダラダラ残業しない。</p>
+                        <p class="mb-6">こういう流れが作れると、仕事と生活がうまく回り始めます。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>家族とバーベキューに行く（欧米っぽい）。</li>
+                            <li>趣味の時間をしっかり取る。</li>
+                            <li>自然の中で体を動かす。</li>
+                            <li>旅行に行く。</li>
+                            <li>読書や学び直しをする。</li>
+                        </ul>
+                        <p class="mb-6">そういう「楽しみな休み」があると、仕事のやり方も変わります。</p>
+                        <p class="mb-6">でもですね、、、</p>
+                        <p class="mb-8">いざ自分でやってみると、ここが意外と難しいのです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">日曜日の朝、いきなりスマホに負けました。</h2>
+                        <p class="mb-6">ぼくの場合、ランニングをよくします。</p>
+                        <p class="mb-6">トレイルランニングをやっているので、週末に山を走ることもよくあります。</p>
+                        <p class="mb-6">なので、自分ではワークライフハーモニーを作りやすいタイプだと思っていました。</p>
+                        <p class="mb-6">休みに走る楽しみがある。</p>
+                        <p class="mb-6">だから平日の仕事を効率よく終わらせられる。</p>
+                        <p class="mb-6">そういう流れは、作りやすいはずです。</p>
+                        <p class="mb-6">では、実際どうだったか。</p>
+                        <p class="mb-6">日曜日の朝、7時くらいに起きました。</p>
+                        <p class="mb-6">今日は仕事をしないと決めていました。</p>
+                        <p class="mb-6">ランニングに行く予定にしていました。</p>
+                        <p class="mb-6">では、布団からすぐに起きて、「この日のために平日がんばってきたんだ！」とワクワクできたか。</p>
+                        <p class="mb-6">できませんでした。</p>
+                        <p class="mb-6">眠いな……。</p>
+                        <p class="mb-6">もう少し寝たいな……。</p>
+                        <p class="mb-6">そう思いながら、スマホを触ってしまいました。</p>
+                        <p class="mb-6">気づいたら、1時間くらい経っていました。</p>
+                        <p class="mb-8">ワークライフハーモニー実践1日目にして、いきなりスマホに負けたわけです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">走り始めると、ちゃんと楽しくなります。</h2>
+                        <p class="mb-6">とはいえ、このままではダメだと思って、外に出ました。</p>
+                        <p class="mb-6">走り始めると、だんだん楽しくなってきます。</p>
+                        <p class="mb-6">これは、いつもの感覚です。</p>
+                        <p class="mb-6">体が温まってくる。</p>
+                        <p class="mb-6">呼吸が整ってくる。</p>
+                        <p class="mb-6">頭の中も少しずつ整理されていく。</p>
+                        <p class="mb-6">やはりランニングはいいです。</p>
+                        <p class="mb-6">走っている途中で、「ああ、こういう時間のために平日をがんばるというのは、たしかにアリかな」と感じました。</p>
+                        <p class="mb-6">休日にこういう時間があるから、仕事を早く終わらせる意味が出てくる。</p>
+                        <p class="mb-6">土日に仕事を持ち込まないように、平日の段取りを見直そうと思えます。</p>
+                        <p class="mb-6">ここには、ワークライフハーモニーの可能性を感じました。</p>
+                        <p class="mb-6">でも、感じたのはあくまで、うすーい可能性。</p>
+                        <p class="mb-6">そして、同時にこうも思いました。</p>
+                        <p class="mb-8">これは、ひとりで勝手に身につくものではないですね、と。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">休日の質は、意識しないと上がりません。</h2>
+                        <p class="mb-6">ここが今回の発見です。</p>
+                        <p class="mb-6">ワークライフハーモニーという考え方を知らないと、自分の休日の質を見直すことはなかなかありません。</p>
+                        <p class="mb-6">なんとなく休む。</p>
+                        <p class="mb-6">なんとなくスマホを見る。</p>
+                        <p class="mb-6">なんとなく動画を見る。</p>
+                        <p class="mb-6">なんとなく寝る。</p>
+                        <p class="mb-6">それで日曜日が終わります。</p>
+                        <p class="mb-6">もちろん、疲れているなら休むことは大事です。</p>
+                        <p class="mb-6">何もしない時間が必要なときもあります。</p>
+                        <p class="mb-6">でも、それだけでは仕事の生産性を上げるほどの「生活の充実」にはなりにくいです。</p>
+                        <p class="mb-6">休みが、ただの回復時間で終わってしまいます。</p>
+                        <p class="mb-6">ワークライフハーモニーで大事なのは、休みを「消費」ではなく「投資」に変えることです。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>体を整える。</li>
+                            <li>感性を広げる。</li>
+                            <li>人との関係を深める。</li>
+                            <li>新しい経験をする。</li>
+                            <li>自分の中にエネルギーが戻ってくる時間を作る。</li>
+                        </ul>
+                        <p class="mb-8">そういう休日になって初めて、仕事にもいい影響が出てきます。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">「いい休日」は、自然には生まれません。</h2>
+                        <p class="mb-6">ここは多くの人が見落としがちです。</p>
+                        <p class="mb-6">いい休日は、勝手にやってきません。</p>
+                        <p class="mb-6">待っていても、だいたいスマホと布団に吸い込まれます。</p>
+                        <p class="mb-6">これは意志が弱いという話だけではありません。</p>
+                        <p class="mb-6">現代は、何もしなければ可処分時間が奪われるようにできています。</p>
+                        <p class="mb-6">スマホを開けば、SNSがあります。</p>
+                        <p class="mb-6">動画があります。</p>
+                        <p class="mb-6">ニュースがあります。</p>
+                        <p class="mb-6">通知があります。</p>
+                        <p class="mb-6">気づいたら、1時間、2時間が消えています。</p>
+                        <p class="mb-6">だからこそ、休日にも設計が必要です。</p>
+                        <p class="mb-6">朝起きたら何をするのか。</p>
+                        <p class="mb-6">どこに行くのか。</p>
+                        <p class="mb-6">誰と過ごすのか。</p>
+                        <p class="mb-6">何を体験するのか。</p>
+                        <p class="mb-6">休みの日に何を残したいのか。</p>
+                        <p class="mb-6">そこまで考えておかないと、休日はすぐに流れていきます。</p>
+                        <p class="mb-6">仕事の予定はきっちり入れるのに、休日の予定は雑に扱う人が多いです。</p>
+                        <p class="mb-8">でも、ワークライフハーモニーを作るなら、休日こそ大事に設計したほうがいいです。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">ワークライフハーモニーは、すぐには体感できません。</h2>
+                        <p class="mb-6">今日やってみて感じたのは、ワークライフハーモニーは、1日で身につくものではないということです。</p>
+                        <p class="mb-6">考え方としては、とてもいい。</p>
+                        <p class="mb-6">でも、知った瞬間に人生が変わるわけではありません。</p>
+                        <p class="mb-6">実践して、すぐに素晴らしさが分かるものでもありません。</p>
+                        <p class="mb-6">うまくいかなかった部分に気づく。</p>
+                        <p class="mb-6">休日の使い方を少し変える。</p>
+                        <p class="mb-6">平日の仕事の進め方も見直す。</p>
+                        <p class="mb-6">また休日に試してみる。</p>
+                        <p class="mb-6">こういう繰り返しが必要です。</p>
+                        <p class="mb-6">ぼくも、1日目から完璧にできたわけではありません。</p>
+                        <p class="mb-6">むしろ、朝からスマホを触って、普通に失敗しています。</p>
+                        <p class="mb-6">でも、その失敗に気づけたことが大きいです。</p>
+                        <p class="mb-6">「自分は本当に、この休日を楽しみにして平日を過ごしていたのか」</p>
+                        <p class="mb-6">「この休日は、仕事の生産性を上げるほど充実していたのか」</p>
+                        <p class="mb-6">「もっとよい休み方があるのではないか」</p>
+                        <p class="mb-8">こう考えられるようになっただけでも、かなり前進です。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まずは「次の休みに何をしたいか」を決めましょう。</h2>
+                        <p class="mb-6">ワークライフハーモニーを始めるなら、難しいことを考えすぎなくていいです。</p>
+                        <p class="mb-6">まずは、次の休みに何をしたいかを決めましょう。</p>
+                        <p class="mb-6">できれば、スマホや動画で時間を溶かすものではなく、自分の状態が上がるものがいいです。</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>体を動かす。</li>
+                            <li>自然に触れる。</li>
+                            <li>家族と出かける。</li>
+                            <li>本を読む。</li>
+                            <li>料理をする。</li>
+                            <li>行ったことのない場所に行く。</li>
+                            <li>誰かとゆっくり話す。</li>
+                        </ul>
+                        <p class="mb-6">小さくていいです。</p>
+                        <p class="mb-6">大きなイベントである必要はありません。</p>
+                        <p class="mb-6">大事なのは、「その予定があるから、平日の仕事を整えよう」と思えるかどうかです。</p>
+                        <p class="mb-6">次の休みに楽しみがある。</p>
+                        <p class="mb-6">だから、今週の仕事を早めに片づける。</p>
+                        <p class="mb-6">だから、無駄な会議を減らす。</p>
+                        <p class="mb-6">だから、段取りを見直す。</p>
+                        <p class="mb-6">だから、集中して働く。</p>
+                        <p class="mb-8">この流れができると、仕事と生活が少しずつ響き始めます。</p>
+
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめます。</h2>
+                        <p class="mb-6">ワークライフハーモニーは、仕事と生活を調和させる考え方です。</p>
+                        <p class="mb-6">生活を充実させることで、仕事の生産性を上げます。</p>
+                        <p class="mb-6">仕事の生産性が上がることで、生活もさらに充実します。</p>
+                        <p class="mb-6">ただし、実践は思ったより難しいです。</p>
+                        <p class="mb-6">休日は、何も考えないとすぐに流れていきます。</p>
+                        <p class="mb-6">スマホに吸い込まれます。</p>
+                        <p class="mb-6">布団から出られません。</p>
+                        <p class="mb-6">なんとなく休んで、なんとなく終わります。</p>
+                        <p class="mb-6">だからこそ、休日にも設計が必要です。</p>
+                        <p class="mb-6">「次の休みに何をしたいか」</p>
+                        <p class="mb-6">まずはここから決めてみましょう。</p>
+                        <p class="mb-6">その予定が、平日の働き方を変えるきっかけになります。</p>
+                        <p class="mb-6">ワークライフハーモニーは、すぐに完成するものではありません。</p>
+                        <p class="mb-6">でも、意識して続けていけば、仕事も生活も少しずつよくなっていくはずです。</p>
+                        <p class="mb-6">ぼくもまだ実践1日目です。</p>
+                        <p class="mb-6">意外と難しいです。</p>
+                        <p class="mb-6">でも、この考え方はかなり可能性があります。</p>
+                        <p class="mb-6">仕事と休みを奪い合うのではなく、響き合わせていきましょう。</p>
+                        <p class="mb-8">コツコツ、いい休日を作っていきましょう。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">仕事と生活が響き合う職場づくりを進めたい事業者さまへ</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、休日を取りやすくする業務設計、シフト運用、評価制度、属人化の解消を通じて、従業員の生活充実が仕事の成果につながる職場づくりを支援しています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
