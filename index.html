@@ -43,6 +43,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/journey-card-overlay.css">
+    <link rel="stylesheet" href="css/service-cards-horizontal.css">
     <style>
         .swiper {
             width: 100%;
@@ -1116,11 +1118,25 @@
                         <source src="images/labor-journey-story.mp4?v=2" type="video/mp4">
                         お使いのブラウザでは動画を再生できません。
                     </video>
+                    <div id="journey-card-overlay" class="journey-card-overlay" aria-hidden="true">
+                        <div class="journey-overlay-scene journey-overlay-scene--solve">
+                            <div class="journey-overlay-visual"><i class="fas fa-shield-heart"></i></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">01</span><p class="journey-overlay-label">CRISIS RESPONSE</p><p class="journey-overlay-title">解決</p><span class="journey-overlay-line"></span></div>
+                        </div>
+                        <div class="journey-overlay-scene journey-overlay-scene--prevent">
+                            <div class="journey-overlay-visual"><i class="fas fa-arrows-rotate"></i></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">02</span><p class="journey-overlay-label">PREVENTION</p><p class="journey-overlay-title">予防</p><span class="journey-overlay-line"></span></div>
+                        </div>
+                        <div class="journey-overlay-scene journey-overlay-scene--grow">
+                            <div class="journey-overlay-visual"><i class="fas fa-arrow-trend-up"></i></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">03</span><p class="journey-overlay-label">BRIGHT FUTURE</p><p class="journey-overlay-title">成長</p><span class="journey-overlay-line"></span></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="journey-video-meta" aria-label="動画情報">
                     <span><i class="fas fa-volume-mute" aria-hidden="true"></i>音声なし</span>
-                    <span><i class="fas fa-clock" aria-hidden="true"></i>約14秒</span>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i>約15秒</span>
                     <span><i class="fas fa-repeat" aria-hidden="true"></i>自動ループ</span>
                 </div>
 
@@ -1223,10 +1239,14 @@
         <section id="blog" class="py-20 bg-white">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center mb-12">
-                    <span class="text-accent-500 font-bold tracking-wider">BLOG</span>
+                    <span class="text-accent-500 font-bold tracking-wider">PRACTICAL LABOR INSIGHTS</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        現場で起きる“あるある”労務相談ブログ
+                        労務の迷いに、現場で回る答えを。
                     </h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        法改正、トラブル対応、日々の手続き、これからの組織づくり。<br class="hidden md:block">
+                        経営者が知っておきたい労務の実践知をお届けします。
+                    </p>
                 </div>
 
             </div>
@@ -2412,6 +2432,35 @@
 <script>
         // Respect reduced-motion preferences by leaving playback under user control.
         const laborJourneyVideo = document.getElementById('labor-journey-video');
+        const journeyCardOverlay = document.getElementById('journey-card-overlay');
+        if (laborJourneyVideo && journeyCardOverlay) {
+            const syncJourneyCards = () => {
+                const time = laborJourneyVideo.currentTime;
+                let scene = '';
+                if (time >= 1.35 && time < 5.15) scene = 'solve';
+                else if (time >= 5.15 && time < 8.45) scene = 'prevent';
+                else if (time >= 8.45 && time < 12.75) scene = 'grow';
+                journeyCardOverlay.dataset.scene = scene;
+                journeyCardOverlay.classList.toggle('is-active', Boolean(scene));
+            };
+            laborJourneyVideo.addEventListener('timeupdate', syncJourneyCards);
+            laborJourneyVideo.addEventListener('seeking', syncJourneyCards);
+            laborJourneyVideo.addEventListener('play', syncJourneyCards);
+
+            let isHoldingFinalSheet = false;
+            laborJourneyVideo.addEventListener('timeupdate', () => {
+                const holdPoint = laborJourneyVideo.duration - 0.15;
+                if (!isHoldingFinalSheet && !laborJourneyVideo.paused && laborJourneyVideo.currentTime >= holdPoint) {
+                    isHoldingFinalSheet = true;
+                    laborJourneyVideo.pause();
+                    window.setTimeout(() => {
+                        laborJourneyVideo.currentTime = 0;
+                        isHoldingFinalSheet = false;
+                        laborJourneyVideo.play().catch(() => {});
+                    }, 1000);
+                }
+            });
+        }
         if (laborJourneyVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             laborJourneyVideo.autoplay = false;
             laborJourneyVideo.pause();
