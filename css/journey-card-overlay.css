@@ -6,3 +6,40 @@
 @keyframes journeyOverlayOrbit{to{transform:rotate(360deg)}}@keyframes journeyOverlayLine{0%,100%{transform:scaleX(.2);opacity:.35}50%{transform:scaleX(1);opacity:1}}@keyframes journeyOverlayPulse{50%{opacity:.4;transform:scaleX(.82)}}
 @media(max-width:640px){.journey-card-overlay{inset:5px;border-radius:.75rem}.journey-overlay-scene{grid-template-columns:.72fr 1.28fr;padding:10% 7%;gap:4%}.journey-overlay-visual{width:min(28vw,125px)}.journey-overlay-visual i{font-size:clamp(2.2rem,9vw,3.6rem)}.journey-overlay-title{font-size:clamp(1.65rem,8vw,2.7rem)}}
 @media(prefers-reduced-motion:reduce){.journey-card-overlay:after,.journey-overlay-visual:before,.journey-overlay-visual:after,.journey-overlay-line{animation:none}}
+/* Cinematic typography and scene-specific supporting copy */
+.journey-overlay-title {
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    font-feature-settings: "palt";
+    font-weight: 900;
+    letter-spacing: .12em;
+    transform: scaleY(1.04);
+    transform-origin: left center;
+    text-shadow: 0 4px 0 #0003, 0 14px 32px #0009, 0 0 24px currentColor;
+}
+
+.journey-overlay-subtitle {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: .8rem;
+    padding-left: .85rem;
+    border-left: 3px solid currentColor;
+    color: rgba(255,255,255,.94);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: clamp(.78rem, 1.55vw, 1.15rem);
+    font-weight: 700;
+    letter-spacing: .06em;
+    line-height: 1.65;
+    text-shadow: 0 5px 18px rgba(0,0,0,.8);
+}
+
+@media (max-width: 640px) {
+    .journey-overlay-title { letter-spacing: .08em; }
+    .journey-overlay-subtitle {
+        margin-top: .45rem;
+        padding-left: .5rem;
+        border-left-width: 2px;
+        font-size: clamp(.58rem, 2.65vw, .78rem);
+        letter-spacing: .02em;
+        line-height: 1.5;
+    }
+}

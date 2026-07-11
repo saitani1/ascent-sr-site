@@ -1115,28 +1115,28 @@
                     <video id="labor-journey-video" class="journey-video" autoplay muted loop playsinline controls preload="metadata"
                         poster="images/labor-journey-story-poster.png?v=2"
                         aria-label="労務トラブルの解決から平時の再発防止、働き方改革による成長までを説明する14秒の動画">
-                        <source src="images/labor-journey-story.mp4?v=2" type="video/mp4">
+                        <source src="images/labor-journey-story-v3.mp4?v=3" type="video/mp4">
                         お使いのブラウザでは動画を再生できません。
                     </video>
                     <div id="journey-card-overlay" class="journey-card-overlay" aria-hidden="true">
                         <div class="journey-overlay-scene journey-overlay-scene--solve">
                             <div class="journey-overlay-visual"><i class="fas fa-shield-heart"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">01</span><p class="journey-overlay-label">CRISIS RESPONSE</p><p class="journey-overlay-title">解決</p><span class="journey-overlay-line"></span></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">01</span><p class="journey-overlay-label">CRISIS RESPONSE</p><p class="journey-overlay-title">解決</p><p class="journey-overlay-subtitle">15年の経験値</p><span class="journey-overlay-line"></span></div>
                         </div>
                         <div class="journey-overlay-scene journey-overlay-scene--prevent">
                             <div class="journey-overlay-visual"><i class="fas fa-arrows-rotate"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">02</span><p class="journey-overlay-label">PREVENTION</p><p class="journey-overlay-title">予防</p><span class="journey-overlay-line"></span></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">02</span><p class="journey-overlay-label">PREVENTION</p><p class="journey-overlay-title">予防</p><p class="journey-overlay-subtitle">AIも活かし事務を効率化</p><span class="journey-overlay-line"></span></div>
                         </div>
                         <div class="journey-overlay-scene journey-overlay-scene--grow">
                             <div class="journey-overlay-visual"><i class="fas fa-arrow-trend-up"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">03</span><p class="journey-overlay-label">BRIGHT FUTURE</p><p class="journey-overlay-title">成長</p><span class="journey-overlay-line"></span></div>
+                            <div class="journey-overlay-copy"><span class="journey-overlay-number">03</span><p class="journey-overlay-label">BRIGHT FUTURE</p><p class="journey-overlay-title">成長</p><p class="journey-overlay-subtitle">ワーク・ライフ・ハーモニーの実現</p><span class="journey-overlay-line"></span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="journey-video-meta" aria-label="動画情報">
                     <span><i class="fas fa-volume-mute" aria-hidden="true"></i>音声なし</span>
-                    <span><i class="fas fa-clock" aria-hidden="true"></i>約15秒</span>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i>約17秒</span>
                     <span><i class="fas fa-repeat" aria-hidden="true"></i>自動ループ</span>
                 </div>
 
@@ -2437,29 +2437,17 @@
             const syncJourneyCards = () => {
                 const time = laborJourneyVideo.currentTime;
                 let scene = '';
-                if (time >= 1.35 && time < 5.15) scene = 'solve';
-                else if (time >= 5.15 && time < 8.45) scene = 'prevent';
-                else if (time >= 8.45 && time < 12.75) scene = 'grow';
+                if (time >= 1.35 && time < 4.65) scene = 'solve';
+                else if (time >= 5.15 && time < 7.95) scene = 'prevent';
+                else if (time >= 8.45 && time < 12.25) scene = 'grow';
                 journeyCardOverlay.dataset.scene = scene;
-                journeyCardOverlay.classList.toggle('is-active', Boolean(scene));
+                const isMiddleSequence = time >= 1.35 && time < 12.75;
+                journeyCardOverlay.classList.toggle('is-active', isMiddleSequence);
             };
             laborJourneyVideo.addEventListener('timeupdate', syncJourneyCards);
             laborJourneyVideo.addEventListener('seeking', syncJourneyCards);
             laborJourneyVideo.addEventListener('play', syncJourneyCards);
 
-            let isHoldingFinalSheet = false;
-            laborJourneyVideo.addEventListener('timeupdate', () => {
-                const holdPoint = laborJourneyVideo.duration - 0.15;
-                if (!isHoldingFinalSheet && !laborJourneyVideo.paused && laborJourneyVideo.currentTime >= holdPoint) {
-                    isHoldingFinalSheet = true;
-                    laborJourneyVideo.pause();
-                    window.setTimeout(() => {
-                        laborJourneyVideo.currentTime = 0;
-                        isHoldingFinalSheet = false;
-                        laborJourneyVideo.play().catch(() => {});
-                    }, 1000);
-                }
-            });
         }
         if (laborJourneyVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             laborJourneyVideo.autoplay = false;
