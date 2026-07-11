@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT 5.6で、社労士・人事労務の仕事はどう変わるのか。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="ChatGPT 5.6、上手に使いこなせていますか？Chat・Work・Codes　それぞれ実務でどう使うか、具体例を入れて解説します。">
+    <meta property="og:title" content="ChatGPT 5.6で、社労士・人事労務の仕事はどう変わるのか。 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://saitani1.github.io/ascent-sr-site/blog-chatgpt-56-hr-labor.html">
+    <meta property="og:image"
+        content="https://saitani1.github.io/ascent-sr-site/images/ChatGPT Image 2026年7月11日 21_23_34 (1).jpg">
+    <meta property="og:description"
+        content="ChatGPT 5.6、上手に使いこなせていますか？Chat・Work・Codes　それぞれ実務でどう使うか、具体例を入れて解説します。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">平時の対応</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    ChatGPT 5.6で、社労士・人事労務の仕事はどう変わるのか。
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.07.11
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年7月11日 21_23_34 (1).jpg" alt="ChatGPT 5.6で社労士・人事労務の仕事はどう変わるのか" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="lead font-bold text-xl mb-8 text-navy-900">ChatGPT 5.6が来ました。</p>
+                        <p class="mb-6">今回、大きく変わったと感じるのは、「チャット」「ワーク」「Codex」の役割がかなり見えやすくなったことです。</p>
+                        <p class="mb-6">OpenAIの案内でも、ChatGPTは「Chat」「Work」「Codex」をひとつのアプリで扱える形になってきており、Chatは質問や会話、Workは調査や成果物作成、Codexはソフトウェア開発という位置づけで説明されています。</p>
+                        <p class="mb-6">社労士事務所や人事労務担当者にとって、これは単なる新機能の話ではありません。</p>
+                        <p class="mb-6">仕事の進め方そのものを変える話です。</p>
+                        <p class="mb-6">AIに詳しい人になる必要はありません。</p>
+                        <p class="mb-6">大事なのは、「自分の仕事のどこにAIを置くか」です。</p>
+                        <p class="mb-6">ここを間違えなければ、労務実務はかなり変わります。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まずは3つの違いを押さえましょう。</h2>
+                        <p class="mb-6">今回のChatGPTは、ざっくり言うと3つに分けて考えるとわかりやすいです。</p>
+                        <p class="mb-6">「チャット」は相談相手です。</p>
+                        <p class="mb-6">「ワーク」は作業者です。</p>
+                        <p class="mb-6">「Codex」は、自分専用の仕組みを作る開発担当です。</p>
+                        <p class="mb-6">この分け方をすると、かなり使いやすくなります。</p>
+                        <p class="mb-6">今までは、何でも同じ画面で聞いていた人が多いと思います。</p>
+                        <p class="mb-6">制度の相談もする。</p>
+                        <p class="mb-6">文章も作る。</p>
+                        <p class="mb-6">表も作る。</p>
+                        <p class="mb-6">ファイルもまとめる。</p>
+                        <p class="mb-6">でも、これからは少し考え方を変えたほうがいいです。</p>
+                        <p class="mb-6">相談したいならチャット。</p>
+                        <p class="mb-6">成果物を作りたいならワーク。</p>
+                        <p class="mb-6">自分の業務用ツールを作りたいならCodex。</p>
+                        <p class="mb-6">こう切り分けると、AIの使い方がかなり実務的になります。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">チャットは「専門家に相談する場所」です。</h2>
+                        <p class="mb-6">まず、チャットです。</p>
+                        <p class="mb-6">これは今までのChatGPTに近い使い方ですね。</p>
+                        <p class="mb-6">社労士や人事労務担当者であれば、制度の確認や業務の壁打ちに使えます。</p>
+                        <p class="mb-6">たとえば、育児休業です。</p>
+                        <p class="mb-6">育児休業は、制度がかなり複雑です。</p>
+                        <p class="mb-6">産前産後休業があります。</p>
+                        <p class="mb-6">育児休業があります。</p>
+                        <p class="mb-6">出生時育児休業があります。</p>
+                        <p class="mb-6">社会保険料免除があります。</p>
+                        <p class="mb-6">給付金があります。</p>
+                        <p class="mb-6">会社がやる手続きもあります。</p>
+                        <p class="mb-6">本人に出してもらう書類もあります。</p>
+                        <p class="mb-6">こういうときに、チャットで聞くわけです。</p>
+                        <p class="mb-6">「従業員が出産予定です。産前産後休業から育児休業まで、会社として何を確認すればいいですか」</p>
+                        <p class="mb-6">こう聞けば、かなり整理して返してくれます。</p>
+                        <p class="mb-6">これは、相談相手として使うイメージです。</p>
+                        <p class="mb-6">専門家に聞く前の整理にも使えます。</p>
+                        <p class="mb-6">顧問先に説明する前の下準備にも使えます。</p>
+                        <p class="mb-6">制度の全体像をつかむには、かなり便利です。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">ワークは「成果物を作ってもらう場所」です。</h2>
+                        <p class="mb-6">次に、ワークです。</p>
+                        <p class="mb-6">ここがかなり実務的です。</p>
+                        <p class="mb-6">ChatGPT Workは、散らばったメモや下書き、アイデアなどを成果物にすることを支援するものとして紹介されています。</p>
+                        <p class="mb-6">社労士や人事労務の仕事で言えば、チェックリスト、説明資料、社内案内文、表、PDF整理などに使えます。</p>
+                        <p class="mb-6">たとえば、同じ会社の夫婦が育児休業を取るケースがあります。</p>
+                        <p class="mb-6">夫は出産時から1か月間、育児休業を取ります。</p>
+                        <p class="mb-6">妻は産前産後休業を経て、子どもが1歳になるまで育児休業を取ります。</p>
+                        <p class="mb-6">この場合、それぞれ必要な書類や会社側の手続きを整理するのは、けっこう大変です。</p>
+                        <p class="mb-6">そこで、ワークに頼みます。</p>
+                        <p class="mb-6">「夫婦で育児休業を取得するケースについて、本人提出書類、会社手続き、提出期限を一覧表にしてください」</p>
+                        <p class="mb-6">こういう依頼をすると、チェックリストのような形で出してくれます。</p>
+                        <p class="mb-6">もちろん、そのまま完成ではありません。</p>
+                        <p class="mb-6">会社ごとに不要なものもあります。</p>
+                        <p class="mb-6">逆に、追加したほうがいい項目もあります。</p>
+                        <p class="mb-6">でも、ゼロから作るより圧倒的に早いです。</p>
+                        <p class="mb-6">たたき台があるだけで、実務のスピードはかなり上がります。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">電子申請の添付ファイル整理にも使えます。</h2>
+                        <p class="mb-6">社労士や人事担当者なら、電子申請の添付ファイルで困ったことがあると思います。</p>
+                        <p class="mb-6">画像が何枚も送られてくる。</p>
+                        <p class="mb-6">PDFが分かれている。</p>
+                        <p class="mb-6">容量が大きすぎる。</p>
+                        <p class="mb-6">こういう地味な作業、ありますよね。</p>
+                        <p class="mb-6">ここでもワークは使えます。</p>
+                        <p class="mb-6">たとえば、10個の画像ファイルがあるとします。</p>
+                        <p class="mb-6">それを1つのPDFにまとめたい。</p>
+                        <p class="mb-6">容量も一定以下にしたい。</p>
+                        <p class="mb-6">こういう作業を、ワークに依頼できます。</p>
+                        <p class="mb-6">「この画像ファイルを1つのPDFにまとめてください」</p>
+                        <p class="mb-6">「容量を2MB以内にしてください」</p>
+                        <p class="mb-6">こういった使い方ですね。</p>
+                        <p class="mb-6">これは、派手ではありません。</p>
+                        <p class="mb-6">でも、実務ではかなり効きます。</p>
+                        <p class="mb-6">労務の仕事は、こういう小さな作業が山ほどあります。</p>
+                        <p class="mb-6">AI活用というと、すごい資料を作る話に目が行きがちです。</p>
+                        <p class="mb-6">でも、本当に効くのは、こういう「面倒だけれど毎回発生する作業」を減らすことです。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">Codexは「自分専用の業務アプリを作る場所」です。</h2>
+                        <p class="mb-6">最後に、Codexです。</p>
+                        <p class="mb-6">Codexは、OpenAIが提供しているコーディングエージェントです。</p>
+                        <p class="mb-6">公式ヘルプでも、Codexはコードを書いたり、デバッグしたり、テストやコマンドを実行したりできるものとして説明されています。</p>
+                        <p class="mb-6">デスクトップでは、ChatGPTアプリの左上からWorkとCodexを選択できる形になっています。</p>
+                        <p class="mb-6">ここは、チャットやワークとは少し違います。</p>
+                        <p class="mb-6">Codexは、単発の相談や資料作成というより、自分の業務を回すための仕組みを作る場所です。</p>
+                        <p class="mb-6">たとえば、育児休業の管理アプリを作ることができます。</p>
+                        <p class="mb-6">会社ごとに従業員を登録します。</p>
+                        <p class="mb-6">出産予定日を入れます。</p>
+                        <p class="mb-6">出生日を入れます。</p>
+                        <p class="mb-6">そうすると・・・</p>
+                        <p class="mb-6">産前産後休業の期間を表示します。</p>
+                        <p class="mb-6">育児休業の開始日と終了予定日を管理します。</p>
+                        <p class="mb-6">必要な手続きの期限を表示します。</p>
+                        <p class="mb-6">こういうツールを、自分の業務に合わせて作っていくわけです。</p>
+                        <p class="mb-6">今までは、こういうものを作ろうと思ったら、エンジニアに頼む必要がありました。</p>
+                        <p class="mb-6">費用もかかります。</p>
+                        <p class="mb-6">時間もかかります。</p>
+                        <p class="mb-6">でも、Codexを使えば、小さな業務アプリなら自分で作れる可能性が出てきます。</p>
+                        <p class="mb-6">これはかなり大きいです。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">社労士業務は「管理」が多いので、Codexと相性がいいです。</h2>
+                        <p class="mb-6">社労士業務や人事労務の仕事は、管理が多いです。</p>
+                        <p class="mb-6">入社管理。</p>
+                        <p class="mb-6">退職管理。</p>
+                        <p class="mb-6">育児休業管理。</p>
+                        <p class="mb-6">有期契約の更新管理。</p>
+                        <p class="mb-6">36協定の期限管理。</p>
+                        <p class="mb-6">健康診断の実施状況管理。</p>
+                        <p class="mb-6">ストレスチェックの実施管理。</p>
+                        <p class="mb-6">就業規則の改定履歴管理。</p>
+                        <p class="mb-6">こういうものが山ほどあります。</p>
+                        <p class="mb-6">そして、どれも地味に漏れると危ないです。</p>
+                        <p class="mb-6">だから、管理アプリ化できる業務はかなり多いです。</p>
+                        <p class="mb-6">たとえば、育児休業管理アプリなら、出生日が確定した時点で手続き期限を自動で出す。</p>
+                        <p class="mb-6">復帰予定日が近づいたらアラートを出す。</p>
+                        <p class="mb-6">会社ごとに対象者一覧を見られるようにする。</p>
+                        <p class="mb-6">こういうことができると、実務の安心感がかなり変わります。</p>
+                        <p class="mb-6">Excelで管理している会社も多いと思います。</p>
+                        <p class="mb-6">もちろんExcelでもできます。</p>
+                        <p class="mb-6">でも、業務の流れに合わせた小さなアプリにできると、見落としが減ります。</p>
+                        <p class="mb-6">ここは、今後かなり伸びる使い方でしょう。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">AIで大事なのは「いい変化」を作ることです。</h2>
+                        <p class="mb-6">AIを使う目的は、楽をすることだけではありません。</p>
+                        <p class="mb-6">もちろん、作業時間が減るのは大事です。</p>
+                        <p class="mb-6">でも、それだけで終わるともったいないです。</p>
+                        <p class="mb-6">マーケティング的に考えると、AI活用の本質は「望ましい変化を起こすこと」です。</p>
+                        <p class="mb-6">社労士事務所なら、顧問先の不安を減らすことです。</p>
+                        <p class="mb-6">人事担当者なら、従業員が安心して働ける状態を作ることです。</p>
+                        <p class="mb-6">担当者が、手続きに追われる時間を減らすことです。</p>
+                        <p class="mb-6">その分、従業員への説明や相談対応に時間を使うことです。</p>
+                        <p class="mb-6">AIで作業を減らす。</p>
+                        <p class="mb-6">浮いた時間で、人に向き合う。</p>
+                        <p class="mb-6">これが、労務分野におけるAI活用のいい変化です。</p>
+                        <p class="mb-6">単に「AIを使っています」と言うだけでは弱いです。</p>
+                        <p class="mb-6">「AIを使って、顧問先への対応が早くなりました」</p>
+                        <p class="mb-6">「AIを使って、育休取得者への説明がわかりやすくなりました」</p>
+                        <p class="mb-6">「AIを使って、手続き漏れが減りました」</p>
+                        <p class="mb-6">ここまで言えると、価値になります。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">AIを触るだけの人と、仕事を変える人に分かれます。</h2>
+                        <p class="mb-6">ここから、かなり差がつくと思います。</p>
+                        <p class="mb-6">新しいChatGPTを触って、「すごいですね」で終わる人がいます。</p>
+                        <p class="mb-6">一方で、自分の仕事に落とし込む人がいます。</p>
+                        <p class="mb-6">この差は大きいです。</p>
+                        <p class="mb-6">チャットで制度を整理する。</p>
+                        <p class="mb-6">ワークでチェックリストを作る。</p>
+                        <p class="mb-6">Codexで管理アプリを作る。</p>
+                        <p class="mb-6">ここまでやると、仕事の流れが変わります。</p>
+                        <p class="mb-6">特に社労士や人事労務の仕事は、AIと相性がいいです。</p>
+                        <p class="mb-6">法律や制度の確認があります。</p>
+                        <p class="mb-6">書類作成があります。</p>
+                        <p class="mb-6">一覧表作成があります。</p>
+                        <p class="mb-6">期限管理があります。</p>
+                        <p class="mb-6">説明文作成があります。</p>
+                        <p class="mb-6">ファイル整理があります。</p>
+                        <p class="mb-6">こういう仕事が多いからです。</p>
+                        <p class="mb-6">もちろん、最終判断は人間がやるべきです。</p>
+                        <p class="mb-6">労務は人の人生に関わります。</p>
+                        <p class="mb-6">間違えると大きな問題になります。</p>
+                        <p class="mb-6">だから、AIに丸投げしてはいけません。</p>
+                        <p class="mb-6">でも、AIを使わない理由もありません。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まずは小さい業務から変えましょう。</h2>
+                        <p class="mb-6">最初から大きなシステムを作ろうとしなくていいです。</p>
+                        <p class="mb-6">まずは、小さいところから始めましょう。</p>
+                        <p class="mb-6">育児休業のチェックリストを作る。</p>
+                        <p class="mb-6">電子申請の添付ファイルを整理する。</p>
+                        <p class="mb-6">顧問先向けの説明文を作る。</p>
+                        <p class="mb-6">社内向けのFAQを作る。</p>
+                        <p class="mb-6">有期契約の更新管理表を整える。</p>
+                        <p class="mb-6">こういうところからで十分です。</p>
+                        <p class="mb-6">大事なのは、「毎回少し面倒だな」と感じている業務を見つけることです。</p>
+                        <p class="mb-6">そこにAIを入れると、効果がわかりやすいです。</p>
+                        <p class="mb-6">AI活用は、派手なことをする必要はありません。</p>
+                        <p class="mb-6">地味な改善を積み上げるほうが強いです。</p>
+                        <p class="mb-6">社労士業務や人事労務は、地味なミスを減らすことが価値になります。</p>
+                        <p class="mb-6">そこにAIを使いましょう。</p>
+                        <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめ</h2>
+                        <p class="mb-6">ChatGPT 5.6では、「チャット」「ワーク」「Codex」の使い分けがかなり重要になります。</p>
+                        <p class="mb-6">チャットは、相談する場所です。</p>
+                        <p class="mb-6">制度確認や業務の壁打ちに使います。</p>
+                        <p class="mb-6">ワークは、成果物を作る場所です。</p>
+                        <p class="mb-6">チェックリスト、表、説明資料、ファイル整理などに使えます。</p>
+                        <p class="mb-6">Codexは、仕組みを作る場所です。</p>
+                        <p class="mb-6">自分専用の管理アプリや業務ツールを作る方向で使えます。</p>
+                        <p class="mb-6">社労士事務所や人事労務担当者にとって、この3つを使い分けられるかどうかは、かなり大きいです。</p>
+                        <p class="mb-6">AIを使う目的は、単に作業を楽にすることではありません。</p>
+                        <p class="mb-6">顧問先や従業員にとって、より安心できる状態を作ることです。</p>
+                        <p class="mb-6">手続きに追われる時間を減らし、人に向き合う時間を増やすことです。</p>
+                        <p class="mb-6">これが、AIによって起こせる「いい変化」です。</p>
+                        <p class="mb-6">まずは、ひとつでいいです。</p>
+                        <p class="mb-6">今週の業務の中で、面倒な作業をひとつAIに任せてみましょう。</p>
+                        <p class="mb-6">そこから、働き方は少しずつアセントしていきます。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">AI活用を人事労務の実務に落とし込みませんか</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、AI時代の業務整理、労務相談、社内ルール整備、実務フローの見直しを通じて、人事労務の生産性向上を支援しています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                無料相談（60分）に申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center justify-center">
+                    <a href="https://www.osaka.cci.or.jp/samurai/search/index.php?mode=show&seq=3299&s_license=4&s_location=16&r=157"
+                        target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="images/osaka_samurai_search.jpg" alt="大阪サムライ検索"
+                            class="h-12 border border-navy-700 rounded hover:opacity-80 transition">
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">大阪商工会議所</p>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
