@@ -1104,10 +1104,6 @@
                         トラブル対応から、<br class="md:hidden">輝く未来まで。
                     </h2>
                     <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
-                    <p class="mt-5 text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
-                        労務トラブルに強いアセントだからこそ描ける、解決・予防・成長のストーリー。<br class="hidden md:block">
-                        3つの支援が一本につながる流れを、14秒の映像にしました。
-                    </p>
                 </div>
 
                 <div class="journey-video-shell">
@@ -1132,7 +1128,12 @@
                             <div class="journey-overlay-copy"><span class="journey-overlay-number">03</span><p class="journey-overlay-label">BRIGHT FUTURE</p><p class="journey-overlay-title">成長</p><p class="journey-overlay-subtitle">ワーク・ライフ・ハーモニーの実現</p><span class="journey-overlay-line"></span></div>
                         </div>
                     </div>
-                </div>
+                    <div id="journey-finale-overlay" class="journey-finale-overlay" aria-hidden="true">
+                        <div class="journey-finale-sun"></div>
+                        <div class="journey-finale-rays"></div>
+                        <div class="journey-finale-horizon"></div>
+                        <div class="journey-finale-particles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    </div>                </div>
 
                 <div class="journey-video-meta" aria-label="動画情報">
                     <span><i class="fas fa-volume-mute" aria-hidden="true"></i>音声なし</span>
@@ -2433,16 +2434,20 @@
         // Respect reduced-motion preferences by leaving playback under user control.
         const laborJourneyVideo = document.getElementById('labor-journey-video');
         const journeyCardOverlay = document.getElementById('journey-card-overlay');
+        const journeyFinaleOverlay = document.getElementById('journey-finale-overlay');
         if (laborJourneyVideo && journeyCardOverlay) {
             const syncJourneyCards = () => {
                 const time = laborJourneyVideo.currentTime;
                 let scene = '';
                 if (time >= 1.35 && time < 4.65) scene = 'solve';
-                else if (time >= 5.15 && time < 7.95) scene = 'prevent';
-                else if (time >= 8.45 && time < 12.25) scene = 'grow';
+                else if (time >= 5.15 && time < 8.45) scene = 'prevent';
+                else if (time >= 8.95 && time < 12.25) scene = 'grow';
                 journeyCardOverlay.dataset.scene = scene;
                 const isMiddleSequence = time >= 1.35 && time < 12.75;
                 journeyCardOverlay.classList.toggle('is-active', isMiddleSequence);
+                if (journeyFinaleOverlay) {
+                    journeyFinaleOverlay.classList.toggle('is-active', time >= 12.75);
+                }
             };
             laborJourneyVideo.addEventListener('timeupdate', syncJourneyCards);
             laborJourneyVideo.addEventListener('seeking', syncJourneyCards);

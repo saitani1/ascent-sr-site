@@ -43,3 +43,44 @@
         line-height: 1.5;
     }
 }
+/* Hope-filled finale */
+.journey-finale-overlay{position:absolute;z-index:2;inset:10px;overflow:hidden;border-radius:1.25rem;background:radial-gradient(ellipse at 50% 112%,rgba(255,211,86,.42),transparent 46%),linear-gradient(to top,rgba(34,111,192,.2),transparent 62%);opacity:0;pointer-events:none;transition:opacity .8s ease}.journey-finale-overlay.is-active{opacity:1}
+.journey-finale-sun{position:absolute;left:50%;bottom:-25%;width:38%;aspect-ratio:1;translate:-50% 0;border-radius:50%;background:radial-gradient(circle,#fff 0 3%,#fff3a6 10%,#f4c94e 24%,rgba(244,201,78,.15) 55%,transparent 72%);filter:drop-shadow(0 0 36px rgba(255,222,104,.9));animation:journeyFinaleSun 4.25s cubic-bezier(.18,.8,.2,1) both}
+.journey-finale-rays{position:absolute;left:50%;bottom:-48%;width:105%;aspect-ratio:1;translate:-50% 0;border-radius:50%;background:repeating-conic-gradient(from -8deg,rgba(255,239,169,.24) 0 2deg,transparent 3deg 13deg);mask-image:radial-gradient(circle,transparent 0 15%,#000 28%,transparent 68%);animation:journeyFinaleRays 14s linear infinite}
+.journey-finale-horizon{position:absolute;left:7%;right:7%;bottom:18%;height:2px;background:linear-gradient(90deg,transparent,#fff0a0,#fff,#fff0a0,transparent);box-shadow:0 0 14px #f6cf55,0 0 38px rgba(94,180,255,.85);transform:scaleX(0);animation:journeyFinaleHorizon 3.4s ease-out .25s forwards}
+.journey-finale-particles{position:absolute;inset:0}.journey-finale-particles i{position:absolute;bottom:13%;width:5px;aspect-ratio:1;border-radius:50%;background:#fff5b7;box-shadow:0 0 10px #fff,0 0 22px #f1c45b;opacity:0;animation:journeyFinaleParticle 3.2s ease-out infinite}
+.journey-finale-particles i:nth-child(1){left:12%;animation-delay:.1s}.journey-finale-particles i:nth-child(2){left:20%;animation-delay:1.2s}.journey-finale-particles i:nth-child(3){left:29%;animation-delay:.55s}.journey-finale-particles i:nth-child(4){left:38%;animation-delay:1.7s}.journey-finale-particles i:nth-child(5){left:45%;animation-delay:.9s}.journey-finale-particles i:nth-child(6){left:51%;animation-delay:.25s}.journey-finale-particles i:nth-child(7){left:58%;animation-delay:1.45s}.journey-finale-particles i:nth-child(8){left:65%;animation-delay:.7s}.journey-finale-particles i:nth-child(9){left:72%;animation-delay:1.9s}.journey-finale-particles i:nth-child(10){left:79%;animation-delay:.4s}.journey-finale-particles i:nth-child(11){left:86%;animation-delay:1.1s}.journey-finale-particles i:nth-child(12){left:92%;animation-delay:2.05s}
+@keyframes journeyFinaleSun{from{opacity:0;transform:translateY(36%) scale(.55)}45%,to{opacity:1;transform:translateY(-10%) scale(1)}}@keyframes journeyFinaleRays{to{rotate:360deg}}@keyframes journeyFinaleHorizon{0%{transform:scaleX(0);opacity:0}45%,100%{transform:scaleX(1);opacity:1}}@keyframes journeyFinaleParticle{0%{opacity:0;transform:translateY(0) scale(.4)}20%{opacity:1}100%{opacity:0;transform:translateY(-250px) translateX(24px) scale(1.35)}}
+@media(max-width:640px){.journey-finale-overlay{inset:5px;border-radius:.75rem}.journey-finale-sun{width:52%}.journey-finale-horizon{bottom:15%}}@media(prefers-reduced-motion:reduce){.journey-finale-sun,.journey-finale-rays,.journey-finale-horizon,.journey-finale-particles i{animation:none}}
+/* Start finale motion when its video segment becomes active */
+.journey-finale-sun,.journey-finale-rays,.journey-finale-horizon,.journey-finale-particles i{animation:none}
+.journey-finale-overlay.is-active .journey-finale-sun{animation:journeyFinaleSun 4.25s cubic-bezier(.18,.8,.2,1) both}
+.journey-finale-overlay.is-active .journey-finale-rays{animation:journeyFinaleRays 14s linear infinite}
+.journey-finale-overlay.is-active .journey-finale-horizon{animation:journeyFinaleHorizon 3.4s ease-out .25s forwards}
+.journey-finale-overlay.is-active .journey-finale-particles i{animation-name:journeyFinaleParticle;animation-duration:3.2s;animation-timing-function:ease-out;animation-iteration-count:infinite}
+/* Refined finale: smaller sun following a gentle parabolic arc */
+.journey-finale-sun {
+    bottom: -8%;
+    width: 18%;
+    background: radial-gradient(circle, #fffde2 0 3%, #fff0a0 11%, #e9bd3e 25%, rgba(233,189,62,.1) 48%, transparent 68%);
+    filter: drop-shadow(0 0 14px rgba(255,222,104,.55));
+}
+.journey-finale-overlay.is-active .journey-finale-sun {
+    animation: journeyFinaleSunArc 4.25s cubic-bezier(.22,.68,.22,1) both;
+}
+@keyframes journeyFinaleSunArc {
+    0% { opacity: 0; transform: translate(-240%,80%) scale(.48); }
+    15% { opacity: .72; transform: translate(-195%,28%) scale(.68); }
+    55% { opacity: .88; transform: translate(0,-135%) scale(1); }
+    84% { opacity: .62; transform: translate(185%,-248%) scale(.84); }
+    100% { opacity: 0; transform: translate(265%,-330%) scale(.62); }
+}
+@media(max-width:640px){.journey-finale-sun{width:24%}}
+/* Hide the finale instantly when the video loops back to the opening frame */
+.journey-finale-overlay:not(.is-active) {
+    opacity: 0;
+    transition: none;
+}
+.journey-finale-overlay.is-active {
+    transition: opacity .8s ease;
+}
