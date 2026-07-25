@@ -84,3 +84,248 @@
 .journey-finale-overlay.is-active {
     transition: opacity .8s ease;
 }
+/* ===== Cinematic refinement ===== */
+/* 流れ（トラブル→解決→予防→成長）は維持したまま、
+   1) シーンの切れ目の“無音の間”をなくす 2) 章立てを可視化 3) 要素ごとに時間差で見せる */
+
+/* 章バーと重ならないよう下側の余白を確保 */
+.journey-overlay-scene {
+    padding-bottom: 16%;
+    transition: opacity .55s ease, transform .75s cubic-bezier(.2, .85, .2, 1), filter .55s ease;
+    filter: blur(7px);
+}
+
+/* 送り出したシーンは左へ抜ける（時間の進行方向を体感させる） */
+.journey-overlay-scene.is-past {
+    transform: translate(-9%) scale(.94);
+}
+
+.journey-overlay-scene.is-current {
+    filter: blur(0);
+}
+
+/* シーンごとの空気感 */
+.journey-overlay-scene--solve {
+    background:
+        radial-gradient(circle at 26% 42%, rgba(255, 118, 93, .28), transparent 48%),
+        linear-gradient(120deg, rgba(88, 20, 12, .55), transparent 62%);
+}
+
+.journey-overlay-scene--prevent {
+    background:
+        radial-gradient(circle at 26% 42%, rgba(105, 189, 255, .22), transparent 48%),
+        linear-gradient(120deg, rgba(10, 46, 92, .55), transparent 62%);
+}
+
+.journey-overlay-scene--grow {
+    background:
+        radial-gradient(circle at 26% 42%, rgba(243, 206, 103, .24), transparent 48%),
+        linear-gradient(120deg, rgba(96, 68, 12, .5), transparent 62%);
+}
+
+/* 要素を時間差で立ち上げる */
+.journey-overlay-visual,
+.journey-overlay-number,
+.journey-overlay-label,
+.journey-overlay-title,
+.journey-overlay-subtitle {
+    opacity: 0;
+    transition: opacity .55s ease, transform .7s cubic-bezier(.2, .85, .2, 1);
+    will-change: opacity, transform;
+}
+
+.journey-overlay-visual {
+    transform: translateY(18px) rotate(-7deg) scale(.9);
+}
+
+.journey-overlay-number {
+    transform: translateY(18px);
+}
+
+.journey-overlay-label,
+.journey-overlay-title,
+.journey-overlay-subtitle {
+    transform: translateY(16px);
+}
+
+.is-current .journey-overlay-visual {
+    opacity: 1;
+    transform: rotate(-7deg) scale(1);
+    transition-delay: .12s;
+}
+
+.is-current .journey-overlay-number {
+    opacity: 1;
+    transform: none;
+    transition-delay: .04s;
+}
+
+.is-current .journey-overlay-label {
+    opacity: 1;
+    transform: none;
+    transition-delay: .2s;
+}
+
+.is-current .journey-overlay-title {
+    opacity: 1;
+    transform: none;
+    transition-delay: .3s;
+}
+
+.is-current .journey-overlay-subtitle {
+    opacity: 1;
+    transform: none;
+    transition-delay: .44s;
+}
+
+/* 章立てインジケーター */
+.journey-chapters {
+    position: absolute;
+    z-index: 4;
+    right: 6.5%;
+    bottom: 5.5%;
+    left: 6.5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .6rem 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s ease, transform .5s ease;
+    pointer-events: none;
+}
+
+.journey-chapters.is-active {
+    opacity: 1;
+    transform: none;
+}
+
+.journey-chapters.is-complete {
+    opacity: .8;
+}
+
+.journey-chapters__item {
+    display: grid;
+    gap: .5rem;
+    color: rgba(255, 255, 255, .35);
+    transition: color .45s ease;
+}
+
+.journey-chapters__item[data-key="solve"].is-current,
+.journey-chapters__item[data-key="solve"].is-done {
+    color: #ff765d;
+}
+
+.journey-chapters__item[data-key="prevent"].is-current,
+.journey-chapters__item[data-key="prevent"].is-done {
+    color: #69bdff;
+}
+
+.journey-chapters__item[data-key="grow"].is-current,
+.journey-chapters__item[data-key="grow"].is-done {
+    color: #f3ce67;
+}
+
+.journey-chapters__bar {
+    position: relative;
+    display: block;
+    height: 3px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .16);
+}
+
+.journey-chapters__bar i {
+    position: absolute;
+    inset: 0;
+    transform: scaleX(var(--p, 0));
+    transform-origin: left center;
+    background: currentColor;
+    box-shadow: 0 0 12px currentColor;
+    transition: transform .12s linear;
+}
+
+.journey-chapters__label {
+    display: flex;
+    align-items: baseline;
+    gap: .5em;
+    color: rgba(255, 255, 255, .5);
+    font-size: clamp(.62rem, 1.1vw, .82rem);
+    font-weight: 800;
+    letter-spacing: .16em;
+    transition: color .45s ease;
+}
+
+.journey-chapters__label b {
+    color: currentColor;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.05em;
+    letter-spacing: .04em;
+}
+
+.journey-chapters__item.is-current .journey-chapters__label,
+.journey-chapters__item.is-done .journey-chapters__label {
+    color: rgba(255, 255, 255, .95);
+}
+
+@media (max-width:640px) {
+    .journey-overlay-scene {
+        padding-bottom: 19%;
+    }
+
+    .journey-chapters {
+        right: 4.5%;
+        bottom: 4.5%;
+        left: 4.5%;
+        gap: .35rem .5rem;
+    }
+
+    .journey-chapters__label {
+        gap: .3em;
+        font-size: .54rem;
+        letter-spacing: .08em;
+    }
+
+    .journey-chapters__bar {
+        height: 2px;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .journey-overlay-scene,
+    .journey-overlay-visual,
+    .journey-overlay-number,
+    .journey-overlay-label,
+    .journey-overlay-title,
+    .journey-overlay-subtitle,
+    .journey-chapters,
+    .journey-chapters__bar i {
+        transition: none;
+    }
+
+    .journey-overlay-scene {
+        filter: none;
+    }
+}
+
+/* スキャンラインが見出しを横切っていたので、本文と章バーの間へ逃がす */
+.journey-card-overlay:after {
+    top: auto;
+    bottom: 21%;
+    opacity: .55;
+}
+
+/* フィナーレでは動画本体が見えるため、ネイティブのコントロールバーを避ける高さに置く */
+.journey-chapters {
+    bottom: 8%;
+}
+
+@media (max-width:640px) {
+    .journey-chapters {
+        bottom: 7%;
+    }
+
+    .journey-overlay-scene {
+        padding-bottom: 21%;
+    }
+}
