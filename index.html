@@ -1043,7 +1043,156 @@
         #contact-form-anchor+section details>div{color:#46505d!important}
         #contact-form-anchor+section details p.text-accent-500{color:#963a32!important}
         .contact-form .button-primary{background:#b74436!important;color:#fff!important;border:1px solid #8f2e27!important}
-        @media(max-width:767px){#lead-magnet .mt-10.bg-navy-900{background:#26364c!important}}    </style>
+        @media(max-width:767px){#lead-magnet .mt-10.bg-navy-900{background:#26364c!important}}
+
+        /* ===== Contact form usability fix ===== */
+        /* 用紙の罫線と入力欄の下線が見分けられない問題を解消し、入力欄を「枠のある白いボックス」として明示する */
+        .contact-form {
+            padding: 3rem 3rem 3rem 4.5rem !important;
+            background-image:
+                linear-gradient(90deg, transparent 0 3rem, rgba(173, 60, 52, .28) 3rem 3.1rem, transparent 3.1rem),
+                repeating-linear-gradient(180deg, transparent 0 31px, rgba(73, 116, 148, .06) 31px 32px) !important;
+        }
+
+        .contact-form__intro {
+            margin: 0 0 2rem;
+            padding: .85rem 1rem;
+            border: 1px dashed #b9ad98;
+            background: rgba(239, 234, 223, .6);
+            font-family: "Noto Serif JP", serif;
+            font-weight: 700;
+            font-size: .95rem;
+            color: #172033;
+            text-align: center;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.75rem;
+        }
+
+        .contact-form label {
+            display: flex !important;
+            align-items: center;
+            gap: .5rem;
+            margin-bottom: .5rem !important;
+            font-size: 1rem !important;
+            color: #172033 !important;
+        }
+
+        .contact-form label::before {
+            content: "";
+            flex: 0 0 auto;
+            width: 4px;
+            height: 1.05em;
+            background: #b74436;
+        }
+
+        .contact-form .required,
+        .contact-form .optional {
+            display: inline-block;
+            padding: .18em .6em !important;
+            font-size: .72rem !important;
+            font-weight: 700;
+            letter-spacing: .04em;
+            line-height: 1.5;
+            margin-left: 0 !important;
+        }
+
+        .contact-form .optional {
+            background: #efeade !important;
+            color: #5f5a4f !important;
+            border: 1px solid #c9c0ac;
+            border-radius: 1px;
+        }
+
+        /* 入力欄そのもの：不透明な白＋はっきりした枠＋内側の影で「ここに書く場所」と分かるようにする */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: .95rem 1rem !important;
+            border: 2px solid #8a8069 !important;
+            border-radius: 3px !important;
+            background: #ffffff !important;
+            background-image: none !important;
+            box-shadow: inset 0 2px 4px rgba(73, 60, 36, .09) !important;
+            font-size: 1rem !important;
+            color: #172033;
+            transition: border-color .15s, box-shadow .15s, background-color .15s;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #9a9384;
+            opacity: 1;
+        }
+
+        .contact-form input:hover,
+        .contact-form textarea:hover {
+            border-color: #6f6a60 !important;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none !important;
+            border-color: #b74436 !important;
+            background: #fffdf7 !important;
+            box-shadow: 0 0 0 3px rgba(183, 68, 54, .18), inset 0 2px 4px rgba(73, 60, 36, .06) !important;
+        }
+
+        .contact-form textarea {
+            min-height: 10rem;
+            line-height: 1.8;
+            resize: vertical;
+        }
+
+        .contact-form .form-hint {
+            margin-top: .5rem;
+            font-size: .82rem;
+            line-height: 1.7;
+            color: #5f5a4f;
+        }
+
+        .contact-form .form-submit {
+            margin-top: 2.5rem !important;
+            padding-top: 1.75rem;
+            border-top: 1px dashed #c9c0ac;
+        }
+
+        .contact-form .form-submit .button-primary {
+            width: 100%;
+            max-width: 22rem;
+            padding: 1.1rem 2rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-form .form-privacy {
+            margin-top: 1rem;
+            font-size: .8rem;
+            color: #5f5a4f;
+        }
+
+        @media (max-width:767px) {
+            .contact-form {
+                padding: 1.75rem 1.25rem !important;
+                background-image: repeating-linear-gradient(180deg, transparent 0 31px, rgba(73, 116, 148, .06) 31px 32px) !important;
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form input[type="tel"],
+            .contact-form textarea {
+                /* 16px未満だとiOSで自動ズームするため据え置き */
+                font-size: 16px !important;
+                min-height: 3rem;
+            }
+
+            .contact-form .form-submit .button-primary {
+                max-width: none;
+            }
+        }
+    </style>
 </head>
 
 <body class="font-sans text-gray-800 antialiased bg-gray-50">
@@ -2363,9 +2512,7 @@
                     <p class="text-center font-bold mb-4 text-navy-900">よくあるお問い合わせ</p>
                     <div class="flex flex-wrap gap-2 justify-center">
                         <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">無料診断希望</span>
-                        <span
-                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">資料請求希望</span>
+                            class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">初めて人を雇いたい</span>
                         <span
                             class="bg-white px-3 py-1 rounded-full text-sm shadow-sm border border-gray-200 text-gray-700">シフトと社会保険を整理したい</span>
                         <span
@@ -2379,25 +2526,32 @@
                     </div>
                 </div>
                 <form action="https://formspree.io/f/xdkdnwjl" method="POST" class="contact-form">
+                    <p class="contact-form__intro">下の4つの欄にご記入のうえ、送信してください（所要1分）</p>
                     <div class="form-group">
                         <label for="name">お名前 <span class="required">必須</span></label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎" required>
                     </div>
                     <div class="form-group">
                         <label for="email">メールアドレス <span class="required">必須</span></label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email"
+                            placeholder="例：info@example.co.jp" required>
+                        <p class="form-hint">こちらのアドレス宛にご返信します。</p>
                     </div>
                     <div class="form-group">
-                        <label for="company">会社名</label>
-                        <input type="text" id="company" name="company">
+                        <label for="company">会社名 <span class="optional">任意</span></label>
+                        <input type="text" id="company" name="company" autocomplete="organization"
+                            placeholder="例：株式会社アセント">
                     </div>
                     <div class="form-group">
                         <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <p class="text-sm text-gray-500 mt-2">例：無料診断希望／資料請求希望／従業員30名、勤怠と社会保険の整理について相談したい</p>
+                        <textarea id="message" name="message" rows="6"
+                            placeholder="例：初めて人を雇うので、必要な手続きを知りたい&#10;例：従業員30名、勤怠と社会保険の整理について相談したい&#10;例：就業規則を見直したい"
+                            required></textarea>
+                        <p class="form-hint">まだ整理できていなくても構いません。今お困りの状況だけでもお書きください。</p>
                     </div>
                     <div class="form-submit">
-                        <button type="submit" class="button button-primary">送信する</button>
+                        <button type="submit" class="button button-primary">この内容で送信する</button>
+                        <p class="form-privacy">ご記入いただいた内容は、ご相談への回答以外には利用しません。</p>
                     </div>
                 </form>
             </div>
