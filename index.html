@@ -64,7 +64,7 @@
             font-weight: bold;
             color: #fff;
             background-color: #fff;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 3px 3px 0 #e4ddcd;
             transition: transform 0.3s ease;
         }
 
@@ -100,19 +100,19 @@
         }
 
         .swiper-pagination-current {
-            color: #b98b2e;
-            /* accent-500 */
+            color: #8a651b;
+            /* accent-500（紙地でのコントラスト確保のため濃い金） */
             font-size: 20px;
         }
 
         .swiper-button-next,
         .swiper-button-prev {
-            color: #b98b2e !important;
-            background-color: rgba(255, 255, 255, 0.9);
+            color: #8a651b !important;
+            background-color: rgba(255, 253, 247, 0.94);
             width: 44px !important;
             height: 44px !important;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 3px 0 rgba(73, 60, 36, 0.18);
         }
 
         .swiper-button-next::after,
@@ -508,8 +508,9 @@
             border-color: rgba(10, 36, 99, 0.1) !important;
         }
 
+        /* 紙テーマのベース色に統一（旧・寒色系 #f7f9fc は body に漏れて浮いていた） */
         .bg-gray-50 {
-            background-color: #f7f9fc !important;
+            background-color: #f5f0e5 !important;
         }
 
         .bg-red-50 {
@@ -591,7 +592,7 @@
 
         .office-details-table,
         .google-map {
-            border-radius: 8px;
+            border-radius: 2px;
         }
 
         /* Premium visual system */
@@ -640,19 +641,22 @@
             letter-spacing: 0.2em;
         }
 
+        /* 紙の上では #b98b2e はコントラスト約2.6で読みにくいため濃い金に。
+           暗地に乗る箇所だけ後段で明るい金へ戻す */
         .text-accent-500,
         .text-accent-600,
         .text-yellow-400 {
-            color: #b98b2e !important;
+            color: #8a651b !important;
         }
 
+        /* 紙テーマではフラットな朱肉色。光沢グラデ＋ぼかし影は質感が合わないため廃止 */
         .bg-accent-500,
         .bg-accent-600,
         .button-primary {
-            background: linear-gradient(135deg, #B7352B 0%, #E85D3F 55%, #C94132 100%) !important;
+            background: #b74436 !important;
             color: #FFFFFF !important;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 18px 42px rgba(232, 93, 63, 0.26) !important;
+            border: 1px solid #8f2e27;
+            box-shadow: 3px 3px 0 rgba(73, 60, 36, 0.22) !important;
         }
 
         .bg-accent-500 i,
@@ -666,7 +670,7 @@
         .hover\:bg-accent-600:hover,
         .hover\:bg-accent-500:hover,
         .button-primary:hover {
-            background: linear-gradient(135deg, #A62F27 0%, #D94D35 58%, #B6362B 100%) !important;
+            background: #9d3529 !important;
             color: #FFFFFF !important;
         }
 
@@ -711,13 +715,8 @@
                 linear-gradient(180deg, #ffffff 0%, #f8f6ef 100%) !important;
         }
 
-        #reasons,
-        section.bg-navy-900,
-        footer.bg-navy-900 {
-            background:
-                radial-gradient(circle at 18% 10%, rgba(212, 175, 55, 0.16), transparent 28%),
-                linear-gradient(135deg, #050d22 0%, #071638 52%, #10224d 100%) !important;
-        }
+        /* 旧・金×紺グラデ層は削除。#reasons と section.bg-navy-900 は紙テーマ側で
+           上書き済みで死んでいたが、footer だけ詳細度で勝ち残り一人だけ旧テーマだった。 */
 
         #reasons .bg-navy-800,
         #reasons .bg-white\/10,
@@ -989,61 +988,649 @@
         .service-story-card__number{left:1.15rem;right:auto;top:1.3rem;display:grid;place-items:center;width:2.6rem;height:2.6rem;border:2px solid var(--step-color);border-radius:50%;color:var(--step-color)!important;font-family:"Noto Serif JP",serif;font-size:.9rem;font-weight:900;line-height:1;transform:rotate(-7deg)}
         .service-story-card__grid{grid-template-columns:.9fr 1.25fr;gap:3.5rem;align-items:start}
         .service-story-card__grid>div:last-child{padding-left:2.25rem;border-left:1px dashed rgba(56,75,93,.25)}
-        .service-story-card__label,.service-story-card--crisis .service-story-card__label,.service-story-card--routine .service-story-card__label,.service-story-card--future .service-story-card__label{display:inline-flex;padding:.3rem .65rem;border:1px solid currentColor;border-radius:1px;background:#fffdf7;color:var(--step-color);font-size:.67rem;letter-spacing:.08em;box-shadow:2px 2px 0 color-mix(in srgb,var(--step-color) 18%,transparent);transform:rotate(-1deg)}
+        .service-story-card__label,.service-story-card--crisis .service-story-card__label,.service-story-card--routine .service-story-card__label,.service-story-card--future .service-story-card__label{display:inline-flex;padding:.3rem .65rem;border:1px solid currentColor;border-radius:1px;background:#fffdf7;color:var(--step-color);font-size:.67rem;letter-spacing:.08em;box-shadow:2px 2px 0 color-mix(in srgb,var(--step-color) 18%,transparent)}
         .service-story-card__label::after{display:none}
         .service-story-card h4{font-family:"Noto Serif JP",serif;letter-spacing:.025em;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--step-color) 42%,transparent);text-decoration-thickness:5px;text-underline-offset:-2px;text-decoration-skip-ink:none}
         .service-story-card__list li,.service-story-card--crisis .service-story-card__list li{padding:0 0 .55rem 1.25rem;border-bottom:0;color:#46505d;line-height:1.7}
         .service-story-card__list li::before{content:"✓";top:0;left:0;width:auto;height:auto;background:none;color:var(--step-color);font-family:"Noto Serif JP",serif;font-weight:900;transform:rotate(-8deg)}
-        .service-story-card__result,.service-story-card--crisis .service-story-card__result,.service-story-card--routine .service-story-card__result,.service-story-card--future .service-story-card__result{margin-top:1.35rem;padding:.75rem .9rem;border:1px dashed color-mix(in srgb,var(--step-color) 58%,transparent);border-left:3px solid var(--step-color);border-radius:1px;background:rgba(255,253,247,.82);color:#172033;transform:rotate(.25deg)}
+        .service-story-card__result,.service-story-card--crisis .service-story-card__result,.service-story-card--routine .service-story-card__result,.service-story-card--future .service-story-card__result{margin-top:1.35rem;padding:.75rem .9rem;border:1px dashed color-mix(in srgb,var(--step-color) 58%,transparent);border-left:3px solid var(--step-color);border-radius:1px;background:rgba(255,253,247,.82);color:#172033}
         .service-story-card__result i{color:var(--step-color)!important}.service-story-card--crisis .text-white\/75{color:#66707d}
         .service-story-connector{display:grid;grid-template-columns:1fr auto 1fr;gap:1.1rem;min-height:78px;align-items:center;color:#7b7466}.service-story-connector::before,.service-story-connector::after{content:"";width:auto;height:1px;background:#cfc8b9}.service-story-connector span{padding:.15rem .35rem;border:0;border-radius:0;background:#f8f6ef;box-shadow:none;color:inherit;font-family:"Noto Serif JP",serif;font-size:.72rem;letter-spacing:.04em}.service-story-connector i{display:none}
         @media(max-width:767px){.service-story-card{padding:4.5rem 1.25rem 1.5rem 4.25rem;background-image:linear-gradient(90deg,transparent 0 3.15rem,rgba(190,63,55,.4) 3.15rem 3.25rem,transparent 3.25rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}.service-story-card__number{left:.35rem;top:1.15rem;width:2.35rem;height:2.35rem}.service-story-card__grid{grid-template-columns:1fr;gap:1.25rem}.service-story-card__grid>div:last-child{padding:1.25rem 0 0;border-left:0;border-top:1px dashed rgba(56,75,93,.25)}.service-story-connector{min-height:64px;gap:.7rem}.service-story-connector span{text-align:center}}
-        @media(min-width:1024px){#services .service-story-card{padding:4.35rem 1.65rem 1.65rem 3.25rem;background-image:linear-gradient(90deg,transparent 0 2.25rem,rgba(190,63,55,.38) 2.25rem 2.34rem,transparent 2.34rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}#services .service-story-card:nth-of-type(2){transform:rotate(-.35deg)}#services .service-story-card:nth-of-type(3){transform:rotate(.35deg)}#services .service-story-card__number{left:.45rem;right:auto;top:1.1rem;width:2.35rem;height:2.35rem;border:2px solid var(--step-color);font-family:"Noto Serif JP",serif;font-size:.8rem;letter-spacing:0}#services .service-story-card__grid>div:last-child{padding-left:0;border-left:0;border-top:1px dashed rgba(56,75,93,.25);padding-top:1.25rem}}
+        @media(min-width:1024px){#services .service-story-card{padding:4.35rem 1.65rem 1.65rem 3.25rem;background-image:linear-gradient(90deg,transparent 0 2.25rem,rgba(190,63,55,.38) 2.25rem 2.34rem,transparent 2.34rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}#services .service-story-card__number{left:.45rem;right:auto;top:1.1rem;width:2.35rem;height:2.35rem;border:2px solid var(--step-color);font-family:"Noto Serif JP",serif;font-size:.8rem;letter-spacing:0}#services .service-story-card__grid>div:last-child{padding-left:0;border-left:0;border-top:1px dashed rgba(56,75,93,.25);padding-top:1.25rem}}
 
-        /* Site-wide consultation notebook theme */
-        :root{--paper:#fbf8ef;--paper-deep:#f1ecdf;--ink:#172033;--rule:rgba(73,116,148,.12);--pencil:#6f6a60;--red-pencil:#ad3c34}
-        html{background:#e8e2d5}body{background-color:var(--paper);background-image:repeating-linear-gradient(180deg,transparent 0 31px,var(--rule) 31px 32px);color:var(--ink)}
-        header{background:rgba(255,253,247,.96)!important;border-bottom:1px solid #d5cdbd;box-shadow:0 3px 0 rgba(92,80,58,.08)!important}header::after{display:none}header nav a{font-family:"Noto Serif JP",serif}header nav a:hover{text-decoration:underline;text-decoration-color:#ad3c34;text-decoration-thickness:3px;text-underline-offset:5px}
-        #home{border-bottom:8px solid #ded6c5}#home::after{content:"CONFIDENTIAL / CONSULTATION FILE";position:absolute;right:5%;bottom:2.5rem;padding:.45rem .8rem;border:2px solid rgba(255,232,193,.72);color:rgba(255,241,209,.9);font-size:.65rem;font-weight:900;letter-spacing:.16em;transform:rotate(-3deg)}.hero-kicker{border-left:0!important;border-bottom:2px solid #e8cc84;background:rgba(7,22,56,.66);transform:rotate(-.5deg)}
-        main>section:not(#home){position:relative;background-color:var(--paper)!important;background-image:linear-gradient(90deg,transparent 0 calc(50% - 560px),rgba(173,60,52,.12) calc(50% - 560px) calc(50% - 558px),transparent calc(50% - 558px)),repeating-linear-gradient(180deg,transparent 0 31px,var(--rule) 31px 32px)!important;border-bottom:1px solid #d8d0c1}
-        main>section:nth-of-type(even):not(#home){background-color:#f5f0e5!important}main>section>.container,main>section>.legacy-container{position:relative}
-        main>section:not(#home) .text-center>span:first-child,.service-card-stack__heading>span:first-child{display:inline-block;padding:.3rem .7rem;border:1px solid currentColor;background:rgba(255,253,247,.9);font-size:.68rem!important;letter-spacing:.12em;box-shadow:2px 2px 0 rgba(173,60,52,.13);transform:rotate(-1deg)}
-        main>section:not(#home) h2{font-family:"Noto Serif JP",serif!important;letter-spacing:.02em}main>section:not(#home) .text-center h2::after{content:"";display:block;width:5.5rem;height:7px;margin:.7rem auto 0;background:linear-gradient(transparent 20%,rgba(218,184,73,.48) 20% 78%,transparent 78%);transform:rotate(-1.5deg)}
-        main>section:not(#home) .rounded-xl,main>section:not(#home) .rounded-2xl{border-radius:2px!important}main>section:not(#home) .shadow-md,main>section:not(#home) .shadow-xl{box-shadow:4px 5px 0 #ddd5c5,0 14px 28px rgba(52,43,26,.07)!important}
-        #services .journey-video-shell{border-radius:4px;background:#172033;box-shadow:7px 8px 0 #d8d0c0,0 25px 50px rgba(31,37,46,.16)}#services .journey-video{border-radius:2px}.journey-video-summary{border:1px dashed #b9ad98!important;border-radius:2px!important;background:rgba(255,253,247,.88)!important;font-family:"Noto Serif JP",serif;box-shadow:3px 3px 0 #e3dccd}
-        #blog .swiper-slide{padding:8px 8px 24px;background:#fffdf7;border:1px solid #d8d0c1;border-radius:1px!important;box-shadow:3px 5px 0 #ddd5c6;transform:rotate(-.5deg)}#blog .swiper-slide:nth-child(even){transform:rotate(.7deg)}#blog .swiper-slide img{border-radius:0!important}
-        #profile>div>div{border:1px solid #d4cbbb;background:#fffdf7!important;transform:rotate(-.25deg)}#profile>div>div::after{content:"PERSONNEL FILE";position:absolute;right:2rem;top:1.2rem;padding:.35rem .55rem;border:2px solid rgba(173,60,52,.55);color:#ad3c34;font-size:.62rem;font-weight:900;letter-spacing:.12em;transform:rotate(4deg)}#profile h3{border-left:0!important;padding-left:0!important;text-decoration:underline;text-decoration-color:rgba(218,184,73,.5);text-decoration-thickness:6px;text-underline-offset:-2px;text-decoration-skip-ink:none}
-        #cases article,#lead-magnet .grid>div,#flow .grid>div{position:relative;border:1px solid #d5cdbd!important;background-color:#fffdf7!important;background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(73,116,148,.1) 31px 32px);box-shadow:3px 5px 0 #dfd7c8!important;transform:rotate(-.35deg)}#cases article:nth-child(even),#lead-magnet .grid>div:nth-child(even),#flow .grid>div:nth-child(even){transform:rotate(.45deg)}#cases article>div:first-child{background:#26364c!important;border-bottom:3px double #bcb3a2}#lead-magnet .grid>div>div:first-child{border-radius:50%!important;transform:rotate(-7deg);box-shadow:2px 2px 0 #d8d0c1}
-        #service-details .bg-white{background-color:#fffdf7!important;background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(73,116,148,.09) 31px 32px);border-color:#d5cdbd!important}#service-details .bg-gray-50{background:rgba(239,234,223,.78)!important}#service-details h3,#service-details h4{font-family:"Noto Serif JP",serif}
-        #reasons{color:var(--ink)!important}#reasons .text-white,#reasons .text-gray-300{color:var(--ink)!important}#reasons .bg-navy-800{position:relative;background:#fffdf7!important;border:1px solid #cfc5b3!important;box-shadow:4px 5px 0 #ded6c6}#reasons .bg-navy-800::before{content:"";position:absolute;left:1.2rem;top:-10px;width:70px;height:20px;background:rgba(224,204,151,.62);transform:rotate(-3deg)}#reasons .text-5xl{font-family:"Noto Serif JP",serif;color:#ad3c34!important}#reasons .bg-white\/10{background:rgba(255,253,247,.82)!important;border:1px dashed #b8ad98;border-radius:1px!important}
-        #flow .grid>div{padding-top:2.8rem!important}#flow .grid>div::before{content:"";position:absolute;top:1.1rem;left:1.5rem;right:1.5rem;height:1px;background:#b8ae9b}#flow .grid>div p:first-child{display:inline-block;border:1px solid currentColor;padding:.15rem .4rem;transform:rotate(-2deg)}
-        a.rounded-full,.button-primary{border-radius:2px!important;box-shadow:3px 3px 0 rgba(73,60,36,.23)!important;transform:rotate(-.35deg);letter-spacing:.02em}a.rounded-full:hover,.button-primary:hover{transform:rotate(-.35deg) translate(2px,2px)!important;box-shadow:1px 1px 0 rgba(73,60,36,.2)!important}
-        #about .google-map{padding:8px 8px 20px;background:#fffdf7;border:1px solid #d4cbbb;border-radius:1px;box-shadow:4px 6px 0 #ded6c6}#about iframe{filter:saturate(.78) contrast(.94)}
-        .office-details-table{background:#fffdf7;box-shadow:4px 5px 0 #ded6c6}.office-details-table th{background:#eee7d8!important;font-family:"Noto Serif JP",serif}.office-details-table th,.office-details-table td{border-color:#cfc6b5!important}
-        .contact-form-section{background-color:#f3ede0!important}.contact-form{border:1px solid #d0c6b4!important;border-radius:2px!important;background-color:#fffdf7!important;background-image:linear-gradient(90deg,transparent 0 3.8rem,rgba(173,60,52,.28) 3.8rem 3.9rem,transparent 3.9rem),repeating-linear-gradient(180deg,transparent 0 31px,rgba(73,116,148,.1) 31px 32px);box-shadow:6px 7px 0 #dcd3c3!important}.contact-form input,.contact-form textarea{border:0!important;border-bottom:1px solid #9f998d!important;border-radius:0!important;background:rgba(255,255,255,.55)!important}.contact-form label{font-family:"Noto Serif JP",serif}.required{border-radius:1px!important;background:#ad3c34!important;color:#fff!important}
-        footer{background:#26313f!important;border-top:8px solid #ded5c4!important}
-        @media(max-width:767px){main>section:not(#home){background-image:repeating-linear-gradient(180deg,transparent 0 31px,var(--rule) 31px 32px)!important}#home::after{display:none}#profile>div>div::after{right:1rem;top:17rem}.contact-form{padding:2rem 1.25rem!important;background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(73,116,148,.1) 31px 32px)}}
-        /* Paper-theme contrast corrections */
-        #lead-magnet .mt-10.bg-navy-900{background:#26364c!important;color:#fff!important;border:1px solid #172033}
-        #lead-magnet .mt-10.bg-navy-900 p{color:#fff!important}#lead-magnet .mt-10.bg-navy-900 p:first-child{color:#e8c982!important}
-        #lead-magnet .mt-10.bg-navy-900 a{background:#fffdf7!important;color:#172033!important}
-        #lead-magnet .grid>div>a.bg-accent-500{background:#b74436!important;color:#fff!important;border:1px solid #8f2e27}
-        #reasons>.container>.text-center>p.text-yellow-400{color:#8a651b!important}
-        #reasons>.container>.text-center>h2{color:#172033!important}
-        #reasons>.container>.text-center>p.text-white{color:#354052!important}
-        #reasons .mt-16.bg-white\/10,#reasons .mt-16.bg-white\/10 *{color:#354052!important}
-        #reasons .mt-16.bg-white\/10 h3,#reasons .mt-16.bg-white\/10 .text-accent-500{color:#963a32!important}
-        #reasons .mt-16.bg-white\/10{background:rgba(255,253,247,.88)!important}
-        #flow+section{color:#172033!important}#flow+section h2,#flow+section p{color:#172033!important}#flow+section>div>span{color:#963a32!important}
-        #flow+section a.bg-accent-500{background:#b74436!important;color:#fff!important;border:1px solid #8f2e27}
-        #flow+section a.bg-white{background:#fffdf7!important;color:#172033!important;border:1px solid #82796a}
-        #contact-form-anchor+section{color:#172033!important}#contact-form-anchor+section h2{color:#172033!important}
-        #contact-form-anchor+section details{background:rgba(255,253,247,.96)!important;border:1px solid #d2c9b8;border-radius:2px!important;box-shadow:3px 3px 0 #e0d8c9}
-        #contact-form-anchor+section details summary{color:#172033!important}
-        #contact-form-anchor+section details>div{color:#46505d!important}
-        #contact-form-anchor+section details p.text-accent-500{color:#963a32!important}
-        .contact-form .button-primary{background:#b74436!important;color:#fff!important;border:1px solid #8f2e27!important}
-        @media(max-width:767px){#lead-magnet .mt-10.bg-navy-900{background:#26364c!important}}
+        /* =========================================================
+           相談ファイル（紙）テーマ
+           モデル：机（html）→ 用紙＝セクション → 伝票＝カード
+           原則：
+             1. 傾きは「紙の上に後から人が加えたもの」＝スタンプと手書き丸数字のみ。
+                本文・見出し・カード・ボタンなど文字を持つ器は絶対に傾けない
+                （文字が滲み、罫線との垂直リズムが崩れるため）。
+             2. 影は右下固定のハードオフセット。大きさで4段階のスケールに限定し、
+                旧レイヤー由来の「ふわっと浮くぼかし影」は紙面上では使わない。
+             3. 罫線は「紙」の上だけ。body には敷かない（多重で干渉するため）。
+           ========================================================= */
+        :root {
+            /* 面 */
+            --desk: #e8e2d5;
+            --paper: #fbf8ef;
+            --paper-alt: #f5f0e5;
+            --paper-card: #fffdf7;
+            --paper-deep: #f1ecdf;
+            /* 線 */
+            --edge: #d8d0c1;
+            --edge-soft: #e4ddcd;
+            --rule: rgba(73, 116, 148, .085);
+            --rule-card: rgba(73, 116, 148, .06);
+            /* 文字 */
+            --ink: #172033;
+            --ink-soft: #46505d;
+            --pencil: #6f6a60;
+            /* 朱・金 */
+            --red-pencil: #ad3c34;
+            --red-ink: #b74436;
+            --gold: #9a7428;
+            --marker: rgba(218, 184, 73, .42);
+            /* 影：右下固定・大きさ4段階 */
+            --lift-0: 2px 2px 0 var(--edge);
+            --lift-1: 3px 3px 0 var(--edge-soft);
+            --lift-2: 5px 6px 0 var(--edge-soft), 0 14px 28px rgba(52, 43, 26, .06);
+            --lift-3: 6px 7px 0 #dcd3c3;
+            /* 罫線ピッチ */
+            --rule-pitch: 32px;
+        }
+
+        /* ---------- 机と用紙 ---------- */
+        html {
+            background: var(--desk);
+        }
+
+        /* body には罫線を敷かない。セクションが用紙役を担う */
+        body {
+            background-color: var(--paper);
+            background-image: none;
+            color: var(--ink);
+        }
+
+        body.bg-gray-50 {
+            background-color: var(--paper) !important;
+        }
+
+        /* ---------- ヘッダー ---------- */
+        header {
+            background: rgba(255, 253, 247, .96) !important;
+            border-bottom: 1px solid var(--edge);
+            box-shadow: 0 3px 0 rgba(92, 80, 58, .07) !important;
+        }
+
+        header::after {
+            display: none;
+        }
+
+        header nav a {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+            text-decoration-color: var(--red-pencil);
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
+        }
+
+        /* モバイルメニューもヘッダーと同じ紙面に揃える
+           （旧レイヤーのまま白＋ぼかし影＋角丸6pxで浮いていた） */
+        #mobile-menu {
+            background: var(--paper-card) !important;
+            border-top: 1px solid var(--edge) !important;
+            box-shadow: 0 6px 0 rgba(92, 80, 58, .07) !important;
+        }
+
+        #mobile-menu a {
+            font-family: "Noto Serif JP", serif;
+            border-radius: 2px !important;
+        }
+
+        /* ---------- ヒーロー ---------- */
+        #home {
+            border-bottom: 8px solid #ded6c5;
+        }
+
+        /* 唯一の「押した」表現。ここだけ傾きを許す */
+        #home::after {
+            content: "CONFIDENTIAL / CONSULTATION FILE";
+            position: absolute;
+            right: 5%;
+            bottom: 2.5rem;
+            padding: .5rem .9rem;
+            border: 2px solid rgba(255, 232, 193, .55);
+            outline: 1px solid rgba(255, 232, 193, .28);
+            outline-offset: 3px;
+            color: rgba(255, 241, 209, .78);
+            font-size: .62rem;
+            font-weight: 900;
+            letter-spacing: .2em;
+            transform: rotate(-2.5deg);
+        }
+
+        .hero-kicker {
+            border-left: 0 !important;
+            border-bottom: 2px solid #e8cc84;
+            background: rgba(7, 22, 56, .66);
+            transform: none;
+        }
+
+        /* ---------- セクション＝用紙 ---------- */
+        /* 旧実装にあった calc(50% - 560px) の縦罫は、コンテンツと無関係な位置
+           （1280px 幅で x≒80px）に出る迷子の線だったため撤去。
+           朱の余白線は実際の「紙片」＝カードとフォームの上にだけ残す。 */
+        main>section:not(#home) {
+            position: relative;
+            background-color: var(--paper) !important;
+            background-image: repeating-linear-gradient(180deg, transparent 0 calc(var(--rule-pitch) - 1px), var(--rule) calc(var(--rule-pitch) - 1px) var(--rule-pitch)) !important;
+            border-bottom: 1px solid var(--edge);
+        }
+
+        main>section:nth-of-type(even):not(#home) {
+            background-color: var(--paper-alt) !important;
+        }
+
+        main>section>.container,
+        main>section>.legacy-container {
+            position: relative;
+        }
+
+        /* 寒色のボーダーが紙に浮くのを補正 */
+        main>section .border-gray-200,
+        main>section .border-gray-100 {
+            border-color: var(--edge) !important;
+        }
+
+        /* ---------- 見出し ---------- */
+        main>section:not(#home) h2 {
+            font-family: "Noto Serif JP", serif !important;
+            letter-spacing: .02em;
+        }
+
+        main>section:not(#home) .text-navy-900,
+        main>section:not(#home) .text-navy-800 {
+            color: var(--ink);
+        }
+
+        /* セクション頭のラベル。文字なので傾けず、押印風の枠だけ残す */
+        main>section:not(#home) .text-center>span:first-child,
+        .service-card-stack__heading>span:first-child {
+            display: inline-block;
+            padding: .32rem .75rem;
+            border: 1px solid currentColor;
+            background: rgba(255, 253, 247, .9);
+            font-size: .68rem !important;
+            letter-spacing: .14em;
+            box-shadow: 2px 2px 0 rgba(173, 60, 52, .13);
+            transform: none;
+        }
+
+        /* h2 下のマーカー線 */
+        main>section:not(#home) .text-center h2::after {
+            content: "";
+            display: block;
+            width: 5.5rem;
+            height: 7px;
+            margin: .8rem auto 0;
+            background: linear-gradient(transparent 20%, var(--marker) 20% 78%, transparent 78%);
+        }
+
+        /* マーカー引き。text-decoration では改行時に破綻するため背景で描く */
+        #profile h3,
+        .service-story-card h4 {
+            padding: 0 .1em;
+            background-image: linear-gradient(transparent 58%, var(--marker) 58% 94%, transparent 94%);
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            text-decoration: none;
+        }
+
+        /* ---------- 角丸と影の統一 ---------- */
+        main>section:not(#home) .rounded-xl,
+        main>section:not(#home) .rounded-2xl,
+        main>section:not(#home) .rounded-lg {
+            border-radius: 2px !important;
+        }
+
+        main>section:not(#home) .shadow-sm {
+            box-shadow: var(--lift-1) !important;
+        }
+
+        main>section:not(#home) .shadow-md,
+        main>section:not(#home) .shadow-lg,
+        main>section:not(#home) .shadow-xl,
+        main>section:not(#home) .shadow-2xl {
+            box-shadow: var(--lift-2) !important;
+        }
+
+        /* 旧「プレミアム」層の 0 22px 62px / 0 20px 50px が
+           詳細度で勝ち残っていたため、同等の詳細度で紙の影に置き換える */
+        main .container>div.bg-white,
+        main>section:not(#home) #lead-magnet .grid>div,
+        #cases article,
+        #services .grid>div,
+        #flow .grid>div,
+        .office-details-table,
+        .google-map {
+            box-shadow: var(--lift-1) !important;
+        }
+
+        #reasons .bg-navy-800,
+        #reasons .bg-white\/10,
+        section.bg-navy-900 .bg-white\/10 {
+            box-shadow: var(--lift-1) !important;
+        }
+
+        .service-story-card,
+        .service-story-card:hover {
+            box-shadow: var(--lift-2) !important;
+        }
+
+        .contact-form,
+        #services .journey-video-shell {
+            box-shadow: var(--lift-3) !important;
+        }
+
+        /* ---------- 動画（サービス） ---------- */
+        #services .journey-video-shell {
+            border-radius: 4px;
+            background: var(--ink);
+            border-color: rgba(154, 116, 40, .38);
+            box-shadow: 6px 7px 0 var(--edge), 0 25px 50px rgba(31, 37, 46, .14);
+        }
+
+        #services .journey-video {
+            border-radius: 2px;
+        }
+
+        .journey-video-summary {
+            border: 1px dashed #b9ad98 !important;
+            border-radius: 2px !important;
+            background: rgba(255, 253, 247, .88) !important;
+            font-family: "Noto Serif JP", serif;
+            box-shadow: var(--lift-1);
+        }
+
+        /* ---------- ブログ・カルーセル ---------- */
+        #blog .swiper-slide {
+            padding: 8px 8px 24px;
+            background: var(--paper-card);
+            border: 1px solid var(--edge);
+            border-radius: 1px !important;
+            box-shadow: var(--lift-1);
+            transform: none;
+        }
+
+        #blog .swiper-slide:nth-child(even) {
+            transform: none;
+        }
+
+        #blog .swiper-slide img {
+            border-radius: 0 !important;
+        }
+
+        /* ---------- プロフィール ---------- */
+        /* transform を外したので、スタンプの位置基準を position で明示的に確保する */
+        #profile>div>div {
+            position: relative;
+            border: 1px solid #d4cbbb;
+            background: var(--paper-card) !important;
+            transform: none;
+        }
+
+        #profile>div>div::after {
+            content: "PERSONNEL FILE";
+            position: absolute;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            padding: .35rem .6rem;
+            border: 2px solid rgba(173, 60, 52, .45);
+            color: rgba(173, 60, 52, .8);
+            font-size: .6rem;
+            font-weight: 900;
+            letter-spacing: .14em;
+            transform: rotate(3deg);
+            pointer-events: none;
+        }
+
+        #profile h3 {
+            border-left: 0 !important;
+            padding-left: .1em !important;
+        }
+
+        /* ---------- カード群（事例・無料診断・流れ） ---------- */
+        #cases article,
+        #lead-magnet .grid>div,
+        #flow .grid>div {
+            position: relative;
+            border: 1px solid #d5cdbd !important;
+            background-color: var(--paper-card) !important;
+            background-image: repeating-linear-gradient(180deg, transparent 0 calc(var(--rule-pitch) - 1px), var(--rule-card) calc(var(--rule-pitch) - 1px) var(--rule-pitch));
+            box-shadow: var(--lift-1) !important;
+            transform: none;
+        }
+
+        #cases article:nth-child(even),
+        #lead-magnet .grid>div:nth-child(even),
+        #flow .grid>div:nth-child(even) {
+            transform: none;
+        }
+
+        #cases article>div:first-child {
+            background: #26364c !important;
+            border-bottom: 3px double #bcb3a2;
+        }
+
+        #lead-magnet .grid>div>div:first-child {
+            border-radius: 50% !important;
+            transform: none;
+            box-shadow: var(--lift-0);
+        }
+
+        /* ---------- サービス詳細 ---------- */
+        #service-details .bg-white {
+            background-color: var(--paper-card) !important;
+            background-image: repeating-linear-gradient(180deg, transparent 0 calc(var(--rule-pitch) - 1px), var(--rule-card) calc(var(--rule-pitch) - 1px) var(--rule-pitch));
+            border-color: #d5cdbd !important;
+        }
+
+        #service-details .bg-gray-50 {
+            background: rgba(239, 234, 223, .78) !important;
+        }
+
+        #service-details h3,
+        #service-details h4 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        /* ---------- 選ばれる理由（元・紺地→紙に反転） ---------- */
+        #reasons {
+            color: var(--ink) !important;
+        }
+
+        #reasons .text-white,
+        #reasons .text-gray-300 {
+            color: var(--ink) !important;
+        }
+
+        #reasons .bg-navy-800 {
+            position: relative;
+            background: var(--paper-card) !important;
+            border: 1px solid #cfc5b3 !important;
+            box-shadow: var(--lift-1);
+        }
+
+        /* 上辺のマスキングテープ */
+        #reasons .bg-navy-800::before {
+            content: "";
+            position: absolute;
+            left: 1.4rem;
+            top: -9px;
+            width: 68px;
+            height: 18px;
+            background: rgba(224, 204, 151, .55);
+            border-left: 1px solid rgba(196, 172, 112, .5);
+            border-right: 1px solid rgba(196, 172, 112, .5);
+        }
+
+        #reasons .text-5xl {
+            font-family: "Noto Serif JP", serif;
+            color: var(--red-pencil) !important;
+        }
+
+        #reasons .bg-white\/10 {
+            background: rgba(255, 253, 247, .82) !important;
+            border: 1px dashed #b8ad98;
+            border-radius: 1px !important;
+        }
+
+        /* ---------- 相談の流れ ---------- */
+        #flow .grid>div {
+            padding-top: 2.8rem !important;
+        }
+
+        #flow .grid>div::before {
+            content: "";
+            position: absolute;
+            top: 1.1rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            height: 1px;
+            background: #b8ae9b;
+        }
+
+        #flow .grid>div p:first-child {
+            display: inline-block;
+            border: 1px solid currentColor;
+            padding: .15rem .45rem;
+            transform: none;
+        }
+
+        /* ---------- ボタン ---------- */
+        /* 傾けない。押下時に影が縮んで沈む＝紙に押しつける手触りだけ残す */
+        a.rounded-full,
+        .button-primary {
+            border-radius: 2px !important;
+            box-shadow: 3px 3px 0 rgba(73, 60, 36, .22) !important;
+            transform: none;
+            letter-spacing: .02em;
+        }
+
+        a.rounded-full:hover,
+        .button-primary:hover {
+            transform: translate(2px, 2px) !important;
+            box-shadow: 1px 1px 0 rgba(73, 60, 36, .2) !important;
+        }
+
+        /* ---------- アクセス・事務所概要 ---------- */
+        #about .google-map {
+            padding: 8px 8px 20px;
+            background: var(--paper-card);
+            border: 1px solid #d4cbbb;
+            border-radius: 1px;
+            box-shadow: var(--lift-2);
+        }
+
+        #about iframe {
+            filter: saturate(.78) contrast(.94);
+        }
+
+        .office-details-table {
+            background: var(--paper-card);
+            box-shadow: var(--lift-1);
+        }
+
+        .office-details-table th {
+            background: #eee7d8 !important;
+            font-family: "Noto Serif JP", serif;
+        }
+
+        .office-details-table th,
+        .office-details-table td {
+            border-color: #cfc6b5 !important;
+        }
+
+        /* ---------- 問い合わせフォーム ---------- */
+        .contact-form-section {
+            background-color: #f3ede0 !important;
+        }
+
+        .contact-form {
+            border: 1px solid #d0c6b4 !important;
+            border-radius: 2px !important;
+            background-color: var(--paper-card) !important;
+            box-shadow: 6px 7px 0 #dcd3c3 !important;
+        }
+
+        .contact-form label {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        .required {
+            border-radius: 1px !important;
+            background: var(--red-ink) !important;
+            color: #fff !important;
+        }
+
+        /* ---------- フッター ---------- */
+        footer,
+        footer.bg-navy-900 {
+            background: #26313f !important;
+            border-top: 8px solid #ded5c4 !important;
+        }
+
+        @media (max-width:767px) {
+            #home::after {
+                display: none;
+            }
+
+            /* スタンプが「詳しいプロフィールを読む」に重なるため下に余白を確保する */
+            #profile>div>div>div:last-child {
+                padding-bottom: 4.75rem;
+            }
+
+            #profile>div>div::after {
+                right: 1rem;
+                bottom: 1rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.25rem !important;
+            }
+        }
+
+        /* =========================================================
+           紙テーマへの反転にともなうコントラスト補正
+           （元は紺地・白文字で設計されていたブロック）
+           ========================================================= */
+        #lead-magnet .mt-10.bg-navy-900 {
+            background: #26364c !important;
+            color: #fff !important;
+            border: 1px solid var(--ink);
+        }
+
+        #lead-magnet .mt-10.bg-navy-900 p {
+            color: #fff !important;
+        }
+
+        #lead-magnet .mt-10.bg-navy-900 p:first-child {
+            color: #e8c982 !important;
+        }
+
+        #lead-magnet .mt-10.bg-navy-900 a {
+            background: var(--paper-card) !important;
+            color: var(--ink) !important;
+        }
+
+        #lead-magnet .grid>div>a.bg-accent-500 {
+            background: var(--red-ink) !important;
+            color: #fff !important;
+            border: 1px solid #8f2e27;
+        }
+
+        #reasons>.container>.text-center>p.text-yellow-400 {
+            color: #8a651b !important;
+        }
+
+        #reasons>.container>.text-center>h2 {
+            color: var(--ink) !important;
+        }
+
+        #reasons>.container>.text-center>p.text-white {
+            color: #354052 !important;
+        }
+
+        #reasons .mt-16.bg-white\/10,
+        #reasons .mt-16.bg-white\/10 * {
+            color: #354052 !important;
+        }
+
+        #reasons .mt-16.bg-white\/10 h3,
+        #reasons .mt-16.bg-white\/10 .text-accent-500 {
+            color: #963a32 !important;
+        }
+
+        #reasons .mt-16.bg-white\/10 {
+            background: rgba(255, 253, 247, .88) !important;
+        }
+
+        /* 最終CTA（#flow の次） */
+        #flow+section,
+        #flow+section h2,
+        #flow+section p {
+            color: var(--ink) !important;
+        }
+
+        #flow+section>div>span {
+            color: #963a32 !important;
+        }
+
+        #flow+section a.bg-accent-500 {
+            background: var(--red-ink) !important;
+            color: #fff !important;
+            border: 1px solid #8f2e27;
+        }
+
+        #flow+section a.bg-white {
+            background: var(--paper-card) !important;
+            color: var(--ink) !important;
+            border: 1px solid #82796a;
+        }
+
+        /* FAQ（#contact-form-anchor の次） */
+        #contact-form-anchor+section,
+        #contact-form-anchor+section h2 {
+            color: var(--ink) !important;
+        }
+
+        #contact-form-anchor+section details {
+            background: rgba(255, 253, 247, .96) !important;
+            border: 1px solid #d2c9b8;
+            border-radius: 2px !important;
+            box-shadow: var(--lift-1) !important;
+        }
+
+        #contact-form-anchor+section details summary {
+            color: var(--ink) !important;
+        }
+
+        #contact-form-anchor+section details>div {
+            color: var(--ink-soft) !important;
+        }
+
+        #contact-form-anchor+section details p.text-accent-500 {
+            color: #963a32 !important;
+        }
+
+        .contact-form .button-primary {
+            background: var(--red-ink) !important;
+            color: #fff !important;
+            border: 1px solid #8f2e27 !important;
+        }
+
+        /* 暗い帯の上に乗るラベルだけ明るい金へ戻す */
+        #cases article>div:first-child .text-accent-500,
+        #lead-magnet .mt-10.bg-navy-900 .text-accent-500 {
+            color: #e8c982 !important;
+        }
+
+        /* コピーライトが濃紺地に対してコントラスト1.7しかなかった */
+        footer .text-gray-600 {
+            color: #97a1ad !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            a.rounded-full:hover,
+            .button-primary:hover {
+                transform: none !important;
+            }
+        }
 
         /* ===== Contact form usability fix ===== */
         /* 用紙の罫線と入力欄の下線が見分けられない問題を解消し、入力欄を「枠のある白いボックス」として明示する */
@@ -1388,7 +1975,7 @@
                         <div class="service-story-card__grid">
                             <div>
                                 <span class="service-story-card__label"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i> 最も得意な支援</span>
-                                <p class="text-sm font-bold mb-2" style="color:#ff8a70">まず、目の前の火を消す</p>
+                                <p class="text-sm font-bold mb-2" style="color:#ad3c34">まず、目の前の火を消す</p>
                                 <h4 class="text-2xl md:text-3xl font-black leading-tight mb-3">労務トラブルを<br>解決する</h4>
                                 <p class="text-white/75 text-sm leading-relaxed">15年・1万人規模の現場経験をもとに、初動から収束まで伴走します。</p>
                             </div>
@@ -1401,7 +1988,7 @@
                                     <li>労基署の調査・是正勧告</li>
                                     <li>労災発生時の初動対応</li>
                                 </ul>
-                                <p class="service-story-card__result"><i class="fas fa-check-circle mr-2" style="color:#ff8a70" aria-hidden="true"></i>混乱を広げず、会社と働く人を守る着地点をつくります。</p>
+                                <p class="service-story-card__result"><i class="fas fa-check-circle mr-2" style="color:#ad3c34" aria-hidden="true"></i>混乱を広げず、会社と働く人を守る着地点をつくります。</p>
                             </div>
                         </div>
                     </article>
@@ -1874,7 +2461,7 @@
 
         <div class="relative my-14 mx-auto max-w-4xl border border-[#d4cbbb] bg-[#fffdf7] px-6 py-9 md:px-10 md:py-10 text-center shadow-[6px_7px_0_#ddd5c6]" style="background-image:linear-gradient(90deg,transparent 0 3.6rem,rgba(173,60,52,.25) 3.6rem 3.7rem,transparent 3.7rem),repeating-linear-gradient(180deg,transparent 0 31px,rgba(73,116,148,.1) 31px 32px)">
             <span class="absolute -top-2.5 left-1/2 h-5 w-20 -translate-x-1/2 -rotate-2 bg-[#e0cc97]/70" aria-hidden="true"></span>
-            <span class="inline-block border border-accent-500 bg-[#fffdf7] px-3 py-1 text-xs font-black tracking-widest text-accent-600 -rotate-1">SERVICE &amp; PRICE</span>
+            <span class="inline-block border border-accent-500 bg-[#fffdf7] px-3 py-1 text-xs font-black tracking-widest text-accent-600">SERVICE &amp; PRICE</span>
             <h4 class="mt-4 font-serif text-2xl md:text-3xl font-black text-navy-900">支援内容と料金を確認する</h4>
             <p class="mx-auto mt-3 max-w-2xl text-sm md:text-base leading-relaxed text-gray-600">緊急相談・労務顧問・給与計算・各種スポットサービスの料金をご案内しています。</p>
             <a href="pricing.html" class="mt-6 inline-flex items-center justify-center border border-[#8f2e27] bg-[#b74436] px-7 py-3.5 font-bold text-white shadow-[3px_3px_0_rgba(73,60,36,.23)] transition hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_rgba(73,60,36,.2)]">サービス・料金表を見る <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
@@ -2057,7 +2644,7 @@
         </section>
 
         <!-- Trust Signals -->
-        <section class="py-8 bg-white">
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="max-w-4xl mx-auto text-center mb-8">
                     <h2 class="text-2xl md:text-3xl font-bold text-navy-900">中でも、労務トラブル対応を最も得意としています。</h2>
