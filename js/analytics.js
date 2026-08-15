@@ -12,7 +12,7 @@
  *       プライバシーポリシーの掲載を先に済ませてください。
  */
 
-var ASCENT_GA_ID = 'G-XXXXXXXXXX';
+var ASCENT_GA_ID = 'G-P35LGVE0DQ';
 
 (function () {
     'use strict';
