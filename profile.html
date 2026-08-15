@@ -10,7 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
     <script>
         tailwind.config = {
@@ -22,8 +23,8 @@
                             900: '#111827', // Darker Navy
                         },
                         accent: {
-                            500: '#f97316', // Orange
-                            600: '#ea580c', // Dark Orange
+                            500: '#b98b2e', // Classic gold
+                            600: '#8a651a', // Deep gold
                         }
                     },
                     fontFamily: {
@@ -33,31 +34,23 @@
             }
         }
     </script>
+    <!-- 共通ビジュアルテーマ（紙 × 紺 × 金）。index.html と揃える -->
+    <link rel="stylesheet" href="css/paper-theme.css">
     <style>
         .hero-sub-bg {
-            background-color: #111827;
-            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-color: #071638;
+            background-image:
+                linear-gradient(rgba(7, 22, 56, 0.74), rgba(7, 22, 56, 0.84)),
+                url('images/hero-bg-service-labor.png');
             background-size: cover;
-            background-position: center;
+            background-position: center right;
         }
 
-        /* Timeline line */
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background: #e5e7eb;
-            z-index: 0;
-        }
-
-        @media (min-width: 768px) {
-            .timeline-line::before {
-                left: 20px;
-                transform: none;
-            }
+        /* 経歴の縦線と節点 */
+        .timeline-dot {
+            background: linear-gradient(135deg, #8a651a 0%, #d4af37 100%);
+            border: 4px solid #fffdf8;
+            box-shadow: 0 2px 8px rgba(73, 60, 36, 0.28);
         }
     </style>
 </head>
@@ -122,7 +115,7 @@
                 <a href="index.html#access"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
                 <a href="profile.html"
-                    class="block px-3 py-2 rounded-md text-base font-bold text-accent-500 bg-orange-50">代表プロフィール</a>
+                    class="block px-3 py-2 rounded-md text-base font-bold text-accent-500 bg-[#f8f2e3]">代表プロフィール</a>
                 <a href="index.html#blog"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
                 <a href="index.html#contact-form-anchor"
@@ -137,12 +130,18 @@
 
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="hero-sub-bg py-24 text-white text-center px-4">
-            <div class="container mx-auto">
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">代表プロフィール</h1>
-                <p class="text-gray-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-                    労務トラブルで削られる時間とメンタルを止め、<br class="hidden md:block">
-                    経営者と現場に余裕を取り戻します。
+        <section class="hero-section hero-sub-bg py-24 md:py-28 px-4">
+            <div class="container mx-auto text-center">
+                <p class="hero-kicker font-bold uppercase mb-6 text-sm md:text-base inline-block pl-4 pr-2 pb-2">
+                    代表プロフィール｜アセント社労士事務所
+                </p>
+                <h1 class="hero-title text-3xl md:text-5xl leading-[1.32] mb-6">
+                    労務の土台を整えて、<br class="hidden md:block">
+                    <span class="hero-title-accent">経営と現場に余裕</span>を取り戻す。
+                </h1>
+                <p class="hero-copy text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    アルバイト1万人規模の組織を含む15年。<br class="hidden md:block">
+                    トラブルで削られる時間とメンタルを、まず止めます。
                 </p>
             </div>
         </section>
@@ -201,7 +200,6 @@
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">
                         「アセント」に込めたこと
                     </h2>
-                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <p class="text-2xl md:text-3xl font-bold text-accent-500 text-center mb-10 leading-relaxed">
@@ -237,10 +235,9 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
                         目指す社労士像
                     </h2>
-                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div class="bg-white p-10 md:p-14 rounded-2xl shadow-lg border-l-8 border-accent-500">
+                <div class="paper-card p-10 md:p-14 border-l-8 border-accent-500">
                     <h3 class="text-2xl font-bold text-navy-900 mb-6">まず、消耗を止める。話はそこからです。</h3>
                     <p class="text-gray-600 leading-loose mb-6">
                         問題社員への対応、ハラスメント、長時間労働、育児・介護との両立。
@@ -287,25 +284,24 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
                         主に担っていること
                     </h2>
-                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-7">
-                    <div class="bg-gray-50 rounded-xl p-8 border-t-4 border-accent-500">
+                    <div class="paper-card p-8">
                         <p class="text-accent-500 text-xs font-bold tracking-widest mb-2">MAIN</p>
                         <h3 class="text-xl font-bold text-navy-900 mb-4">労務トラブル対応</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
                             問題社員への指導、ハラスメント事案、長時間労働、育児・介護との両立。感情と法律がぶつかる場面で、事実を整理し、何をどの順番で進めるかを決めます。
                         </p>
                     </div>
-                    <div class="bg-gray-50 rounded-xl p-8 border-t-4 border-gray-300">
+                    <div class="paper-card p-8">
                         <p class="text-gray-400 text-xs font-bold tracking-widest mb-2">BASE</p>
                         <h3 class="text-xl font-bold text-navy-900 mb-4">社会保険手続き</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
                             入退社にともなう届出、各種給付の申請、日々の手続き。手前の実務を確実に回すことが、トラブルを未然に防ぐ土台になります。
                         </p>
                     </div>
-                    <div class="bg-gray-50 rounded-xl p-8 border-t-4 border-gray-300">
+                    <div class="paper-card p-8">
                         <p class="text-gray-400 text-xs font-bold tracking-widest mb-2">DESIGN</p>
                         <h3 class="text-xl font-bold text-navy-900 mb-4">制度設計・就業規則</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
@@ -330,13 +326,12 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
                         これまでの経歴
                     </h2>
-                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <!-- Item 0: 原点 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">小学5・6年</span>
@@ -352,7 +347,7 @@
                 <!-- Item 1: 中学・高校 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">中学・高校</span>
@@ -366,7 +361,7 @@
                 <!-- Item 2: 2000 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">2000年 前後</span>
@@ -381,7 +376,7 @@
                 <!-- Item 3: 2002 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">2002年</span>
@@ -397,7 +392,7 @@
                 <!-- Item 4: 2010 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">2010年</span>
@@ -412,7 +407,7 @@
                 <!-- Item 5: 30代 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1 pb-12 border-b border-gray-100">
                         <span class="text-accent-500 font-bold text-lg block mb-1">30代</span>
@@ -427,7 +422,7 @@
                 <!-- Item 6: 2025 -->
                 <div class="relative z-10 flex gap-8 items-start">
                     <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
                     </div>
                     <div class="flex-1">
                         <span class="text-accent-500 font-bold text-lg block mb-1">2025年</span>
@@ -448,7 +443,6 @@
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">
                         趣味・プライベート
                     </h2>
-                    <div class="w-20 h-1 bg-accent-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
