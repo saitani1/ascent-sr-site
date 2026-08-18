@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公式LINEをリリースしました。他社の働き方の取り組みを、読みやすくしてお届けします。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="公式LINEを始めました。明日から試したくなる働き方のヒントになるような情報をお届けします。">
+    <meta property="og:title" content="公式LINEをリリースしました。他社の働き方の取り組みを、読みやすくしてお届けします。 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ascent-sr.jp/blog-official-line-workstyle-updates.html">
+    <meta property="og:image"
+        content="https://ascent-sr.jp/images/ChatGPT Image 2026年8月18日 12_45_59 (1).jpg">
+    <meta property="og:description"
+        content="公式LINEを始めました。明日から試したくなる働き方のヒントになるような情報をお届けします。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">働き方改革</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    公式LINEをリリースしました。他社の働き方の取り組みを、読みやすくしてお届けします。
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.08.18
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年8月18日 12_45_59 (1).jpg" alt="公式LINEで働き方のヒントをお届けします" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                            <p class="lead font-bold text-xl mb-8 text-navy-900">アセント社労士事務所の公式LINEをリリースしました。</p>
+                            <p class="mb-6">お盆の間に整備をしていて、形になりました。</p>
+                            <p class="mb-6">ご登録いただけましたら、大変うれしいです。</p>
+
+                            <div class="my-10 border border-green-200 bg-green-50 rounded-lg p-6 md:p-8 text-center">
+                                <h2 class="text-2xl font-bold text-navy-900 mb-3">アセント社労士事務所 公式LINE</h2>
+                                <p class="mb-6 text-gray-700">スマートフォンでQRコードを読み取るか、下のボタンから友だち追加できます。</p>
+                                <a href="https://lin.ee/XAupP0V" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block mb-6" aria-label="アセント社労士事務所の公式LINEを友だち追加">
+                                    <img src="images/official-line-qr.png" alt="アセント社労士事務所公式LINE 友だち追加QRコード"
+                                        class="w-44 h-44 mx-auto bg-white border border-gray-200 rounded-lg p-2">
+                                </a>
+                                <div>
+                                    <a href="https://lin.ee/XAupP0V" target="_blank" rel="noopener noreferrer"
+                                        class="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                                        <i class="fas fa-user-plus mr-2" aria-hidden="true"></i>公式LINEを友だち追加
+                                    </a>
+                                </div>
+                                <p class="mt-4 mb-0 text-sm">
+                                    <a href="https://lin.ee/XAupP0V" target="_blank" rel="noopener noreferrer"
+                                        class="text-green-700 hover:underline break-all">https://lin.ee/XAupP0V</a>
+                                </p>
+                            </div>
+
+                            <p class="mb-6">今日は、このLINEで何を配信していくのか。</p>
+                            <p class="mb-6">そして、なぜこれを作ったのかをお話しします。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">配信するのは、他社の働き方の取り組みです。</h2>
+                            <p class="mb-6">メインの配信内容は決まっています。</p>
+                            <p class="mb-6">いろいろな会社の、働き方に関する取り組みです。</p>
+                            <p class="mb-6">こういう工夫をしたら残業が減った。</p>
+                            <p class="mb-6">こうしたら有給の取得率が上がった。</p>
+                            <p class="mb-6">育児休業を取りやすくなった。</p>
+                            <p class="mb-6">業績や生産性が上がった。</p>
+                            <p class="mb-6">そうした事例を、1社ずつお届けしていきます。</p>
+                            <p class="mb-6">ただ、そのまま載せても面白くありません。</p>
+                            <p class="mb-6">内容はクイズ形式にする予定です。</p>
+                            <p class="mb-6">通勤の合間にでも読めるくらいの、軽い形にしたいと考えています。</p>
+                            <p class="mb-6">配信は週に1回ほどを予定しています。</p>
+                            <p class="mb-6">多すぎても、うっとうしくなってしまいますので。</p>
+                            <p class="mb-6">もちろん、重要な法改正があればお知らせします。</p>
+                            <p class="mb-6">直近では最低賃金がまた上がりますので、そうした情報もお届けします。</p>
+                            <p class="mb-6">セミナーなどの機会があれば、そちらもご案内します。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">登録特典は、就業規則のチェックリストです。</h2>
+                            <p class="mb-6">ご登録いただいた方には、就業規則のチェックリストをお渡しいたします。</p>
+                            <p class="mb-6">ご自身の会社の就業規則と、照らし合わせて使ってください。</p>
+                            <p class="mb-6">自分の会社の就業規則を見たことがない。</p>
+                            <p class="mb-6">そういう方も、実際には多いと思います。</p>
+                            <p class="mb-6">この機会に開いてみてください。</p>
+                            <p class="mb-6">「これ、うちはできていないな」</p>
+                            <p class="mb-6">そういう項目が見つかれば、それだけで価値があります。</p>
+                            <p class="mb-6">なお、LINEの画面には他のリンクも置いています。</p>
+                            <p class="mb-6">事務所のホームページ。</p>
+                            <p class="mb-6">相談窓口。</p>
+                            <p class="mb-6">最近始めたニュースサイト。</p>
+                            <p class="mb-6">労務のコラム。</p>
+                            <p class="mb-6">まとめて見ていただける形にしました。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">登録は、人事労務の担当者でなくても大丈夫です。</h2>
+                            <p class="mb-6">社労士事務所の公式LINEですから、対象は限られると思われるかもしれません。</p>
+                            <p class="mb-6">そんなことはありません。</p>
+                            <p class="mb-6">働くということに関係のない方は、まずいないからです。</p>
+                            <p class="mb-6">人事労務のご担当者。</p>
+                            <p class="mb-6">会社の社長。</p>
+                            <p class="mb-6">このあたりは直接的に関係があります。</p>
+                            <p class="mb-6">ただ、どこかの会社で従業員として働いている方にも役立ちます。</p>
+                            <p class="mb-6">他社の取り組みを知ることは、そのまま勉強になります。</p>
+                            <p class="mb-6">「こういう会社があるのか」</p>
+                            <p class="mb-6">そう思えるだけで、見え方が変わります。</p>
+                            <p class="mb-6">学生の方でも構いません。</p>
+                            <p class="mb-6">会社というものがどう動いているかを知る材料になります。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">なぜ作ったのか。自社の外が見えないからです。</h2>
+                            <p class="mb-6">ここからが、このLINEを作った理由です。</p>
+                            <p class="mb-6">人事労務の担当者も、社長も、基本的に自分の会社しか見ていません。</p>
+                            <p class="mb-6">これは当たり前のことです。</p>
+                            <p class="mb-6">日々の業務は自社のことですし、他社の内情を知る機会はまずありません。</p>
+                            <p class="mb-6">その結果、制度設計がゼロからの発想になります。</p>
+                            <p class="mb-6">「うちに合う制度って、なんだろう」</p>
+                            <p class="mb-6">そこから考え始めることになります。</p>
+                            <p class="mb-6">有給を取りやすくするにはどうするか。</p>
+                            <p class="mb-6">残業を減らすにはどうするか。</p>
+                            <p class="mb-6">全部を自力で考えることになります。</p>
+                            <p class="mb-6">もちろん、それも悪くはありません。</p>
+                            <p class="mb-6">ただ、他社が既に試して結果が出ているものがあるなら、先に見たほうが早いです。</p>
+                            <p class="mb-6">「この制度なら、うちにも合いそうだ」</p>
+                            <p class="mb-6">そこから入るほうが、現実的です。</p>
+                            <p class="mb-6"><strong>ゼロから考えるより、はるかに速いです。</strong></p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">他社の労務データは、実名で公開されています。</h2>
+                            <p class="mb-6">そして、ここが意外と知られていません。</p>
+                            <p class="mb-6">他社の労務に関する数字は、会社名つきで公開されています。</p>
+                            <p class="mb-6">推測ではなく、実際の数字です。</p>
+                            <p class="mb-6">数字だけでなく、取り組みの中身も公開されています。</p>
+                            <p class="mb-6">厚生労働省の「働き方・休み方改善ポータルサイト」です（<a href="https://work-holiday.mhlw.go.jp/" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">work-holiday.mhlw.go.jp</a>）。</p>
+                            <p class="mb-6">ここには、取組・参考事例の検索機能があります。</p>
+                            <p class="mb-6">業種や規模で絞り込めますし、フリーワードでも探せます。</p>
+                            <p class="mb-6">自社の働き方を簡易に自己診断できるツールもあります。</p>
+                            <p class="mb-6">さらに「働き方・休み方改革取組事例集」も公表されていて、印刷して社内で活用してよいと案内されています。</p>
+                            <p class="mb-6">会議の資料に、そのまま使えるということです。</p>
+                            <p class="mb-6">数字で比べたい場合は、別のサイトがあります。</p>
+                            <p class="mb-6">「女性の活躍推進企業データベース」と「両立支援のひろば」です（<a href="https://ryouritsu.mhlw.go.jp/" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">両立支援のひろば</a>）。</p>
+                            <p class="mb-6">登録企業の取り組みを検索できるので、同業他社の状況を確認できます。</p>
+                            <p class="mb-6">オープンデータとして、CSV形式でのダウンロードにも対応しています。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">見に行かないから、埋もれたままです。</h2>
+                            <p class="mb-6">ここまで紹介したサイトは、どれも無料です。</p>
+                            <p class="mb-6">登録も要りません。</p>
+                            <p class="mb-6">それでも、ほとんど見られていません。</p>
+                            <p class="mb-6">理由は単純で、わざわざ見に行かないからです。</p>
+                            <p class="mb-6">私自身、公式LINEを作るにあたって、あらためて目を通しました。</p>
+                            <p class="mb-6">想像していたよりずっと多くの事例が載っていて、使えそうなものが山ほどありました。</p>
+                            <p class="mb-6"><strong>これを埋もれさせておくのは、もったいないと思いました。</strong></p>
+                            <p class="mb-6">だったら、こちらから発信したほうが早い。</p>
+                            <p class="mb-6">そう考えたのが、公式LINEを作った理由です。</p>
+                            <p class="mb-6">サイトを見てくださいと伝えても、たぶん見に行きません。</p>
+                            <p class="mb-6">届く形にして送れば、目に触れる機会は増えます。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめ</h2>
+                            <p class="mb-6">アセント社労士事務所の公式LINEをリリースしました。</p>
+                            <p class="mb-6">配信するのは、いろいろな会社の働き方の取り組みです。</p>
+                            <p class="mb-6">クイズ形式で、週に1回ほどお届けします。</p>
+                            <p class="mb-6">法改正や最低賃金の情報、セミナーのご案内もあわせて配信します。</p>
+                            <p class="mb-6">ご登録いただいた方には、就業規則のチェックリストをお渡ししています。</p>
+                            <p class="mb-6">人事労務のご担当者や社長はもちろん、従業員の方も学生の方も歓迎です。</p>
+                            <p class="mb-6">他社の取り組みを知っている人は、そう多くありません。</p>
+                            <p class="mb-6">制度をゼロから考えるより、既にある事例を見たほうが早いです。</p>
+                            <p class="mb-6">そして、他社の労務データは実名で公開されています。</p>
+                            <p class="mb-6">その入り口を、少しでも広げられればと思っています。</p>
+                            <p class="mb-6">ご登録、お待ちしております。</p>
+                            <p class="mb-6">働き方をアセント（上昇）させる一歩に、していただければ幸いです。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">働き方をアップデートする情報を、日々の実務に活かしませんか</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、他社の働き方事例や法改正情報を分かりやすく発信し、明日から試せる制度づくりと運用を支援しています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="privacy-policy.html" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- 計測 -->
+    <script src="js/analytics.js" defer></script>
+</body>
+
+</html>
