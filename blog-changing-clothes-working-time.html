@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社で制服に着替える時間は労働時間です。家でスーツに着替える時間は…違います。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="着替えの時間を労働時間にするという認識が広がってきました。今回、少し違う視点で、家でスーツに着替える時間は労働時間ではないの？と聞かれたときにキチンと説明ができますか？という論点で記事を書きました。">
+    <meta property="og:title" content="会社で制服に着替える時間は労働時間です。家でスーツに着替える時間は…違います。 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ascent-sr.jp/blog-changing-clothes-working-time.html">
+    <meta property="og:image"
+        content="https://ascent-sr.jp/images/ChatGPT Image 2026年8月21日 16_05_33 (1).jpg">
+    <meta property="og:description"
+        content="着替えの時間を労働時間にするという認識が広がってきました。今回、少し違う視点で、家でスーツに着替える時間は労働時間ではないの？と聞かれたときにキチンと説明ができますか？という論点で記事を書きました。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">平時の対応</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    会社で制服に着替える時間は労働時間です。家でスーツに着替える時間は…違います。
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.08.21
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年8月21日 16_05_33 (1).jpg" alt="制服への着替え時間と労働時間の考え方" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                            <p class="lead font-bold text-xl mb-8 text-navy-900">会社で制服に着替える時間は、労働時間です。</p>
+                            <p class="mb-6">一方で、家でスーツに着替える時間は、労働時間ではありません。</p>
+                            <p class="mb-6">同じ着替えなのに、扱いが違います。</p>
+                            <p class="mb-6">「どこで線を引いているんですか」</p>
+                            <p class="mb-6">この質問を、ときどきいただきます。</p>
+                            <p class="mb-6">今日は、この線引きの話をします。</p>
+                            <p class="mb-6">先に答えを言っておきます。</p>
+                            <p class="mb-6"><strong>線を引いているのは、社内でその着替えを義務づけているか、です。</strong></p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">制服への着替えは、労働時間です。</h2>
+                            <p class="mb-6">まず、制服の側から確認します。</p>
+                            <p class="mb-6">仕事前の着替えも、仕事終わりの着替えも、労働時間です。</p>
+                            <p class="mb-6">どちらも労働時間として扱ってください。</p>
+                            <p class="mb-6">この認識が、ここ1、2年で急速に広がってきた肌感があります。</p>
+                            <p class="mb-6">少し前まで、着替えを労働時間に入れるなんて考えられない。</p>
+                            <p class="mb-6">そう言う社長は、珍しくありませんでした。</p>
+                            <p class="mb-6">先日お話しした、サービス業の社長も同じことを言っていました。</p>
+                            <p class="mb-6">「2、3年前は考えられなかった」</p>
+                            <p class="mb-6">ただ、最近は従業員から言われることが増えたそうです。</p>
+                            <p class="mb-6">「着替えの時間も、労働時間ですよね」</p>
+                            <p class="mb-6">それで、今は労働時間に入れるようにしたとのことでした。</p>
+                            <p class="mb-6">従業員の側に認識が広がり、経営者の側も動き始めている。</p>
+                            <p class="mb-6">労働基準監督署などの啓発の影響も、少なからずあると思います。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">スーツへの着替えは、労働時間ではありません。</h2>
+                            <p class="mb-6">次に、スーツの側です。</p>
+                            <p class="mb-6">ここで、よく出てくる論点があります。</p>
+                            <p class="mb-6">「じゃあ、家でスーツに着替える時間はどうなるんですか」</p>
+                            <p class="mb-6">さすがに、そこは違います。と、思いつつも、その理由をきちんと説明しようとすると困ってしまうことも多いのではないでしょうか。</p>
+                            <p class="mb-6">仕事に行くからスーツを着るんだ、という言い分はあるでしょう。</p>
+                            <p class="mb-6">気持ちは分かります。</p>
+                            <p class="mb-6">それでも、労働時間にはなりません。</p>
+                            <p class="mb-6">制服は労働時間で、スーツは違う。</p>
+                            <p class="mb-6">この差はどこから来るのか。</p>
+                            <p class="mb-6">ここからが本題です。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">分かれ目は、社内での着替えを会社が義務づけているかどうかです。</h2>
+                            <p class="mb-6">もとになっているのは、2000年3月9日の最高裁判決です。</p>
+                            <p class="mb-6">三菱重工長崎造船所事件と呼ばれています。</p>
+                            <p class="mb-6">最高裁は、まず労働時間の考え方を示しました。</p>
+                            <p class="mb-6">労働時間とは、労働者が使用者の指揮命令下に置かれている時間をいう。</p>
+                            <p class="mb-6">そして、労働時間に当たるかどうかは客観的に定まる。</p>
+                            <p class="mb-6">就業規則などで決まるものではない、ということです。</p>
+                            <p class="mb-6">そのうえで、着替えについてこう判断しました。</p>
+                            <p class="mb-6">業務の準備行為を事業所内で行うことを義務づけられ、または余儀なくされたときは、特段の事情のない限り指揮命令下にある。</p>
+                            <p class="mb-6">その時間は、社会通念上必要と認められる限り、労働時間に当たる。</p>
+                            <p class="mb-6">こういう趣旨です。</p>
+                            <p class="mb-6"><strong>１つの分かれ目は、会社が義務づけているかどうかです。</strong></p>
+                            <p class="mb-6">制服は、会社が支給して、勤務中はこれを着なさいと決めています。</p>
+                            <p class="mb-6">作業服と安全靴でなければ現場に入れない、という会社もあります。</p>
+                            <p class="mb-6">これは、会社が義務づけている着替えです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">もう一つの目安は、その服で飲み会に行けるかです。</h2>
+                            <p class="mb-6">義務づけているかどうかを、もう少し実感のある形にします。</p>
+                            <p class="mb-6">私が目安にしているのは、この問いです。</p>
+                            <p class="mb-6"><strong>その服のまま、友達との飲み会に行けますか。</strong></p>
+                            <p class="mb-6">通勤中に、その服で歩いていておかしくないか。</p>
+                            <p class="mb-6">仕事が終わった後、その服のまま家に帰れるか。</p>
+                            <p class="mb-6">その服で、友達と遊びに行けるか。</p>
+                            <p class="mb-6">その服で、飲み会に行けるか。</p>
+                            <p class="mb-6">制服の場合、答えはノーです。</p>
+                            <p class="mb-6">その制服を着ていれば、あの会社の人だと分かってしまいます。</p>
+                            <p class="mb-6">だから会社は、仕事では必ず着てくださいと言います。</p>
+                            <p class="mb-6">同時に、仕事以外では着ないでくださいとも言います。</p>
+                            <p class="mb-6">本人も、会社の制服のまま遊びに行きたくはないでしょう。</p>
+                            <p class="mb-6">仕事中しか着てはいけない服なのです。</p>
+                            <p class="mb-6">その服への着替えは、労働時間です。</p>
+                            <p class="mb-6">スーツの場合、答えはイエスです。</p>
+                            <p class="mb-6">スーツを着て街を歩いていても、どこの会社の従業員かは分かりません。</p>
+                            <p class="mb-6">そのまま飲み会にも行けます。</p>
+                            <p class="mb-6">会社だけの服ではないので、着替えは労働時間になりにくいのです。</p>
+                            <p class="mb-6">これは本人の感覚だけで決まるものではありません。</p>
+                            <p class="mb-6">会社がどう決めているか、というルールの話です。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">国のガイドラインにも、この線が書いてあります。</h2>
+                            <p class="mb-6">厚生労働省のガイドラインに、はっきり書かれています。</p>
+                            <p class="mb-6">2017年1月20日に策定されたものです。</p>
+                            <p class="mb-6"><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/070614-2.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">労働時間の適正な把握のために使用者が講ずべき措置に関するガイドライン</a></p>
+                            <p class="mb-6">労働時間として扱わなければならない時間の例として、最初に挙げられているのがこれです。</p>
+                            <p class="mb-6">使用者の指示により、就業を命じられた業務に必要な準備行為や、業務終了後の後始末を事業場内において行った時間。</p>
+                            <p class="mb-6">そして準備行為の例として、着用を義務付けられた所定の服装への着替え等、と明記されています。</p>
+                            <p class="mb-6">注目してほしい言葉が2つあります。</p>
+                            <p class="mb-6"><strong>「着用を義務付けられた」と「事業場内」</strong>です。</p>
+                            <p class="mb-6">会社の制服は、着用を義務づけられていて、事業場内で着替えます。</p>
+                            <p class="mb-6">家のスーツは、どちらにも当たりません。</p>
+                            <p class="mb-6">最高裁の線と、ガイドラインの線は同じところに引かれています。</p>
+                            <p class="mb-6">労働基準監督署が啓発しているのも、このガイドラインが根拠です。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">26年前の判決が、四半世紀かけて広がりました。</h2>
+                            <p class="mb-6">ただ、この判決が出た当時、世の中に広がった記憶が私にはありません。</p>
+                            <p class="mb-6">制服に着替える時間を労働時間にしましょう。</p>
+                            <p class="mb-6">そういう話を、当時聞いたことがないのです。</p>
+                            <p class="mb-6">なぜでしょうか。</p>
+                            <p class="mb-6">舞台が造船所だったから、だと思っています。</p>
+                            <p class="mb-6">造船所の着替えは、大変です。</p>
+                            <p class="mb-6">作業服に着替えて、安全靴を履いて、保護具を着ける。</p>
+                            <p class="mb-6">製造の現場ですから、事故に遭わない格好をきちんと整えないといけません。</p>
+                            <p class="mb-6">下手をすると、20分や30分かかっていたかもしれません。</p>
+                            <p class="mb-6">サービス業の人が制服に着替える、2、3分の話ではなかったはずです。</p>
+                            <p class="mb-6">「さすがに、それは労働時間にしないとまずい」</p>
+                            <p class="mb-6">そういう受け止め方をされたのだと思います。</p>
+                            <p class="mb-6">だから、自分たちとは関係のない話に見えた。</p>
+                            <p class="mb-6">でも、判決の理屈は、着替えが大変かどうかで分かれていません。</p>
+                            <p class="mb-6">会社が義務づけたかどうか、それだけです。</p>
+                            <p class="mb-6">2、3分の制服でも、同じ線の内側にあります。</p>
+                            <p class="mb-6">四半世紀かかって、ようやくその理屈のほうが広がりつつあります。</p>
+                            <p class="mb-6"><strong>26年前の話です。</strong></p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">私服で働く会社は、スーツの側です。</h2>
+                            <p class="mb-6">最近は、私服で働いてよい会社も増えました。</p>
+                            <p class="mb-6">この場合はどちらでしょうか。</p>
+                            <p class="mb-6">家でパジャマから私服に着替える時間は、労働時間に入りません。</p>
+                            <p class="mb-6">その私服で仕事をして、そのまま帰って、そのまま飲み会にも行けるからです。</p>
+                            <p class="mb-6">会社が義務づけた服でもありません。</p>
+                            <p class="mb-6">スーツと同じ側です。</p>
+                            <p class="mb-6">時代の流れで、この線引きは変わるかもしれません。</p>
+                            <p class="mb-6">ただ、現状の考え方はこういうことです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">就業規則を見直すときの、ポイントになります。</h2>
+                            <p class="mb-6">就業規則を整備するときも、ここが一つの論点になります。</p>
+                            <p class="mb-6">確認することは2つです。</p>
+                            <p class="mb-6"><strong>勤務中に着なければならない服があるか。</strong></p>
+                            <p class="mb-6"><strong>その服は、勤務以外の場所や時間で着てはいけないものか。</strong></p>
+                            <p class="mb-6"><strong>この2つがイエスなら、制服の側です。</strong></p>
+                            <p class="mb-6">着替えの時間を労働時間に入れる前提で設計してください。</p>
+                            <p class="mb-6">始業時刻を制服に着替えた後にしているなら、着替えの分だけ前にずらす。</p>
+                            <p class="mb-6">あるいは、着替えの時間を見込んだ形で勤務時間を組み直す。</p>
+                            <p class="mb-6">やり方はいくつもあります。</p>
+                            <p class="mb-6">一方で、まだできていない会社も多いのが実態です。</p>
+                            <p class="mb-6">そもそも着替えが労働時間になるという認識がない社長も、まだいらっしゃいます。</p>
+                            <p class="mb-6">まずは、そこの認識を改めるところからです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめ</h2>
+                            <p class="mb-6">会社で制服に着替える時間は、労働時間です。</p>
+                            <p class="mb-6">家でスーツに着替える時間は、労働時間ではありません。</p>
+                            <p class="mb-6">分かれ目は、会社がその着替えを義務づけているかどうかです。</p>
+                            <p class="mb-6">もとになったのは、2000年3月9日の三菱重工長崎造船所事件の最高裁判決です。</p>
+                            <p class="mb-6">会社が義務づけた準備行為は、特段の事情がない限り労働時間に当たると判断されました。</p>
+                            <p class="mb-6">2017年の厚生労働省のガイドラインも、同じ線を引いています。</p>
+                            <p class="mb-6">着用を義務付けられた服装への着替えを、事業場内で行った時間は労働時間です。</p>
+                            <p class="mb-6">実感としての目安は、その服のまま飲み会に行けるかどうかです。</p>
+                            <p class="mb-6">制服は行けないので、着替えは労働時間です。</p>
+                            <p class="mb-6">スーツや私服は行けるので、着替えは労働時間の外です。</p>
+                            <p class="mb-6">当時は造船所の大がかりな着替えの話と受け止められ、四半世紀かけてようやく広がってきました。</p>
+                            <p class="mb-6">2、3分の制服でも、同じ線の内側です。</p>
+                            <p class="mb-6">就業規則を見直すときは、勤務中に着る服と、その服を勤務以外で着てよいかを確認してください。</p>
+                            <p class="mb-6">まだ対応できていない会社は、今のうちに認識を改めておきましょう。</p>
+                            <p class="mb-6">働き方をアセントさせる一歩は、当たり前に働いている時間を、当たり前に労働時間と認めることだと思います。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">着替え時間の扱いを、実態に合ったルールへ整えませんか</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、制服への着替えや準備時間が労働時間に当たるかを業務実態から整理し、賃金計算や就業ルールへ正しく反映する支援を行っています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="privacy-policy.html" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- 計測 -->
+    <script src="js/analytics.js" defer></script>
+</body>
+
+</html>
