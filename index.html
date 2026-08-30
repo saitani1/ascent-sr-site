@@ -999,21 +999,6 @@
         @media(max-width:767px){.service-story-card{padding:4.5rem 1.25rem 1.5rem 4.25rem;background-image:linear-gradient(90deg,transparent 0 3.15rem,rgba(190,63,55,.4) 3.15rem 3.25rem,transparent 3.25rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}.service-story-card__number{left:.35rem;top:1.15rem;width:2.35rem;height:2.35rem}.service-story-card__grid{grid-template-columns:1fr;gap:1.25rem}.service-story-card__grid>div:last-child{padding:1.25rem 0 0;border-left:0;border-top:1px dashed rgba(56,75,93,.25)}.service-story-connector{min-height:64px;gap:.7rem}.service-story-connector span{text-align:center}}
         @media(min-width:1024px){#services .service-story-card{padding:4.35rem 1.65rem 1.65rem 3.25rem;background-image:linear-gradient(90deg,transparent 0 2.25rem,rgba(190,63,55,.38) 2.25rem 2.34rem,transparent 2.34rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}#services .service-story-card__number{left:.45rem;right:auto;top:1.1rem;width:2.35rem;height:2.35rem;border:2px solid var(--step-color);font-family:"Noto Serif JP",serif;font-size:.8rem;letter-spacing:0}#services .service-story-card__grid>div:last-child{padding-left:0;border-left:0;border-top:1px dashed rgba(56,75,93,.25);padding-top:1.25rem}}
 
-        /* PCでは3枚のメモを横に並べる。つなぎのコピーは縦書きの帯として間に残す
-           （外部CSS service-cards-horizontal.css が読み込まれていないため本体に持つ） */
-        @media(min-width:1024px){
-            #services .service-card-stack{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:1.1rem;align-items:stretch}
-            #services .service-card-stack__heading{grid-column:1/-1;margin-bottom:.75rem}
-            #services .service-story-card{min-width:0;height:100%}
-            #services .service-story-card__grid{display:flex;height:100%;flex-direction:column;gap:1.35rem;align-items:stretch}
-            #services .service-story-card__grid>div:last-child{display:flex;flex:1;flex-direction:column}
-            #services .service-story-card__list{display:grid;grid-template-columns:1fr;gap:.5rem}
-            #services .service-story-card__result{margin-top:auto}
-            #services .service-story-connector{grid-template-columns:1fr;grid-template-rows:1fr auto 1fr;justify-items:center;align-items:center;width:2.5rem;min-height:0;gap:.55rem}
-            #services .service-story-connector::before,#services .service-story-connector::after{width:1px;height:auto;align-self:stretch;justify-self:center;background:#cfc8b9}
-            #services .service-story-connector span{writing-mode:vertical-rl;letter-spacing:.16em;padding:.35rem .1rem;text-align:center}
-        }
-
         /* =========================================================
            相談ファイル（紙）テーマ
            モデル：机（html）→ 用紙＝セクション → 伝票＝カード
