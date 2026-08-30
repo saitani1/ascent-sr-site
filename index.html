@@ -999,6 +999,21 @@
         @media(max-width:767px){.service-story-card{padding:4.5rem 1.25rem 1.5rem 4.25rem;background-image:linear-gradient(90deg,transparent 0 3.15rem,rgba(190,63,55,.4) 3.15rem 3.25rem,transparent 3.25rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}.service-story-card__number{left:.35rem;top:1.15rem;width:2.35rem;height:2.35rem}.service-story-card__grid{grid-template-columns:1fr;gap:1.25rem}.service-story-card__grid>div:last-child{padding:1.25rem 0 0;border-left:0;border-top:1px dashed rgba(56,75,93,.25)}.service-story-connector{min-height:64px;gap:.7rem}.service-story-connector span{text-align:center}}
         @media(min-width:1024px){#services .service-story-card{padding:4.35rem 1.65rem 1.65rem 3.25rem;background-image:linear-gradient(90deg,transparent 0 2.25rem,rgba(190,63,55,.38) 2.25rem 2.34rem,transparent 2.34rem),repeating-linear-gradient(180deg,transparent 0 2rem,rgba(70,119,155,.14) 2rem 2.06rem)}#services .service-story-card__number{left:.45rem;right:auto;top:1.1rem;width:2.35rem;height:2.35rem;border:2px solid var(--step-color);font-family:"Noto Serif JP",serif;font-size:.8rem;letter-spacing:0}#services .service-story-card__grid>div:last-child{padding-left:0;border-left:0;border-top:1px dashed rgba(56,75,93,.25);padding-top:1.25rem}}
 
+        /* PCでは3枚のメモを横に並べる。つなぎのコピーは縦書きの帯として間に残す
+           （外部CSS service-cards-horizontal.css が読み込まれていないため本体に持つ） */
+        @media(min-width:1024px){
+            #services .service-card-stack{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:1.1rem;align-items:stretch}
+            #services .service-card-stack__heading{grid-column:1/-1;margin-bottom:.75rem}
+            #services .service-story-card{min-width:0;height:100%}
+            #services .service-story-card__grid{display:flex;height:100%;flex-direction:column;gap:1.35rem;align-items:stretch}
+            #services .service-story-card__grid>div:last-child{display:flex;flex:1;flex-direction:column}
+            #services .service-story-card__list{display:grid;grid-template-columns:1fr;gap:.5rem}
+            #services .service-story-card__result{margin-top:auto}
+            #services .service-story-connector{grid-template-columns:1fr;grid-template-rows:1fr auto 1fr;justify-items:center;align-items:center;width:2.5rem;min-height:0;gap:.55rem}
+            #services .service-story-connector::before,#services .service-story-connector::after{width:1px;height:auto;align-self:stretch;justify-self:center;background:#cfc8b9}
+            #services .service-story-connector span{writing-mode:vertical-rl;letter-spacing:.16em;padding:.35rem .1rem;text-align:center}
+        }
+
         /* =========================================================
            相談ファイル（紙）テーマ
            モデル：机（html）→ 用紙＝セクション → 伝票＝カード
@@ -1779,6 +1794,304 @@
                 max-width: none;
             }
         }
+
+        /* =========================================================
+           伝票・付箋レイヤー
+           「3つの支援」のメモカードより下のカード群にも、
+           service-story-card と同じ文房具の語彙を通す：
+           マスキングテープ / 朱の丸スタンプ / 罫線 / 破線ミシン目 / マーカー / 明朝
+           ========================================================= */
+
+        /* マスキングテープ（上辺中央）。使うのは「大判の紙」だけに絞り、
+           他のカード群はそれぞれ別の文房具（付箋・伝票・半券・クリップ・方眼・情報カード）で描き分ける */
+        #issue .max-w-5xl::before,
+        #lead-magnet .grid>div::before {
+            content: "";
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 64px;
+            height: 18px;
+            transform: translateX(-50%);
+            background: rgba(224, 204, 151, .55);
+            border-left: 1px solid rgba(196, 172, 112, .5);
+            border-right: 1px solid rgba(196, 172, 112, .5);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* 共通：カード内の見出しは明朝で紙に馴染ませる */
+        #issue h3,
+        #cases article h3,
+        #lead-magnet .grid h3,
+        #flow .grid h3 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        /* ---------- 対象企業カード＝色違いの付箋（糊付きなのでテープは無し） ---------- */
+        #issue .md\:grid-cols-4>div {
+            position: relative;
+            background-color: #fdf4cf !important;
+            border: 1px solid rgba(160, 140, 70, .28) !important;
+            box-shadow: var(--lift-1) !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(2) {
+            background-color: #e9f1e6 !important;
+            border-color: rgba(90, 130, 90, .26) !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(3) {
+            background-color: #e8eff6 !important;
+            border-color: rgba(70, 110, 150, .26) !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(4) {
+            background-color: #fbeae4 !important;
+            border-color: rgba(170, 90, 70, .26) !important;
+        }
+
+        #issue .md\:grid-cols-4>div:hover {
+            transform: none !important;
+            box-shadow: var(--lift-1) !important;
+        }
+
+        /* アイコンは付箋の地色を濃くしたインクで */
+        #issue .md\:grid-cols-4>div .text-3xl {
+            color: #8a651b !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(2) .text-3xl {
+            color: #4a7043 !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(3) .text-3xl {
+            color: #38638f !important;
+        }
+
+        #issue .md\:grid-cols-4>div:nth-child(4) .text-3xl {
+            color: #a34a35 !important;
+        }
+
+        /* ---------- 「なんとなく不安」ボックス＝大判の用紙 ---------- */
+        #issue .max-w-5xl {
+            position: relative;
+            background-color: var(--paper-card) !important;
+            background-image: linear-gradient(90deg, transparent 0 1.45rem, rgba(190, 63, 55, .3) 1.45rem 1.55rem, transparent 1.55rem), repeating-linear-gradient(180deg, transparent 0 calc(var(--rule-pitch) - 1px), var(--rule-card) calc(var(--rule-pitch) - 1px) var(--rule-pitch));
+            border: 1px solid #d5cdbd !important;
+            box-shadow: var(--lift-2) !important;
+        }
+
+        #issue .max-w-5xl .inline-block.border {
+            background: rgba(255, 253, 247, .9);
+            box-shadow: 2px 2px 0 rgba(173, 60, 52, .13);
+        }
+
+        /* 内部の区切り線はミシン目（破線）に */
+        #issue .max-w-5xl .border-t {
+            border-top: 1px dashed #b9ad98 !important;
+        }
+
+        /* 丸数字・アイコン＝朱の押印。スタンプなので傾けてよい */
+        #issue .w-10.h-10.bg-navy-900 {
+            background: transparent !important;
+            border: 2px solid var(--red-pencil) !important;
+            border-radius: 50%;
+            color: var(--red-pencil) !important;
+            font-family: "Noto Serif JP", serif;
+            box-shadow: none !important;
+            transform: rotate(-7deg);
+        }
+
+        /* 試算3枚＝伝票。上辺は帳票の二重罫、金額は朱書き、途中はミシン目 */
+        #issue div.bg-\[\#fbfaf7\] {
+            background-color: var(--paper-card) !important;
+            border: 1px solid #d5cdbd !important;
+            border-top: 5px double rgba(173, 60, 52, .6) !important;
+            box-shadow: var(--lift-1) !important;
+        }
+
+        #issue div.bg-\[\#fbfaf7\] .text-2xl {
+            font-family: "Noto Serif JP", serif;
+            color: #963a32 !important;
+        }
+
+        /* ---------- 実績数字＝チケット（破線の半券＋左右のパンチ穴） ---------- */
+        #trust .grid>div {
+            position: relative;
+            background: var(--paper-card) !important;
+            border: 1px dashed #b9ad98 !important;
+            box-shadow: var(--lift-1);
+        }
+
+        #trust .grid>div::before,
+        #trust .grid>div::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            border-radius: 50%;
+            background: var(--paper);
+            border: 1px dashed #b9ad98;
+        }
+
+        #trust .grid>div::before {
+            left: -9px;
+        }
+
+        #trust .grid>div::after {
+            right: -9px;
+        }
+
+        #trust .grid>div p:first-child {
+            display: inline-block;
+            padding: 0 .18em;
+            font-family: "Noto Serif JP", serif;
+            background-image: linear-gradient(transparent 60%, var(--marker) 60% 92%, transparent 92%);
+        }
+
+        /* ---------- 改善事例＝クリップ留めの報告書 ---------- */
+        #cases article {
+            overflow: visible !important;
+        }
+
+        /* ゼムクリップ（外ループ＋内ループの2枚重ね） */
+        #cases article::before {
+            content: "";
+            position: absolute;
+            top: -13px;
+            left: 1.4rem;
+            width: 17px;
+            height: 42px;
+            border: 3px solid #97a0ac;
+            border-radius: 8px;
+            box-shadow: 1px 1px 0 rgba(45, 38, 25, .14);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        #cases article::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: calc(1.4rem + 4px);
+            width: 9px;
+            height: 26px;
+            border: 2px solid #b3bac4;
+            border-top-color: transparent;
+            border-radius: 5px;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        #cases article .p-6 p.font-bold.text-gray-500,
+        #cases article .p-6 p.font-bold.text-accent-500 {
+            display: inline-block;
+            padding: .1rem .5rem;
+            border: 1px solid currentColor;
+            border-radius: 1px;
+            background: rgba(255, 253, 247, .9);
+            font-size: .72rem;
+            letter-spacing: .08em;
+        }
+
+        #cases article .p-6 p.font-bold.text-gray-500 {
+            color: var(--pencil) !important;
+        }
+
+        #cases article .p-6 p.font-bold.text-accent-500 {
+            color: #963a32 !important;
+        }
+
+        /* ---------- 無料診断・コラム3枚＝方眼のワークシート（テープ留め） ---------- */
+        #lead-magnet .grid>div {
+            background-image: repeating-linear-gradient(0deg, transparent 0 17px, rgba(73, 116, 148, .08) 17px 18px), repeating-linear-gradient(90deg, transparent 0 17px, rgba(73, 116, 148, .08) 17px 18px) !important;
+        }
+
+        /* ---------- サービス詳細＝ホチキス留めの書類 ---------- */
+        #service-details .mt-10>.bg-white,
+        #service-details .mt-14 {
+            position: relative;
+            overflow: visible !important;
+            border-color: #d5cdbd !important;
+        }
+
+        /* 左上角の斜めホチキス */
+        #service-details .mt-10>.bg-white::before,
+        #service-details .mt-14::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 24px;
+            height: 9px;
+            border: 2px solid #848d99;
+            border-radius: 2px;
+            background: linear-gradient(#cdd2d9, #a8aeb8);
+            box-shadow: 1px 1px 0 rgba(45, 38, 25, .18);
+            transform: rotate(-45deg);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        #service-details .space-y-3 .bg-white {
+            background: var(--paper-card) !important;
+            border: 1px dashed #b9ad98 !important;
+        }
+
+        #service-details .md\:grid-cols-3>div {
+            border: 1px solid var(--edge) !important;
+        }
+
+        /* 「アセントなら」だけ朱線で囲んで強調（service-story-card__result と同じ書式） */
+        #service-details .md\:grid-cols-3>div:last-child {
+            background: rgba(255, 253, 247, .92) !important;
+            border: 1px dashed rgba(173, 60, 52, .55) !important;
+            border-left: 3px solid var(--red-pencil) !important;
+        }
+
+        #service-details .md\:grid-cols-3>div:last-child .text-accent-500 {
+            color: #963a32 !important;
+        }
+
+        /* ---------- 相談の流れ＝情報カード（上端の赤罫が目印。STEPラベルは押印風チップ） ---------- */
+        #flow .grid>div::before {
+            height: 2px;
+            background: rgba(192, 90, 80, .75);
+        }
+
+        #flow .grid>div p:first-child {
+            background: rgba(255, 253, 247, .9);
+            font-family: "Noto Serif JP", serif;
+            box-shadow: 2px 2px 0 rgba(173, 60, 52, .13);
+        }
+
+        /* ---------- 最終CTAの本文＝紙片 ---------- */
+        #flow+section .bg-white\/95 {
+            background: rgba(255, 253, 247, .96) !important;
+            border: 1px dashed #b9ad98;
+            box-shadow: var(--lift-1) !important;
+        }
+
+        /* ---------- 「よくあるお問い合わせ」＝付箋とラベル ---------- */
+        .contact-form-section .bg-gray-50 {
+            background: var(--paper-card) !important;
+            border: 1px dashed #b9ad98 !important;
+            box-shadow: var(--lift-1);
+        }
+
+        .contact-form-section .bg-gray-50 p.font-bold {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        .contact-form-section .bg-gray-50 span {
+            border-radius: 1px !important;
+            background: #fff !important;
+            border: 1px solid #c9c0ac !important;
+            box-shadow: 2px 2px 0 var(--edge-soft) !important;
+        }
     </style>
 </head>
 
@@ -2531,7 +2844,7 @@
             <a href="pricing.html" class="mt-6 inline-flex items-center justify-center border border-[#8f2e27] bg-[#b74436] px-7 py-3.5 font-bold text-white shadow-[3px_3px_0_rgba(73,60,36,.23)] transition hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_rgba(73,60,36,.2)]">サービス・料金表を見る <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
         </div>
         <!-- 2. Target Audience Section -->
-        <section class="py-24 bg-[#f7f7f4] border-y border-gray-200">
+        <section id="issue" class="py-24 bg-[#f7f7f4] border-y border-gray-200">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center mb-16">
                     <span class="text-[#b98b2e] font-bold tracking-[0.24em] text-sm">ISSUE</span>
@@ -2708,7 +3021,7 @@
         </section>
 
         <!-- Trust Signals -->
-        <section class="py-16 bg-white">
+        <section id="trust" class="py-16 bg-white">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="max-w-4xl mx-auto text-center mb-8">
                     <h2 class="text-2xl md:text-3xl font-bold text-navy-900">中でも、労務トラブル対応を最も得意としています。</h2>
