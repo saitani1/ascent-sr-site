@@ -43,7 +43,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/journey-card-overlay.css">
     <link rel="stylesheet" href="css/service-cards-horizontal.css">
     <style>
         .swiper {
@@ -856,26 +855,6 @@
             object-fit: cover;
         }
 
-        .journey-video-badge {
-            position: absolute;
-            z-index: 3;
-            top: 1.7rem;
-            right: 1.7rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.5rem 0.85rem;
-            border: 1px solid rgba(255,255,255,0.22);
-            border-radius: 999px;
-            background: rgba(7,22,56,0.72);
-            color: #fff;
-            font-size: 0.72rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            backdrop-filter: blur(8px);
-            pointer-events: none;
-        }
-
         .journey-video-meta {
             display: flex;
             justify-content: center;
@@ -960,7 +939,6 @@
         @media (max-width: 640px) {
             .journey-video-shell { padding: 5px; border-radius: 1rem; }
             .journey-video { border-radius: 0.75rem; }
-            .journey-video-badge { top: 0.9rem; right: 0.9rem; padding: 0.35rem 0.6rem; font-size: 0.62rem; }
             .journey-video-meta { flex-wrap: wrap; gap: 0.5rem 1rem; }
             .journey-video-summary { text-align: left; font-size: 0.86rem; }
             .journey-video-summary i { margin: 0 0.35rem; }
@@ -2197,7 +2175,7 @@
         <section id="services" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center mb-12">
-                    <span class="text-accent-500 font-bold tracking-wider">17-SECOND STORY</span>
+                    <span class="text-accent-500 font-bold tracking-wider">15-SECOND STORY</span>
                     <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mt-2">
                         トラブル対応から、<br class="md:hidden">輝く未来まで。
                     </h2>
@@ -2205,52 +2183,17 @@
                 </div>
 
                 <div class="journey-video-shell">
-                    <span class="journey-video-badge"><i class="fas fa-play-circle" aria-hidden="true"></i> CINEMATIC STORY</span>
                     <video id="labor-journey-video" class="journey-video" autoplay muted loop playsinline controls preload="metadata"
-                        poster="images/labor-journey-story-poster.png?v=2"
-                        aria-label="労務トラブルの解決から平時の再発防止、働き方改革による成長までを説明する14秒の動画">
-                        <source src="images/labor-journey-story-v3.mp4?v=3" type="video/mp4">
+                        poster="images/labor-journey-story-poster-v4.jpg"
+                        aria-label="労務トラブルの解決から平時の再発防止、働き方改革による成長までを説明する15秒の動画">
+                        <source src="images/labor-journey-story-v4.mp4" type="video/mp4">
                         お使いのブラウザでは動画を再生できません。
                     </video>
-                    <div id="journey-card-overlay" class="journey-card-overlay" aria-hidden="true">
-                        <div class="journey-overlay-scene journey-overlay-scene--solve">
-                            <div class="journey-overlay-visual"><i class="fas fa-fire-extinguisher"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">01</span><p class="journey-overlay-label">CRISIS RESPONSE</p><p class="journey-overlay-title">解決</p><p class="journey-overlay-subtitle">15年の経験値</p><span class="journey-overlay-line"></span></div>
-                        </div>
-                        <div class="journey-overlay-scene journey-overlay-scene--prevent">
-                            <div class="journey-overlay-visual"><i class="fas fa-arrows-rotate"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">02</span><p class="journey-overlay-label">PREVENTION</p><p class="journey-overlay-title">予防</p><p class="journey-overlay-subtitle">AIも活かし事務を効率化</p><span class="journey-overlay-line"></span></div>
-                        </div>
-                        <div class="journey-overlay-scene journey-overlay-scene--grow">
-                            <div class="journey-overlay-visual"><i class="fas fa-arrow-trend-up"></i></div>
-                            <div class="journey-overlay-copy"><span class="journey-overlay-number">03</span><p class="journey-overlay-label">BRIGHT FUTURE</p><p class="journey-overlay-title">成長</p><p class="journey-overlay-subtitle">ワーク・ライフ・ハーモニーの実現</p><span class="journey-overlay-line"></span></div>
-                        </div>
-                    </div>
-                    <div id="journey-finale-overlay" class="journey-finale-overlay" aria-hidden="true">
-                        <div class="journey-finale-sun"></div>
-                        <div class="journey-finale-rays"></div>
-                        <div class="journey-finale-horizon"></div>
-                        <div class="journey-finale-particles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                    </div>
-                    <div id="journey-chapters" class="journey-chapters" aria-hidden="true">
-                        <div class="journey-chapters__item" data-key="solve">
-                            <span class="journey-chapters__bar"><i></i></span>
-                            <span class="journey-chapters__label"><b>01</b>解決</span>
-                        </div>
-                        <div class="journey-chapters__item" data-key="prevent">
-                            <span class="journey-chapters__bar"><i></i></span>
-                            <span class="journey-chapters__label"><b>02</b>予防</span>
-                        </div>
-                        <div class="journey-chapters__item" data-key="grow">
-                            <span class="journey-chapters__bar"><i></i></span>
-                            <span class="journey-chapters__label"><b>03</b>成長</span>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="journey-video-meta" aria-label="動画情報">
                     <span><i class="fas fa-volume-mute" aria-hidden="true"></i>音声なし</span>
-                    <span><i class="fas fa-clock" aria-hidden="true"></i>約17秒</span>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i>約15秒</span>
                     <span><i class="fas fa-repeat" aria-hidden="true"></i>自動ループ</span>
                 </div>
 
@@ -3658,89 +3601,6 @@
 <script>
         // Respect reduced-motion preferences by leaving playback under user control.
         const laborJourneyVideo = document.getElementById('labor-journey-video');
-        const journeyCardOverlay = document.getElementById('journey-card-overlay');
-        const journeyFinaleOverlay = document.getElementById('journey-finale-overlay');
-        const journeyChapters = document.getElementById('journey-chapters');
-        if (laborJourneyVideo && journeyCardOverlay) {
-            // 章の切れ目に空白時間を作らず、前の章から次の章へ直接渡す
-            const journeyScenes = [
-                { key: 'solve', start: 1.35, end: 5.05 },
-                { key: 'prevent', start: 5.05, end: 8.75 },
-                { key: 'grow', start: 8.75, end: 12.75 }
-            ];
-            const journeyFinaleStart = 12.75;
-            const sceneElements = journeyScenes.map(scene => ({
-                scene,
-                el: journeyCardOverlay.querySelector('.journey-overlay-scene--' + scene.key)
-            }));
-            const chapterItems = journeyChapters
-                ? journeyScenes.map(scene => ({
-                    scene,
-                    el: journeyChapters.querySelector('[data-key="' + scene.key + '"]')
-                }))
-                : [];
-
-            const syncJourneyCards = () => {
-                const time = laborJourneyVideo.currentTime;
-                const current = journeyScenes.find(scene => time >= scene.start && time < scene.end);
-                const currentKey = current ? current.key : '';
-                journeyCardOverlay.dataset.scene = currentKey;
-                journeyCardOverlay.classList.toggle(
-                    'is-active', time >= journeyScenes[0].start && time < journeyFinaleStart);
-
-                sceneElements.forEach(({ scene, el }) => {
-                    if (!el) return;
-                    el.classList.toggle('is-current', scene.key === currentKey);
-                    el.classList.toggle('is-past', time >= scene.end && time < journeyFinaleStart);
-                });
-
-                chapterItems.forEach(({ scene, el }) => {
-                    if (!el) return;
-                    const progress = Math.min(
-                        1, Math.max(0, (time - scene.start) / (scene.end - scene.start)));
-                    el.style.setProperty('--p', progress.toFixed(3));
-                    el.classList.toggle('is-current', scene.key === currentKey);
-                    el.classList.toggle('is-done', progress >= 1);
-                });
-
-                if (journeyChapters) {
-                    journeyChapters.classList.toggle('is-active', time >= 1);
-                    journeyChapters.classList.toggle('is-complete', time >= journeyFinaleStart);
-                }
-
-                if (journeyFinaleOverlay) {
-                    journeyFinaleOverlay.classList.toggle('is-active', time >= journeyFinaleStart);
-                }
-            };
-
-            // timeupdate は毎秒4回程度しか発火しないため、再生中は rAF で滑らかに追従させる
-            let journeyFrame = null;
-            const stopJourneyLoop = () => {
-                if (journeyFrame === null) return;
-                cancelAnimationFrame(journeyFrame);
-                journeyFrame = null;
-            };
-            const runJourneyLoop = () => {
-                syncJourneyCards();
-                journeyFrame = requestAnimationFrame(runJourneyLoop);
-            };
-
-            laborJourneyVideo.addEventListener('play', () => {
-                if (journeyFrame === null) runJourneyLoop();
-            });
-            laborJourneyVideo.addEventListener('pause', () => {
-                stopJourneyLoop();
-                syncJourneyCards();
-            });
-            laborJourneyVideo.addEventListener('ended', stopJourneyLoop);
-            laborJourneyVideo.addEventListener('timeupdate', syncJourneyCards);
-            laborJourneyVideo.addEventListener('seeking', syncJourneyCards);
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) stopJourneyLoop();
-                else if (!laborJourneyVideo.paused) runJourneyLoop();
-            });
-            syncJourneyCards();
-        }
         if (laborJourneyVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             laborJourneyVideo.autoplay = false;
             laborJourneyVideo.pause();
