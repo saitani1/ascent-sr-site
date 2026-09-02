@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>給与計算が簡単に見えるのは、8割の人が毎月同じだからです。大変さは、残りの2割に隠れています。 | アセント社労士事務所</title>
+    <meta name="description"
+        content="給与計算の大変さというものはあまり理解いただけないものです。どのような仕事もそうかもしれませんが・・・。工数を理解いただくことで大変さが伝わるかと思っております。弊所にご依頼いただくことも歓迎いたしております。">
+    <meta property="og:title" content="給与計算が簡単に見えるのは、8割の人が毎月同じだからです。大変さは、残りの2割に隠れています。 | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ascent-sr.jp/blog-payroll-calculation-complexity.html">
+    <meta property="og:image"
+        content="https://ascent-sr.jp/images/ChatGPT Image 2026年9月2日 22_51_22 (1).jpg">
+    <meta property="og:description"
+        content="給与計算の大変さというものはあまり理解いただけないものです。どのような仕事もそうかもしれませんが・・・。工数を理解いただくことで大変さが伝わるかと思っております。弊所にご依頼いただくことも歓迎いたしております。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">平時の対応</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    給与計算が簡単に見えるのは、8割の人が毎月同じだからです。大変さは、残りの2割に隠れています。
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.09.02
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年9月2日 22_51_22 (1).jpg" alt="給与計算の大変さは残り2割の例外対応にあります" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                            <p class="lead font-bold text-xl mb-8 text-navy-900">皆さんの会社で、給与計算は誰がやっていますか。</p>
+                            <p class="mb-6">バックオフィスにいないと、意外と知らないのではないでしょうか。</p>
+                            <p class="mb-6">私も20代で営業の仕事をしていた頃、誰が計算しているのか知りませんでした。</p>
+                            <p class="mb-6">本社の誰かがやっているんだろうな、くらいの感覚です。</p>
+                            <p class="mb-6">毎月決まった日に、給与は当たり前のように振り込まれます。</p>
+                            <p class="mb-6">だから、給与計算に対するありがたみも感じなかったです。</p>
+                            <p class="mb-6">今日は、この話をします。</p>
+                            <p class="mb-6">先に結論を言っておきます。</p>
+                            <p class="mb-6"><strong>給与計算の大変さは、毎月同じ8割ではなく、残り2割のイレギュラーにあります。</strong></p>
+                            <p class="mb-6">8割という数字は私の肌感覚ですが、大きくは外れていないと思います。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">「あんなん簡単だろう」と言われてしまう仕事です。</h2>
+                            <p class="mb-6">給与計算をしている人の、あるあるだと思います。</p>
+                            <p class="mb-6">大変さを、周りが分かってくれない。</p>
+                            <p class="mb-6">「給与計算、大変なんです」</p>
+                            <p class="mb-6">担当者がそう伝えても、社長からはこんな反応が返ってきがちです。</p>
+                            <p class="mb-6">「あんなん簡単だろう、すぐできるんじゃないの」</p>
+                            <p class="mb-6">わざわざ社労士事務所に頼む必要があるのか、と言われることもあります。</p>
+                            <p class="mb-6">でも実際は、簡単なようで難しいのが給与計算なのです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">足し算と掛け算だけの世界に、見えてしまいます。</h2>
+                            <p class="mb-6">簡単に見える理由は、はっきりしています。</p>
+                            <p class="mb-6">基本給が30万円あって、手当が1万円、2万円と乗って、交通費がつく。</p>
+                            <p class="mb-6">残業があれば、時間単価を1.25倍して時間を掛ける。</p>
+                            <p class="mb-6">これで支給額が決まります。</p>
+                            <p class="mb-6">控除は、毎月決まった社会保険料を引いて、税金は表に当てはめる。</p>
+                            <p class="mb-6">支給から控除を引き算すれば、手取りが出ます。</p>
+                            <p class="mb-6">足し算、引き算、掛け算、割り算。</p>
+                            <p class="mb-6">たしかに、これだけなら簡単そうに見えます。</p>
+                            <p class="mb-6">でも、それだけではないのです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">8割は毎月同じ、だから簡単に見えます。</h2>
+                            <p class="mb-6">給与計算の対象者のうち、毎月ほとんど変わらない人が大半を占めます。</p>
+                            <p class="mb-6">私の感覚では、8割くらいでしょうか。</p>
+                            <p class="mb-6">7割かもしれないし、9割かもしれません。</p>
+                            <p class="mb-6">この人たちの計算は、たしかに難しくありません。</p>
+                            <p class="mb-6">「先月と大体同じだよね」</p>
+                            <p class="mb-6">特に管理職は残業代がないので、毎月まったく同じ数字も珍しくないですよね。</p>
+                            <p class="mb-6">社長の目に入るのは、この8割です。</p>
+                            <p class="mb-6"><strong>簡単に見えるのは、大多数がうまくいっているからです。</strong></p>
+                            <p class="mb-6">難しいのは、残り2割をどう合わせていくか。</p>
+                            <p class="mb-6">人数は少なくても、工数はそこにどんと乗ってきます。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">入社と退職は、日割り計算がついて回ります。</h2>
+                            <p class="mb-6">イレギュラーの代表が、入社と退職です。</p>
+                            <p class="mb-6">入社日は月の途中になることが多く、日割り計算が発生します。</p>
+                            <p class="mb-6">手当は日割りにするのか、全額支給か、支給しないのか。</p>
+                            <p class="mb-6">ルールがあっても、いちいち確認しながら進めることになります。</p>
+                            <p class="mb-6">退職では、有給を消化するかどうかで最終給与がなかなか確定しません。</p>
+                            <p class="mb-6">最初や最後の月は日割りで給与が少なくなり、社会保険料を引き切れないことがあります。</p>
+                            <p class="mb-6">引き切れない分をどう精算するかも、決めておかなければなりません。</p>
+                            <p class="mb-6">さらに退職なら、離職票はいるのか、住民税はどうするのか。</p>
+                            <p class="mb-6">給与計算の外側の手続きも、一緒に動き出します。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">育児休業は、免除と控除が入り混じります。</h2>
+                            <p class="mb-6">長期のお休みも、イレギュラーの定番です。</p>
+                            <p class="mb-6">代表が育児休業ですね。</p>
+                            <p class="mb-6">育児休業中は、事業主の申出により健康保険と厚生年金の保険料が本人分も会社分も免除されます。</p>
+                            <p class="mb-6"><a href="https://www.nenkin.go.jp/service/kounen/hokenryo/menjo/ikuji-menjo/20140327-05.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">育児休業等期間中の保険料免除｜日本年金機構</a></p>
+                            <p class="mb-6">一方で、雇用保険料には免除の仕組みがありません。</p>
+                            <p class="mb-6">雇用保険料は支払った賃金に料率を掛けるので、育休中に少し働いて賃金が出れば、その分は引きます。</p>
+                            <p class="mb-6">住民税も、免除されません。</p>
+                            <p class="mb-6">給与がなくても、毎月の特別徴収分をどう納めてもらうか考える必要があります。</p>
+                            <p class="mb-6">社会保険料は免除、雇用保険料は賃金しだい、住民税はそのまま。</p>
+                            <p class="mb-6">同じ育休中でも、項目ごとに扱いが違うのです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">同じ休みでも、私傷病には免除がありません。</h2>
+                            <p class="mb-6">病気やけがで休む場合は、扱いがまた変わります。</p>
+                            <p class="mb-6">最近は、メンタル不調で長く休む方も増えていますよね。</p>
+                            <p class="mb-6">私傷病の休職には、育児休業のような保険料免除の制度がありません。</p>
+                            <p class="mb-6">給与がゼロでも、社会保険料は毎月発生し続けます。</p>
+                            <p class="mb-6">そうすると、給与明細がマイナスになります。</p>
+                            <p class="mb-6">マイナス分をどう徴収するのかも、考えておかなければなりません。</p>
+                            <p class="mb-6">本人から会社の口座に振り込んでもらう形をとることが多いと思います。</p>
+                            <p class="mb-6"><strong>同じ休んでいる状態でも、理由まで見ないと計算を間違えます。</strong></p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">昇給と賞与にも、社会保険の計算がついてきます。</h2>
+                            <p class="mb-6">毎月ではないけれど、定期的に来るイベントもあります。</p>
+                            <p class="mb-6">年1回の昇給や、年2回の賞与です。</p>
+                            <p class="mb-6">昇給で固定的賃金が上がり、3か月平均で標準報酬月額に2等級以上の差が出れば、随時改定です。</p>
+                            <p class="mb-6"><a href="https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-02.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">随時改定(月額変更届)｜日本年金機構</a></p>
+                            <p class="mb-6">賞与は年3回までなら、賞与から社会保険料を引けば済みます。</p>
+                            <p class="mb-6">年4回以上支給すると報酬の扱いに変わり、標準報酬月額の計算に組み込む別の処理になります。</p>
+                            <p class="mb-6"><a href="https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20141203.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">従業員に賞与を支給したときの手続き｜日本年金機構</a></p>
+                            <p class="mb-6">年1回の定時決定で、9月や10月から社会保険料が変わることもあります。</p>
+                            <p class="mb-6">年末には、年末調整も待っていますね。</p>
+                            <p class="mb-6">毎月は来ないけれど、来たときには独特の処理がいる。</p>
+                            <p class="mb-6">この積み重ねが、給与計算の正体です。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">伝えるべきは、人数ではなく工数です。</h2>
+                            <p class="mb-6">ここまでを踏まえて、担当者の方に伝えたいことがあります。</p>
+                            <p class="mb-6">大変だと言うだけでは、上の方には届きません。</p>
+                            <p class="mb-6">なぜかというと、社長の目に入るのは毎月同じ8割だからです。</p>
+                            <p class="mb-6">イレギュラーの2割は、そもそも見えていない可能性があります。</p>
+                            <p class="mb-6">「あの人たちは例外だから」</p>
+                            <p class="mb-6">そう片付けられてしまうと、話はそこで終わってしまいます。</p>
+                            <p class="mb-6">だから、人数の割合ではなく、工数を見せてください。</p>
+                            <p class="mb-6">2割の人に、どんな確認と処理がどれだけ発生しているか。</p>
+                            <p class="mb-6">それを並べるだけで、話の通り方が変わると思います。</p>
+                            <p class="mb-6">人を増やしてほしいときも、外部に委託したいときも、同じです。</p>
+                            <p class="mb-6">もちろん、給与計算ごと社労士事務所に任せていただくのも、ひとつの手です。</p>
+                            <p class="mb-6">当事務所でも、給与計算のご依頼をお受けしています。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめ</h2>
+                            <p class="mb-6">給与計算は、足し算と掛け算だけの世界に見えます。</p>
+                            <p class="mb-6">毎月ほとんど変わらない人が、大半を占めるからです。</p>
+                            <p class="mb-6">でも、大変さは残り2割のイレギュラーに隠れています。</p>
+                            <p class="mb-6">入社と退職では、日割り計算と手当の扱いの確認がついて回ります。</p>
+                            <p class="mb-6">退職月は、給与から社会保険料を引き切れないことがあります。</p>
+                            <p class="mb-6">育児休業中は、申出で健康保険と厚生年金の保険料が免除されます。</p>
+                            <p class="mb-6">雇用保険料と住民税は、免除されません。</p>
+                            <p class="mb-6">私傷病の休職には保険料の免除がなく、給与明細がマイナスになることもあります。</p>
+                            <p class="mb-6">昇給で2等級以上動けば、随時改定です。</p>
+                            <p class="mb-6">賞与が年4回以上になると、報酬として別の計算に変わります。</p>
+                            <p class="mb-6">定時決定と年末調整も、毎年やってきます。</p>
+                            <p class="mb-6">大変さを伝えるときは、人数の割合ではなく工数を見せてください。</p>
+                            <p class="mb-6">働き方をアセントさせる一歩は、見えていない2割の工数を、見える場所に出すことだと思います。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">給与計算の負担を、正確で安定した運用へ変えませんか</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、毎月の給与計算、入退社・休職・賞与などの例外処理、社会保険や法改正への対応まで、正確で安定した給与計算業務を支援しています。
+                            </p>
+                            <a href="index.html#contact-form-anchor"
+                                class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="privacy-policy.html" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- 計測 -->
+    <script src="js/analytics.js" defer></script>
+</body>
+
+</html>
