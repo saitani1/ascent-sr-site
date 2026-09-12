@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正社員とアルバイトの待遇差を聞かれたら、職務・責任・配置転換の3つで説明を！ | アセント社労士事務所</title>
+    <meta name="description"
+        content="「なんで正社員だけ手当があるんですか」 10月1日から、アルバイトの契約書に「待遇差の説明を求めることができる」と書くのが義務になります。 聞かれたら、答えは3つ。 職務の内容、責任の程度、配置転換の範囲。 この3つで説明できない手当は、そろえる番です。">
+    <meta property="og:title" content="正社員とアルバイトの待遇差を聞かれたら、職務・責任・配置転換の3つで説明を！ | アセント社労士事務所">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ascent-sr.jp/blog-equal-treatment-explanation.html">
+    <meta property="og:image"
+        content="https://ascent-sr.jp/images/ChatGPT Image 2026年9月12日 12_50_02 (1).jpg">
+    <meta property="og:description"
+        content="「なんで正社員だけ手当があるんですか」 10月1日から、アルバイトの契約書に「待遇差の説明を求めることができる」と書くのが義務になります。 聞かれたら、答えは3つ。 職務の内容、責任の程度、配置転換の範囲。 この3つで説明できない手当は、そろえる番です。">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a202c', 900: '#111827' },
+                        accent: { 500: '#f97316', 600: '#ea580c' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/ascent-logo.png" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
+                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
+                        アセント社労士事務所
+                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html#home" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
+                    <a href="index.html#blog" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">労務事例</a>
+                    <a href="index.html#reasons" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
+                    <a href="index.html#profile" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">代表プロフィール</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
+                    <a href="index.html#access" class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
+                    <a href="index.html#contact-form-anchor"
+                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
+                    </a>
+                    <a href="tel:0678783790" class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
+                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                    </a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
+                <a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">労務事例</a>
+                <a href="index.html#reasons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
+                <a href="index.html#profile" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">代表プロフィール</a>
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
+                <a href="index.html#access" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
+                <a href="index.html#contact-form-anchor" class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
+                <a href="tel:0678783790" class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
+                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-navy-900 text-white py-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <span class="inline-block bg-navy-800 border border-gray-600 text-white text-xs px-3 py-1 rounded-full mb-4">平時の対応</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
+                    正社員とアルバイトの待遇差を聞かれたら、職務・責任・配置転換の3つで説明を！
+                </h1>
+                <div class="mt-4 text-sm text-gray-300">
+                    <i class="far fa-calendar-alt mr-2"></i>2026.09.12
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-3xl mx-auto bg-white">
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/ChatGPT Image 2026年9月12日 12_50_02 (1).jpg" alt="正社員とアルバイトの待遇差を職務・責任・配置転換で説明" class="w-full h-auto">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                            <p class="lead font-bold text-xl mb-8 text-navy-900">今日は、同一労働同一賃金の話をします。</p>
+                            <p class="mb-6">同一労働同一賃金は範囲が広いので、1点だけに絞ります。</p>
+                            <p class="mb-6">正社員とアルバイトの待遇差です。</p>
+                            <p class="mb-6">「なんで正社員にはこの手当があって、自分にはないんですか」</p>
+                            <p class="mb-6">アルバイトにこう聞かれたとき、どう答えればいいのか。</p>
+                            <p class="mb-6">先に結論を言っておきます。</p>
+                            <p class="mb-6"><strong>職務の内容、責任の程度、配置転換の範囲の3つで説明してください。</strong></p>
+                            <p class="mb-6">このどれかで理由を言えるなら、その待遇差にはある程度の合理性があります。</p>
+                            <p class="mb-6">逆に、どれでも説明できない手当は、差をつけること自体が問題になります。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">10月1日から、雇用契約書に書くことが増えます。</h2>
+                            <p class="mb-6">この話を今するのには、理由があります。</p>
+                            <p class="mb-6">2026年10月1日から、パートタイム・有期雇用労働法のルールが変わるからです。</p>
+                            <p class="mb-6">雇い入れたときの労働条件の明示事項に、新しい項目が加わります。</p>
+                            <p class="mb-6">待遇の相違の内容や理由について、説明を求めることができる。</p>
+                            <p class="mb-6">この旨を、雇用契約書や労働条件通知書に書かなければなりません。</p>
+                            <p class="mb-6"><a href="https://www.mhlw.go.jp/content/001698010.pdf" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">パートタイム・有期雇用労働者に関するルールが変わります(厚生労働省)</a></p>
+                            <p class="mb-6">アルバイトやパートには、もともと4つの項目を書く決まりがありました。</p>
+                            <p class="mb-6">昇給の有無。</p>
+                            <p class="mb-6">退職手当の有無。</p>
+                            <p class="mb-6">賞与の有無。</p>
+                            <p class="mb-6">相談窓口。</p>
+                            <p class="mb-6">これに5つ目として、説明を求めることができる旨が加わるわけです。</p>
+                            <p class="mb-6">明示しなかった場合は、10万円以下の過料と書かれています。</p>
+                            <p class="mb-6">私が使っている雇用契約書は、A4で1枚に収めています。</p>
+                            <p class="mb-6">給与、契約期間、就業場所と書くことが多く、もう字がかなり小さくなっています。</p>
+                            <p class="mb-6">そこにまた1項目増えるので、そろそろ2枚にするか、というところです。</p>
+                            <p class="mb-6">5つ目は、今ある相談窓口の行のすぐ下に入れるつもりです。</p>
+                            <p class="mb-6">文言は、モデル労働条件通知書にそろえます。</p>
+                            <p class="mb-6">次の窓口に対して、正社員との待遇の相違の内容や理由について説明を求めることができる。</p>
+                            <p class="mb-6">こう書いて、部署名と担当者を添えます。</p>
+                            <p class="mb-6">窓口は、相談窓口と同じ担当者にする予定です。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">ガイドラインも、同じ日に変わります。</h2>
+                            <p class="mb-6">同一労働同一賃金ガイドラインも、10月1日から改正されます。</p>
+                            <p class="mb-6">いろいろなサイトが解説しているので、ここではさらっと触れるだけにします。</p>
+                            <p class="mb-6">家族手当、住宅手当、退職手当などが、新しく書き加えられました。</p>
+                            <p class="mb-6">賞与や病気休職の給与保障も、記載が充実しています。</p>
+                            <p class="mb-6"><a href="https://www.mhlw.go.jp/content/001695902.pdf" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">令和8年改正の概要(厚生労働省)</a></p>
+                            <p class="mb-6">正社員とアルバイトで差をつけている手当は、合理性のあるものにしていきましょう。</p>
+                            <p class="mb-6">改正の方向は、こういうところです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">説明を誤ると、火種になります。</h2>
+                            <p class="mb-6">ここからが本題です。</p>
+                            <p class="mb-6">説明を求めることができる旨を、契約書に書く。</p>
+                            <p class="mb-6">書けば、実際に説明を求められます。</p>
+                            <p class="mb-6">そのとき、説明を誤ると、そこで火種が生まれます。</p>
+                            <p class="mb-6">何も解決しなければ不満につながり、最悪の場合はもっと大きな問題になります。</p>
+                            <p class="mb-6">「正社員のほうが偉いから、この手当があるんだ」</p>
+                            <p class="mb-6">こう答えてしまうと、明らかにまずい雰囲気が漂います。</p>
+                            <p class="mb-6">法律上も、説明は軽い話ではありません。</p>
+                            <p class="mb-6">パートタイム・有期雇用労働法14条2項で、求めがあれば待遇の相違の内容と理由を説明しなければならないと決まっています。</p>
+                            <p class="mb-6">同じ条の3項で、説明を求めたことを理由にした解雇や不利益な取扱いは禁止されています。</p>
+                            <p class="mb-6">聞かれたこと自体を、とがめてはいけません。</p>
+                            <p class="mb-6">改正後のガイドラインには、こう書き加えられました。</p>
+                            <p class="mb-6">十分な説明を行わなかったと認められる場合、その事実も、待遇差が不合理だと認める方向の事情として考慮されうる。</p>
+                            <p class="mb-6">こういう趣旨です。</p>
+                            <p class="mb-6"><a href="https://www.mhlw.go.jp/content/001695906.pdf" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">同一労働同一賃金ガイドライン 新旧対照表(厚生労働省)</a></p>
+                            <p class="mb-6">「将来の役割期待が違うから」といった抽象的な説明では足りない、とも書かれています。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まず、誰が説明するかを決めてください。</h2>
+                            <p class="mb-6">説明の中身の前に、決めておくことがあります。</p>
+                            <p class="mb-6">誰が説明するのか、です。</p>
+                            <p class="mb-6">厚生労働省のモデル労働条件通知書には、説明を求める窓口として、部署名と担当者の職氏名を書く欄があります。</p>
+                            <p class="mb-6"><a href="https://www.mhlw.go.jp/content/001696984.pdf" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">モデル労働条件通知書(厚生労働省)</a></p>
+                            <p class="mb-6">本社の人事担当者、と決めておくのが一番わかりやすいと思います。</p>
+                            <p class="mb-6">そうは言っても、現場では、アルバイトの方が直接本社の人事担当者に聞くとは限りません。</p>
+                            <p class="mb-6">店長に聞く、身近な社員に聞く、そういうことも十分考えられます。</p>
+                            <p class="mb-6">その場合は、聞かれた店長や社員が「何それ？」とならないように、きちんと教育しておく必要があります。</p>
+                            <p class="mb-6">社内の通達で、説明を求められたら人事の誰々につないでください、としておくのもいいと思います。</p>
+                            <p class="mb-6"><strong>契約書に書くことと合わせて、誰に説明を求めることができるのかを決めておいてください。</strong></p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">説明の論点は、職務の内容・責任の程度・配置転換の範囲です。</h2>
+                            <p class="mb-6">では、どう説明するのか。</p>
+                            <p class="mb-6">冒頭で言った3つです。</p>
+                            <p class="mb-6">職務の内容。</p>
+                            <p class="mb-6">責任の程度。</p>
+                            <p class="mb-6">配置転換の範囲。</p>
+                            <p class="mb-6">パートタイム・有期雇用労働法8条は、この3つを考慮して不合理な待遇差を設けてはならない、という作りになっています。</p>
+                            <p class="mb-6">法律の言い方では、業務の内容と責任の程度をあわせて職務の内容と呼び、それに職務の内容と配置の変更の範囲を加えます。</p>
+                            <p class="mb-6">ほかに、その他の事情も考慮されます。</p>
+                            <p class="mb-6">つまり、正社員とアルバイトでここに差があるなら、その差に紐づく待遇差は説明できます。</p>
+                            <p class="mb-6">紐づかない待遇差は、説明できません。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">役職手当や基本給は、説明しやすい手当です。</h2>
+                            <p class="mb-6">例をあげます。</p>
+                            <p class="mb-6">「正社員の課長には役職手当があるのに、なんでアルバイトにはないんですか」</p>
+                            <p class="mb-6">こう聞かれたら、答えは簡単です。</p>
+                            <p class="mb-6">職務の内容が違うからです。</p>
+                            <p class="mb-6">責任の程度も違うからです。</p>
+                            <p class="mb-6">ガイドラインでも、役職手当は同じ内容の役職に就く人には同じように払う、という書き方です。</p>
+                            <p class="mb-6">役職に就いていないアルバイトに役職手当がないのは、説明がつきます。</p>
+                            <p class="mb-6">基本給に差があるのも、同じ理屈で説明できます。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">交通費は、説明が難しい手当です。</h2>
+                            <p class="mb-6">一方で、説明できない手当もたくさんあります。</p>
+                            <p class="mb-6">例えば、交通費です。</p>
+                            <p class="mb-6">正社員は実費の全額が出るのに、アルバイトは少ない金額しか出ない。</p>
+                            <p class="mb-6">私の印象では、こういう会社がまだ結構あります。</p>
+                            <p class="mb-6">これを職務、責任、配置転換で説明できるでしょうか。</p>
+                            <p class="mb-6">責任が重いから交通費が多い、というのは違います。</p>
+                            <p class="mb-6">職務の内容が違っても、交通費に差が生まれる理由にはなりません。</p>
+                            <p class="mb-6">正社員には転勤があるから交通費に差がある、というのも、しっくりきません。</p>
+                            <p class="mb-6">ガイドラインには、アルバイトやパートにも同一の通勤手当を支給しなければならない、と書かれています。</p>
+                            <p class="mb-6">差をつけても問題にならない例として挙がっているのは、店舗採用の人に近隣から通える額の上限を設けている場合などです。</p>
+                            <p class="mb-6">3つの論点で説明できないのであれば、ここは正社員とそろえていく必要があります。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">家族手当は、10月から明文化されます。</h2>
+                            <p class="mb-6">今回のガイドライン改正で、話題になっているのが家族手当です。</p>
+                            <p class="mb-6">配偶者がいたら1万円、子ども1人あたり5,000円、といった手当を入れている会社は多いと思います。</p>
+                            <p class="mb-6">そして、正社員にしか払っていない会社も、多いと思います。</p>
+                            <p class="mb-6">今までは、そういうものだよね、という空気がありました。</p>
+                            <p class="mb-6">改正後のガイドラインには、こう書かれています。</p>
+                            <p class="mb-6">契約の更新を繰り返しているなど、相応に継続的な勤務が見込まれるアルバイトやパート。</p>
+                            <p class="mb-6">この人たちには、正社員と同一の家族手当を支給しなければならない。</p>
+                            <p class="mb-6">こういう趣旨です。</p>
+                            <p class="mb-6">家族手当がアルバイトにないことを、職務や責任や配置転換で説明するのは難しいです。</p>
+                            <p class="mb-6">「アルバイトは正社員ほど長く勤めないから」</p>
+                            <p class="mb-6">感覚的にはそうかもしれませんが、勤務期間が短いから家族手当を出さない、という理由も立ちません。</p>
+                            <p class="mb-6">家族手当を出すのであれば、アルバイトにも出してください、ということです。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">正社員の手当をなくしてそろえるのは、勧められていません。</h2>
+                            <p class="mb-6">少し本流からそれますが、押さえておいてほしい点があります。</p>
+                            <p class="mb-6">差があるならなくしましょう、ということで、正社員の家族手当をやめてしまう会社があります。</p>
+                            <p class="mb-6">これは、好ましくないとされています。</p>
+                            <p class="mb-6">ガイドラインの前文に、労使で合意することなく正社員の待遇を引き下げることは望ましい対応とはいえない、と書かれています。</p>
+                            <p class="mb-6">今回の改正で、この趣旨がもう一段はっきりしました。</p>
+                            <p class="mb-6">正社員の労働条件を不利益に変更することなく、アルバイトやパートの改善を図ることが求められる。</p>
+                            <p class="mb-6">そう明確にされています。</p>
+                            <p class="mb-6">違法かどうかという話ではなく、望ましくない、という話です。</p>
+                            <p class="mb-6">ただし、就業規則の不利益変更になるので、手続きは煩雑になります。</p>
+                            <p class="mb-6"><strong>出ていないアルバイトに出す方向でそろえる。</strong></p>
+                            <p class="mb-6">不利益の方向には変えない、と押さえておいてください。</p>
+                            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6 border-l-4 border-accent-500 pl-4 py-1">まとめ</h2>
+                            <p class="mb-6">2026年10月1日から、パートタイム・有期雇用労働法のルールが変わります。</p>
+                            <p class="mb-6">雇用契約書や労働条件通知書に、待遇差の説明を求めることができる旨を書かなければなりません。</p>
+                            <p class="mb-6">昇給・退職手当・賞与の有無と相談窓口に続く、5つ目の明示事項です。</p>
+                            <p class="mb-6">私は、相談窓口の行の下に、モデル通知書の文言で入れる予定です。</p>
+                            <p class="mb-6">同じ日に、同一労働同一賃金ガイドラインも改正されます。</p>
+                            <p class="mb-6">説明を求められたときに誤ると、火種になります。</p>
+                            <p class="mb-6">説明を求めたことを理由にした不利益な取扱いは、禁止されています。</p>
+                            <p class="mb-6">十分な説明をしなかった事実は、待遇差が不合理だと認める方向の事情にもなりえます。</p>
+                            <p class="mb-6">まず、誰が説明するかを決めてください。</p>
+                            <p class="mb-6">説明の論点は、職務の内容、責任の程度、配置転換の範囲の3つです。</p>
+                            <p class="mb-6">役職手当や基本給の差は、この3つで説明できます。</p>
+                            <p class="mb-6">交通費の差は、説明が難しいです。</p>
+                            <p class="mb-6">家族手当は、継続的な勤務が見込まれるアルバイトには正社員と同一に支給する、と明文化されます。</p>
+                            <p class="mb-6">正社員の手当をなくしてそろえるのではなく、アルバイトに出す方向でそろえてください。</p>
+                            <p class="mb-6">働き方をアセントさせる一歩は、自社の手当を1つずつ、この3つで説明できるか確かめてみることだと思います。</p>
+                            <p class="mb-6">こうした労務の話は、公式LINEでも配信しています。</p>
+                            <p class="mb-6">ご登録いただいた方には、就業規則のチェックリストをお渡ししています。</p>
+
+                        <div class="bg-navy-900 text-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">待遇差の説明と雇用契約書を見直しませんか</h3>
+                            <p class="mb-8 text-gray-300">
+                                アセント社労士事務所では、正社員とパート・アルバイトの待遇差の確認、雇用契約書の見直し、説明窓口の整備など、労務管理体制づくりを支援しています。
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a href="index.html#contact-form-anchor"
+                                    class="inline-flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    <i class="fas fa-envelope mr-2" aria-hidden="true"></i>お問い合わせ
+                                </a>
+                                <a href="https://lin.ee/ZSMSqAy" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition transform hover:scale-105">
+                                    <i class="fab fa-line mr-2" aria-hidden="true"></i>公式LINEで相談
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+                        <a href="blog-list.html" class="text-navy-900 font-bold hover:text-accent-500 transition">
+                            &larr; ブログ一覧に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
+            <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <div>
+                        <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
+                        <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 text-sm">
+                        <a href="index.html#home" class="hover:text-white">ホーム</a>
+                        <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
+                        <a href="index.html#services" class="hover:text-white">サービス案内</a>
+                        <a href="privacy-policy.html" class="hover:text-white">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center text-xs text-gray-600">
+                    &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- 計測 -->
+    <script src="js/analytics.js" defer></script>
+</body>
+
+</html>
