@@ -2055,6 +2055,102 @@
             border: 1px solid #c9c0ac !important;
             box-shadow: 2px 2px 0 var(--edge-soft) !important;
         }
+
+        /* Hero typography: editorial, restrained, human */
+        #home { isolation: isolate; }
+        #home::before {
+            content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background: linear-gradient(90deg, rgba(5,17,42,.96) 0%, rgba(7,25,57,.88) 42%, rgba(7,25,57,.22) 72%, transparent 100%);
+        }
+        .hero-editorial { max-width: 760px; }
+        .hero-lettering { margin: 0 0 0 -2%; width: 96%; max-width: 710px; }
+        .hero-lettering img { display: block; width: 100%; height: auto; }
+        @media (max-width: 767px) {
+            .hero-lettering { width: 104%; max-width: none; margin-left: -2%; }
+        }
+        .hero-kicker-new {
+            display: flex; align-items: center; gap: .8rem; margin: 0 0 1.45rem;
+            color: rgba(255,248,232,.82); font-family: "Noto Serif JP", "Yu Mincho", serif;
+            font-size: .82rem; font-weight: 600; letter-spacing: .12em;
+        }
+        .hero-kicker-new::before { content: ""; flex: 0 0 2.75rem; height: 1px; background: #d8b86a; }
+        .hero-title-new {
+            margin: 0; color: #fffdf7; font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-size: clamp(2.65rem, 5.25vw, 4.75rem); font-weight: 700; line-height: 1.36;
+            letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 3px 22px rgba(0,0,0,.34);
+        }
+        .hero-title-new .hero-title-line { display: block; }
+        .hero-title-new .hero-title-answer {
+            position: relative; display: inline-block; color: #f0d695; font-weight: 800; letter-spacing: -.055em;
+        }
+        .hero-title-new .hero-title-answer::after {
+            content: ""; position: absolute; left: .02em; right: -.04em; bottom: .08em; height: .09em;
+            background: #b4483d; transform: rotate(-.8deg); opacity: .9;
+        }
+        .hero-lead-new {
+            max-width: 660px; margin: 1.85rem 0 0; padding-left: 1.15rem;
+            border-left: 2px solid rgba(216,184,106,.72); color: rgba(255,253,247,.88);
+            font-size: 1rem; font-weight: 400; line-height: 2; letter-spacing: .035em;
+            text-shadow: 0 2px 10px rgba(0,0,0,.35);
+        }
+        .hero-scope-new {
+            display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; margin-top: 1.15rem;
+            color: rgba(240,214,149,.88); font-family: "Noto Serif JP", serif;
+            font-size: .78rem; letter-spacing: .1em;
+        }
+        .hero-scope-new span + span::before { content: "/"; margin-right: 1.1rem; color: rgba(255,255,255,.35); }
+        #home .hero-actions-new { align-items: stretch; }
+        #home .hero-cta {
+            position: relative; display: grid; grid-template-columns: 2px 1fr 2.35rem;
+            align-items: center; column-gap: 1rem; min-width: 250px; min-height: 68px;
+            padding: .72rem .9rem .72rem 1.05rem !important; overflow: hidden;
+            border-radius: 2px !important; text-decoration: none; transform: none !important;
+            transition: border-color .22s ease, background-color .22s ease, box-shadow .22s ease, translate .22s ease !important;
+        }
+        #home .hero-cta::before { content: ""; align-self: stretch; width: 2px; background: currentColor; opacity: .65; }
+        #home .hero-cta__text { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+        #home .hero-cta__meta {
+            margin-bottom: .34rem; font-family: "Noto Sans JP", sans-serif; font-size: .58rem;
+            font-weight: 700; letter-spacing: .18em; opacity: .72;
+        }
+        #home .hero-cta__label { font-family: "Noto Serif JP", serif; font-size: 1rem; font-weight: 800; letter-spacing: .025em; }
+        #home .hero-cta__arrow {
+            display: grid; place-items: center; width: 2.35rem; height: 2.35rem;
+            border: 1px solid currentColor; border-radius: 50%; font: 400 1.1rem/1 serif;
+            transition: transform .22s ease, background-color .22s ease;
+        }
+        #home .hero-cta--primary {
+            color: #fffdf7 !important; background: #b6453a !important; border: 1px solid #d06a5f !important;
+            box-shadow: 5px 6px 0 rgba(5,16,38,.55), inset 0 1px rgba(255,255,255,.12) !important;
+        }
+        #home .hero-cta--secondary {
+            color: #f2d896 !important; background: rgba(6,22,52,.76) !important;
+            border: 1px solid rgba(226,197,126,.62) !important;
+            box-shadow: 5px 6px 0 rgba(2,10,26,.42), inset 0 0 0 1px rgba(255,255,255,.035) !important;
+        }
+        #home .hero-cta--secondary .hero-cta__label { color: #fffdf7; }
+        #home .hero-cta:hover { translate: 0 -2px; }
+        #home .hero-cta--primary:hover { background: #a93b32 !important; box-shadow: 5px 8px 0 rgba(5,16,38,.55) !important; }
+        #home .hero-cta--secondary:hover { background: rgba(16,42,78,.92) !important; border-color: #efd899 !important; }
+        #home .hero-cta:hover .hero-cta__arrow { transform: translateX(3px); background: rgba(255,255,255,.08); }
+        #home .hero-cta:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+        @media (max-width: 767px) {
+            #home { min-height: 690px; padding-top: 5.75rem !important; background-position: 68% center; }
+            #home::before { background: linear-gradient(180deg, rgba(4,15,37,.94) 0%, rgba(6,22,51,.9) 56%, rgba(6,22,51,.78) 100%); }
+            .hero-editorial { max-width: 100%; }
+            .hero-kicker-new { align-items: flex-start; gap: .6rem; margin-bottom: 1.1rem; font-size: .69rem; line-height: 1.7; letter-spacing: .075em; }
+            .hero-kicker-new::before { flex-basis: 1.65rem; margin-top: .58rem; }
+            .hero-title-new { max-width: 21rem; font-size: 2.15rem; line-height: 1.4; letter-spacing: -.06em; }
+            .hero-title-new .hero-title-line:first-child { font-size: .76em; letter-spacing: -.03em; }
+            .hero-lead-new { margin-top: 1.4rem; padding-left: .85rem; font-size: .88rem; line-height: 1.85; letter-spacing: 0; }
+            .hero-lead-new span { display: block; }
+            .hero-scope-new { gap: .35rem .65rem; margin-top: .9rem; font-size: .68rem; letter-spacing: .055em; }
+            .hero-scope-new span + span::before { margin-right: .65rem; }
+            #home .hero-actions-new { margin-top: 1.45rem; gap: .7rem; }
+            #home .hero-cta { width: 100%; min-width: 0; min-height: 62px; padding: .62rem .8rem .62rem .9rem !important; }
+            #home .hero-cta__label { font-size: .94rem; }
+            #home .hero-cta__arrow { width: 2.1rem; height: 2.1rem; }
+        }
     </style>
 </head>
 
@@ -2128,46 +2224,37 @@
         <section id="home"
             class="hero-bg relative min-h-[720px] flex items-start pt-32 md:pt-0 md:items-center justify-center text-white px-4">
             <div class="container mx-auto z-10">
-                <p class="hero-kicker font-bold uppercase mb-5 text-base md:text-xl inline-block pl-4 pr-2 pb-2">
+                <div class="hero-editorial">
+                <p class="hero-kicker-new">
                     労務トラブル対応に強い｜大阪の企業を支える社労士事務所
                 </p>
-                <h1 class="hero-title leading-tight mb-7 max-w-5xl">
-                    <span class="block text-[2.35rem] md:text-[4.2rem] leading-[1.28]">
-                        その労務の迷いに、<br><span class="hero-title-accent">現場で回る答え</span>を。
-                    </span>
+                <h1 class="hero-lettering">
+                    <img src="images/hero-headline-brush-calm.png" alt="その労務の迷いに、現場で回る答えを。" width="1942" height="809" fetchpriority="high">
                 </h1>
-                <div
-                    class="hero-copy-panel backdrop-blur-md rounded-2xl p-6 md:p-8 mb-8 w-full max-w-4xl relative overflow-hidden group transition duration-500">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
-                    </div>
-                    <div class="flex flex-wrap gap-3 md:gap-4 mb-5 relative z-10">
-                        <span
-                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">危機対応</span>
-                        <span
-                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">平時の手続き</span>
-                        <span
-                            class="hero-chip px-4 py-2 rounded-lg text-sm md:text-lg font-bold tracking-widest transition duration-300">働き方改革</span>
-                    </div>
-                    <p class="hero-copy text-base md:text-xl leading-relaxed tracking-wide relative z-10">
-                        トラブルの初動から、平時の確実な手続き、未来の組織づくりまで。<br>
-                        1万人規模の組織を含む15年の現場経験で、利益が安定する会社づくりを支えます。
-                    </p>
+                <p class="hero-lead-new">
+                    <span>トラブルの初動から、平時の確実な手続き、未来の組織づくりまで。</span>
+                    <span>1万人規模の組織を含む15年の現場経験で、利益が安定する会社づくりを支えます。</span>
+                </p>
+                <div class="hero-scope-new" aria-label="対応領域">
+                    <span>危機対応</span><span>平時の手続き</span><span>働き方改革</span>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4 items-start">
+                <div class="hero-actions-new flex flex-col sm:flex-row gap-4 items-start mt-8">
                     <a href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"
-                        class="w-full md:w-auto bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transition transform hover:scale-105 flex items-center justify-center">
-                        <i class="fas fa-clipboard-check mr-2"></i> 労務リスク5分診断
+                        class="hero-cta hero-cta--primary">
+                        <span class="hero-cta__text"><span class="hero-cta__meta">FREE CHECK / 5 MIN</span><span class="hero-cta__label">労務リスク5分診断</span></span>
+                        <span class="hero-cta__arrow" aria-hidden="true">→</span>
                     </a>
                     <a href="#contact-form-anchor"
-                        class="w-full md:w-auto bg-white/95 hover:bg-white text-navy-900 font-bold py-4 px-8 rounded-full text-lg shadow-xl transition flex items-center justify-center">
-                        <i class="fas fa-envelope mr-2 text-accent-500"></i> お問い合わせ
+                        class="hero-cta hero-cta--secondary">
+                        <span class="hero-cta__text"><span class="hero-cta__meta">CONTACT / CONSULTATION</span><span class="hero-cta__label">お問い合わせ</span></span>
+                        <span class="hero-cta__arrow" aria-hidden="true">→</span>
                     </a>
                 </div>
                 <p class="mt-5 text-sm md:text-base text-white/85 max-w-3xl">
                     業種や会社規模を問わず、従業員を雇用するすべての企業へ。労務の安定は、そのまま現場と経営の安定につながります。
                 </p>
+                </div>
             </div>
         </section>
 
