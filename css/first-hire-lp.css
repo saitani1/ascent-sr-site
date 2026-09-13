@@ -561,7 +561,7 @@
     min-height: 150px;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.78)),
-        url("../images/hero-bg-representative-work.png") right center / cover no-repeat;
+        url("../images/hero-bg-representative-work.webp") right center / cover no-repeat;
 }
 
 .closing-card p {

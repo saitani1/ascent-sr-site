@@ -1,3 +1,5 @@
 tmp_doc/
 tmp_doc.zip
 *.docx
+# local backups of old top pages (never deploy)
+index-before-*.html

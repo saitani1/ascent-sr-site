@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /index-before-
+Disallow: /tmp_doc/
+Disallow: /thanks.html
+
+Sitemap: https://ascent-sr.jp/sitemap.xml
