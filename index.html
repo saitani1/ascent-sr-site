@@ -810,7 +810,9 @@
 
         .journey-video-shell {
             position: relative;
-            max-width: 1120px;
+            /* 画面の高さに収まるよう、幅を高さ(約72%)からも制限 */
+            max-width: min(920px, calc(72vh * 16 / 9));
+            max-width: min(920px, calc(72svh * 16 / 9));
             margin: 0 auto;
             padding: 10px;
             overflow: hidden;
