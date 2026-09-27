@@ -2,19 +2,21 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="canonical" href="https://ascent-sr.jp/labor-stability-diagnosis.html">
-    <title>サービス業の労務安定度 5分診断 | アセント社労士事務所</title>
-    <meta name="description" content="大阪のサービス業向け無料診断。採用費やトラブル対応費が膨らみやすいポイントを、5分で見える化します。">
-    <meta property="og:title" content="サービス業の労務安定度 5分診断">
-    <meta property="og:description" content="労務の迷いが利益の不安定さにつながっていないか、5分で確認できます。">
+    <title>労務リスク5分診断（無料） | アセント社労士事務所</title>
+    <meta name="description" content="業種・規模を問わず使える無料の労務リスク診断。採用費やトラブル対応費が膨らみやすいポイントを、5分・12問で見える化します。大阪の社労士事務所アセントが監修。">
+    <meta name="theme-color" content="#fbf8ef">
+    <meta property="og:title" content="労務リスク5分診断（無料）">
+    <meta property="og:description" content="労務の迷いが利益の不安定さにつながっていないか、5分・12問で確認できます。業種・規模を問わずご利用いただけます。">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/service-industry-complexity.png">
+    <meta property="og:image" content="https://ascent-sr.jp/images/representative-new.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Klee+One:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/ascent1.png">
-    <link rel="stylesheet" href="css/labor-stability-diagnosis.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/diagnosis.css?v=20260927d">
     <!-- seo:jsonld -->
     <script type="application/ld+json">
 {
@@ -24,8 +26,8 @@
       "@type": "WebPage",
       "@id": "https://ascent-sr.jp/labor-stability-diagnosis.html",
       "url": "https://ascent-sr.jp/labor-stability-diagnosis.html",
-      "name": "サービス業の労務安定度 5分診断",
-      "description": "大阪のサービス業向け無料診断。採用費やトラブル対応費が膨らみやすいポイントを、5分で見える化します。",
+      "name": "労務リスク5分診断（無料）",
+      "description": "業種・規模を問わず使える無料の労務リスク診断。採用費やトラブル対応費が膨らみやすいポイントを、5分・12問で見える化します。大阪の社労士事務所アセントが監修。",
       "isPartOf": {
         "@id": "https://ascent-sr.jp/#website"
       },
@@ -46,7 +48,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "サービス業の労務安定度 5分診断",
+          "name": "労務リスク5分診断（無料）",
           "item": "https://ascent-sr.jp/labor-stability-diagnosis.html"
         }
       ]
@@ -57,336 +59,391 @@
     <!-- /seo:jsonld -->
 </head>
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+        <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+        <symbol id="i-clip" viewBox="0 0 22 64"><path d="M7 20v34a5 5 0 0 0 10 0V10a8 8 0 0 0-16 0v40"/></symbol>
+    </svg>
+
     <header class="site-header">
-        <div class="header-inner">
+        <div class="wrap site-header__inner">
             <a class="brand" href="index.html" aria-label="アセント社労士事務所トップへ">
-                <img loading="lazy" decoding="async" width="760" height="759" src="images/ascent1.webp" alt="">
-                <span>アセント社労士事務所</span>
+                <img src="images/ascent-logo.webp" alt="" width="760" height="759">
+                <span class="brand__name">
+                    <span class="brand__jp">アセント社労士事務所</span>
+                    <span class="brand__sub">労務リスク 5分診断</span>
+                </span>
             </a>
-            <nav class="header-nav" aria-label="ページ内ナビゲーション">
-                <a href="#why">不安の正体</a>
-                <a href="#diagnosis">診断する</a>
-                <a href="#faq">FAQ</a>
-                <a href="tel:0678783790" class="header-phone">06-7878-3790</a>
+            <nav class="gnav-lite" aria-label="ページ内ナビゲーション">
+                <a class="gnav__link" href="#guide">診断の見方</a>
+                <a class="gnav__link" href="#why">利益がブレる理由</a>
+                <a class="gnav__link" href="#faq">よくある質問</a>
+                <a class="gnav__tel" href="tel:0678783790"><svg class="icon"><use href="#i-phone"/></svg>06-7878-3790</a>
+                <a class="btn" href="#diagnosis">診断する</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-bg" aria-hidden="true">
-                <img fetchpriority="high" src="images/service-industry-complexity.png" alt="">
-            </div>
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <h1>サービス業の<br>労務安定度<br><span>5分診断</span></h1>
-                    <p class="lead">採用費やトラブル対応費が膨らみやすいポイントを、5分で見える化します。</p>
-                    <p class="support">「これで合っているのか」。「もっといいやり方があるのではないか」。そんな労務の迷いを放置すると、売上が安定していても利益が安定しにくい会社になってしまいます。まずは今の状態を整理してみてください。</p>
-                    <div class="hero-actions">
-                        <a class="button primary" href="#diagnosis">無料で診断を始める</a>
-                        <div class="mini-badges" aria-label="診断の特徴">
-                            <span>無料</span>
-                            <span>約5分</span>
-                            <span>結果はその場で表示</span>
-                        </div>
-                    </div>
-                    <p class="note">診断は無料です。所要時間は約5分です。結果はその場で確認できます。</p>
-                </div>
-                <div class="hero-panel" aria-label="診断で見える化する項目">
-                    <div class="meter">
-                        <span>労務の迷い</span>
-                        <strong>利益のブレ</strong>
-                    </div>
-                    <ul>
-                        <li>採用・定着コスト</li>
-                        <li>シフト・社会保険判断コスト</li>
-                        <li>現場マネジメント・ハラスメントコスト</li>
-                        <li>トラブル・是正対応コスト</li>
+        <!-- ============================== HERO：その場で診断できる ============================== -->
+        <section class="hero dx-hero" id="top">
+            <div class="wrap dx-hero__grid">
+                <div class="dx-pitch">
+                    <p class="hero__file"><b>CHECK SHEET</b><span>全12問・選択式</span><span>所要 約5分</span><span>登録不要</span></p>
+                    <p class="dx-kicker">業種・規模を問わず使える無料診断</p>
+                    <h1 class="dx-title"><small>会社の労務安定度を見える化する</small>労務リスク<br><span class="big mark">5分診断</span></h1>
+                    <p class="dx-lead">採用費やトラブル対応費が膨らみやすいポイントを、5分で見える化します。</p>
+                    <p class="dx-support">「これで合っているのか」。「もっといいやり方があるのではないか」。そんな労務の迷いを放置すると、売上が安定していても利益が安定しにくい会社になってしまいます。まずは今の状態を整理してみてください。</p>
+                    <ul class="checklist" aria-label="診断の特徴">
+                        <li><span class="checkbox" style="--d:.6s"><svg viewBox="0 0 24 24"><path d="M4 13l5 5L21 3"/></svg></span>無料</li>
+                        <li><span class="checkbox" style="--d:.85s"><svg viewBox="0 0 24 24"><path d="M4 13l5 5L21 3"/></svg></span>約5分・全12問</li>
+                        <li><span class="checkbox" style="--d:1.1s"><svg viewBox="0 0 24 24"><path d="M4 13l5 5L21 3"/></svg></span>結果はその場で表示</li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="why" class="section band">
-            <div class="container two-column">
-                <div>
-                    <p class="section-label">共感</p>
-                    <h2>こんな「なんとなく不安」はありませんか。</h2>
-                </div>
-                <div class="text-flow">
-                    <p>社会保険や扶養の判断が、担当者や店長によって少しずつ違う。採用しても定着せず、また募集して、また教えて、を繰り返している。注意したいのに、ハラスメントと言われるのが怖くて現場責任者が動けない。</p>
-                    <p>休職や復職、雇い止めの判断がその場しのぎになっている。労基署や年金事務所から連絡が来ると、一気に不安になる。他社はどうしているのか気になるけれど、自社に合う答えがわからない。</p>
-                    <p>こうした迷いは、目の前では小さく見えても、採用コスト、離職コスト、説明ミスの修正コスト、トラブル対応コストとして、じわじわ利益を削っていきます。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container split">
-                <div class="visual-strip">
-                    <img loading="lazy" decoding="async" width="1024" height="558" src="images/blog-social-insurance-2month.webp" alt="社会保険や労務判断のイメージ">
-                </div>
-                <div class="text-flow">
-                    <p class="section-label">問題提起</p>
-                    <h2>売上はあるのに、<br>利益が安定しない会社があります。</h2>
-                    <p>その原因が、商品や集客ではなく、労務にあることは少なくありません。人が辞めるたびに採用コストがかかる。シフトや保険の判断ミスで、あとから修正コストが発生する。現場のルールが曖昧なままで、店長の負担が増えていく。トラブルが起きるたびに、本来の業務が止まる。</p>
-                    <p>これが積み重なると、売上が安定していても、利益が安定しにくくなります。労務を整えるというのは、単に問題を防ぐためだけではありません。利益のブレを小さくする、経営の土台づくりでもあります。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section muted">
-            <div class="container">
-                <p class="section-label center">診断でわかること</p>
-                <h2 class="center-title">この診断でわかること</h2>
-                <div class="check-grid">
-                    <article><span>01</span><p>採用や定着に関する、見えにくいコストの発生ポイント</p></article>
-                    <article><span>02</span><p>社会保険やシフト判断で、現場が迷いやすい箇所</p></article>
-                    <article><span>03</span><p>店長や責任者が、動きにくくなっている原因</p></article>
-                    <article><span>04</span><p>休職・復職・雇い止めなどで、トラブルが起きやすい状態かどうか</p></article>
-                    <article><span>05</span><p>今すぐ見直すべきことと、まだ急がなくてよいことの優先順位</p></article>
-                </div>
-                <p class="section-note">違法かどうかだけではなく、「どこで利益が削られやすいか」まで見える形で整理します。</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container two-column">
-                <div>
-                    <p class="section-label">対象者</p>
-                    <h2>こんな会社さまにおすすめです</h2>
-                </div>
-                <div class="text-flow">
-                    <p>飲食店。小売店。アミューズメント施設。介護・医療の現場。アルバイトやパートが多い。人の出入りが多い。シフトや勤務条件の判断が複雑。そんなサービス業の会社さまに、特におすすめです。</p>
-                    <p>従業員数の大小は問いません。「まだ大きな問題は起きていないけれど、少し不安がある」という段階での活用が、いちばん効果的です。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section band">
-            <div class="container">
-                <p class="section-label center">4つの視点</p>
-                <h2 class="center-title">診断は4つの視点からチェックします</h2>
-                <div class="category-grid">
-                    <article>
-                        <h3>採用・定着コスト</h3>
-                        <p>採っても辞める状態になっていないか。労務や運用の不安が、離職につながっていないかを見ます。</p>
-                    </article>
-                    <article>
-                        <h3>シフト・社会保険判断コスト</h3>
-                        <p>社会保険や扶養の壁の判断がぶれていないか。月末修正や説明ミスが増えていないかを見ます。</p>
-                    </article>
-                    <article>
-                        <h3>現場マネジメント・ハラスメントコスト</h3>
-                        <p>店長や責任者が、安心して指導できる状態かどうかを見ます。</p>
-                    </article>
-                    <article>
-                        <h3>トラブル・是正対応コスト</h3>
-                        <p>休職、復職、雇い止め、労基署対応などで、後追いコストが発生しやすい状態かを見ます。</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container narrow text-flow">
-                <p class="section-label center">メリット</p>
-                <h2 class="center-title">診断するメリット</h2>
-                <p>この診断は、単なるチェックリストではありません。今の運営で、どこに迷いがあり、どこに利益を削る原因があるのかを整理するためのものです。</p>
-                <p>結果を見ることで、「何を一気に全部直すか」ではなく、「まず何から整えるか」が見えてきます。それだけでも、経営判断はかなりラクになります。</p>
-            </div>
-        </section>
-
-        <section class="section muted">
-            <div class="container">
-                <p class="section-label center">結果イメージ</p>
-                <h2 class="center-title">診断結果は4タイプで表示されます</h2>
-                <div class="type-grid">
-                    <article><h3>安定運営タイプ</h3><p>労務の土台は比較的安定しています。今のうちに判断基準を明文化しておくと、さらに利益のブレを抑えやすくなります。</p></article>
-                    <article><h3>見直し優先タイプ</h3><p>一部の判断が属人化している可能性があります。小さな修正コストが積み上がりやすい状態です。</p></article>
-                    <article><h3>コスト流出注意タイプ</h3><p>労務の迷いが、採用やトラブル対応のコスト増につながっている可能性があります。優先順位をつけた見直しが必要です。</p></article>
-                    <article><h3>早期改善推奨タイプ</h3><p>労務判断のあいまいさが、利益の不安定さに直結している可能性があります。一度全体を整理した方が改善は早いです。</p></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section reassurance">
-            <div class="container two-column">
-                <div>
-                    <p class="section-label">安心訴求</p>
-                    <h2>まだ相談するほどではない。<br>その段階でも大丈夫です。</h2>
-                </div>
-                <div class="text-flow">
-                    <p>多くの会社さまは、大きな問題が起きてからではなく、「少し気になる」「今のうちに整理したい」という段階で診断を活用されています。</p>
-                    <p>診断するだけでも、何が課題で、何から手をつければいいかが見えます。無理に契約をすすめるためのものではありません。まずは状況整理のためにお使いください。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section supervisor">
-            <div class="container split reverse">
-                <div class="text-flow">
-                    <p class="section-label">監修者</p>
-                    <h2>現場と法律の両方を見てきた社労士が監修しています</h2>
-                    <p>アセント社労士事務所 代表の長田充博は、アルバイト1万人規模のサービス業を含む現場で、15年にわたり人事・労務に関わってきました。</p>
-                    <p>法律だけでなく、「そのルールで現場が本当に回るか」まで見てきた経験をもとに、この診断を設計しています。</p>
-                    <p>現場に合わない正論ではなく、利益の安定につながる実務的な視点で整理しています。</p>
-                </div>
-                <div class="profile-photo">
-                    <img loading="lazy" decoding="async" width="1024" height="734" src="images/representative-new.webp" alt="アセント社労士事務所 代表 長田充博">
-                </div>
-            </div>
-        </section>
-
-        <section class="section cta-band">
-            <div class="container narrow center">
-                <h2>その迷いを、<br>利益を削る前に整理しませんか。</h2>
-                <p>「これで合っているのか」。そう感じた時点で、診断する理由は十分あります。迷いを放置すると、あとで採用やトラブルのコストとして返ってきます。逆に、早めに整理できれば、現場の負担も利益のブレも小さくしやすくなります。</p>
-                <a class="button light" href="#diagnosis">無料で診断を始める</a>
-            </div>
-        </section>
-
-        <section id="diagnosis" class="section diagnosis-section">
-            <div class="container">
-                <div class="diagnosis-intro">
-                    <p class="section-label center">無料診断</p>
-                    <h2 class="center-title">診断は無料です</h2>
-                    <p>所要時間は約5分です。選択式で進むので、難しい入力は必要ありません。診断結果はその場で確認できます。希望される方には、結果に応じた改善の考え方もご案内します。</p>
-                    <p>以下の質問に、今の自社の状況に近いものをお答えください。直感でお答えいただいて大丈夫です。</p>
-                </div>
-
-                <div class="diagnosis-app" data-diagnosis>
-                    <div class="progress-area">
-                        <div>
-                            <span class="step-label" data-step-label>STEP 1 / 12</span>
-                            <strong data-remaining>あと11問です</strong>
-                        </div>
-                        <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
+                    <div class="dx-views">
+                        <p>CHECK POINTS — 4つの視点でチェックします</p>
+                        <ul>
+                            <li><i style="--c:var(--red)"></i>採用・定着コスト</li>
+                            <li><i style="--c:var(--blue-ink)"></i>シフト・社会保険判断コスト</li>
+                            <li><i style="--c:var(--gold)"></i>現場マネジメント</li>
+                            <li><i style="--c:var(--ink)"></i>トラブル・是正対応コスト</li>
+                        </ul>
                     </div>
-                    <form class="question-form" data-question-form>
-                        <fieldset>
-                            <legend data-question-text>以下の質問に、今の自社の状況に近いものをお答えください。</legend>
-                            <p class="question-help">直感でお答えいただいて大丈夫です。</p>
-                            <div class="answer-grid">
-                                <label><input type="radio" name="answer" value="2"><span>はい</span></label>
-                                <label><input type="radio" name="answer" value="1"><span>どちらともいえない</span></label>
-                                <label><input type="radio" name="answer" value="0"><span>いいえ</span></label>
-                            </div>
-                        </fieldset>
-                        <div class="question-actions">
-                            <button class="button secondary" type="button" data-prev disabled>戻る</button>
-                            <button class="button primary" type="submit" data-next>次へ</button>
-                        </div>
-                    </form>
-                    <section class="result-panel" data-result hidden aria-live="polite">
-                        <p class="result-score" data-result-score></p>
-                        <h2 data-result-title></h2>
-                        <p class="result-heading" data-result-heading></p>
-                        <div class="result-copy" data-result-copy></div>
-                        <div class="result-columns">
+                    <p class="dx-pointer"><span class="pc-only">→ 右の用紙から、そのまま始められます</span><span class="sp-only">↓ すぐ下の用紙から始められます</span></p>
+                </div>
+
+                <div class="clipboard" id="diagnosis">
+                    <div class="dx-app ruled margin-line" data-diagnosis>
+                        <span class="stamp" aria-hidden="true">Answer Sheet</span>
+                        <p class="dx-app__title">設問用紙</p>
+                        <div class="progress-area">
                             <div>
-                                <h3>このタイプに多い状態</h3>
-                                <ul data-result-state></ul>
+                                <span class="step-label" data-step-label>STEP 1 / 12</span>
+                                <strong data-remaining>あと11問です</strong>
                             </div>
-                            <div>
-                                <h3>おすすめの次アクション</h3>
-                                <ul data-result-action></ul>
-                            </div>
+                            <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
                         </div>
-                        <p class="result-common">労務課題は、「違法かどうか」だけで見ると手遅れになりやすいです。大切なのは、利益を不安定にする前に整えることです。</p>
-                        <a class="button primary" data-result-cta href="#report">結果レポートを受け取る</a>
-                    </section>
+                        <form class="question-form" data-question-form>
+                            <fieldset>
+                                <legend data-question-text>以下の質問に、今の自社の状況に近いものをお答えください。</legend>
+                                <p class="question-help">直感でお答えいただいて大丈夫です。</p>
+                                <div class="answer-grid">
+                                    <label><input type="radio" name="answer" value="2"><span>はい</span></label>
+                                    <label><input type="radio" name="answer" value="1"><span>どちらともいえない</span></label>
+                                    <label><input type="radio" name="answer" value="0"><span>いいえ</span></label>
+                                </div>
+                            </fieldset>
+                            <div class="question-actions">
+                                <button class="btn btn--paper" type="button" data-prev disabled>戻る</button>
+                                <button class="btn" type="submit" data-next>次へ</button>
+                            </div>
+                        </form>
+                        <section class="result-panel" data-result hidden aria-live="polite">
+                            <div class="risk" data-risk>
+                                <div class="risk__head">
+                                    <p class="risk__title">あなたの会社の労務リスク</p>
+                                    <p class="risk__level" data-risk-level></p>
+                                </div>
+                                <div class="risk__meter">
+                                    <div class="risk__pin" data-risk-pin aria-hidden="true"><b data-risk-pin-score></b></div>
+                                    <ol class="risk__zones">
+                                        <li><span class="lg">安定運営</span><span class="sm">安定</span><small>0〜5点</small></li>
+                                        <li><span class="lg">見直し優先</span><span class="sm">見直し</span><small>6〜11点</small></li>
+                                        <li><span class="lg">コスト流出注意</span><span class="sm">流出注意</span><small>12〜17点</small></li>
+                                        <li><span class="lg">早期改善推奨</span><span class="sm">早期改善</span><small>18〜24点</small></li>
+                                    </ol>
+                                </div>
+                                <div class="risk__scale" aria-hidden="true"><span>← リスク低い</span><span>リスク高い →</span></div>
+                                <p class="risk__note">※ 点数が<b>高いほど</b>、労務の迷いが利益を削っているリスクが高い状態です。</p>
+                            </div>
+                            <div class="result-top">
+                                <h2 data-result-title></h2>
+                                <p class="result-score" data-result-score></p>
+                            </div>
+                            <p class="result-heading" data-result-heading></p>
+                            <div class="result-copy" data-result-copy></div>
+                            <div class="result-columns">
+                                <div>
+                                    <h3>このタイプに多い状態</h3>
+                                    <ul data-result-state></ul>
+                                </div>
+                                <div>
+                                    <h3>おすすめの次アクション</h3>
+                                    <ul data-result-action></ul>
+                                </div>
+                            </div>
+                            <p class="result-common"><span class="mark">労務課題は、「違法かどうか」だけで見ると手遅れになりやすいです。</span>大切なのは、利益を不安定にする前に整えることです。</p>
+                            <a class="btn" data-result-cta href="#report">結果レポートを受け取る</a>
+                        </section>
+                    </div>
+                    <p class="clipboard__foot"><span>ASCENT LABOR RISK CHECK</span><span>FREE / 5 MIN</span></p>
                 </div>
             </div>
         </section>
 
-        <section id="report" class="section report-section">
-            <div class="container split">
-                <div class="text-flow">
-                    <p class="section-label">結果後の導線</p>
-                    <h2>診断結果を、<br>もう少し詳しく受け取りませんか。</h2>
-                    <p>メールアドレスをご登録いただくと、あなたの診断タイプに合わせて、「優先して見直したいポイント」「利益が削られやすい労務パターン」「今の段階で取り組みやすい改善の方向性」をまとめた結果レポートをお送りします。</p>
-                    <p class="small-note">無理に契約をおすすめすることはありません。まずは現状整理のためにご活用ください。</p>
+        <!-- ============================== 診断の見方 ============================== -->
+        <section id="guide" class="section">
+            <div class="wrap">
+                <div class="sec-head sec-head--center">
+                    <p class="tab-label"><span>No.01</span><span>診断の見方</span></p>
+                    <h2 class="sec-title">4つの視点でチェックし、<br><span class="mark">リスクを4段階</span>で表示します</h2>
+                    <p class="lead">この診断は、単なるチェックリストではありません。今の運営で、どこに迷いがあり、どこに利益を削る原因があるのかを整理するためのものです。結果を見ることで、「何を一気に全部直すか」ではなく、「まず何から整えるか」が見えてきます。</p>
                 </div>
-                <form class="report-form" action="https://formspree.io/f/xdkdnwjl" method="POST">
-                    <input type="hidden" name="form_type" value="サービス業の労務安定度 5分診断 結果レポート希望">
+
+                <div class="dividers">
+                    <article class="divider ruled"><span class="divider__tab">視点 1</span><h3>採用・定着コスト</h3><p>採っても辞める状態になっていないか。労務や運用の不安が、離職につながっていないかを見ます。</p></article>
+                    <article class="divider ruled"><span class="divider__tab">視点 2</span><h3>シフト・社会保険判断コスト</h3><p>社会保険や扶養の壁の判断がぶれていないか。月末修正や説明ミスが増えていないかを見ます。</p></article>
+                    <article class="divider ruled"><span class="divider__tab">視点 3</span><h3>現場マネジメント・ハラスメントコスト</h3><p>管理職や現場責任者が、安心して指導できる状態かどうかを見ます。</p></article>
+                    <article class="divider ruled"><span class="divider__tab">視点 4</span><h3>トラブル・是正対応コスト</h3><p>休職、復職、雇い止め、労基署対応などで、後追いコストが発生しやすい状態かを見ます。</p></article>
+                </div>
+
+                <div class="legend ruled taped">
+                    <div class="legend__head">
+                        <h3>結果の見方：点数は「リスク点」です</h3>
+                        <p class="hand">点数が高いほど、労務リスクが高い状態です</p>
+                    </div>
+                    <div class="legend__bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                    <div class="legend__ends" aria-hidden="true"><span>0点 ← リスク低い</span><span>リスク高い → 24点</span></div>
+                    <div class="legend__types">
+                        <div class="legend__type"><p class="meta">0〜5点<b>リスク 低い</b></p><h4>安定運営タイプ</h4><p>労務の土台は比較的安定しています。今のうちに判断基準を明文化しておくと、さらに利益のブレを抑えやすくなります。</p></div>
+                        <div class="legend__type"><p class="meta">6〜11点<b>リスク 中程度</b></p><h4>見直し優先タイプ</h4><p>一部の判断が属人化している可能性があります。小さな修正コストが積み上がりやすい状態です。</p></div>
+                        <div class="legend__type"><p class="meta">12〜17点<b>リスク やや高い</b></p><h4>コスト流出注意タイプ</h4><p>労務の迷いが、採用やトラブル対応のコスト増につながっている可能性があります。優先順位をつけた見直しが必要です。</p></div>
+                        <div class="legend__type"><p class="meta">18〜24点<b>リスク 高い</b></p><h4>早期改善推奨タイプ</h4><p>労務判断のあいまいさが、利益の不安定さに直結している可能性があります。一度全体を整理した方が改善は早いです。</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== 結果レポート ============================== -->
+        <section id="report" class="price-band">
+            <div class="wrap dx-two">
+                <div>
+                    <p class="tab-label"><span>No.02</span><span>結果レポート</span></p>
+                    <h2 class="sec-title">診断結果を、<br><span class="mark">もう少し詳しく</span>受け取りませんか。</h2>
+                    <p class="lead">メールアドレスをご登録いただくと、あなたの診断タイプに合わせて、次の内容をまとめた結果レポートをお送りします。</p>
+                    <ul class="report-points">
+                        <li>優先して見直したいポイント</li>
+                        <li>利益が削られやすい労務パターン</li>
+                        <li>今の段階で取り組みやすい改善の方向性</li>
+                    </ul>
+                    <p class="hand" style="margin-top:16px">無理に契約をおすすめすることはありません。まずは現状整理のためにご活用ください。</p>
+                </div>
+                <form class="report-form ruled margin-line taped" action="https://formspree.io/f/xdkdnwjl" method="POST">
+                    <div class="report-form__title"><b>レポート申込票</b><span>RESULT REPORT</span></div>
+                    <input type="hidden" name="form_type" value="労務リスク5分診断 結果レポート希望">
                     <input type="hidden" name="diagnosis_result" data-hidden-result value="">
                     <label>
                         診断結果
                         <input type="text" name="diagnosis_result_display" data-result-display value="診断後に自動入力されます" readonly>
                     </label>
                     <label>
-                        お名前
+                        お名前 <span class="required">必須</span>
                         <input type="text" name="name" autocomplete="name" required>
                     </label>
                     <label>
-                        メールアドレス
+                        メールアドレス <span class="required">必須</span>
                         <input type="email" name="email" autocomplete="email" required>
                     </label>
                     <label>
-                        会社名
+                        会社名 <span class="optional">任意</span>
                         <input type="text" name="company" autocomplete="organization">
                     </label>
-                    <button class="button primary" type="submit">詳しい結果レポートを受け取る</button>
+                    <button class="btn" type="submit">詳しい結果レポートを受け取る</button>
                     <p>無理に契約をおすすめすることはありません。まずは、診断結果を整理するためにご活用ください。</p>
                 </form>
             </div>
         </section>
 
-        <section class="section muted">
-            <div class="container">
-                <p class="section-label center">診断後</p>
-                <h2 class="center-title">診断後、こんな次の一歩をご案内できます</h2>
-                <div class="next-grid">
-                    <article><span>1</span><p>結果に応じた優先課題の整理</p></article>
-                    <article><span>2</span><p>無料チェックリストの受け取り</p></article>
-                    <article><span>3</span><p>必要に応じたお問い合わせ</p></article>
+        <!-- ============================== 利益がブレる理由 ============================== -->
+        <section id="why" class="section section--alt">
+            <div class="wrap">
+                <div class="sec-head sec-head--center">
+                    <p class="tab-label"><span>No.03</span><span>利益と労務</span></p>
+                    <h2 class="sec-title">売上はあるのに、<br><span class="mark">利益が安定しない会社</span>があります。</h2>
                 </div>
-                <p class="section-note">診断して終わりではなく、「では何から整えるべきか」まで見えるように設計しています。</p>
+                <div class="why-grid">
+                    <div class="memo-pad ruled margin-line">
+                        <h3>こんな「なんとなく不安」はありませんか。</h3>
+                        <ul>
+                            <li>社会保険や扶養の判断が、担当者や管理職によって少しずつ違う。</li>
+                            <li>採用しても定着せず、また募集して、また教えて、を繰り返している。</li>
+                            <li>注意したいのに、ハラスメントと言われるのが怖くて現場責任者が動けない。</li>
+                            <li>休職や復職、雇い止めの判断がその場しのぎになっている。</li>
+                            <li>労基署や年金事務所から連絡が来ると、一気に不安になる。</li>
+                            <li>他社はどうしているのか気になるけれど、自社に合う答えがわからない。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="chain" aria-label="労務の迷いが利益のブレになるまで">
+                            <div class="chain__node"><small>START</small>小さな労務の迷い</div>
+                            <p class="chain__arrow"><svg viewBox="0 0 18 22"><path d="M9 1v18M3 13l6 7 6-7"/></svg>放置すると、じわじわ</p>
+                            <div class="chain__costs"><span>採用コスト</span><span>離職コスト</span><span>説明ミスの修正コスト</span><span>トラブル対応コスト</span></div>
+                            <p class="chain__arrow"><svg viewBox="0 0 18 22"><path d="M9 1v18M3 13l6 7 6-7"/></svg>積み重なると</p>
+                            <div class="chain__node chain__node--end"><small>RESULT</small>売上があっても、利益がブレる</div>
+                        </div>
+                        <div class="why-text">
+                            <p>その原因が、商品や集客ではなく、労務にあることは少なくありません。人が辞めるたびに採用コストがかかる。シフトや保険の判断ミスで、あとから修正コストが発生する。現場のルールが曖昧なままで、管理職の負担が増えていく。トラブルが起きるたびに、本来の業務が止まる。</p>
+                            <p>労務を整えるというのは、単に問題を防ぐためだけではありません。<strong class="mark">利益のブレを小さくする、経営の土台づくり</strong>でもあります。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="faq" class="section faq-section">
-            <div class="container narrow">
-                <p class="section-label center">FAQ</p>
-                <h2 class="center-title">よくあるご質問</h2>
-                <details>
-                    <summary>本当に5分で終わりますか。</summary>
-                    <p>はい。選択式の設問が中心なので、おおむね5分程度で完了します。</p>
-                </details>
-                <details>
-                    <summary>まだ顧問契約を考えていないのですが、利用して大丈夫ですか。</summary>
-                    <p>はい。むしろ、「まだ相談するほどではないけれど不安がある」という段階の方におすすめです。</p>
-                </details>
-                <details>
-                    <summary>診断したら営業されますか。</summary>
-                    <p>無理に契約をおすすめすることはありません。まずは現状整理のためにご活用ください。</p>
-                </details>
-                <details>
-                    <summary>サービス業以外でも使えますか。</summary>
-                    <p>利用は可能です。ただし、飲食、小売、娯楽・レジャー、介護・医療などのサービス業向けに最適化しています。</p>
-                </details>
+        <!-- ============================== こんな会社に ============================== -->
+        <section id="for" class="section">
+            <div class="wrap">
+                <div class="sec-head sec-head--center">
+                    <p class="tab-label"><span>No.04</span><span>対象</span></p>
+                    <h2 class="sec-title">業種・規模を問わず、<br><span class="mark">人を雇うすべての会社</span>に。</h2>
+                    <p class="lead">従業員数の大小は問いません。特に、次のような状態の会社さまにおすすめです。</p>
+                </div>
+                <div class="fits">
+                    <div class="sticky"><b>パート・アルバイトが多い</b><small>雇用形態ごとの判断が複雑</small></div>
+                    <div class="sticky sticky--pink"><b>人の出入りが多い</b><small>採用と退職の手続きが多い</small></div>
+                    <div class="sticky sticky--blue"><b>シフトや勤務条件が複雑</b><small>社会保険の判断に迷いやすい</small></div>
+                    <div class="sticky sticky--green"><b>初めて人を雇った・増やした</b><small>ルールがまだ固まっていない</small></div>
+                    <div class="sticky"><b>拠点・部署が増えてきた</b><small>判断が人によってばらつく</small></div>
+                    <div class="sticky sticky--pink"><b>管理職が労務判断に迷う</b><small>指導やトラブル対応が属人的</small></div>
+                </div>
+                <div class="assure sticky sticky--blue">
+                    <h3>まだ相談するほどではない。<br>その段階でも大丈夫です。</h3>
+                    <div>
+                        <p>多くの会社さまは、大きな問題が起きてからではなく、「少し気になる」「今のうちに整理したい」という段階で診断を活用されています。「まだ大きな問題は起きていないけれど、少し不安がある」という段階での活用が、いちばん効果的です。</p>
+                        <p class="hand">無理に契約をすすめるためのものではありません。まずは状況整理のためにお使いください。</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section final-cta">
-            <div class="container narrow center">
-                <p class="section-label">無料診断</p>
-                <h2>サービス業の労務安定度<br>5分診断</h2>
-                <p>採用費やトラブル対応費が膨らみやすいポイントを、5分で見える化します。売上が安定していても、利益が安定しない会社をなくすために。まずは、今の状態を整理してみてください。</p>
-                <a class="button primary" href="#diagnosis">無料で診断を始める</a>
+        <!-- ============================== 監修者 ============================== -->
+        <section id="supervisor" class="section section--alt">
+            <div class="wrap">
+                <article class="dossier dx-super">
+                    <div class="dossier__photo">
+                        <figure class="polaroid">
+                            <span class="clip" aria-hidden="true"><svg><use href="#i-clip"/></svg></span>
+                            <div class="polaroid__img">
+                                <img loading="lazy" decoding="async" width="1024" height="734" src="images/representative-new.webp" alt="アセント社労士事務所 代表 長田充博">
+                            </div>
+                            <figcaption><span>代表 社会保険労務士 長田 充博</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="dossier__body ruled margin-line">
+                        <p class="tab-label"><span>No.05</span><span>監修者</span></p>
+                        <h2 class="dossier__lead" style="font-size:clamp(1.25rem,1.05rem + .8vw,1.6rem)">現場と法律の両方を見てきた社労士が監修しています</h2>
+                        <p class="dossier__text">アセント社労士事務所 代表の長田充博は、アルバイト1万人規模のサービス業を含む現場で、15年にわたり人事・労務に関わってきました。</p>
+                        <p class="dossier__text">法律だけでなく、「そのルールで現場が本当に回るか」まで見てきた経験をもとに、この診断を設計しています。</p>
+                        <p class="dossier__text"><strong class="mark">現場に合わない正論ではなく、利益の安定につながる実務的な視点で整理しています。</strong></p>
+                        <div class="dossier__links"><a href="profile.html" class="text-link">代表プロフィールを読む<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+                        <span class="stamp" aria-hidden="true">Supervised</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================== 診断後 ＋ FAQ ============================== -->
+        <section id="faq" class="section dx-faq">
+            <div class="wrap after-grid">
+                <div>
+                    <p class="tab-label"><span>No.06</span><span>診断後</span></p>
+                    <h2 class="sec-title">診断して終わり、<br>にはしません。</h2>
+                    <ol class="after-steps" style="margin-top:26px">
+                        <li><span class="hand-num">1</span><b>結果に応じた優先課題の整理</b><small>何から整えるべきかを、結果タイプに合わせて整理します。</small></li>
+                        <li><span class="hand-num" style="--c:var(--blue-ink)">2</span><b>無料チェックリストの受け取り</b><small>自社で確認を進めるためのチェックリストをお渡しします。</small></li>
+                        <li><span class="hand-num" style="--c:var(--gold)">3</span><b>必要に応じたお問い合わせ</b><small>ご希望の場合だけ、個別にご相談をお受けします。</small></li>
+                    </ol>
+                    <p class="after-note">「では何から整えるべきか」まで見えるように設計しています。</p>
+                </div>
+                <div>
+                    <p class="tab-label"><span>No.07</span><span>FAQ</span></p>
+                    <h2 class="sec-title" style="margin-bottom:24px">よくあるご質問</h2>
+                    <details class="ruled">
+                        <summary>本当に5分で終わりますか。</summary>
+                        <p>はい。選択式の設問が中心なので、おおむね5分程度で完了します。</p>
+                    </details>
+                    <details class="ruled">
+                        <summary>まだ顧問契約を考えていないのですが、利用して大丈夫ですか。</summary>
+                        <p>はい。むしろ、「まだ相談するほどではないけれど不安がある」という段階の方におすすめです。</p>
+                    </details>
+                    <details class="ruled">
+                        <summary>診断したら営業されますか。</summary>
+                        <p>無理に契約をおすすめすることはありません。まずは現状整理のためにご活用ください。</p>
+                    </details>
+                    <details class="ruled">
+                        <summary>業種や会社の規模に関係なく使えますか。</summary>
+                        <p>はい。業種や規模を問わず、従業員を雇用している会社さまにお使いいただけます。設問は、採用・社会保険・現場マネジメント・トラブル対応など、どの会社にも共通する労務のポイントで構成しています。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== 最後の呼びかけ ============================== -->
+        <section class="price-band">
+            <div class="wrap">
+                <div class="letter ruled margin-line taped">
+                    <span class="stamp" aria-hidden="true">Free</span>
+                    <h2 class="sec-title" style="margin-top:0">その迷いを、<br><span class="mark">利益を削る前に</span>整理しませんか。</h2>
+                    <p class="body">「これで合っているのか」。そう感じた時点で、診断する理由は十分あります。迷いを放置すると、あとで採用やトラブルのコストとして返ってきます。<strong class="mark">売上が安定していても、利益が安定しない会社をなくすために。</strong>まずは、今の状態を整理してみてください。</p>
+                    <div class="letter__actions">
+                        <a class="btn" href="#diagnosis">
+                            <span class="btn__text"><span class="btn__meta">FREE CHECK / 5 MIN</span>用紙に戻って診断する</span>
+                            <span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                    </div>
+                    <p class="letter__sign">アセント社労士事務所　長田 充博</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 アセント社労士事務所</p>
-            <a href="index.html">トップへ戻る</a>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="images/ascent-logo.webp" alt="" width="760" height="759" loading="lazy">
+                        <h2>アセント社労士事務所</h2>
+                    </div>
+                    <p class="footer-tag">その労務の迷いに、現場で回る答えを。</p>
+                    <p class="footer-addr">〒541-0054 大阪府大阪市中央区南本町2-3-12 EDGE本町3階<br>TEL <a href="tel:0678783790">06-7878-3790</a> ／ 平日 9:00〜18:00</p>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <a href="index.html">トップへ戻る</a>
+                    <a href="index.html#services">サービス案内</a>
+                    <a href="pricing.html">サービス・料金</a>
+                    <a href="blog-list.html">労務コラム一覧</a>
+                    <a href="index.html#contact-form-anchor">お問い合わせ</a>
+                    <a href="privacy-policy.html">プライバシーポリシー</a>
+                </nav>
+            </div>
+            <p class="footer-copy">&copy; 2026 アセント社労士事務所</p>
         </div>
     </footer>
 
-    <script src="js/labor-stability-diagnosis.js"></script>
+    <nav class="dock dx-dock" id="dx-dock" aria-label="診断ショートカット">
+        <a href="tel:0678783790"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>電話する</a>
+        <a class="dock__main" href="#diagnosis"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>用紙に戻って診断する</a>
+    </nav>
+
+    <script src="js/labor-stability-diagnosis.js?v=20260927c"></script>
+    <script>
+        // スマホ：用紙が見えていないときだけ「診断する」ボタンを出す（申込フォームが見えている間も隠す）
+        (function () {
+            var dock = document.getElementById('dx-dock');
+            if (!dock || !('IntersectionObserver' in window)) return;
+            var watch = [document.getElementById('diagnosis'), document.getElementById('report')];
+            var visible = {};
+            var sync = function () {
+                var covering = Object.keys(visible).some(function (k) { return visible[k]; });
+                dock.classList.toggle('is-shown', window.scrollY > 200 && !covering);
+            };
+            watch.forEach(function (el, i) {
+                new IntersectionObserver(function (e) { visible[i] = e[0].isIntersecting; sync(); }).observe(el);
+            });
+            window.addEventListener('scroll', sync, { passive: true });
+        })();
+    </script>
     <!-- 計測 -->
     <script src="js/analytics.js" defer></script>
 </body>

@@ -1,0 +1,321 @@
+/* ==========================================================================
+   サービス・料金 — トップページ（css/home.css）の「相談ファイル」テーマを継承
+   コンセプト：机の上の料金表ファイル。索引カードで全体を見渡し、必要な紙だけを読む。
+   このファイルには料金ページ固有の部品だけを書く
+   ========================================================================== */
+
+.pr-nav { display: flex; align-items: center; gap: clamp(10px, 1.6vw, 22px); }
+.pr-nav a { text-decoration: none; font-family: var(--serif); font-size: .88rem; font-weight: 600; }
+.pr-nav__link, .pr-nav__tel { display: none !important; }
+.pr-nav__link:hover { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.pr-nav__tel { align-items: center; gap: 6px; font-family: var(--mono) !important; }
+.pr-nav__tel .icon { width: 14px; height: 14px; }
+.pr-nav .btn { min-height: 42px; padding: .4rem .9rem; font-family: var(--sans); font-size: .84rem; }
+@media (min-width: 1000px) { .pr-nav__link, .pr-nav__tel { display: inline-flex !important; } }
+
+.pr-note { margin-top: 12px; font-size: .8rem; color: var(--pencil); line-height: 1.8; }
+.pr-notes { margin-top: 14px; display: grid; gap: 2px; }
+.pr-notes li { font-size: .8rem; color: var(--pencil); line-height: 1.8; }
+.list-title { font-family: var(--serif); font-weight: 900; font-size: .98rem; }
+.checks-list { margin-top: 8px; display: grid; gap: 2px; }
+.checks-list li { position: relative; padding: 5px 0 5px 1.6em; font-size: .9rem; line-height: 1.7; border-bottom: 1px dashed rgba(56, 75, 93, .18); }
+.checks-list li::before { content: "✓"; position: absolute; left: 0; top: 5px; color: var(--red); font-family: var(--serif); font-weight: 900; transform: rotate(-8deg); }
+@media (min-width: 700px) { .checks-list--two { grid-template-columns: 1fr 1fr; column-gap: 24px; } }
+
+/* ==========================================================================
+   HERO：説明の用紙 ＋ 料金早見表（索引カード）
+   ========================================================================== */
+.pr-hero .pr-hero__grid { display: grid; gap: 40px; align-items: center; }
+.pr-title { white-space: nowrap; margin-top: 22px; font-family: var(--serif); font-weight: 900; font-size: clamp(2.3rem, 1.4rem + 3.4vw, 3.8rem); line-height: 1.3; letter-spacing: .05em; }
+.pr-lead { margin-top: 20px; font-family: var(--serif); font-weight: 700; font-size: clamp(1rem, .95rem + .25vw, 1.12rem); line-height: 1.9; }
+.pr-support { margin-top: 12px; font-size: .94rem; color: var(--ink-soft); line-height: var(--pitch); }
+.pr-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.pr-tags li { padding: 5px 12px 5px 10px; font-size: .84rem; font-weight: 700; background: var(--sticky-yellow); border-left: 4px solid rgba(170, 140, 50, .45); box-shadow: 1px 2px 0 rgba(170, 150, 90, .3); }
+.pr-tags li:nth-child(2) { background: var(--sticky-blue); border-left-color: rgba(70, 110, 150, .4); }
+
+.quick { position: relative; padding: 30px 22px 22px; border: 1px solid var(--edge); border-top: 4px solid var(--red); box-shadow: var(--lift-3); }
+.quick__label { font-family: var(--mono); font-size: .66rem; letter-spacing: .16em; color: var(--pencil); }
+.quick__title { font-family: var(--serif); font-weight: 900; font-size: 1.3rem; margin-top: 4px; }
+.quick ol { margin-top: 12px; border-top: 3px double var(--edge-strong); }
+.quick li a {
+    display: flex; align-items: flex-end; gap: 10px;
+    padding: 12px 4px;
+    border-bottom: 1px dashed var(--edge-strong);
+    text-decoration: none;
+    transition: background .2s;
+}
+.quick li a:hover { background: color-mix(in srgb, var(--marker) 45%, transparent); }
+.quick__name { display: flex; flex-direction: column; flex-shrink: 0; }
+.quick__name b { font-family: var(--serif); font-weight: 900; font-size: 1rem; line-height: 1.4; }
+.quick__name small { font-size: .72rem; color: var(--pencil); }
+.quick li a::after { /* 点線のリーダー */
+    content: ""; flex: 1; order: 1; margin-bottom: 8px; border-bottom: 2px dotted var(--edge-strong); min-width: 16px;
+}
+.quick__price { order: 2; flex-shrink: 0; font-family: var(--serif); font-weight: 900; font-size: 1.3rem; color: var(--red); line-height: 1.2; white-space: nowrap; }
+.quick__price small { font-size: .62em; font-weight: 700; color: var(--ink-soft); }
+.quick__urgent .quick__name b::before { content: "急"; display: inline-grid; place-items: center; width: 1.4em; height: 1.4em; margin-right: 6px; border: 1.5px solid var(--red); border-radius: 50%; color: var(--red); font-size: .72em; transform: rotate(-8deg); vertical-align: 2px; }
+.quick .hand { margin-top: 12px; font-size: .92rem; }
+@media (min-width: 1000px) { .pr-hero .pr-hero__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; } }
+@media (max-width: 600px) { .quick { padding: 26px 14px 18px; } .quick__price { font-size: 1.1rem; } .quick__name small { display: none; } }
+
+/* ==========================================================================
+   緊急労務相談
+   ========================================================================== */
+.pr-before { font-size: 1.15rem; margin: 0 0 10px 6px; }
+.urgent { --ml: 2.6rem; position: relative; padding: 34px 24px 26px 3.6rem; border: 2px solid var(--red); box-shadow: 7px 8px 0 rgba(173, 60, 52, .2); }
+.urgent::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px; background: repeating-linear-gradient(135deg, var(--red) 0 12px, transparent 12px 24px); opacity: .85; }
+.urgent__stamp { position: absolute; right: 20px; top: 22px; --r: 8deg; font-size: .9rem; padding: .45rem .9rem; }
+.urgent__head h2 { margin-top: 14px; font-family: var(--serif); font-weight: 900; font-size: clamp(1.35rem, 1.05rem + 1.3vw, 2rem); line-height: 1.5; padding-right: 110px; }
+.urgent__price { margin-top: 8px; font-family: var(--serif); font-weight: 900; font-size: clamp(2.2rem, 1.6rem + 2.4vw, 3.2rem); color: var(--red); line-height: 1.2; }
+.urgent__price small { font-size: .38em; color: var(--ink); margin-left: .2em; }
+.urgent__grid { display: grid; gap: 24px; margin-top: 20px; }
+.urgent__grid > div > p { font-size: .95rem; color: var(--ink-soft); line-height: var(--pitch); }
+.urgent__grid > div > p + p { margin-top: 8px; }
+.urgent__grid strong { color: var(--ink); }
+.urgent__how { font-family: var(--hand); font-weight: 600; color: var(--red) !important; }
+.urgent__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.urgent .sticky { padding: 22px 20px 16px; }
+@media (min-width: 900px) { .urgent { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; } .urgent__grid { grid-template-columns: 1.15fr .85fr; gap: 36px; } }
+@media (max-width: 600px) { .urgent { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; } .urgent__head h2 { padding-right: 0; } .urgent__stamp { top: -16px; right: 10px; background: var(--card); font-size: .7rem; } .urgent__actions .btn { width: 100%; } }
+
+/* ==========================================================================
+   労務顧問：比較表（帳簿）＋ 人数セレクター ＋ プランカード
+   ========================================================================== */
+.ledger-wrap { position: relative; padding: 30px 22px 20px; border: 1px solid var(--edge-strong); box-shadow: var(--lift-2); }
+.ledger-title { font-family: var(--serif); font-weight: 900; font-size: 1.2rem; padding-bottom: 12px; border-bottom: 3px double var(--edge-strong); }
+.ledger-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ledger { width: 100%; min-width: 640px; border-collapse: collapse; margin-top: 8px; }
+.ledger th, .ledger td { padding: 12px 10px; border-bottom: 1px dashed var(--edge-strong); text-align: center; font-size: .9rem; line-height: 1.55; }
+.ledger thead th { font-family: var(--serif); font-weight: 900; font-size: .98rem; border-bottom: 1px solid var(--ink); vertical-align: bottom; }
+.ledger thead th:first-child, .ledger tbody th { text-align: left; font-weight: 700; }
+.ledger tbody th { font-family: var(--serif); }
+.ledger .is-pick { background: color-mix(in srgb, var(--marker) 38%, transparent); }
+.ledger thead .is-pick { position: relative; color: var(--red-deep); }
+.ledger__price td { font-family: var(--serif); font-weight: 900; font-size: 1.1rem; color: var(--red); }
+.ledger__fit td { font-size: .84rem; font-weight: 700; }
+.ledger i { font-style: normal; font-weight: 900; }
+.ledger .yes { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 2px solid var(--red); border-radius: 50%; color: transparent; font-size: .8rem; }
+.ledger .no { color: var(--edge-strong); }
+
+.headcount { margin-top: 34px; padding: 18px 20px; background: var(--card); border: 1px dashed var(--edge-strong); }
+.headcount[hidden] { display: none; }
+.headcount__q { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 900; font-size: 1rem; line-height: 1.6; }
+.headcount__q .hand-num { width: 2rem; height: 2rem; font-size: .9rem; flex-shrink: 0; }
+.headcount__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.headcount__chips label { position: relative; cursor: pointer; }
+.headcount__chips input { position: absolute; opacity: 0; pointer-events: none; }
+.headcount__chips span { display: inline-block; padding: 8px 14px; background: #fff; border: 1.5px solid #bfb5a2; border-radius: 2px; box-shadow: 2px 2px 0 var(--edge-soft); font-weight: 700; font-size: .9rem; transition: background .15s, color .15s, transform .15s; }
+.headcount__chips input:checked + span { background: var(--ink); color: #fff; border-color: var(--ink); transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--edge-soft); }
+.headcount__chips input:focus-visible + span { outline: 2px solid var(--red); outline-offset: 2px; }
+
+.plans { display: grid; gap: 30px; margin-top: 30px; }
+.plan { position: relative; padding: 30px 22px 22px; border: 1px solid var(--edge); border-top: 4px solid var(--ink); box-shadow: var(--lift-2); display: flex; flex-direction: column; }
+.plan > p:not([class]) { margin-top: 8px; font-size: .9rem; color: var(--ink-soft); line-height: 1.85; }
+.plan__no { font-family: var(--mono); font-size: .68rem; letter-spacing: .16em; color: var(--pencil); }
+.plan__name { margin-top: 4px; font-family: var(--serif); font-weight: 900; font-size: 1.3rem; line-height: 1.5; }
+.plan__catch { margin-top: 6px; font-family: var(--serif); font-weight: 700; font-size: .96rem; color: var(--red-deep); line-height: 1.6; }
+.plan__price { margin-top: 14px; padding: 12px 0; border-top: 3px double var(--edge-strong); border-bottom: 1px dashed var(--edge-strong); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.plan__price small { font-size: .8rem; font-weight: 700; color: var(--ink-soft); }
+.plan__price b { font-family: var(--serif); font-weight: 900; font-size: clamp(1.7rem, 1.4rem + 1vw, 2.2rem); color: var(--red); line-height: 1.2; }
+.plan__band { font-family: var(--hand); font-weight: 600; font-size: .9rem; color: var(--pencil); }
+.plan__fit { margin-top: 12px; align-self: flex-start; padding: 3px 10px; background: var(--ink); color: #fff; font-size: .8rem; font-weight: 700; }
+.plan--pick { border-top-color: var(--red); background-color: #fffcf0; box-shadow: 7px 8px 0 rgba(173, 60, 52, .18), 0 14px 28px rgba(52, 43, 26, .06); }
+.plan--pick .plan__fit { background: var(--red-ink); }
+.plan__stamp { position: absolute; right: 14px; top: -16px; --r: 6deg; background: var(--card); }
+
+.rate { width: 100%; border-collapse: collapse; margin-top: 16px; background: #fff; border: 1px solid var(--edge); }
+.rate th, .rate td { padding: 8px 12px; font-size: .88rem; border-bottom: 1px dashed var(--edge); }
+.rate thead th { background: var(--paper-alt); font-size: .74rem; font-weight: 700; color: var(--ink-soft); text-align: left; }
+.rate th:last-child, .rate td:last-child { text-align: right; }
+.rate td:last-child { font-family: var(--serif); font-weight: 900; }
+.rate tr.is-on td { background: color-mix(in srgb, var(--marker) 70%, transparent); }
+.rate tr.is-on td:first-child { box-shadow: inset 4px 0 0 var(--red); }
+
+.plan__more { margin-top: 14px; border: 1px solid var(--edge); background: var(--card); }
+.plan__more summary { cursor: pointer; list-style: none; position: relative; padding: 10px 40px 10px 14px; font-weight: 700; font-size: .9rem; }
+.plan__more summary::-webkit-details-marker { display: none; }
+.plan__more summary::after { content: "+"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-size: .95rem; line-height: 1; }
+.plan__more[open] summary::after { content: "−"; }
+.plan__more .checks-list { padding: 0 14px 10px; margin-top: 0; }
+.plan .pr-note { margin-top: auto; padding-top: 12px; }
+@media (min-width: 1000px) { .plans { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+
+/* ==========================================================================
+   単発サービス：値段表（メニュー）
+   ========================================================================== */
+.menu { --ml: 2.6rem; position: relative; padding: 34px 24px 26px 3.6rem; border: 1px solid var(--edge); box-shadow: var(--lift-2); }
+.menu + .menu, .menu + .menu-pair, .menu-pair { margin-top: 44px; }
+.menu__head { padding-bottom: 12px; border-bottom: 3px double var(--edge-strong); }
+.menu__no { font-family: var(--mono); font-size: .68rem; letter-spacing: .16em; color: var(--red); }
+.menu__head h3 { margin-top: 2px; font-family: var(--serif); font-weight: 900; font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem); }
+.menu__catch { margin-top: 4px; font-family: var(--serif); font-weight: 700; color: var(--red-deep); }
+.menu__intro { margin-top: 14px; }
+.menu__intro p { font-size: .92rem; color: var(--ink-soft); line-height: var(--pitch); }
+
+.price-list { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.price-list thead th { padding: 6px 0; font-family: var(--mono); font-size: .66rem; font-weight: 600; letter-spacing: .12em; color: var(--pencil); text-align: left; border-bottom: 1px solid var(--ink); }
+.price-list thead th:last-child { text-align: right; }
+.price-list tbody th { padding: 12px 12px 12px 0; text-align: left; font-family: var(--serif); font-weight: 900; font-size: 1rem; line-height: 1.5; border-bottom: 1px dashed var(--edge-strong); vertical-align: top; }
+.price-list tbody th small { display: block; margin-top: 2px; font-family: var(--sans); font-weight: 400; font-size: .8rem; color: var(--ink-soft); line-height: 1.6; }
+.price-list tbody td { padding: 12px 0; text-align: right; white-space: nowrap; font-family: var(--serif); font-weight: 900; font-size: 1.08rem; color: var(--red); border-bottom: 1px dashed var(--edge-strong); vertical-align: top; }
+.price-list tbody tr:hover th, .price-list tbody tr:hover td { background: color-mix(in srgb, var(--marker) 30%, transparent); }
+@media (min-width: 900px) {
+    .menu { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; }
+    #work-rules .price-list tbody, #spot-procedures .price-list tbody { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+    #work-rules .price-list tbody tr, #spot-procedures .price-list tbody tr { display: grid; grid-template-columns: 1fr auto; }
+    #work-rules .price-list thead, #spot-procedures .price-list thead { display: none; }
+}
+@media (max-width: 600px) { .menu { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; } .price-list tbody td { font-size: .98rem; white-space: normal; min-width: 6.5em; } }
+
+.menu-pair { display: grid; gap: 44px; align-items: start; }
+.menu-pair .menu { margin-top: 0; }
+@media (min-width: 1000px) { .menu-pair { grid-template-columns: 1fr 1fr; gap: 28px; } .menu-pair .menu { padding: 36px 26px 26px 3.6rem; --ml: 2.6rem; } }
+
+.pay-count { margin-top: 18px; padding: 16px 18px; }
+.pay-count p { font-size: .86rem; line-height: 1.75; }
+.pay-count__ex { margin-top: 8px; font-family: var(--hand); font-weight: 600; color: var(--red-deep); font-size: .95rem !important; }
+
+.calc { margin-top: 18px; padding: 16px 18px; background: #fff; border: 1.5px solid var(--edge-strong); box-shadow: 3px 3px 0 var(--edge-soft); }
+.calc[hidden] { display: none; }
+.calc__title { font-family: var(--serif); font-weight: 900; font-size: .98rem; }
+.calc__title small { font-family: var(--sans); font-weight: 400; font-size: .76rem; color: var(--pencil); }
+.calc__row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 10px; font-size: .88rem; font-weight: 700; }
+.calc__row > label:first-child { display: flex; align-items: center; gap: 10px; }
+.calc__input { display: inline-flex; align-items: center; gap: 6px; }
+.calc__input input { width: 5.5em; padding: 8px 10px; font: inherit; font-size: 16px; text-align: right; border: 1.5px solid #bfb5a2; border-radius: 2px; background: var(--card); }
+.calc__input input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px var(--marker); }
+.calc__check { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.calc__check input { width: 18px; height: 18px; accent-color: var(--red); }
+.calc__result { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--edge-strong); font-size: .9rem; color: var(--ink-soft); }
+.calc__result b { font-family: var(--serif); font-weight: 900; font-size: 1.35rem; color: var(--red); margin-left: 4px; }
+
+/* ==========================================================================
+   料金についてのご案内
+   ========================================================================== */
+.notice { --ml: 2.6rem; position: relative; max-width: 960px; margin: 0 auto; padding: 36px 24px 28px 3.6rem; border: 1px solid var(--edge-strong); box-shadow: var(--lift-3); }
+.notice__stamp { position: absolute; right: 20px; top: 22px; --r: 6deg; }
+.notice h2 { margin-top: 12px; font-family: var(--serif); font-weight: 900; font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem); }
+.notice ul { margin-top: 14px; counter-reset: n; }
+.notice li { counter-increment: n; position: relative; padding: 10px 0 10px 2.4em; font-size: .92rem; line-height: 1.8; border-bottom: 1px dashed var(--edge-strong); }
+.notice li::before { content: "※" counter(n); position: absolute; left: 0; top: 10px; font-family: var(--hand); font-weight: 600; color: var(--red); }
+@media (min-width: 900px) { .notice { padding: 44px 44px 34px 4.6rem; --ml: 3.4rem; } }
+@media (max-width: 600px) { .notice { --ml: 1.6rem; padding-left: 2.4rem; padding-right: 14px; } .notice__stamp { top: -14px; right: 10px; background: var(--card); } }
+
+.letter__sign a { color: var(--ink); }
+
+/* ---------- スマホ下部ボタン ---------- */
+.pr-dock { grid-template-columns: 1fr 1.7fr; }
+
+.pr-nav .btn { white-space: nowrap; }
+.ledger-hint { display: none; margin-top: 10px; font-family: var(--hand); font-weight: 600; font-size: .9rem; color: var(--red); }
+@media (max-width: 700px) {
+    .ledger-hint { display: block; }
+    .brand__sub { display: none; }
+    .brand__jp { font-size: .98rem; }
+}
+
+
+/* ==========================================================================
+   3プランの「積み上げ」図：前のプランに1つずつ支援が足される
+   ========================================================================== */
+.stack-wrap { position: relative; padding: 30px 22px 26px; margin-bottom: 36px; border: 1px solid var(--edge-strong); box-shadow: var(--lift-2); }
+.stack-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 6px 20px; padding-bottom: 14px; border-bottom: 3px double var(--edge-strong); }
+.stack-head h3 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.2rem, 1rem + .8vw, 1.55rem); }
+.stack-head .hand { font-size: .98rem; }
+.stack { display: grid; gap: 22px; margin-top: 26px; }
+.stack__col { display: flex; flex-direction: column; }
+.stack__layers { display: flex; flex-direction: column; gap: 6px; flex: 1; justify-content: flex-end; }
+.layer { position: relative; padding: 12px 14px; box-shadow: 2px 3px 0 rgba(120, 100, 60, .22); }
+.layer--base { background: var(--sticky-yellow); }
+.layer--proc { background: var(--sticky-blue); }
+.layer--visit { background: var(--sticky-pink); border: 2px solid var(--red); }
+.layer--ghost { opacity: .55; box-shadow: none; padding-top: 8px; padding-bottom: 8px; }
+.layer__name { font-family: var(--serif); font-weight: 900; font-size: 1rem; line-height: 1.5; }
+.layer__sub { font-size: .8rem; color: var(--ink-soft); line-height: 1.6; margin-top: 2px; }
+.layer ul { margin-top: 6px; }
+.layer li { position: relative; padding-left: 1.3em; font-size: .86rem; line-height: 1.75; }
+.layer li::before { content: "\2713"; position: absolute; left: 0; color: var(--red); font-weight: 900; }
+.layer__plus {
+    position: absolute; left: -12px; top: -12px;
+    display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--red-ink); color: #fff; font-weight: 900; font-size: 1.1rem; line-height: 1;
+    box-shadow: 1px 2px 0 rgba(0, 0, 0, .2); transform: rotate(-8deg);
+}
+.stack__foot { display: block; margin-top: 10px; padding: 12px 14px; background: var(--card); border: 1px solid var(--ink); border-top: 4px solid var(--ink); text-decoration: none; text-align: center; transition: background .2s; }
+.stack__foot:hover { background: #fff; }
+.stack__foot small { display: block; font-family: var(--mono); font-size: .64rem; letter-spacing: .16em; color: var(--pencil); }
+.stack__foot b { display: block; font-family: var(--serif); font-weight: 900; font-size: 1.05rem; }
+.stack__price { display: block; margin-top: 2px; font-family: var(--serif); font-weight: 900; color: var(--red); }
+.stack__eq { display: inline-block; margin-top: 6px; padding: 2px 8px; font-size: .78rem; font-weight: 700; background: var(--paper-alt); }
+.stack__col--pick .stack__foot { border-color: var(--red); background: #fffcf0; }
+@media (min-width: 860px) { .stack { grid-template-columns: repeat(3, 1fr); gap: 26px; align-items: stretch; } }
+@media (max-width: 859px) { .layer--ghost { display: none; } }
+
+/* 比較表：追加される行と「面談」行 */
+.ledger__add th { color: var(--blue-ink); }
+.ledger__txt { font-size: .84rem !important; font-weight: 700; }
+.ledger__txt b { display: block; font-family: var(--serif); font-weight: 900; color: var(--red); font-size: .98rem; }
+.ledger__txt small { font-size: .74rem; }
+
+/* プランカード：どのプランに何を足したものか */
+.plan__adds { margin-top: 10px; padding: 6px 10px; font-size: .84rem; font-weight: 700; background: var(--sticky-blue); line-height: 1.6; }
+.plan__adds b { color: var(--blue-ink); }
+.plan__adds--base { background: var(--sticky-yellow); }
+.plan__adds--pick { background: var(--sticky-pink); }
+.plan__adds--pick b { color: var(--red-deep); }
+
+/* ==========================================================================
+   料金早見表の削除に伴い、ヒーローは用紙1枚の中央寄せ
+   ========================================================================== */
+.pr-hero .pr-hero__grid { grid-template-columns: 1fr !important; max-width: 880px; margin: 0 auto; }
+
+/* ==========================================================================
+   給与計算：②③は「なし／あり」を選べる
+   ========================================================================== */
+.stack-payroll {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 16px; text-decoration: none;
+    background: #fff; border: 2px dashed var(--blue-ink);
+}
+.stack-payroll:hover { background: var(--sticky-blue); }
+.stack-payroll__tag { flex-shrink: 0; padding: 4px 10px; background: var(--blue-ink); color: #fff; font-weight: 700; font-size: .82rem; }
+.stack-payroll b { display: block; font-family: var(--serif); font-weight: 900; font-size: .98rem; line-height: 1.5; }
+.stack-payroll small { display: block; font-size: .78rem; color: var(--ink-soft); line-height: 1.6; }
+@media (min-width: 860px) { .stack-payroll { grid-column: 2 / 4; } }
+
+.ledger__pay th { color: var(--blue-ink); }
+
+.headcount__row { display: grid; gap: 6px; margin-top: 12px; }
+.headcount__row .headcount__chips { margin-top: 0; }
+.headcount__label { font-size: .8rem; font-weight: 700; color: var(--ink-soft); }
+@media (min-width: 760px) { .headcount__row { grid-template-columns: 9.5em 1fr; align-items: center; } }
+
+.plan__name-add { display: none; margin-left: .15em; color: var(--blue-ink); }
+.payroll-on .plan__name-add { display: inline; }
+.plan__variant { display: inline-flex; margin-top: 10px; border: 1.5px solid var(--ink); align-self: flex-start; }
+.plan__variant[hidden] { display: none; }
+.plan__variant button { padding: 5px 12px; font-size: .8rem; font-weight: 700; background: #fff; border: 0; cursor: pointer; }
+.plan__variant button + button { border-left: 1.5px solid var(--ink); }
+.plan__variant button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+.rate th.col-no, .rate th.col-yes { text-align: right; }
+.rate td.col-yes small { display: block; font-family: var(--sans); font-weight: 400; font-size: .7rem; color: var(--ink-soft); }
+.rate .col-no, .rate .col-yes { transition: opacity .2s, background .2s; }
+.payroll-on .rate .col-no { opacity: .4; }
+.payroll-on .rate .col-yes { opacity: 1; }
+#labor-advisor:not(.payroll-on) .rate .col-yes { opacity: .4; }
+.plan__price small.plan__plus { display: block; width: 100%; font-weight: 400; font-size: .76rem; }
+
+.plan__pay { margin-top: 12px; padding: 8px 12px; font-size: .84rem; line-height: 1.7; background: var(--sticky-blue); }
+.plan__pay span { display: inline-block; margin-right: 6px; padding: 0 6px; background: var(--blue-ink); color: #fff; font-size: .72rem; font-weight: 700; }
+.plan__pay a { color: var(--blue-ink); font-weight: 700; }
+.plan__nopay { display: none; margin-top: 12px; font-family: var(--hand); font-weight: 600; color: var(--red); font-size: .92rem; }
+.payroll-on .plan__nopay { display: block; }
+.payroll-on #plan-consult { opacity: .6; }
+
+.payroll-box { --ml: 2.6rem; position: relative; margin-top: 40px; padding: 34px 24px 26px 3.6rem; border: 2px solid var(--blue-ink); box-shadow: var(--lift-2); }
+.payroll-box .menu__no { color: var(--blue-ink); }
+.payroll-box__grid { display: grid; gap: 22px; }
+.payroll-box .pay-count { margin-top: 16px; }
+@media (min-width: 960px) { .payroll-box { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; } .payroll-box__grid { grid-template-columns: 1.1fr .9fr; gap: 36px; } }
+@media (max-width: 600px) { .payroll-box { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; } }
