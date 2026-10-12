@@ -1,67 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="canonical" href="https://ascent-sr.jp/profile.html">
     <title>代表プロフィール | アセント社労士事務所</title>
-    <meta name="description" content="アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。労務の問題でひとりで悩む社長・管理職を減らしたい——この仕事をする理由と、その原点。">
+    <meta name="description" content="アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。「なんとかなる」で見過ごされる労務の問題に気づき、手を打てる組織へ——この仕事をする理由と、その原点。">
+    <meta name="theme-color" content="#fbf8ef">
     <meta property="og:title" content="代表プロフィール | アセント社労士事務所">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ascent-sr.jp/profile.html">
     <meta property="og:image" content="https://ascent-sr.jp/images/representative-new.jpg">
-    <meta property="og:description" content="アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。労務の問題でひとりで悩む社長・管理職を減らしたい——この仕事をする理由と、その原点。">
+    <meta property="og:description" content="アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。「なんとかなる」で見過ごされる労務の問題に気づき、手を打てる組織へ——この仕事をする理由と、その原点。">
     <meta property="og:site_name" content="アセント社労士事務所">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Klee+One:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            800: '#1a202c', // Dark Navy
-                            900: '#111827', // Darker Navy
-                        },
-                        accent: {
-                            500: '#b98b2e', // Classic gold
-                            600: '#8a651a', // Deep gold
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['"Noto Sans JP"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- 共通ビジュアルテーマ（紙 × 紺 × 金）。index.html と揃える -->
-    <link rel="stylesheet" href="css/paper-theme.css">
-    <style>
-        .hero-sub-bg {
-            background-color: #071638;
-            background-image:
-                linear-gradient(rgba(7, 22, 56, 0.74), rgba(7, 22, 56, 0.84)),
-                url('images/hero-bg-service-labor.webp');
-            background-size: cover;
-            background-position: center right;
-        }
-
-        /* 経歴の縦線と節点 */
-        .timeline-dot {
-            background: linear-gradient(135deg, #8a651a 0%, #d4af37 100%);
-            border: 4px solid #fffdf8;
-            box-shadow: 0 2px 8px rgba(73, 60, 36, 0.28);
-        }
-    </style>
+    <!-- トップページと同じ「相談ファイル」テーマ。プロフィール固有の部品だけ profile.css に置く -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script>document.documentElement.classList.add('js');</script>
     <!-- seo:jsonld -->
     <script type="application/ld+json">
 {
@@ -72,7 +34,7 @@
       "@id": "https://ascent-sr.jp/profile.html",
       "url": "https://ascent-sr.jp/profile.html",
       "name": "代表プロフィール",
-      "description": "アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。労務の問題でひとりで悩む社長・管理職を減らしたい——この仕事をする理由と、その原点。",
+      "description": "アセント社労士事務所代表・長田充博のプロフィール。アルバイト1万人規模の組織を含む15年の人事労務経験。「なんとかなる」で見過ごされる労務の問題に気づき、手を打てる組織へ——この仕事をする理由と、その原点。",
       "inLanguage": "ja",
       "mainEntity": {
         "@type": "Person",
@@ -112,611 +74,523 @@
     <!-- /seo:jsonld -->
 </head>
 
-<body class="font-sans text-gray-800 antialiased bg-gray-50">
+<body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
 
-    <!-- Header / Global Menu -->
-    <header class="fixed w-full bg-white shadow-md z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <img width="760" height="759" src="images/ascent-logo.webp" alt="アセント社労士事務所ロゴ" class="h-12 w-auto object-contain">
-                    <a href="index.html" class="font-bold text-xl md:text-2xl text-navy-900 tracking-tight">
-                        アセント社労士事務所
-                        <span class="block text-xs font-normal text-gray-500">大阪市拠点 サービス業・労務トラブル対応</span>
-                    </a>
-                </div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></symbol>
+        <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.8M18 14.5c1.9.8 3 2.9 3 5.5"/></symbol>
+        <symbol id="i-growth" viewBox="0 0 24 24"><path d="M3 20h18M4 16l5-5 4 3 7-8M15 6h5v5"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+        <symbol id="i-clip" viewBox="0 0 22 64"><path d="M7 20v34a5 5 0 0 0 10 0V10a8 8 0 0 0-16 0v40"/></symbol>
+    </svg>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden lg:flex space-x-6 items-center">
-                    <a href="index.html"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">ホーム</a>
-                    <a href="index.html#reasons"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">選ばれる理由</a>
-                    <a href="index.html#services"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">サービス案内</a>
-                    <a href="index.html#access"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">アクセス</a>
-                    <a href="profile.html"
-                        class="text-accent-500 font-bold border-b-2 border-accent-500 text-sm transition">代表プロフィール</a>
-                    <a href="index.html#blog"
-                        class="text-gray-700 hover:text-accent-500 font-medium text-sm transition">コラム</a>
-                    <a href="index.html#contact-form-anchor"
-                        class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition transform hover:scale-105">
-                        <i class="fas fa-envelope mr-1"></i> お問い合わせ
-                    </a>
-                    <a href="tel:0678783790"
-                        class="text-navy-900 hover:text-accent-500 font-bold text-sm transition whitespace-nowrap">
-                        <i class="fas fa-phone mr-1"></i> 06-7878-3790
-                    </a>
-                </nav>
+    <!-- Header -->
+    <header class="site-header" id="site-header">
+        <div class="wrap site-header__inner">
+            <a href="index.html" class="brand">
+                <img src="images/ascent-logo.webp" alt="アセント社労士事務所ロゴ" width="760" height="759">
+                <span class="brand__name">
+                    <span class="brand__jp">アセント社労士事務所</span>
+                    <span class="brand__sub">大阪市拠点・労務トラブル対応に強い</span>
+                </span>
+            </a>
 
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-navy-900 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <nav class="gnav" aria-label="グローバルナビゲーション">
+                <a class="gnav__link" href="index.html#services">サービス案内</a>
+                <a class="gnav__link" href="pricing.html">サービス・料金</a>
+                <a class="gnav__link" href="index.html#blog">労務コラム</a>
+                <a class="gnav__link is-current" href="profile.html" aria-current="page">代表プロフィール</a>
+                <a class="gnav__link" href="index.html#cases">改善事例</a>
+                <a class="gnav__link" href="index.html#access">アクセス</a>
+                <a class="gnav__tel" href="tel:0678783790"><svg class="icon"><use href="#i-phone"/></svg>06-7878-3790</a>
+                <a class="btn" href="index.html#contact-form-anchor"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
+            </nav>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">ホーム</a>
-                <a href="index.html#reasons"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アセントが選ばれる理由</a>
-                <a href="index.html#services"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">サービス案内</a>
-                <a href="index.html#access"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">アクセス</a>
-                <a href="profile.html"
-                    class="block px-3 py-2 rounded-md text-base font-bold text-accent-500 bg-[#f8f2e3]">代表プロフィール</a>
-                <a href="index.html#blog"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent-500">コラム（労務ブログ）</a>
-                <a href="index.html#contact-form-anchor"
-                    class="block px-3 py-4 mt-2 text-center rounded-md text-base font-bold bg-accent-500 text-white">お問い合わせ</a>
-                <a href="tel:0678783790"
-                    class="block px-3 py-3 rounded-md text-base font-bold text-navy-900 hover:bg-gray-50 hover:text-accent-500">
-                    <i class="fas fa-phone mr-1"></i> 06-7878-3790
-                </a>
-            </div>
+            <button class="menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="menu-btn__bars" aria-hidden="true"><i></i></span>MENU
+            </button>
         </div>
     </header>
 
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="hero-section hero-sub-bg py-24 md:py-28 px-4">
-            <div class="container mx-auto text-center">
-                <p class="hero-kicker font-bold uppercase mb-6 text-sm md:text-base inline-block pl-4 pr-2 pb-2">
-                    代表プロフィール｜アセント社労士事務所
-                </p>
-                <h1 class="hero-title text-3xl md:text-5xl leading-[1.32] mb-6">
-                    労務の土台を整えて、<br class="hidden md:block">
-                    <span class="hero-title-accent">経営と現場に余裕</span>を取り戻す。
-                </h1>
-                <p class="hero-copy text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
-                    アルバイト1万人規模の組織を含む15年。<br class="hidden md:block">
-                    トラブルで削られる時間とメンタルを、まず止めます。
-                </p>
-            </div>
-        </section>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav aria-label="モバイルメニュー">
+            <a href="index.html">ホーム</a>
+            <a href="index.html#services">サービス案内</a>
+            <a href="pricing.html">サービス・料金</a>
+            <a href="index.html#blog">労務コラム</a>
+            <a href="profile.html" aria-current="page">代表プロフィール</a>
+            <a href="index.html#cases">改善事例</a>
+            <a href="index.html#access">アクセス</a>
+        </nav>
+        <div class="mobile-menu__actions">
+            <a class="btn" href="index.html#contact-form-anchor"><span class="btn__text"><span class="btn__meta">CONTACT</span>お問い合わせ</span><span class="btn__arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+            <a class="btn btn--paper" href="tel:0678783790"><span class="btn__text"><span class="btn__meta">平日 9:00–18:00</span>06-7878-3790</span><span class="btn__arrow"><svg class="icon"><use href="#i-phone"/></svg></span></a>
+        </div>
+    </div>
 
-        <!-- Profile Intro -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
-                <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
-                    <div class="w-full md:w-1/3">
-                        <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
-                            <img fetchpriority="high" width="1024" height="734" src="images/representative-new.webp" alt="長田 充博" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <span class="text-accent-500 font-bold tracking-widest text-sm">REPRESENTATIVE PROFILE</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2 mb-1">
-                            長田 充博
-                        </h2>
-                        <p class="text-gray-500 text-lg mb-6">Nagata Mitsuhiro</p>
+    <main id="main">
 
-                        <div class="prose prose-lg text-gray-600 leading-relaxed mb-8">
-                            <p class="mb-4">
-                                アセント社労士事務所 代表。<br>
-                                社会保険労務士。
-                            </p>
-                            <p>
-                                社会人になってすぐに感じたことがあります。労働基準法をはじめ、働くことのルールを、会社側も従業員側もほとんど知らないまま働いている。そして、そこからいろいろな問題が起きている。もっとみんなが知っていればいいのに、と思っていました。
-                            </p>
-                            <p>
-                                労働基準法、労災保険法、雇用保険法、健康保険法。これらは、働くことや人を雇うこと、経営することの土台です。その土台がぐちゃぐちゃなままで、上にいい制度を積もうとしても、うまくいきません。だから社労士の勉強を始めました。
-                            </p>
-                            <p>
-                                30歳のとき、社会保険労務士試験に合格。以後15年間、複合アミューズメント事業を展開するサービス企業の本社人事労務部門で、アルバイトスタッフ1万人を超える組織の労務管理と、日々起きるトラブルの対応にあたってきました。<br>
-                                そこで感じたのも、やはり同じことでした。トラブルの原点には、多かれ少なかれ「お互いに知らない」があります。
-                            </p>
-                            <p>
-                                そしてもう一つ、現場で何度も見てきたことがあります。社長や管理職が、部下の問題で消耗していく姿です。「問題社員の対応に疲れきって、このままではあの管理職が潰れてしまうのではないか」。社長からそんな相談を受けたことも、一度や二度ではありません。<br>
-                                労務管理で困っている人を減らしたい。それが、私がこの仕事をする理由です。
-                            </p>
+        <!-- ============================== HERO：机の上で開いた人事ファイル（フォルダ） ============================== -->
+        <section id="top" class="hero p-hero">
+            <div class="wrap">
+                <div class="folder" data-reveal>
+                    <p class="folder__tab"><span>PERSONNEL FILE</span>代表プロフィール</p>
+                    <div class="folder__sheet graph">
+                        <div class="folder__id">
+                            <figure class="id-photo">
+                                <img fetchpriority="high" width="1024" height="734" src="images/representative-new.webp" alt="長田 充博">
+                                <i class="id-photo__staple" aria-hidden="true"></i>
+                            </figure>
+                            <dl class="id-facts">
+                                <div><dt>氏名</dt><dd><b>長田 充博</b><small>Nagata Mitsuhiro</small></dd></div>
+                                <div><dt>資格</dt><dd>社会保険労務士</dd></div>
+                                <div><dt>経験</dt><dd>人事労務 15年<small>アルバイト1万人規模の組織</small></dd></div>
+                                <div><dt>拠点</dt><dd>大阪市中央区<small>2025年 開業</small></dd></div>
+                            </dl>
+                            <span class="hanko" aria-hidden="true">長田</span>
                         </div>
 
-                        <div class="flex flex-wrap gap-4">
-                            <span
-                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#労務トラブル対応</span>
-                            <span
-                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#現場主義</span>
-                            <span
-                                class="bg-gray-100 text-navy-900 px-4 py-2 rounded-full text-sm font-bold">#100kmマラソン</span>
+                        <div class="folder__main">
+                            <p class="folder__kicker">代表プロフィール｜アセント社労士事務所</p>
+                            <h1 class="p-hero__title">
+                                労務の土台を整えて、<br>
+                                <span class="mark">経営と現場に余裕</span>を取り戻す。
+                            </h1>
+                            <p class="folder__lead">
+                                アルバイト1万人規模の組織を含む15年。<br>
+                                トラブルで削られる時間とメンタルを、まず止めます。
+                            </p>
+                            <p class="folder__note hand">「なんとかなっている」うちに、手を打つ。</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Origin / なぜこの仕事をするのか -->
-        <section id="why" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">ORIGIN</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        「なんとかなる」が、<br class="md:hidden">いちばん怖い。
-                    </h2>
-                    <p class="text-gray-500 mt-4">私が社労士をしている理由は、大学時代のキャンプ場にあります。</p>
+        <!-- ============================== PROFILE：履歴書 ============================== -->
+        <section id="intro" class="section">
+            <div class="wrap">
+                <article class="sheet ruled margin-line" data-reveal>
+                    <p class="sheet__meta">REPRESENTATIVE PROFILE</p>
+                    <div class="dossier__name">
+                        <h2>長田 充博</h2><span>Nagata Mitsuhiro</span>
+                    </div>
+                    <p class="dossier__role">アセント社労士事務所 代表 ／ 社会保険労務士</p>
+
+                    <div class="sheet__body">
+                        <p>
+                            社会人になってすぐに感じたことがあります。労働基準法をはじめ、働くことのルールを、会社側も従業員側もほとんど知らないまま働いている。そして、そこからいろいろな問題が起きている。もっとみんなが知っていればいいのに、と思っていました。
+                        </p>
+                        <p>
+                            労働基準法、労災保険法、雇用保険法、健康保険法。これらは、働くことや人を雇うこと、経営することの土台です。その土台がぐちゃぐちゃなままで、上にいい制度を積もうとしても、うまくいきません。だから社労士の勉強を始めました。
+                        </p>
+                        <p>
+                            30歳のとき、社会保険労務士試験に合格。以後15年間、複合アミューズメント事業を展開するサービス企業の本社人事労務部門で、アルバイトスタッフ1万人を超える組織の労務管理と、日々起きるトラブルの対応にあたってきました。<br>
+                            そこで感じたのも、やはり同じことでした。トラブルの原点には、多かれ少なかれ「お互いに知らない」があります。
+                        </p>
+                        <p>
+                            そしてもう一つ、現場で何度も見てきたことがあります。社長や管理職が、部下の問題で消耗していく姿です。「問題社員の対応に疲れきって、このままではあの管理職が潰れてしまうのではないか」。社長からそんな相談を受けたことも、一度や二度ではありません。<br>
+                            労務管理で困っている人を減らしたい。それが、私がこの仕事をする理由です。
+                        </p>
+                    </div>
+
+                    <ul class="chips" aria-label="キーワード">
+                        <li>#労務トラブル対応</li>
+                        <li>#現場主義</li>
+                        <li>#100kmマラソン</li>
+                    </ul>
+                    <span class="stamp sheet__stamp" aria-hidden="true">Personnel File</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================== ORIGIN：なぜこの仕事をするのか ============================== -->
+        <section id="why" class="section section--alt">
+            <div class="wrap">
+                <div class="sec-head sec-head--center" data-reveal>
+                    <p class="tab-label"><span>No.01</span><span>Origin</span></p>
+                    <h2 class="sec-title">「なんとかなる」が、<br class="sp-br"><span class="mark">いちばん怖い。</span></h2>
+                    <p class="lead">私が社労士をしている理由は、大学時代のキャンプ場にあります。</p>
                 </div>
 
-                <div class="paper-card p-10 md:p-14 border-l-8 border-accent-500">
-                    <h3 class="text-2xl font-bold text-navy-900 mb-6">キャンプ場と大学を往復した4年間。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        大学時代、私はキャンプ場のボランティアに明け暮れていました。
-                        家と大学の往復ではなく、キャンプ場と大学の往復。それが私の4年間です。
+                <article class="story ruled margin-line taped" data-reveal>
+                    <h3><span class="hand-num" aria-hidden="true">1</span>キャンプ場と大学を往復した4年間。</h3>
+                    <p>
+                        大学時代、私はキャンプ場のボランティアに明け暮れていました。家と大学の往復ではなく、キャンプ場と大学の往復。それが私の4年間です。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        夢中になったのは、自然の中での活動でも、キャンプ道具や技術そのものでもありません。
-                        <strong class="text-navy-900 font-bold">私がハマったのは、「組織の運営」でした。</strong>
+                    <p>
+                        夢中になったのは、自然の中での活動でも、キャンプ道具や技術そのものでもありません。<strong>私がハマったのは、「組織の運営」でした。</strong>
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        キャンプ場には、毎日さまざまな人がやってきます。自分たちでキャンプを企画することもあり、
-                        長いものでは子どもたちを集めた3泊4日のキャンプも、何度も行いました。
+                    <p>
+                        キャンプ場には、毎日さまざまな人がやってきます。自分たちでキャンプを企画することもあり、長いものでは子どもたちを集めた3泊4日のキャンプも、何度も行いました。
                     </p>
 
-                    <h3 class="text-2xl font-bold text-navy-900 mt-10 mb-6">小さなミスが、命取りになる場所で。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
+                    <h3><span class="hand-num" aria-hidden="true">2</span>小さなミスが、命取りになる場所で。</h3>
+                    <p>
                         自然の中で行うキャンプでは、小さなミスが命取りになります。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        たとえば、キャンプの定番メニューのカレーライス。実は、飯盒でお米を炊くのは初心者にはなかなか難しいものです。
-                        火にかけすぎれば、お米は真っ黒。そうなれば、その食事は1食抜きです。
-                        「コンビニで別のものを買ってきます」というわけにはいきません。
-                        だから、初心者が多いキャンプではカレーライスを避けます。
+                    <p>
+                        たとえば、キャンプの定番メニューのカレーライス。実は、飯盒でお米を炊くのは初心者にはなかなか難しいものです。火にかけすぎれば、お米は真っ黒。そうなれば、その食事は1食抜きです。「コンビニで別のものを買ってきます」というわけにはいきません。だから、初心者が多いキャンプではカレーライスを避けます。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        子どもたちを集めたキャンプでは、いくつかの班に分けてリーダーを付けます。
-                        1人のリーダーに、子どもを何人付けるのが適切か。多すぎればリーダーの目が行き届かず、
-                        自然の中ではそれが致命的になりかねません。
-                        だから、1人のリーダーに10人以上の子どもは絶対に付けない。
+                    <p>
+                        子どもたちを集めたキャンプでは、いくつかの班に分けてリーダーを付けます。1人のリーダーに、子どもを何人付けるのが適切か。多すぎればリーダーの目が行き届かず、自然の中ではそれが致命的になりかねません。だから、1人のリーダーに10人以上の子どもは絶対に付けない。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        一歩間違えれば一大事になる環境で、どう人を配置し、どう段取りを組むか。
-                        その組織の運営に、私はすっかりハマっていました。
+                    <p>
+                        一歩間違えれば一大事になる環境で、どう人を配置し、どう段取りを組むか。その組織の運営に、私はすっかりハマっていました。
                     </p>
 
-                    <h3 class="text-2xl font-bold text-navy-900 mt-10 mb-6">それでも、ミスは起きる。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        どれだけ準備をしても、自然の中では予定どおりにいかないことが起きます。
-                        夜中に子どもが熱を出す。やり方を間違え炊事を失敗する。
-                        急な雨で、予定していた野外活動ができなくなる。
+                    <h3><span class="hand-num" aria-hidden="true">3</span>それでも、ミスは起きる。</h3>
+                    <p>
+                        どれだけ準備をしても、自然の中では予定どおりにいかないことが起きます。夜中に子どもが熱を出す。やり方を間違え炊事を失敗する。急な雨で、予定していた野外活動ができなくなる。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        そのたびに、まず何が起きているのかを確かめ、今すぐやることと後でいいことを分ける。
-                        保護者やスタッフに状況を説明し、次のキャンプでは同じことが起きないように段取りを見直す。
-                        キャンプ場では、そんな対応を数えきれないほど重ねてきました。
+                    <p>
+                        そのたびに、まず何が起きているのかを確かめ、今すぐやることと後でいいことを分ける。保護者やスタッフに状況を説明し、次のキャンプでは同じことが起きないように段取りを見直す。キャンプ場では、そんな対応を数えきれないほど重ねてきました。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        振り返ると、これはいま私が向き合っている労務トラブルの対応とそっくりです。
-                        体調を崩して休む社員が出る。手続きや運用を間違えて、トラブルになる。急な退職で人が足りなくなる。
-                        <strong class="text-navy-900 font-bold">事実を確かめ、順番を決めて手を打ち、仕組みで再発を防ぐ。</strong>
-                        キャンプ場で身につけた動き方が、そのまま生きています。
+                    <p>
+                        振り返ると、これはいま私が向き合っている労務トラブルの対応とそっくりです。体調を崩して休む社員が出る。手続きや運用を間違えて、トラブルになる。急な退職で人が足りなくなる。<strong>事実を確かめ、順番を決めて手を打ち、仕組みで再発を防ぐ。</strong>キャンプ場で身につけた動き方が、そのまま生きています。
                     </p>
 
-                    <h3 class="text-2xl font-bold text-navy-900 mt-10 mb-6">会社では「なんとかなる」。だから、気づけない。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        社会人になり、会社勤めを始めました。そこでは、小さなミスが命取りになることはめったにありません。
-                        いい意味でも悪い意味でも、なんとかなってしまうのです。
+                    <h3><span class="hand-num" aria-hidden="true">4</span>会社では「なんとかなる」。だから、気づけない。</h3>
+                    <p>
+                        社会人になり、会社勤めを始めました。そこでは、小さなミスが命取りになることはめったにありません。いい意味でも悪い意味でも、なんとかなってしまうのです。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        労働基準法が守られていない。社会保険の手続きが適切に行われていない。マネージャーが部下を管理できていない。
-                        そんな場面に、何度も出会いました。
+                    <p>
+                        労働基準法が守られていない。社会保険の手続きが適切に行われていない。マネージャーが部下を管理できていない。そんな場面に、何度も出会いました。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        <strong class="text-navy-900 font-bold">会社も、悪気があって問題を放置しているわけではありません。</strong>
-                        キャンプと違って、なんとかなってしまうから問題が表に出ない。だから、気づかない。
+                    <p>
+                        <strong>会社も、悪気があって問題を放置しているわけではありません。</strong>キャンプと違って、なんとかなってしまうから問題が表に出ない。だから、気づかない。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        <strong class="text-navy-900 font-bold">でもその問題は、じわじわと人と会社を蝕んでいきます。</strong>
-                        人が辞め、会社は採用や教育に時間とコストを取られ、利益はいつまでも安定しない。
-                        そして、こうした会社が決して少なくないことに気づきました。
+                    <p>
+                        <strong>でもその問題は、じわじわと人と会社を蝕んでいきます。</strong>人が辞め、会社は採用や教育に時間とコストを取られ、利益はいつまでも安定しない。そして、こうした会社が決して少なくないことに気づきました。
                     </p>
 
-                    <div class="border-t border-gray-200 my-8"></div>
-
-                    <h3 class="text-2xl font-bold text-navy-900 mb-6">問題に気づき、手を打てる組織へ。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        問題をきちんと認識し、適切に対応できる組織にしていきたい。
-                        その先に、会社と働く人がwin-winでいられる関係をつくりたい。
+                    <h3 class="story__turn"><span class="hand-num" aria-hidden="true">5</span>問題に気づき、手を打てる組織へ。</h3>
+                    <p>
+                        問題をきちんと認識し、適切に対応できる組織にしていきたい。その先に、会社と働く人がwin-winでいられる関係をつくりたい。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-8">
+                    <p>
                         そのために、私は社労士をしています。
                     </p>
-                    <p class="text-xl font-bold text-navy-900 leading-relaxed">
-                        「なんとかなっている」うちに、手を打つ。<br>
-                        <span class="text-accent-500">会社と働く人の、どちらにとってもいい組織づくりをお手伝いします。</span>
-                    </p>
-                </div>
+                    <div class="story__close sticky">
+                        <p>
+                            「なんとかなっている」うちに、手を打つ。<br>
+                            <span>会社と働く人の、どちらにとってもいい組織づくりをお手伝いします。</span>
+                        </p>
+                    </div>
+                </article>
 
-                <div class="mt-10 grid sm:grid-cols-3 gap-4">
-                    <div class="paper-card p-6">
-                        <p class="text-accent-500 font-bold mb-2"><i class="fas fa-search mr-2"></i>見えていない問題に気づく</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">労働時間、社会保険の手続き、就業規則の運用。「なんとかなっている」部分を点検し、表に出ていない問題を早めに見つけます。</p>
+                <div class="points">
+                    <div class="sticky" data-reveal>
+                        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+                        <h3>見えていない問題に気づく</h3>
+                        <p>労働時間、社会保険の手続き、就業規則の運用。「なんとかなっている」部分を点検し、表に出ていない問題を早めに見つけます。</p>
                     </div>
-                    <div class="paper-card p-6">
-                        <p class="text-accent-500 font-bold mb-2"><i class="fas fa-sitemap mr-2"></i>人の配置と段取りを整える</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">管理職ひとりが見られる部下の数、役割分担、ルールの回し方。現場で回る組織の段取りを、一緒に組み立てます。</p>
+                    <div class="sticky sticky--blue" data-reveal style="--d:.08s">
+                        <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
+                        <h3>人の配置と段取りを整える</h3>
+                        <p>管理職ひとりが見られる部下の数、役割分担、ルールの回し方。現場で回る組織の段取りを、一緒に組み立てます。</p>
                     </div>
-                    <div class="paper-card p-6">
-                        <p class="text-accent-500 font-bold mb-2"><i class="fas fa-handshake mr-2"></i>会社と働く人のwin-winへ</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">人が辞めない、採用や教育のコストが膨らまない。その積み重ねで、利益が安定する会社づくりを支えます。</p>
+                    <div class="sticky sticky--green" data-reveal style="--d:.16s">
+                        <svg class="icon" aria-hidden="true"><use href="#i-growth"/></svg>
+                        <h3>会社と働く人のwin-winへ</h3>
+                        <p>人が辞めない、採用や教育のコストが膨らまない。その積み重ねで、利益が安定する会社づくりを支えます。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why / Office Name -->
-        <section class="py-20 bg-navy-900 text-white">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">WHY ASCENT</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">
-                        「アセント」に込めたこと
-                    </h2>
-                </div>
-
-                <p class="text-2xl md:text-3xl font-bold text-accent-500 text-center mb-10 leading-relaxed">
-                    アセント（Ascent）には、<br class="md:hidden">「上昇」という意味があります。
-                </p>
-
-                <div class="space-y-6 text-gray-300 leading-loose">
-                    <p>
-                        経営者の方も、働く従業員の方も、労務の知識と働き方を一段ずつ上昇させていく。その伴走をしたい。そう思って付けた名前です。
-                    </p>
-                    <p>
-                        労務——つまり「人の問題」で疲弊している会社を、よりよい方向へ導く。会社も従業員も、一緒に上昇できるようにする。それが、この名前に込めた私の役割です。
-                    </p>
-                    <p>
-                        終身雇用と年功序列。新卒で一つの会社に入れば、定年まで会社が面倒を見てくれる。だから何も考えなくていい、仕事だけ一筋にやっていればいい。副業なんてとんでもない、リスキリングなんて転職する気か——そういう空気が、長いあいだありました。
-                    </p>
-                    <p>
-                        結果として、会社は従業員に学ばせず、従業員も学ばなかった。表面的にはもう崩れています。転職は当たり前になり、年功序列も崩れてきました。ただ、根のところにはまだ残っている気がしています。
-                    </p>
-                    <p class="text-white font-bold text-lg border-l-4 border-accent-500 pl-5 py-1">
+        <!-- ============================== WHY ASCENT：屋号メモ ============================== -->
+        <section class="price-band">
+            <div class="wrap">
+                <article class="name-memo ruled margin-line taped" data-reveal>
+                    <span class="stamp" aria-hidden="true">Why Ascent</span>
+                    <p class="tab-label"><span>No.02</span><span>Why Ascent</span></p>
+                    <h2 class="sec-title">「アセント」に込めたこと</h2>
+                    <p class="name-memo__big">アセント（Ascent）には、<br class="sp-br">「上昇」という意味があります。</p>
+                    <div class="name-memo__body">
+                        <p>
+                            経営者の方も、働く従業員の方も、労務の知識と働き方を一段ずつ上昇させていく。その伴走をしたい。そう思って付けた名前です。
+                        </p>
+                        <p>
+                            労務——つまり「人の問題」で疲弊している会社を、よりよい方向へ導く。会社も従業員も、一緒に上昇できるようにする。それが、この名前に込めた私の役割です。
+                        </p>
+                        <p>
+                            終身雇用と年功序列。新卒で一つの会社に入れば、定年まで会社が面倒を見てくれる。だから何も考えなくていい、仕事だけ一筋にやっていればいい。副業なんてとんでもない、リスキリングなんて転職する気か——そういう空気が、長いあいだありました。
+                        </p>
+                        <p>
+                            結果として、会社は従業員に学ばせず、従業員も学ばなかった。表面的にはもう崩れています。転職は当たり前になり、年功序列も崩れてきました。ただ、根のところにはまだ残っている気がしています。
+                        </p>
+                    </div>
+                    <p class="name-memo__quote">
                         企業も、従業員も、働き方をアセント（上昇）させていく。<br>
                         その伴走をすることが、この事務所の役割です。
                     </p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- Vision -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">VISION</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        目指す社労士像
-                    </h2>
+        <!-- ============================== VISION ============================== -->
+        <section id="vision" class="section">
+            <div class="wrap">
+                <div class="sec-head sec-head--center" data-reveal>
+                    <p class="tab-label"><span>No.03</span><span>Vision</span></p>
+                    <h2 class="sec-title">目指す社労士像</h2>
                 </div>
 
-                <div class="paper-card p-10 md:p-14 border-l-8 border-accent-500">
-                    <h3 class="text-2xl font-bold text-navy-900 mb-6">まず、消耗を止める。話はそこからです。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        問題社員への対応、ハラスメント、長時間労働、育児・介護との両立。
-                        こうした問題が起きると、担当者も、上長も、最後は社長までもが消耗します。
-                        時間を大きく使い、気持ちも削られる。だから本業に集中できなくなる。
-                        生産性が落ち、長時間労働につながり、売上にも響く。悪循環です。
+                <article class="story ruled margin-line taped" data-reveal>
+                    <h3><span class="hand-num" aria-hidden="true">1</span>まず、消耗を止める。話はそこからです。</h3>
+                    <p>
+                        問題社員への対応、ハラスメント、長時間労働、育児・介護との両立。こうした問題が起きると、担当者も、上長も、最後は社長までもが消耗します。時間を大きく使い、気持ちも削られる。だから本業に集中できなくなる。生産性が落ち、長時間労働につながり、売上にも響く。悪循環です。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        私の役割は、まずこの悪循環を止めることです。
-                        社会保険の手続き、就業規則の整備、制度の設計、そして労務トラブルへの対応。
-                        これらを引き受けることで、時間にも、気持ちにも、余裕が生まれます。
+                    <p>
+                        私の役割は、まずこの悪循環を止めることです。社会保険の手続き、就業規則の整備、制度の設計、そして労務トラブルへの対応。これらを引き受けることで、時間にも、気持ちにも、余裕が生まれます。
                     </p>
 
-                    <div class="border-t border-gray-200 my-8"></div>
-
-                    <h3 class="text-2xl font-bold text-navy-900 mb-6">そして、余裕ができた先に。</h3>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        はじめにお断りしておくと、仕事に手を抜いていい、という話ではありません。
-                        仕事は大事です。目の前の仕事に本気で向き合った経験のない人が、外で何かを得られるとも思いません。
-                        ただ、<strong class="text-navy-900 font-bold">仕事だけでは足りなくなった</strong>。そう考えています。
+                    <h3 class="story__turn"><span class="hand-num" aria-hidden="true">2</span>そして、余裕ができた先に。</h3>
+                    <p>
+                        はじめにお断りしておくと、仕事に手を抜いていい、という話ではありません。仕事は大事です。目の前の仕事に本気で向き合った経験のない人が、外で何かを得られるとも思いません。ただ、<strong>仕事だけでは足りなくなった</strong>。そう考えています。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        理由は、会社の中だけで人を育てきることが難しくなったからです。
-                        AIのように日進月歩で変わっていく技術があり、働き方も価値観も多様化して、
-                        「これが正解」と言い切れることが減りました。
-                        社内の経験と研修だけで、この変化の速さに追いつくのは、もう無理があります。
+                    <p>
+                        理由は、会社の中だけで人を育てきることが難しくなったからです。AIのように日進月歩で変わっていく技術があり、働き方も価値観も多様化して、「これが正解」と言い切れることが減りました。社内の経験と研修だけで、この変化の速さに追いつくのは、もう無理があります。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        だから私は、社員が社外に出て学ぶことを、遠回りだとは思いません。
-                        外で身につけた知識も、社外で出会った人とのつながりも、最後は会社に返ってきます。
-                        <strong class="text-navy-900 font-bold">社員を外に出したほうが、結局は会社の成長につながる。</strong>
-                        これが、私が働き方にこだわる理由です。
+                    <p>
+                        だから私は、社員が社外に出て学ぶことを、遠回りだとは思いません。外で身につけた知識も、社外で出会った人とのつながりも、最後は会社に返ってきます。<strong>社員を外に出したほうが、結局は会社の成長につながる。</strong>これが、私が働き方にこだわる理由です。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        私自身がそうでした。20代前半は、仕事と家との往復だけで過ごしていました。
-                        仕事はしていましたし、そこで学んだこともあります。ただ、外から学ぶ機会はまったく持っていませんでした。
-                        30代でランニングを始め、チームに入り、大会の運営やカメラマンを引き受けるようになって、
-                        ようやく仕事以外の場所でも自分が育っていく感覚を持てました。
+                    <p>
+                        私自身がそうでした。20代前半は、仕事と家との往復だけで過ごしていました。仕事はしていましたし、そこで学んだこともあります。ただ、外から学ぶ機会はまったく持っていませんでした。30代でランニングを始め、チームに入り、大会の運営やカメラマンを引き受けるようになって、ようやく仕事以外の場所でも自分が育っていく感覚を持てました。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-6">
-                        とはいえ、社員が外に出るには、時間と気持ちの余裕が要ります。
-                        労務が荒れている会社では、その余裕が真っ先に失われます。
-                        週休3日制やフレックス、在宅勤務といった制度も、入れるだけでは足りません。
-                        なぜその制度を入れるのか、会社の考えをあわせて伝える必要があります。
+                    <p>
+                        とはいえ、社員が外に出るには、時間と気持ちの余裕が要ります。労務が荒れている会社では、その余裕が真っ先に失われます。週休3日制やフレックス、在宅勤務といった制度も、入れるだけでは足りません。なぜその制度を入れるのか、会社の考えをあわせて伝える必要があります。
                     </p>
-                    <p class="text-gray-600 leading-loose mb-8">
-                        ただ、いまはその手前で、そもそも「できない環境」にある会社が多いように思います。
-                        だからまずは、手続きと制度設計で「できる環境」をつくる。そこに貢献したいと考えています。
+                    <p>
+                        ただ、いまはその手前で、そもそも「できない環境」にある会社が多いように思います。だからまずは、手続きと制度設計で「できる環境」をつくる。そこに貢献したいと考えています。
                     </p>
-                    <p class="text-xl font-bold text-navy-900 leading-relaxed">
-                        ワークライフバランスではなく、ワークライフハーモニーへ。<br>
-                        <span class="text-accent-500">その入口を、労務の側から整えます。</span>
-                    </p>
-                </div>
+                    <div class="story__close sticky sticky--green">
+                        <p>
+                            ワークライフバランスではなく、ワークライフハーモニーへ。<br>
+                            <span>その入口を、労務の側から整えます。</span>
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- What I Handle -->
-        <section id="what-i-do" class="py-20 bg-white">
-            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
-                <div class="text-center mb-14">
-                    <span class="text-accent-500 font-bold tracking-wider">WHAT I DO</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        主に担っていること
-                    </h2>
+        <!-- ============================== WHAT I DO ============================== -->
+        <section id="what-i-do" class="section section--alt">
+            <div class="wrap">
+                <div class="sec-head sec-head--center" data-reveal>
+                    <p class="tab-label"><span>No.04</span><span>What I Do</span></p>
+                    <h2 class="sec-title">主に担っていること</h2>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-7">
-                    <div class="paper-card p-8">
-                        <p class="text-accent-500 text-xs font-bold tracking-widest mb-2">MAIN</p>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">労務トラブル対応</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            問題社員への指導、ハラスメント事案、長時間労働、育児・介護との両立。感情と法律がぶつかる場面で、事実を整理し、何をどの順番で進めるかを決めます。
-                        </p>
-                    </div>
-                    <div class="paper-card p-8">
-                        <p class="text-gray-400 text-xs font-bold tracking-widest mb-2">BASE</p>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">社会保険手続き</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            入退社にともなう届出、各種給付の申請、日々の手続き。手前の実務を確実に回すことが、トラブルを未然に防ぐ土台になります。
-                        </p>
-                    </div>
-                    <div class="paper-card p-8">
-                        <p class="text-gray-400 text-xs font-bold tracking-widest mb-2">DESIGN</p>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">制度設計・就業規則</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            就業規則の策定と見直し、働き方の制度設計。トラブル対応で得た経験を、同じことを繰り返さないためのルールと運用に変えます。
-                        </p>
-                    </div>
+                <div class="notes p-notes">
+                    <article class="note-card ruled margin-line" data-reveal>
+                        <span class="hand-num" aria-hidden="true">01</span>
+                        <span class="note-card__label">MAIN</span>
+                        <h3>労務トラブル対応</h3>
+                        <p class="note-card__desc">問題社員への指導、ハラスメント事案、長時間労働、育児・介護との両立。感情と法律がぶつかる場面で、事実を整理し、何をどの順番で進めるかを決めます。</p>
+                    </article>
+                    <article class="note-card note-card--routine ruled margin-line" data-reveal style="--d:.08s">
+                        <span class="hand-num" aria-hidden="true">02</span>
+                        <span class="note-card__label">BASE</span>
+                        <h3>社会保険手続き</h3>
+                        <p class="note-card__desc">入退社にともなう届出、各種給付の申請、日々の手続き。手前の実務を確実に回すことが、トラブルを未然に防ぐ土台になります。</p>
+                    </article>
+                    <article class="note-card note-card--future ruled margin-line" data-reveal style="--d:.16s">
+                        <span class="hand-num" aria-hidden="true">03</span>
+                        <span class="note-card__label">DESIGN</span>
+                        <h3>制度設計・就業規則</h3>
+                        <p class="note-card__desc">就業規則の策定と見直し、働き方の制度設計。トラブル対応で得た経験を、同じことを繰り返さないためのルールと運用に変えます。</p>
+                    </article>
                 </div>
 
-                <div class="text-center mt-10">
-                    <a href="index.html#services"
-                        class="text-navy-900 font-bold border-b-2 border-accent-500 hover:text-accent-500 transition">サービスの詳細を見る
-                        &rarr;</a>
-                </div>
+                <p class="p-more" data-reveal>
+                    <a href="index.html#services" class="text-link">サービスの詳細を見る<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </p>
             </div>
         </section>
 
-        <!-- Career History -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
-                <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">CAREER</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-2">
-                        これまでの経歴
-                    </h2>
+        <!-- ============================== CAREER：年表 ============================== -->
+        <section id="career" class="section">
+            <div class="wrap">
+                <div class="sec-head sec-head--center" data-reveal>
+                    <p class="tab-label"><span>No.05</span><span>Career</span></p>
+                    <h2 class="sec-title">これまでの経歴</h2>
                 </div>
 
-                <!-- Item 0: 原点 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">小学5・6年</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">放課後の「班活動」が、いまの原点。</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            担任は「教科書を覚えるだけの勉強に何の意味があるんだ」と問う先生でした。放課後は自分たちで班をつくり、何をするかから考える。畑班、サイエンス班、スポーツ班。<br>
-                            私がいたサイエンス班では「人が入れるくらい大きなシャボン玉を作ろう」となり、グリセリンという薬品が要るとわかりました。買うにはお金が要る。ではどうするか——廃品回収で自分たちで稼ぐ。一軒ずつ訪ねて古新聞を集め、教室の後ろが新聞で埋まりました。<br>
-                            学校の勉強だけが全てではない。外にいろんな世界がある。そう気づけた2年間でした。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 1: 中学・高校 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">中学・高校</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">学校の外に出続ける。</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            中学ではYMCAのスキー、高校では夏休みを使ってオーストラリアへ短期留学。学校だけで学生生活を終えるのはもったいない、という感覚がずっとありました。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 2: 2000 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">2000年 前後</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">大学生時代　4年間、キャンプ場に通う</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            半分ボランティアのような形で、4年間キャンプ場に関わりました。林間学校で来る小中学生の飯盒炊爨を手伝い、キャンプファイヤーを企画して、ゲームや歌を回す。自分たちでキャンプを企画し、参加者を集めることもありました。<br>
-                            働くって何だろう、喜んでもらうって何だろう。社労士という言葉はまだ知りませんでしたが、興味の芽はこのあたりにあったのかもしれません。<br>
-                            一歩間違えれば一大事になる環境で、人の配置や段取りを考える。こうして組織の運営に携わった経験が、<a href="#why" class="text-accent-500 font-bold border-b border-accent-500 hover:text-accent-600">私がこの仕事をする理由</a>につながっています。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 3: 2002 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">2002年</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">就職。働き方への疑問と、20代前半のモヤモヤ。</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            BtoBの営業を学びました。法人営業だったので他社の方と接する機会も多く、自然といろいろな会社の働き方を見聞きすることに。同時に、みんな働くルールを知らないまま働いている、という違和感も強くなっていきました。<br>
-                            一方でこの頃の私自身は、仕事と家との往復になっていました。仕事には打ち込んでいましたが、そこから外に出る機会をまるで持っていなかった。いま振り返ると、そこがもったいなかったと思います。<br>
-                            社内で総務部への公募があり、応募したところ異動が叶い、そこで労務や社会保険を学びました。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 4: 2010 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">2010年</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">転職。社労士資格合格。</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            転職、その直後に社労士試験合格（3回目の受験）。以後15年にわたり、1万人規模のアルバイト労務管理を担当。<br>
-                            社会保険手続き、就業規則変更、労基署対応、ハラスメント事案などの労務トラブルを一手に引き受ける。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 5: 30代 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1 pb-12 border-b border-gray-100">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">30代</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">走り始める。往復だけの生活から抜け出す。</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            ランニングを始め、やがてチームに入りました。大会の運営を手伝い、カメラマンもやりました。仕事の外にも自分が育つ場所があると、はっきり実感した時期です。<br>
-                            そこで得た経験や人とのつながりは、巡り巡って本業にも返ってきました。いまこうして独立しているのも、この頃に外へ出たからだと思っています。仕事と家との往復だけを続けていたら、たぶん今もサラリーマンをやっていました。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 6: 2025 -->
-                <div class="relative z-10 flex gap-8 items-start">
-                    <div class="flex-shrink-0 w-10 flex justify-center mt-1">
-                        <div class="timeline-dot w-4 h-4 rounded-full"></div>
-                    </div>
-                    <div class="flex-1">
-                        <span class="text-accent-500 font-bold text-lg block mb-1">2025年</span>
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">アセント社労士事務所 開業</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            労務の土台を整えることで、経営者にも現場にも余裕を取り戻す。その伴走をするために独立しました。<br>
-                            労務の問題でひとりで悩む社長・管理職を、ひとりでも減らしたい。その思いは、あの頃から変わっていません。
-                        </p>
-                    </div>
-                </div>
+                <ol class="timeline">
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">小学5・6年</p>
+                            <h3>放課後の「班活動」が、いまの原点。</h3>
+                            <p>
+                                担任は「教科書を覚えるだけの勉強に何の意味があるんだ」と問う先生でした。放課後は自分たちで班をつくり、何をするかから考える。畑班、サイエンス班、スポーツ班。<br>
+                                私がいたサイエンス班では「人が入れるくらい大きなシャボン玉を作ろう」となり、グリセリンという薬品が要るとわかりました。買うにはお金が要る。ではどうするか——廃品回収で自分たちで稼ぐ。一軒ずつ訪ねて古新聞を集め、教室の後ろが新聞で埋まりました。<br>
+                                学校の勉強だけが全てではない。外にいろんな世界がある。そう気づけた2年間でした。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">中学・高校</p>
+                            <h3>学校の外に出続ける。</h3>
+                            <p>
+                                中学ではYMCAのスキー、高校では夏休みを使ってオーストラリアへ短期留学。学校だけで学生生活を終えるのはもったいない、という感覚がずっとありました。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">2000年 前後</p>
+                            <h3>大学生時代　4年間、キャンプ場に通う</h3>
+                            <p>
+                                半分ボランティアのような形で、4年間キャンプ場に関わりました。林間学校で来る小中学生の飯盒炊爨を手伝い、キャンプファイヤーを企画して、ゲームや歌を回す。自分たちでキャンプを企画し、参加者を集めることもありました。<br>
+                                働くって何だろう、喜んでもらうって何だろう。社労士という言葉はまだ知りませんでしたが、興味の芽はこのあたりにあったのかもしれません。<br>
+                                一歩間違えれば一大事になる環境で、人の配置や段取りを考える。こうして組織の運営に携わった経験が、<a href="#why" class="text-link">私がこの仕事をする理由</a>につながっています。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">2002年</p>
+                            <h3>就職。働き方への疑問と、20代前半のモヤモヤ。</h3>
+                            <p>
+                                BtoBの営業を学びました。法人営業だったので他社の方と接する機会も多く、自然といろいろな会社の働き方を見聞きすることに。同時に、みんな働くルールを知らないまま働いている、という違和感も強くなっていきました。<br>
+                                一方でこの頃の私自身は、仕事と家との往復になっていました。仕事には打ち込んでいましたが、そこから外に出る機会をまるで持っていなかった。いま振り返ると、そこがもったいなかったと思います。<br>
+                                社内で総務部への公募があり、応募したところ異動が叶い、そこで労務や社会保険を学びました。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">2010年</p>
+                            <h3>転職。社労士資格合格。</h3>
+                            <p>
+                                転職、その直後に社労士試験合格（3回目の受験）。以後15年にわたり、1万人規模のアルバイト労務管理を担当。<br>
+                                社会保険手続き、就業規則変更、労基署対応、ハラスメント事案などの労務トラブルを一手に引き受ける。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">30代</p>
+                            <h3>走り始める。往復だけの生活から抜け出す。</h3>
+                            <p>
+                                ランニングを始め、やがてチームに入りました。大会の運営を手伝い、カメラマンもやりました。仕事の外にも自分が育つ場所があると、はっきり実感した時期です。<br>
+                                そこで得た経験や人とのつながりは、巡り巡って本業にも返ってきました。いまこうして独立しているのも、この頃に外へ出たからだと思っています。仕事と家との往復だけを続けていたら、たぶん今もサラリーマンをやっていました。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tl tl--now" data-reveal>
+                        <div class="tl__card">
+                            <p class="tl__when">2025年</p>
+                            <h3>アセント社労士事務所 開業</h3>
+                            <p>
+                                労務の土台を整えることで、経営者にも現場にも余裕を取り戻す。その伴走をするために独立しました。<br>
+                                「なんとかなっている」うちに問題に気づき、手を打てる組織をつくる。キャンプ場で組織の運営にハマったあの頃の感覚が、いまの仕事の軸になっています。
+                            </p>
+                            <span class="stamp" aria-hidden="true">Now</span>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <!-- Hobbies -->
-        <section class="py-20 bg-navy-900 text-white">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                    <span class="text-accent-500 font-bold tracking-wider">HOBBIES</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">
-                        趣味・プライベート
-                    </h2>
+        <!-- ============================== HOBBIES ============================== -->
+        <section id="hobbies" class="section section--alt">
+            <div class="wrap">
+                <div class="sec-head sec-head--center" data-reveal>
+                    <p class="tab-label"><span>No.06</span><span>Hobbies</span></p>
+                    <h2 class="sec-title">趣味・プライベート</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <img loading="lazy" decoding="async" width="1024" height="682" src="images/hobby-running.webp" alt="マラソン画像"
-                            class="rounded-xl shadow-2xl border-4 border-white/10">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-accent-500 mb-4">100kmウルトラマラソン</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
-                            年に数回、100km以上を走るウルトラマラソン（トレイルランニング）の大会に出場しています。
-                            ただひたすらにゴールを目指して走り続ける時間は、自分自身と向き合う大切な時間です。
+                <div class="hobby">
+                    <figure class="polaroid taped" data-reveal>
+                        <div class="polaroid__img">
+                            <img loading="lazy" decoding="async" width="1024" height="682" src="images/hobby-running.webp" alt="マラソン画像">
+                        </div>
+                        <figcaption><span>100kmウルトラマラソン</span></figcaption>
+                    </figure>
+                    <div class="hobby__text" data-reveal style="--d:.1s">
+                        <h3>100kmウルトラマラソン</h3>
+                        <p>
+                            年に数回、100km以上を走るウルトラマラソン（トレイルランニング）の大会に出場しています。ただひたすらにゴールを目指して走り続ける時間は、自分自身と向き合う大切な時間です。
                         </p>
-                        <p class="text-gray-300 leading-relaxed mb-6">
+                        <p>
                             マラソンは準備が9割と言われます。日々の練習、食事管理、道具の準備・・・
                             あらゆるトラブルを想定して準備する姿勢は、社労士業務における「リスク管理」にも通じていると感じています。<br>
                             そして残り1割は何が起こっても何とかする力。
                         </p>
-                        <p class="font-bold text-white text-lg">
-                            「諦めずに最後まで伴走する」。<br>
-                            それが私のモットーです。
-                        </p>
+                        <div class="sticky sticky--pink hobby__motto">
+                            <p>
+                                「諦めずに最後まで伴走する」。<br>
+                                それが私のモットーです。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="profile-cta" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-navy-900 mb-6">まずは一度、お話を聞かせてください</h2>
-                <p class="text-gray-600 mb-8">
-                    ひとりで抱え込む前に。「こんなことで相談していいのか」と迷うことほど、早めに聞かせてください。<br>
-                    御社の現状や課題感、将来のビジョンなど、ざっくばらんにお話ししましょう。
-                </p>
-                <a href="index.html#contact-form-anchor"
-                    class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-105">
-                    <i class="fas fa-envelope mr-2"></i> お問い合わせ
-                </a>
+        <!-- ============================== CTA：手紙 ============================== -->
+        <section id="profile-cta" class="section">
+            <div class="wrap">
+                <div class="letter ruled margin-line" data-reveal>
+                    <span class="stamp" aria-hidden="true">Contact</span>
+                    <p class="tab-label"><span>No.07</span><span>Contact</span></p>
+                    <h2 class="sec-title">まずは一度、お話を聞かせてください</h2>
+                    <p class="body">
+                        ひとりで抱え込む前に。「こんなことで相談していいのか」と迷うことほど、早めに聞かせてください。<br>
+                        御社の現状や課題感、将来のビジョンなど、ざっくばらんにお話ししましょう。
+                    </p>
+                    <div class="letter__actions">
+                        <a class="btn" href="index.html#contact-form-anchor"><span class="btn__text"><span class="btn__meta">CONTACT</span>お問い合わせ</span><span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+                        <a class="btn btn--paper" href="tel:0678783790"><span class="btn__text"><span class="btn__meta">平日 9:00–18:00</span>06-7878-3790</span><span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span></a>
+                    </div>
+                    <p class="letter__sign">アセント社労士事務所 代表　長田 充博</p>
+                </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-12">
-        <div class="container mx-auto px-4 md:px-8 text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
                 <div>
-                    <h2 class="text-white text-xl font-bold mb-2">アセント社労士事務所</h2>
-                    <p class="text-sm">大阪のサービス業と“そこで働く人”を守る。</p>
+                    <div class="footer-brand">
+                        <img src="images/ascent-logo.webp" alt="" width="760" height="759" loading="lazy">
+                        <h2>アセント社労士事務所</h2>
+                    </div>
+                    <p class="footer-tag">その労務の迷いに、現場で回る答えを。</p>
+                    <p class="footer-addr">〒541-0054 大阪府大阪市中央区南本町2-3-12 EDGE本町3階<br>TEL <a href="tel:0678783790">06-7878-3790</a> ／ 平日 9:00〜18:00</p>
                 </div>
-                <div class="flex flex-col md:flex-row gap-6 text-sm">
-                    <a href="index.html" class="hover:text-white">ホーム</a>
-                    <a href="index.html#reasons" class="hover:text-white">選ばれる理由</a>
-                    <a href="index.html#services" class="hover:text-white">サービス案内</a>
-                    <a href="privacy-policy.html" class="hover:text-white">プライバシーポリシー</a>
-                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <a href="index.html">ホーム</a>
+                    <a href="index.html#lead-magnet">無料診断</a>
+                    <a href="index.html#cases">改善事例</a>
+                    <a href="index.html#reasons">選ばれる理由</a>
+                    <a href="index.html#services">サービス案内</a>
+                    <a href="pricing.html">サービス・料金</a>
+                    <a href="blog-list.html">労務コラム一覧</a>
+                    <a href="privacy-policy.html">プライバシーポリシー</a>
+                </nav>
             </div>
-            <div class="mt-12 text-center text-xs text-gray-600">
-                &copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.
-            </div>
+            <p class="footer-copy">&copy; Ascent Labor and Social Security Attorney Office. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+    <nav class="dock" id="dock" aria-label="お問い合わせショートカット">
+        <a href="tel:0678783790"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>電話する</a>
+        <a class="dock__main" href="labor-stability-diagnosis.html" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>5分診断（無料）</a>
+        <a href="index.html#contact-form-anchor"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>相談する</a>
+    </nav>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="js/home.js" defer></script>
     <!-- 計測 -->
     <script src="js/analytics.js" defer></script>
 </body>

@@ -173,13 +173,14 @@
 
     // --- Mobile dock: ヒーローを過ぎたら出し、フォームが見えたら隠す ---------------
     var dock = document.getElementById('dock');
-    var hero = document.getElementById('home');
+    var hero = document.querySelector('.hero');
     var contact = document.getElementById('contact-form-anchor');
-    if (dock && 'IntersectionObserver' in window) {
+    if (dock && hero && 'IntersectionObserver' in window) {
         var pastHero = false, atContact = false;
         var sync = function () { dock.classList.toggle('is-shown', pastHero && !atContact); };
         new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; sync(); }).observe(hero);
-        new IntersectionObserver(function (e) { atContact = e[0].isIntersecting; sync(); }).observe(contact);
+        // フォームのないページ（プロフィールなど）ではヒーローを過ぎたら出しっぱなし
+        if (contact) new IntersectionObserver(function (e) { atContact = e[0].isIntersecting; sync(); }).observe(contact);
     }
 
     // --- Video: 動きを減らす設定ではユーザー操作に任せる ------------------------------

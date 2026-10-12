@@ -1,0 +1,260 @@
+/* ==========================================================================
+   代表プロフィール — home.css（相談ファイル）の上に載せる、このページだけの部品
+   原則は home.css 冒頭と同じ：傾けるのはスタンプと手書き数字だけ、影は右下固定。
+   ========================================================================== */
+
+.gnav__link.is-current { text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
+   Hero：机の上で開いた人事ファイル
+   トップの「用紙＋ポラロイド＋付箋」とは別の構図にする：
+   マニラフォルダ（見出しタブ付き）の中に、方眼の個人票。証明写真はホチキス留め、名前に朱の印。
+   -------------------------------------------------------------------------- */
+
+.folder {
+    --manila: #e3cf9c;
+    --manila-deep: #cdb57a;
+    position: relative; max-width: 1120px; margin: 26px auto 0;
+    padding: 16px;
+    background: var(--manila);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, .18), transparent 40%);
+    border: 1px solid var(--manila-deep); border-radius: 0 6px 6px 6px;
+    box-shadow: var(--lift-3);
+}
+.folder__tab {
+    position: absolute; left: -1px; bottom: 100%;
+    display: inline-flex; align-items: baseline; gap: 10px;
+    padding: 8px 22px 6px;
+    background: var(--manila); border: 1px solid var(--manila-deep); border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    font-family: var(--serif); font-weight: 700; font-size: .9rem; color: var(--ink);
+}
+.folder__tab span { font-family: var(--mono); font-size: .64rem; font-weight: 600; letter-spacing: .16em; color: #6b5a2c; }
+.folder__sheet {
+    position: relative;
+    display: grid; gap: 28px;
+    padding: 30px 22px 30px;
+    border: 1px solid var(--edge);
+    box-shadow: 2px 2px 0 rgba(120, 95, 40, .25);
+}
+
+/* 個人票：証明写真＋項目 */
+.folder__id { position: relative; display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: start; }
+.id-photo {
+    position: relative; margin: 0;
+    padding: 5px; background: #fff; border: 1px solid var(--edge);
+    box-shadow: var(--lift-0);
+}
+.id-photo img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: 48% 22%; background: var(--ink); }
+.id-photo__staple { /* ホチキス */
+    position: absolute; top: -5px; left: 50%; width: 34px; height: 9px; margin-left: -17px;
+    border: 2px solid #9aa0a8; border-bottom: 0; border-radius: 2px 2px 0 0;
+}
+.id-facts { margin: 0; border-top: 2px solid var(--ink); }
+.id-facts > div { display: grid; grid-template-columns: 3.2em 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--edge-strong); }
+.id-facts dt { font-family: var(--mono); font-size: .68rem; font-weight: 600; letter-spacing: .12em; color: var(--pencil); padding-top: .3em; }
+.id-facts dd { margin: 0; font-family: var(--serif); font-weight: 700; font-size: .92rem; line-height: 1.5; }
+.id-facts dd b { font-size: 1.3rem; font-weight: 900; letter-spacing: .12em; }
+.id-facts dd small { display: block; font-family: var(--sans); font-weight: 400; font-size: .72rem; color: var(--pencil); letter-spacing: .04em; }
+
+/* 朱の印（傾けてよい＝紙に後から押したもの） */
+.hanko {
+    position: absolute; left: 78px; top: 128px; /* 証明写真の右下に押す */
+    display: grid; place-items: center;
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 2.5px solid var(--red); color: var(--red);
+    font-family: var(--serif); font-weight: 900; font-size: .95rem; line-height: 1; letter-spacing: .05em;
+    writing-mode: vertical-rl;
+    transform: rotate(-10deg); opacity: .78; mix-blend-mode: multiply;
+}
+
+.folder__kicker {
+    display: inline-block; padding: .2rem .7rem;
+    background: var(--ink); color: var(--card);
+    font-size: .82rem; font-weight: 700; letter-spacing: .06em;
+}
+.p-hero__title {
+    margin-top: 18px;
+    font-family: var(--serif); font-weight: 900;
+    font-size: clamp(1.7rem, 1.1rem + 2.4vw, 2.9rem);
+    line-height: 1.55; letter-spacing: .03em;
+}
+.folder__lead { word-break: auto-phrase; margin-top: 18px; color: var(--ink-soft); font-size: clamp(.95rem, .92rem + .15vw, 1.04rem); line-height: 1.9; }
+.folder__note { margin-top: 20px; padding-top: 14px; border-top: 1px dashed var(--edge-strong); font-size: 1.08rem; }
+
+@media (min-width: 980px) {
+    .folder { padding: 22px; margin-top: 34px; }
+    .folder__sheet { grid-template-columns: 320px 1fr; gap: 52px; padding: 48px 52px 48px 44px; align-items: center; }
+    .folder__id { grid-template-columns: 1fr; gap: 20px; }
+    .id-photo { width: 200px; }
+    .hanko { left: 170px; top: 196px; width: 62px; height: 62px; font-size: 1.1rem; }
+    .folder__main { padding-left: 52px; border-left: 1px solid var(--edge); }
+}
+@media (max-width: 420px) {
+    .folder { padding: 10px; }
+    .folder__sheet { padding: 24px 16px; }
+    .folder__id { grid-template-columns: 100px 1fr; gap: 14px; }
+    .hanko { left: 60px; top: 110px; width: 46px; height: 46px; font-size: .85rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Profile：履歴書の用紙
+   -------------------------------------------------------------------------- */
+
+.sheet {
+    --ml: 2.4rem;
+    position: relative; max-width: 960px; margin: 0 auto;
+    padding: 40px 24px 40px 3.4rem;
+    border: 1px solid var(--edge-strong); box-shadow: var(--lift-3);
+}
+.sheet__meta { font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; color: var(--pencil); }
+.sheet .dossier__name { padding-bottom: 6px; }
+.sheet .dossier__role { padding-bottom: 16px; border-bottom: 3px double var(--edge-strong); }
+.sheet__body p { margin-top: var(--pitch); color: var(--ink-soft); line-height: var(--pitch); }
+.sheet__stamp { position: absolute; right: 22px; top: 26px; --r: 6deg; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.chips li {
+    padding: 6px 12px 6px 10px;
+    background: var(--sticky-yellow); border-left: 4px solid rgba(170, 140, 50, .45);
+    box-shadow: 1px 2px 0 rgba(170, 150, 90, .3);
+    font-size: .86rem; font-weight: 700;
+}
+.chips li:nth-child(3n+2) { background: var(--sticky-pink); border-left-color: rgba(180, 100, 80, .4); }
+.chips li:nth-child(3n) { background: var(--sticky-blue); border-left-color: rgba(70, 110, 150, .4); }
+
+@media (min-width: 900px) {
+    .sheet { --ml: 3.2rem; padding: 52px 56px 52px 4.6rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Story：罫線ノートに綴った話（Origin / Vision）
+   -------------------------------------------------------------------------- */
+
+.story {
+    --ml: 2.4rem;
+    position: relative; max-width: 880px; margin: 0 auto;
+    padding: 48px 22px 40px 3.4rem;
+    border: 1px solid var(--edge-strong); box-shadow: var(--lift-3);
+}
+.story h3 {
+    display: flex; align-items: center; gap: 14px;
+    margin-top: calc(var(--pitch) * 2);
+    font-family: var(--serif); font-weight: 900;
+    font-size: clamp(1.2rem, 1.05rem + .7vw, 1.55rem); line-height: 1.55;
+}
+.story h3:first-child { margin-top: 0; }
+.story h3 .hand-num { width: 2.3rem; height: 2.3rem; font-size: .95rem; flex-shrink: 0; }
+.story h3.story__turn { margin-top: calc(var(--pitch) * 2); padding-top: calc(var(--pitch) * 1.5); border-top: 3px double var(--edge-strong); }
+.story p { margin-top: var(--pitch); color: var(--ink-soft); line-height: var(--pitch); }
+.story h3 + p { margin-top: 18px; }
+.story strong {
+    color: var(--ink); font-weight: 700;
+    background-image: linear-gradient(transparent 60%, var(--marker) 60% 94%, transparent 94%);
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.story__close { margin-top: calc(var(--pitch) * 1.5); padding: 24px 22px 22px; }
+.story__close p { margin: 0; font-family: var(--serif); font-weight: 900; font-size: clamp(1.08rem, 1rem + .4vw, 1.3rem); line-height: 1.8; color: var(--ink); }
+.story__close p span { color: var(--red-deep); }
+
+@media (min-width: 900px) {
+    .story { --ml: 3.4rem; padding: 64px 64px 56px 5rem; }
+    .story h3 { margin-left: -3.5rem; }
+    .story h3 .hand-num { width: 2.6rem; height: 2.6rem; }
+}
+
+/* 3つの方針：付箋 */
+.points { display: grid; gap: 18px; max-width: 960px; margin: clamp(40px, 5vw, 56px) auto 0; }
+.points .sticky { padding: 22px 20px 20px; }
+.points .icon { width: 26px; height: 26px; stroke-width: 1.6; color: var(--ink-soft); }
+.points h3 { margin-top: 10px; font-family: var(--serif); font-weight: 700; font-size: 1.05rem; line-height: 1.6; }
+.points p { margin-top: 6px; font-size: .86rem; color: var(--ink-soft); line-height: 1.85; }
+@media (min-width: 860px) { .points { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+
+/* --------------------------------------------------------------------------
+   Why Ascent：机に置いた屋号メモ
+   -------------------------------------------------------------------------- */
+
+.name-memo {
+    --ml: 2.4rem;
+    position: relative; max-width: 880px; margin: 0 auto;
+    padding: 44px 22px 40px 3.4rem;
+    border: 1px solid var(--edge-strong); box-shadow: var(--lift-3);
+}
+.name-memo .stamp { position: absolute; right: 18px; top: -16px; --r: -6deg; background: var(--card); }
+.name-memo__big {
+    margin-top: 22px; padding: 14px 0;
+    border-top: 1px dashed var(--edge-strong); border-bottom: 1px dashed var(--edge-strong);
+    font-family: var(--serif); font-weight: 900; color: var(--red);
+    font-size: clamp(1.2rem, 1rem + .9vw, 1.65rem); line-height: 1.6;
+}
+.name-memo__body p { margin-top: var(--pitch); color: var(--ink-soft); line-height: var(--pitch); }
+.name-memo__quote {
+    margin-top: calc(var(--pitch) * 1.25); padding: 6px 0 6px 18px;
+    border-left: 4px solid var(--red);
+    font-family: var(--serif); font-weight: 700; font-size: clamp(1rem, .95rem + .3vw, 1.15rem); line-height: 1.85;
+}
+@media (min-width: 900px) { .name-memo { --ml: 3.4rem; padding: 56px 60px 52px 5rem; } }
+
+/* --------------------------------------------------------------------------
+   What I do / Career / Hobbies
+   -------------------------------------------------------------------------- */
+
+.p-notes { gap: 26px; margin-top: 0; }
+.p-notes .note-card h3 { margin-top: 16px; }
+.p-more { margin-top: 36px; text-align: center; }
+
+/* 年表：朱の点線に、カードを留めていく */
+.timeline { position: relative; max-width: 900px; margin: 0 auto; }
+.timeline::before {
+    content: ""; position: absolute; left: 11px; top: 12px; bottom: 12px;
+    border-left: 2px dashed var(--margin-line);
+}
+.tl { position: relative; padding-left: 44px; }
+.tl + .tl { margin-top: 26px; }
+.tl::before {
+    content: ""; position: absolute; left: 2px; top: 26px;
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 2px solid var(--red); background: var(--card);
+}
+.tl--now::before { background: var(--red); box-shadow: 0 0 0 4px rgba(173, 60, 52, .15); }
+.tl__card {
+    position: relative;
+    padding: 22px 22px 22px;
+    background: var(--card); border: 1px solid var(--edge); box-shadow: var(--lift-1);
+}
+.tl__when {
+    display: inline-block; padding: .1rem .5rem;
+    font-family: var(--mono); font-size: .74rem; font-weight: 600; letter-spacing: .1em;
+    color: var(--red); border: 1px solid currentColor;
+}
+.tl__card h3 { margin-top: 10px; font-family: var(--serif); font-weight: 700; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); line-height: 1.6; }
+.tl__card p:not(.tl__when) { margin-top: 8px; font-size: .92rem; color: var(--ink-soft); line-height: 1.95; }
+.tl__card .text-link { display: inline; }
+.tl--now .tl__card { border: 2px solid var(--ink); }
+.tl__card .stamp { position: absolute; right: 14px; top: 14px; --r: 8deg; font-size: .58rem; }
+@media (min-width: 900px) {
+    .tl { padding-left: 60px; }
+    .tl__card { padding: 26px 30px; }
+}
+
+.hobby { display: grid; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; }
+.hobby .polaroid { max-width: 520px; margin: 0 auto; width: 100%; }
+.hobby .polaroid__img { aspect-ratio: 3 / 2; }
+.hobby .polaroid__img img { object-position: 50% 50%; }
+.hobby__text h3 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem); line-height: 1.5; }
+.hobby__text > p { margin-top: 16px; color: var(--ink-soft); line-height: 1.95; }
+.hobby__motto { margin-top: 26px; max-width: 26em; }
+.hobby__motto p { font-family: var(--hand); font-weight: 600; font-size: 1.1rem; line-height: 1.8; color: var(--ink); }
+@media (min-width: 900px) { .hobby { grid-template-columns: 1fr 1fr; gap: 56px; } }
+
+/* CTA（手紙）：index は画像の見出しなので、テキスト見出し用に整える */
+.letter .tab-label { margin-top: 4px; }
+.letter .sec-title { margin-top: 18px; }
+
+@media (max-width: 600px) {
+    .sheet, .story, .name-memo { --ml: 1.7rem; padding-left: 2.6rem; padding-right: 16px; }
+    .sheet__stamp { top: -14px; right: 12px; background: var(--card); }
+    .story h3 { gap: 10px; }
+    .story h3 .hand-num { width: 2rem; height: 2rem; font-size: .85rem; }
+}
