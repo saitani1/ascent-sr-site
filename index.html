@@ -448,11 +448,6 @@
                         <h2 class="sec-title">労務の迷いに、<span class="mark">現場で回る答えを。</span></h2>
                         <p class="lead">法改正、トラブル対応、日々の手続き、これからの組織づくり。経営者が知っておきたい労務の実践知をお届けします。</p>
                     </div>
-                    <div class="rail-ctrl" data-reveal>
-                        <p class="rail-count" aria-live="polite"><b id="rail-current">01</b> / <span id="rail-total">--</span></p>
-                        <button class="rail-btn rail-btn--prev" type="button" id="rail-prev" aria-label="前の記事"><svg class="icon"><use href="#i-arrow"/></svg></button>
-                        <button class="rail-btn" type="button" id="rail-next" aria-label="次の記事"><svg class="icon"><use href="#i-arrow"/></svg></button>
-                    </div>
                 </div>
             </div>
 
@@ -953,7 +948,14 @@
 
             <div class="wrap">
                 <div class="blog-foot">
-                    <p class="hand">← 横にスワイプ、またはボタンでめくれます</p>
+                    <div class="blog-foot__nav">
+                        <div class="rail-ctrl">
+                            <p class="rail-count" aria-live="polite"><b id="rail-current">01</b> / <span id="rail-total">--</span></p>
+                            <button class="rail-btn rail-btn--prev" type="button" id="rail-prev" aria-label="前の記事"><svg class="icon"><use href="#i-arrow"/></svg></button>
+                            <button class="rail-btn" type="button" id="rail-next" aria-label="次の記事"><svg class="icon"><use href="#i-arrow"/></svg></button>
+                        </div>
+                        <p class="hand">← 横にスワイプ、またはボタンでめくれます</p>
+                    </div>
                     <a href="blog-list.html" target="_blank" class="btn btn--paper">
                         <span class="btn__text"><span class="btn__meta">ALL ARTICLES</span>一覧表示</span>
                         <span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>

@@ -577,6 +577,7 @@ main { padding-top: var(--header-h); }
 .rail-progress { margin: 0 var(--gutter); height: 3px; background: var(--edge-soft); position: relative; }
 .rail-progress i { position: absolute; top: 0; left: 0; height: 100%; width: 10%; background: var(--red); transition: left .2s, width .2s; }
 .blog-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-top: 30px; }
+.blog-foot__nav { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .blog-foot .hand { color: var(--pencil); font-size: .95rem; }
 @media (min-width: 1260px) {
     .mySwiper .swiper-wrapper { padding-left: calc((100vw - var(--max)) / 2); scroll-padding-left: calc((100vw - var(--max)) / 2); }
