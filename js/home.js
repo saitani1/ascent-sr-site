@@ -171,6 +171,11 @@
         });
     });
 
+    // --- Contact: 料金ページの「労務点検」ボタンから来たらテーマを入れておく --------
+    if (textarea && !textarea.value && /[?&]topic=risk-check\b/.test(location.search)) {
+        textarea.value = PREFIX + '実務同行型 労務点検\n';
+    }
+
     // --- Mobile dock: ヒーローを過ぎたら出し、フォームが見えたら隠す ---------------
     var dock = document.getElementById('dock');
     var hero = document.querySelector('.hero');

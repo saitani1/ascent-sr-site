@@ -319,3 +319,126 @@
 .payroll-box .pay-count { margin-top: 16px; }
 @media (min-width: 960px) { .payroll-box { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; } .payroll-box__grid { grid-template-columns: 1.1fr .9fr; gap: 36px; } }
 @media (max-width: 600px) { .payroll-box { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; } }
+
+/* ===== 実務同行型 労務点検（特別メニュー） ===== */
+/* 用紙の並びの中で、ここだけ「紺の台紙に金の箔押し」にして別格に見せる */
+.rc-special {
+    --rc-gold: #c9a24a;
+    --rc-gold-soft: #e6cf8e;
+    background-color: #141c2c;
+    background-image:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 162, 74, .16), transparent 70%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, .018) 0 2px, transparent 2px 9px);
+    color: #efe9da;
+    border-top: 3px double var(--rc-gold);
+    border-bottom: 3px double var(--rc-gold);
+}
+.rc-special .tab-label { border-color: var(--rc-gold); color: var(--rc-gold-soft); }
+.rc-special .tab-label span:first-child { background: var(--rc-gold); color: #141c2c; }
+.rc-eyebrow { margin: 1.4rem auto 0; width: max-content; max-width: 100%; display: flex; align-items: center; gap: .8em; font-family: var(--serif); font-weight: 700; font-size: .95rem; letter-spacing: .2em; color: var(--rc-gold-soft); }
+.rc-eyebrow span { padding: .15em .9em; border: 1px solid var(--rc-gold); color: #141c2c; background: linear-gradient(135deg, #e6cf8e, #c9a24a 55%, #a8822f); letter-spacing: .14em; }
+.rc-eyebrow::before, .rc-eyebrow::after { content: ""; width: 2.4em; height: 1px; background: var(--rc-gold); }
+.rc-special .sec-title { margin-top: .6rem; color: #fbf6ea; font-weight: 900; font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3.1rem); letter-spacing: .04em; }
+.rc-special .sec-title .mark { background: none; color: var(--rc-gold-soft); }
+.rc-special .lead { color: #cfc8b8; }
+
+.rc-why { --ml: 2.6rem; position: relative; padding: 32px 24px 26px 3.6rem; border: 1px solid var(--edge); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); color: var(--ink); }
+.rc-why h3 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.2rem, 1.05rem + .7vw, 1.55rem); line-height: 1.5; }
+.rc-why__grid { margin-top: 14px; display: grid; gap: 22px; }
+.rc-why__grid p { font-size: .92rem; color: var(--ink-soft); line-height: var(--pitch); }
+.rc-why__grid p + p { margin-top: 8px; }
+.rc-why__sign { font-family: var(--serif); font-weight: 700; color: var(--ink) !important; }
+
+#risk-check-6m { margin-top: 44px; color: var(--ink); border: 2px solid var(--rc-gold); outline: 1px solid var(--rc-gold); outline-offset: 6px; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+#risk-check-6m .menu__no { color: var(--gold); }
+#risk-check-6m .rc-price { margin-top: 18px; color: var(--ink); font-size: clamp(3rem, 2.1rem + 3.6vw, 4.6rem); letter-spacing: -.01em; line-height: 1.05; }
+#risk-check-6m .rc-price small { font-size: .32em; color: var(--gold); }
+#risk-check-6m .urgent__grid > div > p.rc-price__sub { margin-top: 6px; font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--ink); }
+#risk-check-6m .urgent__grid > div > p.rc-limit { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--gold); border-left: 4px solid var(--gold); background: color-mix(in srgb, var(--rc-gold) 12%, var(--card)); font-size: .86rem; line-height: 1.7; }
+.rc-limit b { display: block; font-family: var(--serif); font-weight: 900; font-size: 1.05rem; color: var(--ink); }
+#risk-check-6m .menu__intro p + p { margin-top: 8px; }
+#risk-check-6m .urgent__actions { margin-top: 18px; }
+#risk-check-6m .pr-notes li { color: var(--pencil); }
+
+/* 金の封蝋：同時2社限定 */
+.rc-seal {
+    position: absolute; top: -34px; right: 22px; z-index: 2;
+    width: 92px; height: 92px; border-radius: 50%;
+    display: grid; place-content: center; text-align: center;
+    font-family: var(--serif); font-weight: 900; font-size: 1.45rem; line-height: 1.05; color: #2a1f08;
+    background: radial-gradient(circle at 32% 28%, #f3e2a8, #c9a24a 55%, #94702a);
+    box-shadow: 0 0 0 3px #141c2c, 0 0 0 5px var(--rc-gold), 0 10px 22px rgba(0, 0, 0, .4);
+    transform: rotate(8deg);
+}
+.rc-seal small { display: block; font-size: .5em; letter-spacing: .2em; }
+
+@media (min-width: 900px) {
+    .rc-why { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; }
+    .rc-why__grid { grid-template-columns: 1.15fr .85fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+    .rc-why { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; }
+    #risk-check-6m { outline-offset: 4px; }
+    #risk-check-6m .urgent__actions .btn { width: 100%; }
+    .rc-seal { width: 74px; height: 74px; font-size: 1.15rem; top: -30px; right: 10px; }
+    .rc-eyebrow { font-size: .82rem; letter-spacing: .1em; }
+    .rc-eyebrow::before, .rc-eyebrow::after { width: 1.2em; }
+}
+
+/* ===== モーション（JS が .rc-motion を付けたときだけ。動きを減らす設定では静止した完成形） ===== */
+.rc-motion { overflow: hidden; }
+.rc-motion > .wrap { position: relative; z-index: 1; }
+/* 台紙の上を、金の光がゆっくり横切る */
+.rc-motion::after {
+    content: ""; position: absolute; top: -20%; bottom: -20%; left: -40%; width: 35%; z-index: 0; pointer-events: none;
+    background: linear-gradient(100deg, transparent, rgba(230, 207, 142, .09) 45%, rgba(230, 207, 142, .16) 50%, rgba(230, 207, 142, .09) 55%, transparent);
+    transform: skewX(-12deg);
+    animation: rc-sweep 9s ease-in-out infinite;
+}
+@keyframes rc-sweep { 0% { left: -40%; } 55%, 100% { left: 120%; } }
+
+/* 見出し：金の線が左右に伸び、題字が下から立ち上がる。「労務点検」は箔が光る */
+.rc-motion .sec-head .rc-eyebrow::before, .rc-motion .sec-head .rc-eyebrow::after { transform: scaleX(0); }
+.rc-motion .sec-head .rc-eyebrow::before { transform-origin: right; }
+.rc-motion .sec-head .rc-eyebrow::after { transform-origin: left; }
+.rc-motion .sec-head .rc-eyebrow span, .rc-motion .sec-head .sec-title, .rc-motion .sec-head .lead { opacity: 0; }
+.rc-motion .sec-head.is-play .rc-eyebrow::before, .rc-motion .sec-head.is-play .rc-eyebrow::after { animation: rc-draw .9s .2s cubic-bezier(.2, .7, .2, 1) both; }
+.rc-motion .sec-head.is-play .rc-eyebrow span { animation: rc-pop .6s .1s cubic-bezier(.3, 1.6, .5, 1) both; }
+.rc-motion .sec-head.is-play .sec-title { animation: rc-rise .9s .45s cubic-bezier(.2, .7, .2, 1) both; }
+.rc-motion .sec-head.is-play .lead { animation: rc-rise .9s .75s cubic-bezier(.2, .7, .2, 1) both; }
+.rc-motion .sec-title .mark {
+    background: linear-gradient(100deg, #c9a24a 0%, #e6cf8e 30%, #fff6d8 45%, #e6cf8e 60%, #c9a24a 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: rc-foil 5s 1.4s ease-in-out infinite;
+}
+@keyframes rc-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rc-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes rc-rise { from { opacity: 0; transform: translateY(22px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes rc-foil { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+
+/* カードは下からすべり込む */
+.rc-motion .rc-why { opacity: 0; }
+.rc-motion .rc-why.is-play { animation: rc-rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+
+/* 料金カード：封蝋が押され、カードが沈み、価格が数え上がり、項目が順に並ぶ */
+.rc-motion #risk-check-6m { opacity: 0; }
+.rc-motion #risk-check-6m.is-play { animation: rc-rise .9s cubic-bezier(.2, .7, .2, 1) both, rc-thud .35s 1.3s ease-out; }
+.rc-motion #risk-check-6m .rc-seal { opacity: 0; }
+.rc-motion #risk-check-6m.is-play .rc-seal { animation: rc-seal .55s .8s cubic-bezier(.5, 0, .7, .4) both; }
+@keyframes rc-seal { 0% { opacity: 0; transform: rotate(-30deg) scale(2.6); } 80% { opacity: 1; transform: rotate(10deg) scale(.92); } 100% { opacity: 1; transform: rotate(8deg) scale(1); } }
+@keyframes rc-thud { 0%, 100% { transform: none; } 40% { transform: translateY(3px) scale(.995); } }
+.rc-motion #risk-check-6m .checks-list li { opacity: 0; }
+.rc-motion #risk-check-6m.is-play .checks-list li { animation: rc-slide .5s both; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(1) { animation-delay: 1.3s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(2) { animation-delay: 1.42s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(3) { animation-delay: 1.54s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(4) { animation-delay: 1.66s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(5) { animation-delay: 1.78s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(6) { animation-delay: 1.9s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(7) { animation-delay: 2.02s; }
+.rc-motion #risk-check-6m.is-play .checks-list li:nth-child(8) { animation-delay: 2.14s; }
+@keyframes rc-slide { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+.rc-motion #risk-check-6m .rc-limit { position: relative; overflow: hidden; }
+.rc-motion #risk-check-6m.is-play .rc-limit::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255, 246, 216, .8) 50%, transparent 70%); transform: translateX(-100%); animation: rc-glint 1.1s 2.2s ease-in-out both; }
+@keyframes rc-glint { to { transform: translateX(100%); } }

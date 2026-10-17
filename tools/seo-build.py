@@ -222,7 +222,7 @@ def build_jsonld(f, h, url, title, desc):
             "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}],
             "hasMap": "https://maps.google.com/?cid=5936103874545252663",
             "areaServed": [{"@type": "AdministrativeArea", "name": "大阪府"}, {"@type": "City", "name": "大阪市"}],
-            "priceRange": "¥15,000〜",
+            "priceRange": "¥6,500〜",
             "founder": {"@type": "Person", "name": AUTHOR, "jobTitle": "社会保険労務士", "url": BASE + "profile.html"},
             "sameAs": ["https://lin.ee/XAupP0V", "https://maps.google.com/?cid=5936103874545252663"],
             "knowsAbout": ["労務トラブル対応", "就業規則作成", "社会保険手続き", "労働保険手続き", "給与計算", "働き方改革", "サービス業の労務管理"],
