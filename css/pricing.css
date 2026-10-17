@@ -171,23 +171,7 @@
 .menu-pair .menu { margin-top: 0; }
 @media (min-width: 1000px) { .menu-pair { grid-template-columns: 1fr 1fr; gap: 28px; } .menu-pair .menu { padding: 36px 26px 26px 3.6rem; --ml: 2.6rem; } }
 
-.pay-count { margin-top: 18px; padding: 16px 18px; }
-.pay-count p { font-size: .86rem; line-height: 1.75; }
-.pay-count__ex { margin-top: 8px; font-family: var(--hand); font-weight: 600; color: var(--red-deep); font-size: .95rem !important; }
 
-.calc { margin-top: 18px; padding: 16px 18px; background: #fff; border: 1.5px solid var(--edge-strong); box-shadow: 3px 3px 0 var(--edge-soft); }
-.calc[hidden] { display: none; }
-.calc__title { font-family: var(--serif); font-weight: 900; font-size: .98rem; }
-.calc__title small { font-family: var(--sans); font-weight: 400; font-size: .76rem; color: var(--pencil); }
-.calc__row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 10px; font-size: .88rem; font-weight: 700; }
-.calc__row > label:first-child { display: flex; align-items: center; gap: 10px; }
-.calc__input { display: inline-flex; align-items: center; gap: 6px; }
-.calc__input input { width: 5.5em; padding: 8px 10px; font: inherit; font-size: 16px; text-align: right; border: 1.5px solid #bfb5a2; border-radius: 2px; background: var(--card); }
-.calc__input input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px var(--marker); }
-.calc__check { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
-.calc__check input { width: 18px; height: 18px; accent-color: var(--red); }
-.calc__result { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--edge-strong); font-size: .9rem; color: var(--ink-soft); }
-.calc__result b { font-family: var(--serif); font-weight: 900; font-size: 1.35rem; color: var(--red); margin-left: 4px; }
 
 /* ==========================================================================
    料金についてのご案内
@@ -265,11 +249,6 @@
 .plan__adds--pick b { color: var(--red-deep); }
 
 /* ==========================================================================
-   料金早見表の削除に伴い、ヒーローは用紙1枚の中央寄せ
-   ========================================================================== */
-.pr-hero .pr-hero__grid { grid-template-columns: 1fr !important; max-width: 880px; margin: 0 auto; }
-
-/* ==========================================================================
    給与計算：②③は「なし／あり」を選べる
    ========================================================================== */
 .stack-payroll {
@@ -277,7 +256,6 @@
     padding: 12px 16px; text-decoration: none;
     background: #fff; border: 2px dashed var(--blue-ink);
 }
-.stack-payroll:hover { background: var(--sticky-blue); }
 .stack-payroll__tag { flex-shrink: 0; padding: 4px 10px; background: var(--blue-ink); color: #fff; font-weight: 700; font-size: .82rem; }
 .stack-payroll b { display: block; font-family: var(--serif); font-weight: 900; font-size: .98rem; line-height: 1.5; }
 .stack-payroll small { display: block; font-size: .78rem; color: var(--ink-soft); line-height: 1.6; }
@@ -313,52 +291,59 @@
 .payroll-on .plan__nopay { display: block; }
 .payroll-on #plan-consult { opacity: .6; }
 
-.payroll-box { --ml: 2.6rem; position: relative; margin-top: 40px; padding: 34px 24px 26px 3.6rem; border: 2px solid var(--blue-ink); box-shadow: var(--lift-2); }
-.payroll-box .menu__no { color: var(--blue-ink); }
-.payroll-box__grid { display: grid; gap: 22px; }
-.payroll-box .pay-count { margin-top: 16px; }
-@media (min-width: 960px) { .payroll-box { padding: 40px 40px 30px 4.4rem; --ml: 3.2rem; } .payroll-box__grid { grid-template-columns: 1.1fr .9fr; gap: 36px; } }
-@media (max-width: 600px) { .payroll-box { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; } }
 
 /* ===== 実務同行型 労務点検（特別メニュー） ===== */
-/* 用紙の並びの中で、ここだけ「紺の台紙に金の箔押し」にして別格に見せる */
+/* 用紙の並びはそのままに、金の罫と箔押し・ときどき走る光で「きらりと光る」別格の一枚にする */
 .rc-special {
-    --rc-gold: #c9a24a;
+    --rc-gold: #b8913c;
+    --rc-gold-deep: #8a6a24;
     --rc-gold-soft: #e6cf8e;
-    background-color: #141c2c;
+    --rc-foil: linear-gradient(100deg, #8a6a24 0%, #b8913c 22%, #e9d18f 40%, #fff6d6 50%, #e9d18f 60%, #b8913c 78%, #8a6a24 100%);
+    background-color: var(--paper);
     background-image:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 162, 74, .16), transparent 70%),
-        repeating-linear-gradient(135deg, rgba(255, 255, 255, .018) 0 2px, transparent 2px 9px);
-    color: #efe9da;
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(233, 209, 143, .28), transparent 70%),
+        radial-gradient(ellipse 50% 40% at 85% 85%, rgba(233, 209, 143, .16), transparent 70%);
     border-top: 3px double var(--rc-gold);
     border-bottom: 3px double var(--rc-gold);
 }
-.rc-special .tab-label { border-color: var(--rc-gold); color: var(--rc-gold-soft); }
-.rc-special .tab-label span:first-child { background: var(--rc-gold); color: #141c2c; }
-.rc-eyebrow { margin: 1.4rem auto 0; width: max-content; max-width: 100%; display: flex; align-items: center; gap: .8em; font-family: var(--serif); font-weight: 700; font-size: .95rem; letter-spacing: .2em; color: var(--rc-gold-soft); }
-.rc-eyebrow span { padding: .15em .9em; border: 1px solid var(--rc-gold); color: #141c2c; background: linear-gradient(135deg, #e6cf8e, #c9a24a 55%, #a8822f); letter-spacing: .14em; }
-.rc-eyebrow::before, .rc-eyebrow::after { content: ""; width: 2.4em; height: 1px; background: var(--rc-gold); }
-.rc-special .sec-title { margin-top: .6rem; color: #fbf6ea; font-weight: 900; font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3.1rem); letter-spacing: .04em; }
-.rc-special .sec-title .mark { background: none; color: var(--rc-gold-soft); }
-.rc-special .lead { color: #cfc8b8; }
+.rc-special .sec-head { position: relative; }
+.rc-special .tab-label { border-color: var(--rc-gold); color: var(--rc-gold-deep); background: var(--card); }
+.rc-special .tab-label span:first-child { background: var(--rc-foil); background-size: 200% 100%; color: #2a1f08; }
+.rc-eyebrow { margin: 1.4rem auto 0; width: max-content; max-width: 100%; display: flex; align-items: center; gap: .8em; font-family: var(--serif); font-weight: 700; font-size: .95rem; letter-spacing: .2em; color: var(--rc-gold-deep); }
+.rc-eyebrow span { padding: .2em 1em; color: #2a1f08; background: var(--rc-foil); background-size: 200% 100%; letter-spacing: .14em; box-shadow: 0 2px 8px rgba(138, 106, 36, .25); }
+.rc-eyebrow::before, .rc-eyebrow::after { content: ""; width: 3em; height: 1px; background: linear-gradient(90deg, transparent, var(--rc-gold)); }
+.rc-eyebrow::after { background: linear-gradient(90deg, var(--rc-gold), transparent); }
+.rc-special .sec-title { margin-top: .6rem; font-weight: 900; font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3.1rem); letter-spacing: .04em; }
+.rc-special .sec-title .mark {
+    background: var(--rc-foil); background-size: 250% 100%; background-position: 100% 0;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(138, 106, 36, .25));
+}
 
-.rc-why { --ml: 2.6rem; position: relative; padding: 32px 24px 26px 3.6rem; border: 1px solid var(--edge); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); color: var(--ink); }
+/* 星のきらめき（静止時は小さく灯っているだけ） */
+.rc-spark { position: absolute; width: 18px; height: 18px; pointer-events: none; background: radial-gradient(circle, #fff8dc 0 18%, transparent 20%), conic-gradient(from 0deg, transparent 0 40deg, #e9d18f 45deg, transparent 50deg 130deg, #e9d18f 135deg, transparent 140deg 220deg, #e9d18f 225deg, transparent 230deg 310deg, #e9d18f 315deg, transparent 320deg); -webkit-mask: radial-gradient(circle, #000 0 30%, transparent 72%); mask: radial-gradient(circle, #000 0 30%, transparent 72%); opacity: .7; }
+.rc-spark--1 { top: 18%; left: 12%; }
+.rc-spark--2 { top: 46%; right: 14%; width: 24px; height: 24px; }
+.rc-spark--3 { top: 70%; left: 22%; width: 12px; height: 12px; }
+.rc-spark--seal { top: -40px; right: 6px; width: 26px; height: 26px; z-index: 3; }
+
+.rc-why { --ml: 2.6rem; position: relative; padding: 32px 24px 26px 3.6rem; border: 1px solid var(--edge); box-shadow: var(--lift-2); }
 .rc-why h3 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.2rem, 1.05rem + .7vw, 1.55rem); line-height: 1.5; }
 .rc-why__grid { margin-top: 14px; display: grid; gap: 22px; }
 .rc-why__grid p { font-size: .92rem; color: var(--ink-soft); line-height: var(--pitch); }
 .rc-why__grid p + p { margin-top: 8px; }
 .rc-why__sign { font-family: var(--serif); font-weight: 700; color: var(--ink) !important; }
 
-#risk-check-6m { margin-top: 44px; color: var(--ink); border: 2px solid var(--rc-gold); outline: 1px solid var(--rc-gold); outline-offset: 6px; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
-#risk-check-6m .menu__no { color: var(--gold); }
+/* 料金カード：金の二重枠 */
+#risk-check-6m { margin-top: 44px; overflow: visible; border: 2px solid var(--rc-gold); outline: 1px solid var(--rc-gold); outline-offset: 6px; box-shadow: 0 0 0 10px rgba(233, 209, 143, .18), 0 22px 50px rgba(138, 106, 36, .22); }
+#risk-check-6m .menu__no { color: var(--rc-gold-deep); }
 #risk-check-6m .rc-price { margin-top: 18px; color: var(--ink); font-size: clamp(3rem, 2.1rem + 3.6vw, 4.6rem); letter-spacing: -.01em; line-height: 1.05; }
-#risk-check-6m .rc-price small { font-size: .32em; color: var(--gold); }
+#risk-check-6m .rc-price small { font-size: .32em; color: var(--rc-gold-deep); }
 #risk-check-6m .urgent__grid > div > p.rc-price__sub { margin-top: 6px; font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--ink); }
-#risk-check-6m .urgent__grid > div > p.rc-limit { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--gold); border-left: 4px solid var(--gold); background: color-mix(in srgb, var(--rc-gold) 12%, var(--card)); font-size: .86rem; line-height: 1.7; }
+#risk-check-6m .urgent__grid > div > p.rc-limit { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--rc-gold); border-left: 4px solid var(--rc-gold); background: linear-gradient(100deg, rgba(233, 209, 143, .28), rgba(255, 246, 214, .5) 50%, rgba(233, 209, 143, .22)); font-size: .86rem; line-height: 1.7; }
 .rc-limit b { display: block; font-family: var(--serif); font-weight: 900; font-size: 1.05rem; color: var(--ink); }
 #risk-check-6m .menu__intro p + p { margin-top: 8px; }
 #risk-check-6m .urgent__actions { margin-top: 18px; }
-#risk-check-6m .pr-notes li { color: var(--pencil); }
 
 /* 金の封蝋：同時2社限定 */
 .rc-seal {
@@ -366,9 +351,10 @@
     width: 92px; height: 92px; border-radius: 50%;
     display: grid; place-content: center; text-align: center;
     font-family: var(--serif); font-weight: 900; font-size: 1.45rem; line-height: 1.05; color: #2a1f08;
-    background: radial-gradient(circle at 32% 28%, #f3e2a8, #c9a24a 55%, #94702a);
-    box-shadow: 0 0 0 3px #141c2c, 0 0 0 5px var(--rc-gold), 0 10px 22px rgba(0, 0, 0, .4);
+    background: radial-gradient(circle at 32% 28%, #fff3c4, #d8b45c 50%, #9a7428);
+    box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--rc-gold), 0 10px 22px rgba(138, 106, 36, .35);
     transform: rotate(8deg);
+    overflow: hidden;
 }
 .rc-seal small { display: block; font-size: .5em; letter-spacing: .2em; }
 
@@ -378,54 +364,54 @@
 }
 @media (max-width: 600px) {
     .rc-why { --ml: 1.6rem; padding: 30px 14px 22px 2.4rem; }
-    #risk-check-6m { outline-offset: 4px; }
+    #risk-check-6m { outline-offset: 4px; box-shadow: 0 0 0 6px rgba(233, 209, 143, .18), 0 16px 34px rgba(138, 106, 36, .2); }
     #risk-check-6m .urgent__actions .btn { width: 100%; }
     .rc-seal { width: 74px; height: 74px; font-size: 1.15rem; top: -30px; right: 10px; }
+    .rc-spark--seal { top: -36px; right: 0; }
     .rc-eyebrow { font-size: .82rem; letter-spacing: .1em; }
-    .rc-eyebrow::before, .rc-eyebrow::after { width: 1.2em; }
+    .rc-eyebrow::before, .rc-eyebrow::after { width: 1.6em; }
+    .rc-spark--1 { left: 2%; } .rc-spark--2 { right: 2%; }
 }
 
 /* ===== モーション（JS が .rc-motion を付けたときだけ。動きを減らす設定では静止した完成形） ===== */
-.rc-motion { overflow: hidden; }
-.rc-motion > .wrap { position: relative; z-index: 1; }
-/* 台紙の上を、金の光がゆっくり横切る */
-.rc-motion::after {
-    content: ""; position: absolute; top: -20%; bottom: -20%; left: -40%; width: 35%; z-index: 0; pointer-events: none;
-    background: linear-gradient(100deg, transparent, rgba(230, 207, 142, .09) 45%, rgba(230, 207, 142, .16) 50%, rgba(230, 207, 142, .09) 55%, transparent);
-    transform: skewX(-12deg);
-    animation: rc-sweep 9s ease-in-out infinite;
-}
-@keyframes rc-sweep { 0% { left: -40%; } 55%, 100% { left: 120%; } }
-
-/* 見出し：金の線が左右に伸び、題字が下から立ち上がる。「労務点検」は箔が光る */
+/* 見出し：金の線が伸び、題字が立ち上がる。「労務点検」の箔に光が走る */
 .rc-motion .sec-head .rc-eyebrow::before, .rc-motion .sec-head .rc-eyebrow::after { transform: scaleX(0); }
 .rc-motion .sec-head .rc-eyebrow::before { transform-origin: right; }
 .rc-motion .sec-head .rc-eyebrow::after { transform-origin: left; }
 .rc-motion .sec-head .rc-eyebrow span, .rc-motion .sec-head .sec-title, .rc-motion .sec-head .lead { opacity: 0; }
 .rc-motion .sec-head.is-play .rc-eyebrow::before, .rc-motion .sec-head.is-play .rc-eyebrow::after { animation: rc-draw .9s .2s cubic-bezier(.2, .7, .2, 1) both; }
-.rc-motion .sec-head.is-play .rc-eyebrow span { animation: rc-pop .6s .1s cubic-bezier(.3, 1.6, .5, 1) both; }
+.rc-motion .sec-head.is-play .rc-eyebrow span { animation: rc-pop .6s .1s cubic-bezier(.3, 1.6, .5, 1) both, rc-foil-slide 4s 1.2s ease-in-out infinite; }
 .rc-motion .sec-head.is-play .sec-title { animation: rc-rise .9s .45s cubic-bezier(.2, .7, .2, 1) both; }
 .rc-motion .sec-head.is-play .lead { animation: rc-rise .9s .75s cubic-bezier(.2, .7, .2, 1) both; }
-.rc-motion .sec-title .mark {
-    background: linear-gradient(100deg, #c9a24a 0%, #e6cf8e 30%, #fff6d8 45%, #e6cf8e 60%, #c9a24a 100%);
-    background-size: 250% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    animation: rc-foil 5s 1.4s ease-in-out infinite;
-}
+.rc-motion .sec-title .mark { animation: rc-foil 4.5s 1.4s ease-in-out infinite; }
 @keyframes rc-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes rc-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
 @keyframes rc-rise { from { opacity: 0; transform: translateY(22px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
-@keyframes rc-foil { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+@keyframes rc-foil { 0%, 30% { background-position: 100% 0; } 65%, 100% { background-position: 0 0; } }
+@keyframes rc-foil-slide { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
 
-/* カードは下からすべり込む */
+/* 星がまたたく */
+.rc-motion .rc-spark { opacity: 0; transform: scale(.2) rotate(0deg); animation: rc-twinkle 3.2s ease-in-out infinite; }
+.rc-motion .rc-spark--1 { animation-delay: 1.2s; }
+.rc-motion .rc-spark--2 { animation-delay: 2.3s; }
+.rc-motion .rc-spark--3 { animation-delay: 3.1s; }
+.rc-motion .rc-spark--seal { animation-delay: 2.6s; }
+@keyframes rc-twinkle { 0%, 70%, 100% { opacity: 0; transform: scale(.2) rotate(0deg); } 82% { opacity: 1; transform: scale(1.15) rotate(45deg); } 92% { opacity: .6; transform: scale(.8) rotate(80deg); } }
+
 .rc-motion .rc-why { opacity: 0; }
 .rc-motion .rc-why.is-play { animation: rc-rise .9s cubic-bezier(.2, .7, .2, 1) both; }
 
-/* 料金カード：封蝋が押され、カードが沈み、価格が数え上がり、項目が順に並ぶ */
+/* 料金カード：封蝋が押され、カードが沈み、価格が数え上がり、項目が順に並ぶ。以後ときどき光が走る */
 .rc-motion #risk-check-6m { opacity: 0; }
 .rc-motion #risk-check-6m.is-play { animation: rc-rise .9s cubic-bezier(.2, .7, .2, 1) both, rc-thud .35s 1.3s ease-out; }
+.rc-shine { display: none; }
+.rc-motion .rc-shine { display: block; position: absolute; inset: 0; pointer-events: none; z-index: 1; background: linear-gradient(105deg, transparent 38%, rgba(255, 246, 214, .0) 42%, rgba(255, 246, 214, .75) 50%, rgba(255, 246, 214, 0) 58%, transparent 62%); background-size: 250% 100%; background-position: 130% 0; }
+.rc-motion #risk-check-6m.is-play .rc-shine { animation: rc-shine 7s 2.6s ease-in-out infinite; }
+@keyframes rc-shine { 0% { background-position: 130% 0; } 22%, 100% { background-position: -30% 0; } }
 .rc-motion #risk-check-6m .rc-seal { opacity: 0; }
 .rc-motion #risk-check-6m.is-play .rc-seal { animation: rc-seal .55s .8s cubic-bezier(.5, 0, .7, .4) both; }
+.rc-motion #risk-check-6m .rc-seal::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, .85) 50%, transparent 65%); background-size: 300% 100%; background-position: 150% 0; }
+.rc-motion #risk-check-6m.is-play .rc-seal::after { animation: rc-shine 5s 2s ease-in-out infinite; }
 @keyframes rc-seal { 0% { opacity: 0; transform: rotate(-30deg) scale(2.6); } 80% { opacity: 1; transform: rotate(10deg) scale(.92); } 100% { opacity: 1; transform: rotate(8deg) scale(1); } }
 @keyframes rc-thud { 0%, 100% { transform: none; } 40% { transform: translateY(3px) scale(.995); } }
 .rc-motion #risk-check-6m .checks-list li { opacity: 0; }
@@ -439,6 +425,140 @@
 .rc-motion #risk-check-6m.is-play .checks-list li:nth-child(7) { animation-delay: 2.02s; }
 .rc-motion #risk-check-6m.is-play .checks-list li:nth-child(8) { animation-delay: 2.14s; }
 @keyframes rc-slide { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
-.rc-motion #risk-check-6m .rc-limit { position: relative; overflow: hidden; }
-.rc-motion #risk-check-6m.is-play .rc-limit::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255, 246, 216, .8) 50%, transparent 70%); transform: translateX(-100%); animation: rc-glint 1.1s 2.2s ease-in-out both; }
-@keyframes rc-glint { to { transform: translateX(100%); } }
+
+/* ===== 給与計算の料金（式で見せる） ===== */
+.pay-formula { margin-bottom: 28px; padding: 20px 22px 16px; background: var(--card); border: 2px solid var(--blue-ink); box-shadow: 4px 5px 0 rgba(45, 90, 136, .15); }
+.pay-formula__tag { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: .9rem; font-weight: 700; color: var(--ink); }
+.pay-formula__tag span { padding: 3px 10px; background: var(--blue-ink); color: #fff; font-size: .82rem; }
+.pay-formula__eq { margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; padding: 14px 10px; background: var(--sticky-blue); }
+.pay-formula__term { display: grid; justify-items: center; text-align: center; }
+.pay-formula__term small { font-size: .74rem; font-weight: 700; color: var(--ink-soft); }
+.pay-formula__term b { font-family: var(--serif); font-weight: 900; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); color: var(--blue-ink); line-height: 1.2; }
+.pay-formula__term b i { font-style: normal; font-size: .5em; margin-left: .1em; }
+.pay-formula__term em { font-style: normal; font-size: .8rem; font-weight: 700; color: var(--ink); }
+.pay-formula__term--sum b { color: var(--ink); }
+.pay-formula__op { font-family: var(--serif); font-weight: 900; font-size: 1.5rem; color: var(--ink-soft); }
+.pay-formula__ex { margin-top: 12px; font-size: .9rem; color: var(--ink-soft); }
+.pay-formula__ex b { font-family: var(--serif); font-weight: 900; color: var(--blue-ink); font-size: 1.05rem; }
+.pay-formula .pr-note { margin-top: 4px; }
+@media (max-width: 600px) { .pay-formula { padding: 16px 14px 12px; } .pay-formula__eq { gap: 4px 10px; } .pay-formula__op { font-size: 1.2rem; } }
+
+/* ===== HERO：料金早見表（静止時の完成形） ===== */
+.quick { background: var(--card); }
+.quick__stamp { position: absolute; top: 16px; right: 18px; --r: 8deg; font-size: .7rem; }
+.quick li { position: relative; }
+.quick__special a { position: relative; z-index: 1; }
+.quick__special .quick__name b { color: var(--gold); }
+.quick__special .quick__price { color: var(--ink); }
+.quick__special .quick__price small { color: var(--gold); }
+.quick__ring { position: absolute; top: -2px; left: -12px; width: calc(100% + 24px); height: calc(100% + 8px); overflow: visible; pointer-events: none; }
+.quick__ring path { fill: none; stroke: #c9a24a; stroke-width: 2.6; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.quick__note { position: absolute; top: -6px; right: -16px; z-index: 2; padding: 1px 8px; font-family: var(--hand); font-weight: 600; font-size: .9rem; color: #2a1f08; background: linear-gradient(135deg, #f3e2a8, #c9a24a); transform: rotate(-10deg); box-shadow: 1px 2px 0 rgba(138, 106, 36, .3); }
+
+/* ===== HERO：モーション（JS が .hm を付けたときだけ） ===== */
+/* 見出しの用紙がすべり込み、「料金」にマーカーが引かれる */
+.hm .hero__sheet { opacity: 0; }
+.hm.is-play .hero__sheet { animation: hm-rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+.hm .pr-title .mark { background-repeat: no-repeat; background-size: 0% 100%; }
+.hm.is-play .pr-title .mark { animation: hm-marker .7s 1s cubic-bezier(.6, 0, .3, 1) both; }
+.hm .hero__stamp { opacity: 0; }
+.hm.is-play .hero__stamp { animation: hm-stamp .45s 1.5s cubic-bezier(.5, 0, .7, .4) both; }
+.hm.is-play .pr-lead, .hm.is-play .pr-support, .hm.is-play .pr-tags { animation: hm-rise .8s both; }
+.hm.is-play .pr-lead { animation-delay: .5s; }
+.hm.is-play .pr-support { animation-delay: .65s; }
+.hm.is-play .pr-tags { animation-delay: .8s; }
+
+/* 早見表：カードが机に置かれ、行が1本ずつ書き込まれ、金額が数え上がる */
+.hm .quick { opacity: 0; }
+.hm.is-play .quick { animation: hm-drop .9s .35s cubic-bezier(.2, .9, .3, 1.15) both; }
+.hm .quick__stamp { opacity: 0; }
+.hm.is-play .quick__stamp { animation: hm-stamp .45s 3.4s cubic-bezier(.5, 0, .7, .4) both; }
+.hm .quick li { opacity: 0; }
+.hm.is-play .quick li { animation: hm-write .55s cubic-bezier(.2, .7, .2, 1) both; }
+.hm.is-play .quick li:nth-child(1) { animation-delay: 1s; }
+.hm.is-play .quick li:nth-child(2) { animation-delay: 1.25s; }
+.hm.is-play .quick li:nth-child(3) { animation-delay: 1.5s; }
+.hm.is-play .quick li:nth-child(4) { animation-delay: 1.75s; }
+.hm.is-play .quick li:nth-child(5) { animation-delay: 2s; }
+.hm .quick li a::after { transform: scaleX(0); transform-origin: left; }
+.hm.is-play .quick li a::after { animation: hm-draw .6s cubic-bezier(.6, 0, .3, 1) both; }
+.hm.is-play .quick li:nth-child(1) a::after { animation-delay: 1.2s; }
+.hm.is-play .quick li:nth-child(2) a::after { animation-delay: 1.45s; }
+.hm.is-play .quick li:nth-child(3) a::after { animation-delay: 1.7s; }
+.hm.is-play .quick li:nth-child(4) a::after { animation-delay: 1.95s; }
+.hm.is-play .quick li:nth-child(5) a::after { animation-delay: 2.2s; }
+.hm .quick .hand { opacity: 0; }
+.hm.is-play .quick .hand { animation: hm-rise .7s 3s both; }
+
+/* 特別メニューの行に、金のペンで丸が描かれ「特別」の付箋が貼られる。以後ときどき光る */
+.hm .quick__ring path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.hm.is-play .quick__ring path { animation: hm-ring 1s 2.4s cubic-bezier(.5, 0, .3, 1) both; }
+.hm .quick__note { opacity: 0; }
+.hm.is-play .quick__note { animation: hm-note .5s 3.1s cubic-bezier(.3, 1.6, .5, 1) both; }
+.hm .quick__special::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, rgba(255, 240, 190, .85) 50%, transparent 65%); background-size: 260% 100%; background-position: 140% 0; }
+.hm.is-play .quick__special::before { animation: hm-glint 6s 3.6s ease-in-out infinite; }
+
+@keyframes hm-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes hm-drop { 0% { opacity: 0; transform: translateY(-40px) rotate(-6deg) scale(1.04); } 70% { opacity: 1; transform: translateY(4px) rotate(1.2deg); } 100% { opacity: 1; transform: rotate(.6deg); } }
+@keyframes hm-marker { to { background-size: 100% 100%; } }
+@keyframes hm-stamp { 0% { opacity: 0; transform: rotate(-20deg) scale(2.4); } 80% { opacity: .9; transform: rotate(var(--r, 6deg)) scale(.92); } 100% { opacity: .82; transform: rotate(var(--r, 6deg)) scale(1); } }
+@keyframes hm-write { from { opacity: 0; transform: translateX(-14px); clip-path: inset(0 100% 0 0); } to { opacity: 1; transform: none; clip-path: inset(-40px -40px -40px -40px); } }
+@keyframes hm-draw { to { transform: scaleX(1); } }
+@keyframes hm-ring { to { stroke-dashoffset: 0; } }
+@keyframes hm-note { from { opacity: 0; transform: rotate(-30deg) scale(.3); } to { opacity: 1; transform: rotate(-10deg) scale(1); } }
+@keyframes hm-glint { 0% { background-position: 140% 0; } 25%, 100% { background-position: -40% 0; } }
+
+/* ===== 積み上げ式：プランの間の矢印とリプレイ ===== */
+.stack__col { position: relative; }
+.stack-replay { margin-left: auto; padding: 4px 12px 4px 10px; font: inherit; font-size: .8rem; font-weight: 700; color: var(--ink); background: var(--card); border: 1px solid var(--edge-strong); cursor: pointer; }
+.stack-replay::before { content: "\21BB"; margin-right: 6px; color: var(--red); }
+.stack-replay:hover { background: #fff; }
+@media (min-width: 860px) {
+    .stack__col + .stack__col::before {
+        content: "\FF0B"; position: absolute; left: -26px; top: 42%; z-index: 2;
+        display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+        font-weight: 900; color: #fff; background: var(--ink); box-shadow: 1px 2px 0 rgba(0, 0, 0, .2);
+    }
+}
+
+/* ===== 積み上げ式：モーション（JS が .sm を付けたときだけ） =====
+   ① 土台ができる → ② ①を写して手続きの層が落ちてくる → ③ さらに訪問の層が落ちてくる → 給与計算の帯 */
+.sm .stack__layers .layer, .sm .stack__foot, .sm .stack-payroll, .sm .layer__plus, .sm .layer--base li { opacity: 0; }
+@media (min-width: 860px) { .sm .stack__col + .stack__col::before { opacity: 0; } }
+
+.sm.is-play .stack__col:nth-child(1) .layer--base { animation: sm-build .6s .2s cubic-bezier(.2, .8, .2, 1) both; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li { animation: sm-tick .35s both; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li:nth-child(1) { animation-delay: .55s; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li:nth-child(2) { animation-delay: .67s; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li:nth-child(3) { animation-delay: .79s; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li:nth-child(4) { animation-delay: .91s; }
+.sm.is-play .stack__col:nth-child(1) .layer--base li:nth-child(5) { animation-delay: 1.03s; }
+.sm.is-play .stack__col:nth-child(1) .stack__foot { animation: sm-foot .5s 1.2s cubic-bezier(.3, 1.4, .5, 1) both; }
+
+.sm.is-play .stack__col:nth-child(2)::before { animation: sm-pop .4s 1.5s cubic-bezier(.3, 1.6, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(2) .layer--proc { animation: sm-drop .7s 2s cubic-bezier(.3, 1.3, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(2) .layer__plus { animation: sm-plus .45s 2.45s cubic-bezier(.3, 1.6, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(2) .stack__foot { animation: sm-foot .5s 2.65s cubic-bezier(.3, 1.4, .5, 1) both; }
+
+.sm.is-play .stack__col:nth-child(3)::before { animation: sm-pop .4s 2.95s cubic-bezier(.3, 1.6, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(3) .layer--base.layer--ghost { animation: sm-copy .5s 3.1s cubic-bezier(.2, .8, .2, 1) both; }
+.sm.is-play .stack__col:nth-child(3) .layer--visit { animation: sm-drop .7s 3.55s cubic-bezier(.3, 1.3, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(3) .layer__plus { animation: sm-plus .45s 4s cubic-bezier(.3, 1.6, .5, 1) both; }
+.sm.is-play .stack__col:nth-child(3) .stack__foot { animation: sm-foot .5s 4.2s cubic-bezier(.3, 1.4, .5, 1) both, sm-glow 1.6s 4.8s ease-in-out 2; }
+
+.sm.is-play .stack-payroll { animation: sm-slide .6s 4.7s cubic-bezier(.2, .8, .2, 1) both; }
+
+/* 層が落ちて着地したとき、下の層がわずかに沈む */
+.sm.is-play .stack__col:nth-child(2) .layer--ghost { animation: sm-copy .5s 1.65s cubic-bezier(.2, .8, .2, 1) both, sm-squash .3s 2.5s ease-out; }
+.sm.is-play .stack__col:nth-child(3) .layer--proc.layer--ghost { animation: sm-copy .5s 3.25s cubic-bezier(.2, .8, .2, 1) both, sm-squash .3s 4.05s ease-out; }
+
+@keyframes sm-build { from { opacity: 0; transform: translateY(30px) scaleY(.6); transform-origin: bottom; } to { opacity: 1; transform: none; } }
+@keyframes sm-tick { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
+@keyframes sm-copy { from { opacity: 0; transform: translateX(-60px); } to { opacity: .55; transform: none; } }
+@keyframes sm-drop { 0% { opacity: 0; transform: translateY(-90px) rotate(-3deg); } 60% { opacity: 1; transform: translateY(6px) rotate(.5deg); } 100% { opacity: 1; transform: none; } }
+@keyframes sm-plus { from { opacity: 0; transform: rotate(-90deg) scale(0); } to { opacity: 1; transform: rotate(-8deg) scale(1); } }
+@keyframes sm-pop { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+@keyframes sm-foot { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes sm-slide { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes sm-squash { 0%, 100% { transform: none; } 40% { transform: scaleY(.9) translateY(3px); } }
+@keyframes sm-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(183, 68, 54, 0); } 50% { box-shadow: 0 0 0 6px rgba(183, 68, 54, .22); } }

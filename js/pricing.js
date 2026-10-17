@@ -1,7 +1,7 @@
 /*
  * アセント社労士事務所 — サービス・料金ページ
  * 料金表そのものは HTML に書いてあり、JS が動かなくてもすべて読めます。
- * このスクリプトは「人数・給与計算の有無を選んで比べる」「給与計算の目安を出す」補助だけを行います。
+ * このスクリプトは「人数・給与計算の有無を選んで比べる」補助だけを行います。
  *
  * 料金を変更するときは、HTML の表と下の PLAN_PRICES の両方を直してください。
  */
@@ -65,25 +65,48 @@
         apply();
     }
 
-    // --- 給与計算：対象人数から月額の目安を出す ------------------------------------
-    var BASE = 12000, PER_PAYROLL = 800, PER_ATTENDANCE = 400;
-    var calc = document.querySelector('[data-payroll-calc]');
-    if (calc) {
-        calc.hidden = false;
-        var nInput = calc.querySelector('[data-payroll-n]');
-        var att = calc.querySelector('[data-payroll-att]');
-        var formula = calc.querySelector('[data-payroll-formula]');
-        var total = calc.querySelector('[data-payroll-total]');
-        var update = function () {
-            var n = Math.max(1, Math.min(999, parseInt(nInput.value, 10) || 1));
-            var perPerson = PER_PAYROLL + (att.checked ? PER_ATTENDANCE : 0);
-            var extra = perPerson * n;
-            formula.textContent = yen(BASE) + '＋' + yen(extra) + '（' + yen(perPerson) + '×' + n + '名）';
-            total.textContent = '月額' + yen(BASE + extra);
+    // --- ヒーロー：用紙と料金早見表が順に現れ、金額が数え上がる ------------------------
+    // 動きを減らす設定・JS なしのときは静止した完成形のまま
+    var heroEl = document.querySelector('.pr-hero');
+    if (heroEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        heroEl.classList.add('hm');
+        requestAnimationFrame(function () { heroEl.classList.add('is-play'); });
+        heroEl.querySelectorAll('[data-count]').forEach(function (el, i) {
+            var to = Number(el.getAttribute('data-count'));
+            var finalText = el.textContent;
+            setTimeout(function () {
+                var start = null;
+                var step = function (ts) {
+                    if (start === null) start = ts;
+                    var p = Math.min((ts - start) / 900, 1);
+                    el.textContent = p < 1 ? Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('ja-JP') : finalText;
+                    if (p < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+            }, 1100 + i * 250);
+        });
+    }
+
+    // --- 積み上げ式：画面に入ったら層を順に積み上げる（「もう一度見る」で再生し直せる） ---
+    var stackEl = document.querySelector('[data-stack]');
+    if (stackEl && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        stackEl.classList.add('sm');
+        var replay = stackEl.querySelector('[data-stack-replay]');
+        var playStack = function () {
+            stackEl.classList.remove('is-play');
+            void stackEl.offsetWidth;
+            stackEl.classList.add('is-play');
         };
-        nInput.addEventListener('input', update);
-        att.addEventListener('change', update);
-        update();
+        var stackIo = new IntersectionObserver(function (e) {
+            if (!e[0].isIntersecting) return;
+            playStack();
+            stackIo.disconnect();
+        }, { threshold: 0.35 });
+        stackIo.observe(stackEl);
+        if (replay) {
+            replay.hidden = false;
+            replay.addEventListener('click', playStack);
+        }
     }
 
     // --- スマホ：ヒーローを過ぎたら相談ボタンを出す ---------------------------------
