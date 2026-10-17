@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Klee+One:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home.css?v=20261018b">
     <script>document.documentElement.classList.add('js');</script>
     <!-- seo:jsonld -->
     <script type="application/ld+json">
@@ -975,17 +975,26 @@
         <!-- ============================== 3.5 PRICE ============================== -->
         <section id="price" class="price-band">
             <div class="wrap">
-                <div class="price-memo ruled margin-line taped" data-reveal>
-                    <span class="stamp" aria-hidden="true">Service &amp; Price</span>
-                    <div>
+                <div class="price-board ruled margin-line taped" data-reveal>
+                    <span class="stamp price-board__stamp" aria-hidden="true">Service &amp; Price</span>
+                    <div class="price-board__head">
                         <p class="tab-label"><span>Price</span><span>料金表</span></p>
-                        <h3>支援内容と料金を確認する</h3>
-                        <p>労務顧問・給与計算・実務同行型の労務点検・各種スポットサービスの料金をご案内しています。</p>
+                        <h2 class="price-board__title">支援内容と<span class="mark">料金</span>を、<br class="sp-only">先に確認できます</h2>
+                        <p class="price-board__lead">「顧問をお願いするといくらかかるのか」。問い合わせる前に気になる料金を、すべて公開しています。表示はすべて税抜です。</p>
                     </div>
-                    <a href="pricing.html" class="btn">
-                        <span class="btn__text">サービス・料金表を見る</span>
-                        <span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
-                    </a>
+                    <ul class="price-board__list">
+                        <li data-reveal style="--d:.1s"><a href="pricing.html#labor-advisor"><small>労務の相談・手続き・毎月の訪問</small><b>労務顧問</b><span class="price-board__yen"><i>月額</i>16,000<i>円～</i></span></a></li>
+                        <li data-reveal style="--d:.2s"><a href="pricing.html#payroll"><small>顧問に追加できます</small><b>給与計算</b><span class="price-board__yen">12,000<i>円＋1名800円</i></span></a></li>
+                        <li data-reveal style="--d:.3s"><a href="pricing.html#spot-procedures"><small>顧問契約がなくても1件から</small><b>スポット手続き</b><span class="price-board__yen"><i>1件</i>6,500<i>円～</i></span></a></li>
+                        <li class="price-board__special" data-reveal style="--d:.4s"><a href="pricing.html#risk-check"><small>特別メニュー・同時2社限定</small><b>実務同行型 労務点検</b><span class="price-board__yen"><i>月額</i>400,000<i>円</i></span></a></li>
+                    </ul>
+                    <div class="price-board__cta">
+                        <a href="pricing.html" class="btn price-board__btn">
+                            <span class="btn__text"><span class="btn__meta">SERVICE &amp; PRICE</span>サービス・料金表をくわしく見る</span>
+                            <span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                        <p class="hand">人数に合わせた月額も、料金表ですぐ確認できます</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1238,64 +1247,11 @@
             </div>
         </section>
 
-        <!-- ============================== 9. SERVICE DETAILS ============================== -->
-        <section id="service-details" class="section section--alt">
-            <div class="wrap">
-                <div class="sec-head sec-head--center" data-reveal>
-                    <p class="tab-label"><span>No.09</span><span>Practical Support</span></p>
-                    <h2 class="sec-title">支援を、<span class="mark">現場で動く形へ。</span></h2>
-                    <p class="lead">相談への回答だけで終わらせず、手続き、ルール、研修まで必要な形に組み合わせます。</p>
-                </div>
-
-                <article class="pack taped" data-reveal>
-                    <div class="pack__main ruled margin-line">
-                        <p class="pack__label">RELATED STARTER PACK</p>
-                        <h3>初めて従業員を採用する会社向けのセットメニュー</h3>
-                        <p>初めての従業員でつまずかない会社作りを、雇用契約書、就業規則、保険手続き、3ヶ月相談、助成金設計まで短期集中で整えるパックです。</p>
-                        <a href="first-hire-lp.html" target="_blank" rel="noopener noreferrer" class="btn btn--paper">
-                            <span class="btn__text">詳細を見る</span>
-                            <span class="btn__arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
-                        </a>
-                    </div>
-                    <div class="pack__change" aria-label="支援による変化">
-                        <div class="sticky sticky--blue"><small>BEFORE</small><b>初めて人を雇う不安な社長</b></div>
-                        <span class="arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
-                        <div class="sticky"><small>AFTER</small><b>人を雇う会社としての土台が整い、本業に集中できる社長</b></div>
-                    </div>
-                </article>
-
-                <div class="compare">
-                    <div class="compare__head" data-reveal>
-                        <p class="tab-label"><span>Operation</span><span>Design</span></p>
-                        <h3>労務支援は、書類を整えるだけではありません。</h3>
-                    </div>
-                    <div class="compare__grid">
-                        <div class="compare__cell compare__cell--x ruled" data-reveal>
-                            <p>ただ相談するだけだと</p>
-                            <h4>その場しのぎになりやすい</h4>
-                            <p>一件ごとの回答で終わると、次に似た問題が起きたとき、また同じ迷いが生まれます。</p>
-                        </div>
-                        <div class="compare__cell compare__cell--x ruled" data-reveal style="--d:.1s">
-                            <p>制度を作るだけだと</p>
-                            <h4>現場で使われにくい</h4>
-                            <p>就業規則があっても、店長やスタッフが使い方を知らなければ、判断は属人化したままです。</p>
-                        </div>
-                        <div class="compare__cell compare__cell--ours ruled" data-reveal style="--d:.2s">
-                            <svg class="circle-draw" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M40,14 C120,-2 260,2 290,40 C312,90 296,170 230,190 C150,206 40,200 14,160 C-6,120 4,50 36,20 C60,6 110,4 150,6"/></svg>
-                            <p>アセントなら</p>
-                            <h4>現場で動く形まで落とし込む</h4>
-                            <p>相談、手続き、ルール整備、店長研修を組み合わせ、スタッフが納得して働ける状態を作ります。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ============================== 10. REASONS ============================== -->
-        <section id="reasons" class="section">
+        <section id="reasons" class="section section--alt">
             <div class="wrap">
                 <div class="sec-head sec-head--center reasons-head" data-reveal>
-                    <p class="tab-label"><span>No.10</span><span>Why Ascent?</span></p>
+                    <p class="tab-label"><span>No.09</span><span>Why Ascent?</span></p>
                     <p class="pre">法律を守るだけでも、現場に合わせるだけでも足りません。</p>
                     <h2 class="sec-title">会社の労務コストを、<br><span class="mark">乱高下させないための支援</span>ができます。</h2>
                     <p class="lead">正しいだけではなく、続けられること。きれいな制度だけではなく、利益を守れる運用になっていることを重視します。</p>
@@ -1354,10 +1310,10 @@
         </section>
 
         <!-- ============================== 11. FLOW ============================== -->
-        <section id="flow" class="section section--alt">
+        <section id="flow" class="section">
             <div class="wrap">
                 <div class="sec-head sec-head--center" data-reveal>
-                    <p class="tab-label"><span>No.11</span><span>Flow</span></p>
+                    <p class="tab-label"><span>No.10</span><span>Flow</span></p>
                     <h2 class="sec-title">ご相談は、このような流れで進みます。</h2>
                     <p class="lead">無理に契約をおすすめすることはありません。「まず状況を整理したい」という段階でも大丈夫です。</p>
                 </div>
@@ -1371,11 +1327,11 @@
         </section>
 
         <!-- ============================== 12. FINAL CTA ============================== -->
-        <section id="start" class="section">
+        <section id="start" class="section section--alt">
             <div class="wrap">
                 <div class="letter ruled margin-line taped" data-reveal>
                     <span class="stamp" aria-hidden="true">Start</span>
-                    <p class="tab-label"><span>No.12</span><span>Start</span></p>
+                    <p class="tab-label"><span>No.11</span><span>Start</span></p>
                     <h2 class="letter__title"><img src="images/hero-headline-brush-ink.webp" alt="その労務の迷いに、現場で回る答えを。" width="1400" height="372" loading="lazy"></h2>
                     <p class="body">
                         法律と現場の両方を見ながら、採用費やトラブル対応費がふくらみにくく、利益が安定しやすい労務の形を一緒に整えます。<br>
@@ -1397,10 +1353,10 @@
         </section>
 
         <!-- ============================== 13. ACCESS / OFFICE ============================== -->
-        <section id="about" class="section section--alt">
+        <section id="about" class="section">
             <div class="wrap">
                 <div class="sec-head sec-head--center" data-reveal>
-                    <p class="tab-label"><span>No.13</span><span>Access</span></p>
+                    <p class="tab-label"><span>No.12</span><span>Access</span></p>
                     <h2 class="sec-title">アクセス・事務所概要</h2>
                 </div>
                 <div class="access-grid">
@@ -1431,10 +1387,10 @@
         </section>
 
         <!-- ============================== 14. CONTACT ============================== -->
-        <section id="contact-form-anchor" class="section">
+        <section id="contact-form-anchor" class="section section--alt">
             <div class="wrap contact-grid">
                 <div class="contact-side" data-reveal>
-                    <p class="tab-label"><span>No.14</span><span>Contact</span></p>
+                    <p class="tab-label"><span>No.13</span><span>Contact</span></p>
                     <h2 class="sec-title">その迷いを、<br><span class="mark">利益を削る前に</span>整理しませんか。</h2>
                     <p class="lead">ひとりで抱え込む前に、聞かせてください。労務の迷いは、問題が起きてから相談するより、迷っている段階で整理した方がうまくいきます。</p>
 
@@ -1493,10 +1449,10 @@
         </section>
 
         <!-- ============================== 15. FAQ ============================== -->
-        <section id="faq" class="section section--alt">
+        <section id="faq" class="section">
             <div class="wrap">
                 <div class="sec-head sec-head--center" data-reveal>
-                    <p class="tab-label"><span>No.15</span><span>FAQ</span></p>
+                    <p class="tab-label"><span>No.14</span><span>FAQ</span></p>
                     <h2 class="sec-title">よくあるご質問</h2>
                 </div>
                 <div class="faq-list" data-reveal>

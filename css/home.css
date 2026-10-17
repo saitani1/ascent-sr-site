@@ -594,18 +594,50 @@ main { padding-top: var(--header-h); }
     border-top: 8px solid var(--desk-deep);
     border-bottom: 8px solid var(--desk-deep);
 }
-.price-memo {
-    position: relative; max-width: 880px; margin: 0 auto;
+.price-board {
+    position: relative; max-width: 1080px; margin: 0 auto;
     --ml: 3.6rem;
-    padding: 38px 28px 34px 4.8rem;
+    padding: 44px 28px 36px 4.8rem;
     border: 1px solid var(--edge-strong); box-shadow: var(--lift-3);
-    display: grid; gap: 20px; align-items: center;
 }
-.price-memo h3 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.35rem, 1.1rem + .9vw, 1.8rem); margin-top: 8px; }
-.price-memo p { margin-top: 6px; color: var(--ink-soft); font-size: .94rem; }
-.price-memo .stamp { position: absolute; right: 18px; top: -16px; --r: -6deg; background: var(--card); }
-@media (min-width: 820px) { .price-memo { grid-template-columns: 1fr auto; padding-right: 36px; } }
-@media (max-width: 600px) { .price-memo { --ml: 2rem; padding-left: 2.8rem; } }
+.price-board__stamp { position: absolute; right: 18px; top: -16px; --r: -6deg; background: var(--card); }
+.price-board__title { margin-top: 14px; font-family: var(--serif); font-weight: 900; font-size: clamp(1.6rem, 1.05rem + 2.1vw, 2.55rem); line-height: 1.45; }
+.price-board__lead { margin-top: 10px; max-width: 40em; color: var(--ink-soft); font-size: .96rem; line-height: var(--pitch); }
+.price-board .sp-only { display: none; }
+
+/* 料金のカード：押すと料金表の該当箇所へ */
+.price-board__list { margin-top: 26px; display: grid; gap: 14px; }
+.price-board__list a {
+    position: relative; display: grid; gap: 2px; height: 100%;
+    padding: 16px 18px 14px; text-decoration: none; color: inherit;
+    background: #fff; border: 1.5px solid var(--ink); border-top-width: 4px;
+    box-shadow: 4px 5px 0 rgba(23, 32, 51, .14);
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+.price-board__list a::after { content: "→"; position: absolute; right: 14px; top: 12px; font-weight: 900; color: var(--red); transition: transform .2s var(--ease); }
+.price-board__list a:hover { transform: translate(-2px, -3px); box-shadow: 7px 9px 0 rgba(23, 32, 51, .16); }
+.price-board__list a:hover::after { transform: translateX(4px); }
+.price-board__list small { font-size: .74rem; color: var(--pencil); font-weight: 700; }
+.price-board__list b { font-family: var(--serif); font-weight: 900; font-size: 1.12rem; line-height: 1.4; }
+.price-board__yen { margin-top: 6px; font-family: var(--serif); font-weight: 900; font-size: clamp(1.5rem, 1.25rem + .9vw, 1.9rem); line-height: 1.15; color: var(--red); white-space: nowrap; }
+.price-board__yen i { font-style: normal; font-size: .46em; color: var(--ink-soft); margin: 0 .15em; }
+.price-board__special a { border-color: #b8913c; background: linear-gradient(135deg, #fffaf0, #fbf1d6); box-shadow: 4px 5px 0 rgba(138, 106, 36, .22), 0 0 0 4px rgba(233, 209, 143, .25); }
+.price-board__special b { color: #8a6a24; }
+.price-board__special .price-board__yen { color: var(--ink); }
+.price-board__special a::after { color: #b8913c; }
+
+/* 大きなボタン */
+.price-board__cta { margin-top: 28px; display: grid; justify-items: center; gap: 10px; text-align: center; }
+.price-board__btn { min-width: min(100%, 420px); justify-content: space-between; font-size: 1.08rem; padding-top: 18px; padding-bottom: 18px; }
+.price-board__cta .hand { font-size: .98rem; }
+
+@media (min-width: 760px) { .price-board__list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .price-board__list { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 600px) {
+    .price-board { --ml: 2rem; padding: 38px 14px 26px 2.8rem; }
+    .price-board .sp-only { display: inline; }
+    .price-board__btn { width: 100%; min-width: 0; }
+}
 
 /* ==========================================================================
    04 Issue
