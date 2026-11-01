@@ -10,7 +10,7 @@ SITE = 'アセント社労士事務所'
 AUTHOR = '長田充博'
 TODAY = date.today().isoformat()
 LOGO = BASE + 'images/ascent-logo.png'
-DEFAULT_OG = BASE + 'images/representative-new.jpg'
+DEFAULT_OG = BASE + 'images/representative-2026-ogp.jpg'
 EXCLUDE = lambda f: f.startswith('index-before') or f == '404.html'
 
 def read(p):
